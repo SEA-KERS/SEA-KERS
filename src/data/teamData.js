@@ -461,33 +461,5 @@ export const TEAM_DATA = [
     twitter: "https://x.com/dev_robotics",
     linkedin: "https://linkedin.com",
     avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    id: "kavya-m",
-    name: "KAVYA_M",
-    role: "AI VISION LEAD",
-    handle: "@kavya_vision",
-    specialization: "Spatial AI & Computer Vision",
-    winsCount: 5,
-    bio: "Optimizing neural network weights for real-time spatial object tracking and Jetson embedded vision.",
-    skills: ["PyTorch", "OpenCV", "TensorRT", "CUDA", "C++"],
-    github: "https://github.com/kavya-m",
-    twitter: "https://x.com/kavya_vision",
-    linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
-  },
-  {
-    id: "vikram-r",
-    name: "VIKRAM_R",
-    role: "DePIN SYSTEMS LEAD",
-    handle: "@vikram_depin",
-    specialization: "Telemetry Protocols & Node Mesh",
-    winsCount: 6,
-    bio: "Engineering zero-loss micro-telemetry pipelines connecting 10,000+ DePIN IoT nodes across high-latency networks.",
-    skills: ["Rust", "gRPC", "Solana", "Protobuf", "Docker"],
-    github: "https://github.com/vikram-r",
-    twitter: "https://x.com/vikram_depin",
-    linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
   }
 ];
