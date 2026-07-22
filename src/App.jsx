@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WinsSection from './components/WinsSection';
@@ -85,6 +86,9 @@ export default function App() {
         isOpen={isJoinModalOpen}
         onClose={() => setIsJoinModalOpen(false)}
       />
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </div>
   );
 }
