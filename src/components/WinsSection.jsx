@@ -8,7 +8,7 @@ export default function WinsSection({ onSelectProject }) {
   const [activeWinModal, setActiveWinModal] = useState(null);
   const [currentModalImageIdx, setCurrentModalImageIdx] = useState(0);
 
-  const tracks = ['ALL', 'ecell', 'IEEE', 'IISc', 'MSME', 'HAL'];
+  const tracks = ['ALL', 'E-Cell', 'IEEE', 'IISc', 'MSME', 'HAL'];
 
   const filteredWins = WINS_DATA.filter((win) => {
     const matchesSearch =
@@ -39,7 +39,7 @@ export default function WinsSection({ onSelectProject }) {
   return (
     <section id="wins-section" className="py-16 px-4 md:px-8 bg-[var(--bg-surface)] border-b-2 border-[var(--border-main)]">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-[var(--border-main)] pb-6 gap-4">
           <div>
@@ -51,7 +51,7 @@ export default function WinsSection({ onSelectProject }) {
               Challenges Conquered
             </h2>
             <p className="font-headline text-[var(--text-muted)] text-base md:text-lg max-w-2xl mt-2 font-normal leading-relaxed">
-              We don't claim capability — we prove it. Every win on this list is a timestamp of what we built under pressure, on a deadline, against the best in the room.
+              We don't claim capability we prove it. Every win on this list is a timestamp of what we built under pressure, on a deadline, against the best in the room.
             </p>
           </div>
 
@@ -77,11 +77,10 @@ export default function WinsSection({ onSelectProject }) {
             <button
               key={track}
               onClick={() => setSelectedTrack(track)}
-              className={`font-mono text-xs px-3 py-1 font-bold border-2 transition-all shrink-0 ${
-                selectedTrack === track
-                  ? 'bg-[#da261c] text-white border-black shadow-[2px_2px_0px_rgba(0,0,0,0.8)]'
-                  : 'bg-[var(--bg-surface-subtle)] text-[var(--text-main)] border-[var(--border-main)] hover:bg-[var(--bg-surface-high)]'
-              }`}
+              className={`font-mono text-xs px-3 py-1 font-bold border-2 transition-all shrink-0 ${selectedTrack === track
+                ? 'bg-[#da261c] text-white border-black shadow-[2px_2px_0px_rgba(0,0,0,0.8)]'
+                : 'bg-[var(--bg-surface-subtle)] text-[var(--text-main)] border-[var(--border-main)] hover:bg-[var(--bg-surface-high)]'
+                }`}
             >
               {track}
             </button>
@@ -221,9 +220,8 @@ export default function WinsSection({ onSelectProject }) {
                       <button
                         key={idx}
                         onClick={() => setCurrentModalImageIdx(idx)}
-                        className={`h-2 transition-all ${
-                          currentModalImageIdx === idx ? 'w-5 bg-[#da261c]' : 'w-2 bg-white/60'
-                        }`}
+                        className={`h-2 transition-all ${currentModalImageIdx === idx ? 'w-5 bg-[#da261c]' : 'w-2 bg-white/60'
+                          }`}
                       />
                     ))}
                   </div>

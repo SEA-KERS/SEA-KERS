@@ -11,13 +11,13 @@ export default function ProjectsSection({ selectedProjectId }) {
   return (
     <section id="projects-section" className="py-16 px-4 md:px-8 bg-[var(--bg-surface-subtle)] border-b-2 border-[var(--border-main)]">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b-2 border-[var(--border-main)] pb-6 gap-4">
           <div>
             <div className="inline-flex items-center gap-2 font-mono text-xs text-[#001dc2] font-bold uppercase tracking-widest mb-2 border-2 border-[var(--border-main)] px-3 py-1 bg-[var(--bg-surface)]">
               <Code2 className="w-4 h-4 text-[#da261c]" />
-              <span>CODE ARTIFACTS // OPEN SOURCE REPOSITORIES</span>
+              <span>CODE ARTIFACTS</span>
             </div>
             <h2 className="font-headline font-black text-3xl md:text-5xl uppercase text-[var(--text-main)] tracking-tight">
               Our Repositories

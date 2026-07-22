@@ -113,10 +113,6 @@ export default function TeamSection() {
               Young, Hungry, and Building
             </p>
           </div>
-
-          <div className="font-mono text-xs text-[var(--text-muted)] font-bold uppercase border-2 border-[var(--border-main)] px-3 py-1.5 bg-[var(--bg-surface)]">
-            TOTAL ROSTER: <span className="text-[#da261c]">12 MEMBERS</span>
-          </div>
         </div>
 
         {/* Quote Block */}

@@ -12,7 +12,7 @@ export default function Footer({ setActiveTab }) {
             <span className="w-6 h-6 bg-[#da261c] text-white flex items-center justify-center font-mono text-xs font-bold border border-black">
               SK
             </span>
-            <span>SEA_KERS</span>
+            <span>SEA-KERS</span>
           </div>
           <p className="font-headline text-sm text-[var(--text-muted)] font-normal leading-relaxed">
             High-performance collegiate engineering collective. Winning global hackathons and building production Web3, AI, and DePIN protocols.
