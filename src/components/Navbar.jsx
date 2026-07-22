@@ -3,10 +3,10 @@ import { Target, Award, Code2, Users, Sun, Moon } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab, theme, toggleTheme }) {
   const navItems = [
-    { id: 'about', label: 'About Us', icon: Target },
     { id: 'wins', label: 'Wins', icon: Award },
     { id: 'projects', label: 'Projects', icon: Code2 },
-    { id: 'team', label: 'Team', icon: Users }
+    { id: 'team', label: 'Team', icon: Users },
+    { id: 'about', label: 'About Us', icon: Target }
   ];
 
   return (

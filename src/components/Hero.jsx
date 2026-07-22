@@ -10,13 +10,10 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-6">
           {/* Left Column: Headline & Subtitle */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <h1 className="font-headline font-black text-4xl sm:text-6xl md:text-7xl text-[var(--text-main)] leading-[1.05] uppercase tracking-tight mb-4">
-              WE ARE <span className="text-[#da261c]">TEAM SEA_KERS</span>
+            <h1 className="font-headline font-black text-4xl sm:text-6xl md:text-7xl text-[var(--text-main)] leading-[1.05] uppercase tracking-tight mb-6">
+              WE ARE<br />
+              <span className="text-[#da261c]">TEAM SEA-KERS</span>
             </h1>
-
-            <p className="font-headline text-lg sm:text-xl text-[var(--text-muted)] max-w-2xl font-normal leading-relaxed mb-2">
-              <strong className="text-[var(--text-main)] font-bold">Open Innovation. From India, for the world.</strong>
-            </p>
 
             <p className="font-headline text-base sm:text-lg text-[var(--text-muted)] max-w-2xl font-normal leading-relaxed">
               A high-performance engineering crew born in 48-hour hackathon sprints. Out-engineering international competition, building Web3, AI, and DePIN infrastructure.

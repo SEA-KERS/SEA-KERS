@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import MissionSection from './components/MissionSection';
 import WinsSection from './components/WinsSection';
 import ProjectsSection from './components/ProjectsSection';
 import TeamSection from './components/TeamSection';
+import MissionSection from './components/MissionSection';
 import JoinModal from './components/JoinModal';
 import Footer from './components/Footer';
 
@@ -53,27 +53,27 @@ export default function App() {
 
       {/* Main Content Area */}
       <main>
-        {/* Landing First Page */}
+        {/* 1. Landing First Page */}
         <Hero />
 
-        {/* Our Mission Section */}
-        <div id="about-section">
-          <MissionSection />
-        </div>
-
-        {/* Our Track Record Section (20+ Wins) */}
+        {/* 2. Track Record Section (20+ Wins) */}
         <div id="wins-section">
           <WinsSection onSelectProject={handleSelectProject} />
         </div>
 
-        {/* Our Repositories Section */}
+        {/* 3. Repositories Section (Projects) */}
         <div id="projects-section">
           <ProjectsSection selectedProjectId={selectedProjectId} />
         </div>
 
-        {/* Engineering Roster Section */}
+        {/* 4. Engineering Roster Section (Core Team & Team Members) */}
         <div id="team-section">
           <TeamSection />
+        </div>
+
+        {/* 5. About Us Section (Our Mission) - Moved to bottom after Team */}
+        <div id="about-section">
+          <MissionSection />
         </div>
       </main>
 
