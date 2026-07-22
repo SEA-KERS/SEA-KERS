@@ -20,7 +20,7 @@ export default function ProjectsSection({ selectedProjectId }) {
               <span>CODE ARTIFACTS // OPEN SOURCE REPOSITORIES</span>
             </div>
             <h2 className="font-headline font-black text-3xl md:text-5xl uppercase text-[var(--text-main)] tracking-tight">
-              Featured Repositories
+              Our Repositories
             </h2>
             <p className="font-headline text-[var(--text-muted)] text-base md:text-lg max-w-2xl mt-2 font-normal leading-relaxed">
               Complete proofs of concept, engineered from scratch within brutal time constraints. Every Product here was ideated, built, validated and shipped in hours.
