@@ -14,12 +14,9 @@ export default function Footer({ setActiveTab }) {
             </span>
             <span>SEA_KERS</span>
           </div>
-          <p className="font-headline text-sm text-[var(--text-muted)] font-normal leading-relaxed mb-4">
+          <p className="font-headline text-sm text-[var(--text-muted)] font-normal leading-relaxed">
             High-performance collegiate engineering collective. Winning global hackathons and building production Web3, AI, and DePIN protocols.
           </p>
-          <div className="font-mono text-[11px] text-[var(--text-muted)] font-bold">
-            COORD_LAT: 12.9716° N • COORD_LONG: 77.5946° E
-          </div>
         </div>
 
         {/* Col 2: Navigation */}
@@ -28,6 +25,11 @@ export default function Footer({ setActiveTab }) {
             NAVIGATION
           </h5>
           <ul className="flex flex-col gap-2.5 font-headline text-sm text-[var(--text-muted)] font-bold">
+            <li>
+              <button onClick={() => setActiveTab('about')} className="hover:text-[#da261c] transition-colors">
+                About Us & Mission
+              </button>
+            </li>
             <li>
               <button onClick={() => setActiveTab('wins')} className="hover:text-[#da261c] transition-colors">
                 Hackathon Victories (20+)
@@ -93,10 +95,6 @@ export default function Footer({ setActiveTab }) {
 
       <div className="max-w-7xl mx-auto pt-8 border-t-2 border-[var(--border-main)] flex flex-col sm:flex-row justify-between items-center font-mono text-xs text-[var(--text-muted)] font-bold">
         <span>TECHNICAL PRECISION // SYSTEM ACTIVE</span>
-        <span className="mt-2 sm:mt-0 flex items-center gap-1 text-emerald-600">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          ALL NODES OPERATIONAL
-        </span>
       </div>
     </footer>
   );

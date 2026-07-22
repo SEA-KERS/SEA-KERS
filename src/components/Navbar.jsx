@@ -1,8 +1,9 @@
 import React from 'react';
-import { Award, Code2, Users, Sun, Moon } from 'lucide-react';
+import { Target, Award, Code2, Users, Sun, Moon } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab, theme, toggleTheme }) {
   const navItems = [
+    { id: 'about', label: 'About Us', icon: Target },
     { id: 'wins', label: 'Wins', icon: Award },
     { id: 'projects', label: 'Projects', icon: Code2 },
     { id: 'team', label: 'Team', icon: Users }
@@ -23,7 +24,7 @@ export default function Navbar({ activeTab, setActiveTab, theme, toggleTheme }) 
         </div>
 
         {/* Middle: Nav Tabs */}
-        <div className="flex items-center gap-1 md:gap-2 bg-[var(--bg-surface-subtle)] p-1 border-2 border-[var(--border-main)]">
+        <div className="flex items-center gap-1 md:gap-2 bg-[var(--bg-surface-subtle)] p-1 border-2 border-[var(--border-main)] overflow-x-auto">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -31,7 +32,7 @@ export default function Navbar({ activeTab, setActiveTab, theme, toggleTheme }) 
               <button
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
-                className={`flex items-center gap-1.5 px-3 py-1 font-headline text-xs md:text-sm font-bold transition-all ${
+                className={`flex items-center gap-1.5 px-3 py-1 font-headline text-xs md:text-sm font-bold transition-all shrink-0 ${
                   isActive
                     ? 'bg-[#da261c] text-white border border-black shadow-[1.5px_1.5px_0px_rgba(0,0,0,0.9)]'
                     : 'text-[var(--text-main)] hover:bg-[var(--bg-surface-high)]'

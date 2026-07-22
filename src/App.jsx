@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import MissionSection from './components/MissionSection';
 import WinsSection from './components/WinsSection';
 import ProjectsSection from './components/ProjectsSection';
 import TeamSection from './components/TeamSection';
@@ -52,19 +53,25 @@ export default function App() {
 
       {/* Main Content Area */}
       <main>
-        <Hero
-          onSelectSection={handleSelectSection}
-          onOpenJoinModal={() => setIsJoinModalOpen(true)}
-        />
+        {/* Landing First Page */}
+        <Hero />
 
+        {/* Our Mission Section */}
+        <div id="about-section">
+          <MissionSection />
+        </div>
+
+        {/* Our Track Record Section (20+ Wins) */}
         <div id="wins-section">
           <WinsSection onSelectProject={handleSelectProject} />
         </div>
 
+        {/* Our Repositories Section */}
         <div id="projects-section">
           <ProjectsSection selectedProjectId={selectedProjectId} />
         </div>
 
+        {/* Engineering Roster Section */}
         <div id="team-section">
           <TeamSection />
         </div>
