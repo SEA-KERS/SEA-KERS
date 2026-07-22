@@ -45,10 +45,10 @@ export default function WinsSection({ onSelectProject }) {
           <div>
             <div className="inline-flex items-center gap-2 font-mono text-xs text-[#001dc2] font-bold uppercase tracking-widest mb-2 border-2 border-[var(--border-main)] px-3 py-1 bg-[var(--bg-surface-subtle)]">
               <Award className="w-4 h-4 text-[#da261c]" />
-              <span>OUR TRACK RECORD // 20+ GLOBAL VICTORIES</span>
+              <span>OUR TRACK RECORD</span>
             </div>
             <h2 className="font-headline font-black text-3xl md:text-5xl uppercase text-[var(--text-main)] tracking-tight">
-              Hackathon Victories
+              Challenges Conquered
             </h2>
             <p className="font-headline text-[var(--text-muted)] text-base md:text-lg max-w-2xl mt-2 font-normal leading-relaxed">
               We don't claim capability — we prove it. Every win on this list is a timestamp of what we built under pressure, on a deadline, against the best in the room.
@@ -60,7 +60,7 @@ export default function WinsSection({ onSelectProject }) {
             <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)]" />
             <input
               type="text"
-              placeholder="Search victories..."
+              placeholder="Search challenges..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-[var(--bg-surface-subtle)] border-2 border-[var(--border-main)] pl-9 pr-4 py-2 font-mono text-xs text-[var(--text-main)] focus:outline-none focus:border-[#da261c] transition-colors placeholder:text-[var(--text-muted)] font-bold"
@@ -170,7 +170,7 @@ export default function WinsSection({ onSelectProject }) {
         </div>
       </div>
 
-      {/* Win Record Details Modal with Image Carousel & no prize/prooftash */}
+      {/* Win Record Details Modal */}
       {activeWinModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
           <div className="bg-[var(--bg-surface)] border-2 border-black max-w-xl w-full p-6 md:p-8 relative shadow-[8px_8px_0px_rgba(0,0,0,0.9)] max-h-[90vh] overflow-y-auto">

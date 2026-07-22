@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Users, Award, Sparkles, Shield, UserCheck, Quote } from 'lucide-react';
+import { Award, Sparkles, Shield, UserCheck, Quote } from 'lucide-react';
 import { GithubIcon, TwitterIcon, LinkedinIcon } from './SocialIcons';
 import { CORE_TEAM_DATA, TEAM_MEMBERS_DATA } from '../data/teamData';
 
@@ -106,12 +106,8 @@ export default function TeamSection() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-[var(--border-main)] pb-6 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 font-mono text-xs text-[#001dc2] font-bold uppercase tracking-widest mb-2 border-2 border-[var(--border-main)] px-3 py-1 bg-[var(--bg-surface)]">
-              <Users className="w-4 h-4 text-[#da261c]" />
-              <span>THE HUMAN LAYER // 12 INNOVATORS</span>
-            </div>
             <h2 className="font-headline font-black text-3xl md:text-5xl uppercase text-[var(--text-main)] tracking-tight">
-              Engineering Roster
+              Master Minds
             </h2>
             <p className="font-headline text-[var(--text-muted)] text-base md:text-lg mt-2 font-bold">
               Young, Hungry, and Building

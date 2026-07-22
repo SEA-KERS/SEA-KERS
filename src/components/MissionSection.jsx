@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Zap, Shield, Globe, Compass, Award, Flame } from 'lucide-react';
+import { Target, Compass, Award, Flame } from 'lucide-react';
 
 export default function MissionSection() {
   return (
@@ -71,7 +71,7 @@ export default function MissionSection() {
         </div>
 
         {/* Mission Statement Banner */}
-        <div className="bg-[#da261c] text-white p-6 md:p-8 border-2 border-black shadow-[6px_6px_0px_rgba(0,0,0,0.9)] mb-14 text-center">
+        <div className="bg-[#da261c] text-white p-6 md:p-8 border-2 border-black shadow-[6px_6px_0px_rgba(0,0,0,0.9)] text-center">
           <span className="font-mono text-xs uppercase tracking-widest font-black block mb-2 opacity-90">
             THE MISSION STATEMENT
           </span>
@@ -80,73 +80,6 @@ export default function MissionSection() {
           </h3>
         </div>
 
-        {/* Three Pillars — Revised Labels & Descriptions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          {/* Pillar 01 */}
-          <div className="bg-[var(--bg-surface-subtle)] border-2 border-[var(--border-main)] p-6 shadow-[4px_4px_0px_rgba(0,0,0,0.15)] flex flex-col justify-between group">
-            <div>
-              <div className="flex justify-between items-center mb-4">
-                <span className="font-mono text-xs text-[#da261c] font-black uppercase">
-                  01 // SPEED & INTENSITY
-                </span>
-                <Zap className="w-5 h-5 text-[#001dc2]" />
-              </div>
-              <h4 className="font-headline font-black text-lg text-[var(--text-main)] mb-1 uppercase">
-                48-Hour Sprint Mastery
-              </h4>
-              <p className="font-headline text-sm text-[var(--text-muted)] leading-relaxed mt-2">
-                Complex ideas to functional code in under 48 hours. We've done it twenty times. The clock is never an excuse — it's the condition we were trained in.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-[var(--border-main)] font-mono text-[11px] text-[var(--text-muted)] font-bold">
-              PROTOCOL: EXTREME_VELOCITY
-            </div>
-          </div>
-
-          {/* Pillar 02 */}
-          <div className="bg-[var(--bg-surface-subtle)] border-2 border-[var(--border-main)] p-6 shadow-[4px_4px_0px_rgba(0,0,0,0.15)] flex flex-col justify-between group border-t-4 border-t-[#da261c]">
-            <div>
-              <div className="flex justify-between items-center mb-4">
-                <span className="font-mono text-xs text-[#da261c] font-black uppercase">
-                  02 // DEEP TECHNOLOGY
-                </span>
-                <Shield className="w-5 h-5 text-[#da261c]" />
-              </div>
-              <h4 className="font-headline font-black text-lg text-[var(--text-main)] mb-1 uppercase">
-                Hardcore Infrastructure
-              </h4>
-              <p className="font-headline text-sm text-[var(--text-muted)] leading-relaxed mt-2">
-                We don't build demos. We build ZK circuits, DePIN edge nodes, agentic AI systems, and cross-chain relayers that hold up in production. The hard problems are the ones we choose first.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-[var(--border-main)] font-mono text-[11px] text-[var(--text-muted)] font-bold">
-              FOCUS: WEBSPEC_DEPIN_ZK
-            </div>
-          </div>
-
-          {/* Pillar 03 */}
-          <div className="bg-[var(--bg-surface-subtle)] border-2 border-[var(--border-main)] p-6 shadow-[4px_4px_0px_rgba(0,0,0,0.15)] flex flex-col justify-between group">
-            <div>
-              <div className="flex justify-between items-center mb-4">
-                <span className="font-mono text-xs text-[#da261c] font-black uppercase">
-                  03 // GLOBAL IMPACT
-                </span>
-                <Globe className="w-5 h-5 text-[#001dc2]" />
-              </div>
-              <h4 className="font-headline font-black text-lg text-[var(--text-main)] mb-1 uppercase">
-                From India, For The World
-              </h4>
-              <p className="font-headline text-sm text-[var(--text-muted)] leading-relaxed mt-2">
-                We come from a tier-3 college that didn't believe in us. We're building open-source software that the world actually uses. That's the whole point.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-[var(--border-main)] font-mono text-[11px] text-[var(--text-muted)] font-bold">
-              IMPACT: OPEN_SOURCE_GLOBAL
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
   );

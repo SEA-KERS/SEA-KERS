@@ -32,10 +32,10 @@ Stats Telemetry Bar:
 
 
 --------------------------------------------------------------------------------
-3. SECTION 1: HACKATHON VICTORIES (OUR TRACK RECORD - 20+ WINS)
+3. SECTION 1: CHALLENGES CONQUERED (WINS)
 --------------------------------------------------------------------------------
-Section Header: OUR TRACK RECORD // 20+ GLOBAL VICTORIES
-Title: Hackathon Victories
+Section Header: OUR TRACK RECORD
+Title: Challenges Conquered
 Subtitle: We don't claim capability — we prove it. Every win on this list is a timestamp of what we built under pressure, on a deadline, against the best in the room.
 
 Track Filters: ALL | ecell | IEEE | IISc | MSME | HAL
@@ -202,10 +202,9 @@ PROJECT REPOSITORIES:
 
 
 --------------------------------------------------------------------------------
-5. SECTION 3: ENGINEERING ROSTER (12 INNOVATORS)
+5. SECTION 3: MASTER MINDS (12 INNOVATORS)
 --------------------------------------------------------------------------------
-Section Header: THE HUMAN LAYER // 12 INNOVATORS
-Title: Engineering Roster
+Title: Master Minds
 Subtitle: Young, Hungry, and Building
 
 Quote Block:
@@ -335,23 +334,6 @@ The Team Character Paragraph:
 Mission Statement Banner:
   Young Minds Innovating from India to the World
 
-Three Core Pillars:
-
-Pillar 01: SPEED & INTENSITY
-  Subtitle: 48-Hour Sprint Mastery
-  Description: Complex ideas to functional code in under 48 hours. We've done it twenty times. The clock is never an excuse — it's the condition we were trained in.
-  Protocol Tag: PROTOCOL: EXTREME_VELOCITY
-
-Pillar 02: DEEP TECHNOLOGY
-  Subtitle: Hardcore Infrastructure
-  Description: We don't build demos. We build ZK circuits, DePIN edge nodes, agentic AI systems, and cross-chain relayers that hold up in production. The hard problems are the ones we choose first.
-  Focus Tag: FOCUS: WEBSPEC_DEPIN_ZK
-
-Pillar 03: GLOBAL IMPACT
-  Subtitle: From India, For The World
-  Description: We come from a tier-3 college that didn't believe in us. We're building open-source software that the world actually uses. That's the whole point.
-  Impact Tag: IMPACT: OPEN_SOURCE_GLOBAL
-
 
 --------------------------------------------------------------------------------
 7. FOOTER & PROTOCOL STATUS
@@ -361,9 +343,9 @@ Brand Bio: High-performance collegiate engineering collective. Winning global ha
 
 Navigation Links:
   - About Us & Mission
-  - Hackathon Victories (20+)
+  - Challenges Conquered
   - Open Source Projects
-  - Engineering Roster
+  - Master Minds
 
 Channels & Networks:
   - GitHub Repositories
