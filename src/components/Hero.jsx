@@ -15,8 +15,8 @@ export default function Hero() {
               <span className="text-[#da261c]">TEAM SEA-KERS</span>
             </h1>
 
-            <p className="font-headline text-base sm:text-lg text-[var(--text-muted)] max-w-2xl font-normal leading-relaxed">
-              A high-performance engineering crew born in 48-hour hackathon sprints. Out-engineering international competition, building Web3, AI, and DePIN infrastructure.
+            <p className="font-headline text-lg sm:text-xl md:text-2xl text-[var(--text-muted)] max-w-2xl font-normal leading-relaxed">
+              Young engineers. Hungry builders. Innovating from India to the World
             </p>
           </div>
 

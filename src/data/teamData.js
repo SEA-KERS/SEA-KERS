@@ -7,128 +7,139 @@ export const WINS_DATA = [
     title: "1st Place: DePIN Infrastructure",
     hackathon: "Solana Breakpoint Hackathon 2025",
     location: "Lisbon, Portugal",
-    track: "DePIN",
+    track: "ecell",
     award: "WINNERS",
-    prize: "$45,000 USD",
     date: "Jan 2025",
-    hash: "0x882F...F42A",
     projectRef: "neon-mesh",
     tagline: "Sub-second DePIN edge compute orchestration layer for 10,000+ IoT nodes.",
     techStack: ["Solana", "Rust", "DePIN", "gRPC"],
     description: "Built Neon Mesh, a distributed edge-compute orchestration layer capable of routing sub-second telemetry across 10,000+ IoT nodes.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+    images: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     id: "win-02",
     title: "Grand Prize: ZK-Privacy Shield",
     hackathon: "ETHIndia 2024",
     location: "Bengaluru, India",
-    track: "ZK-Proofs",
+    track: "IISc",
     award: "GRAND PRIZE",
-    prize: "$30,000 USD",
     date: "Dec 2024",
-    hash: "0x221A...A901",
     projectRef: "zk-pulse",
     tagline: "Zero-knowledge identity verification protocol with biometric zero-leakage.",
     techStack: ["Circom", "Solidity", "SnarkJS", "Ethereum"],
     description: "Created zero-knowledge identity proof verification for decentralized identity without revealing sensitive biometric data.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80"
+    images: [
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     id: "win-03",
     title: "Best Agentic AI Architecture",
     hackathon: "Global AI Safety Hackathon 2024",
     location: "San Francisco, USA",
-    track: "AI & Autonomous",
+    track: "IEEE",
     award: "WINNERS",
-    prize: "$25,000 USD",
     date: "Nov 2024",
-    hash: "0xCC15...55B2",
     projectRef: "kodex-sentinel",
     tagline: "Real-time AI smart contract auditor & consensus vulnerability scanner.",
     techStack: ["Python", "PyTorch", "LangGraph", "FastAPI"],
     description: "Developed multi-agent consensus verification preventing model hallucination in smart contract automated code generation.",
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80"
+    images: [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     id: "win-04",
     title: "Best Interoperability Protocol",
     hackathon: "Cosmos Interop Hack 2024",
     location: "Berlin, Germany",
-    track: "Cross-Chain",
+    track: "MSME",
     award: "BEST TEAM",
-    prize: "$20,000 USD",
     date: "Oct 2024",
-    hash: "0x99FD...DE1",
     projectRef: "hyper-bridge",
     tagline: "Zero-latency cross-chain packet relay engine with threshold multi-sig.",
     techStack: ["Cosmos SDK", "IBC", "Go", "Tendermint"],
     description: "Zero-latency cross-chain packet relay engine connecting EVM and Cosmos SDK chains with threshold signature validation.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80"
+    images: [
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     id: "win-05",
     title: "1st Place: High-Frequency DeFi",
     hackathon: "HackMIT 2024",
     location: "Cambridge, USA",
-    track: "FinTech & Web3",
+    track: "HAL",
     award: "WINNERS",
-    prize: "$15,000 USD",
     date: "Sep 2024",
-    hash: "0x77A1...991B",
     projectRef: "vector-trade",
     tagline: "Vectorized SIMD order matching engine running directly on WebAssembly.",
     techStack: ["C++", "WebAssembly", "TypeScript", "Solana"],
     description: "Sub-millisecond order matching engine executing on-chain limit orders using vectorized CPU operations.",
-    image: "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=600&q=80"
+    images: [
+      "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     id: "win-06",
     title: "Best Developer Tooling",
     hackathon: "Chainlink Constellation 2024",
     location: "Global Virtual",
-    track: "Oracles & Tooling",
+    track: "IEEE",
     award: "RUNNER UP",
-    prize: "$18,000 USD",
     date: "Aug 2024",
-    hash: "0x44E2...112C",
     projectRef: "oracle-sentinel",
     tagline: "Real-time oracle anomaly detector for price manipulation vectors.",
     techStack: ["Chainlink CCIP", "Solidity", "Next.js"],
     description: "Real-time anomaly detector monitoring price oracle feeds for latency spikes and flash loan manipulation vectors.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
+    images: [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     id: "win-07",
     title: "1st Place: On-Chain Gaming Engine",
     hackathon: "Autonomous Worlds Hackathon",
     location: "Istanbul, Turkey",
-    track: "Gaming Infra",
+    track: "ecell",
     award: "WINNERS",
-    prize: "$22,000 USD",
     date: "Jul 2024",
-    hash: "0x11B9...883A",
     projectRef: "ecs-realm",
     tagline: "On-chain Entity-Component-System spatial physics engine.",
     techStack: ["MUD Framework", "Solidity", "Three.js"],
     description: "Entity-Component-System engine executing complex spatial physics completely on Ethereum L2 state contracts.",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+    images: [
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
+    ]
   },
   {
     id: "win-08",
     title: "Grand Winner: Edge AI Vision",
     hackathon: "NVIDIA Jetson Innovation Challenge",
     location: "Tokyo, Japan",
-    track: "Edge AI",
+    track: "HAL",
     award: "GRAND PRIZE",
-    prize: "$35,000 USD",
     date: "Jun 2024",
-    hash: "0xFE33...9011",
     projectRef: "edge-vision-ai",
     tagline: "Autonomous drone navigation AI optimized for Jetson CUDA microprocessors.",
     techStack: ["TensorRT", "CUDA", "C++", "OpenCV"],
     description: "Ultra-fast thermal detection algorithm running on low-power Jetson Orin microprocessors for drone autonomous flight.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80"
+    images: [
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+    ]
   }
 ];
 

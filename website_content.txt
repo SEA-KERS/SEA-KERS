@@ -22,8 +22,7 @@ Headline:
   TEAM SEA-KERS
 
 Subtitle:
-  A high-performance engineering crew born in 48-hour hackathon sprints.
-  Out-engineering international competition, building Web3, AI, and DePIN infrastructure.
+  Young engineers. Hungry builders. Innovating from India to the World
 
 Stats Telemetry Bar:
   - 20+ Hackathon Wins
@@ -37,9 +36,9 @@ Stats Telemetry Bar:
 --------------------------------------------------------------------------------
 Section Header: OUR TRACK RECORD // 20+ GLOBAL VICTORIES
 Title: Hackathon Victories
-Subtitle: Empirical proof of engineering capability. On-chain verified hackathon wins spanning global web3 and deep-tech hackathons.
+Subtitle: We don't claim capability — we prove it. Every win on this list is a timestamp of what we built under pressure, on a deadline, against the best in the room.
 
-Track Filters: ALL | DePIN | ZK-Proofs | AI & Autonomous | Cross-Chain | FinTech & Web3 | Edge AI
+Track Filters: ALL | ecell | IEEE | IISc | MSME | HAL
 
 WIN RECORDS:
 
@@ -48,88 +47,88 @@ WIN RECORDS:
   Hackathon: Solana Breakpoint Hackathon 2025
   Location & Date: Lisbon, Portugal • Jan 2025
   Award Tag: WINNERS
-  Prize: $45,000 USD
-  Verification Hash: 0x882F...F42A
+  Track Filter: ecell
   Tech Stack: Solana, Rust, DePIN, gRPC
   Tagline: Sub-second DePIN edge compute orchestration layer for 10,000+ IoT nodes.
   Description: Built Neon Mesh, a distributed edge-compute orchestration layer capable of routing sub-second telemetry across 10,000+ IoT nodes.
+  Modal Features: Interactive Image Carousel / Gallery
 
 [Win 02]
   Title: Grand Prize: ZK-Privacy Shield
   Hackathon: ETHIndia 2024
   Location & Date: Bengaluru, India • Dec 2024
   Award Tag: GRAND PRIZE
-  Prize: $30,000 USD
-  Verification Hash: 0x221A...A901
+  Track Filter: IISc
   Tech Stack: Circom, Solidity, SnarkJS, Ethereum
   Tagline: Zero-knowledge identity verification protocol with biometric zero-leakage.
   Description: Created zero-knowledge identity proof verification for decentralized identity without revealing sensitive biometric data.
+  Modal Features: Interactive Image Carousel / Gallery
 
 [Win 03]
   Title: Best Agentic AI Architecture
   Hackathon: Global AI Safety Hackathon 2024
   Location & Date: San Francisco, USA • Nov 2024
   Award Tag: WINNERS
-  Prize: $25,000 USD
-  Verification Hash: 0xCC15...55B2
+  Track Filter: IEEE
   Tech Stack: Python, PyTorch, LangGraph, FastAPI
   Tagline: Real-time AI smart contract auditor & consensus vulnerability scanner.
   Description: Developed multi-agent consensus verification preventing model hallucination in smart contract automated code generation.
+  Modal Features: Interactive Image Carousel / Gallery
 
 [Win 04]
   Title: Best Interoperability Protocol
   Hackathon: Cosmos Interop Hack 2024
   Location & Date: Berlin, Germany • Oct 2024
   Award Tag: BEST TEAM
-  Prize: $20,000 USD
-  Verification Hash: 0x99FD...DE1
+  Track Filter: MSME
   Tech Stack: Cosmos SDK, IBC, Go, Tendermint
   Tagline: Zero-latency cross-chain packet relay engine with threshold multi-sig.
   Description: Zero-latency cross-chain packet relay engine connecting EVM and Cosmos SDK chains with threshold signature validation.
+  Modal Features: Interactive Image Carousel / Gallery
 
 [Win 05]
   Title: 1st Place: High-Frequency DeFi
   Hackathon: HackMIT 2024
   Location & Date: Cambridge, USA • Sep 2024
   Award Tag: WINNERS
-  Prize: $15,000 USD
-  Verification Hash: 0x77A1...991B
+  Track Filter: HAL
   Tech Stack: C++, WebAssembly, TypeScript, Solana
   Tagline: Vectorized SIMD order matching engine running directly on WebAssembly.
   Description: Sub-millisecond order matching engine executing on-chain limit orders using vectorized CPU operations.
+  Modal Features: Interactive Image Carousel / Gallery
 
 [Win 06]
   Title: Best Developer Tooling
   Hackathon: Chainlink Constellation 2024
   Location & Date: Global Virtual • Aug 2024
   Award Tag: RUNNER UP
-  Prize: $18,000 USD
-  Verification Hash: 0x44E2...112C
+  Track Filter: IEEE
   Tech Stack: Chainlink CCIP, Solidity, Next.js
   Tagline: Real-time oracle anomaly detector for price manipulation vectors.
   Description: Real-time anomaly detector monitoring price oracle feeds for latency spikes and flash loan manipulation vectors.
+  Modal Features: Interactive Image Carousel / Gallery
 
 [Win 07]
   Title: 1st Place: On-Chain Gaming Engine
   Hackathon: Autonomous Worlds Hackathon
   Location & Date: Istanbul, Turkey • Jul 2024
   Award Tag: WINNERS
-  Prize: $22,000 USD
-  Verification Hash: 0x11B9...883A
+  Track Filter: ecell
   Tech Stack: MUD Framework, Solidity, Three.js
   Tagline: On-chain Entity-Component-System spatial physics engine.
   Description: Entity-Component-System engine executing complex spatial physics completely on Ethereum L2 state contracts.
+  Modal Features: Interactive Image Carousel / Gallery
 
 [Win 08]
   Title: Grand Winner: Edge AI Vision
   Hackathon: NVIDIA Jetson Innovation Challenge
   Location & Date: Tokyo, Japan • Jun 2024
   Award Tag: GRAND PRIZE
-  Prize: $35,000 USD
-  Verification Hash: 0xFE33...9011
+  Track Filter: HAL
   Tech Stack: TensorRT, CUDA, C++, OpenCV
   Tagline: Autonomous drone navigation AI optimized for Jetson CUDA microprocessors.
   Description: Ultra-fast thermal detection algorithm running on low-power Jetson Orin microprocessors for drone autonomous flight.
+  Modal Features: Interactive Image Carousel / Gallery
 
 
 --------------------------------------------------------------------------------
@@ -137,7 +136,7 @@ WIN RECORDS:
 --------------------------------------------------------------------------------
 Section Header: CODE ARTIFACTS // OPEN SOURCE REPOSITORIES
 Title: Featured Repositories
-Subtitle: Production-grade protocols, research implementations, and infrastructure built by Team SEA-KERS.
+Subtitle: Complete proofs of concept, engineered from scratch within brutal time constraints. Every Product here was ideated, built, validated and shipped in hours.
 
 PROJECT REPOSITORIES:
 
@@ -207,7 +206,10 @@ PROJECT REPOSITORIES:
 --------------------------------------------------------------------------------
 Section Header: THE HUMAN LAYER // 12 INNOVATORS
 Title: Engineering Roster
-Subtitle: Architects of the collective. Lead engineers, cryptographers, and systems hackers who ship under pressure.
+Subtitle: Young, Hungry, and Building
+
+Quote Block:
+  "What you seek is seeking you." We seek greater heights, harder problems, innovations that push human potential forward and build a better future for everyone. We're Innovators who aren't waiting for permission to create.
 
 SUBSECTION A: CORE TEAM (8 Members - 4 Grid Columns)
 
@@ -314,21 +316,41 @@ SUBSECTION B: TEAM MEMBERS (4 Members - 4 Grid Columns)
 --------------------------------------------------------------------------------
 6. SECTION 4: ABOUT US & OUR MISSION
 --------------------------------------------------------------------------------
-Section Header: THE FOUNDATIONAL DIRECTIVE
-Title: Our Mission
-Subtitle: Accelerating technical frontiers through collaborative engineering, zero rent extraction, and high-speed protocol deployment.
+Section Header: THE FOUNDATIONAL STORY // ORIGINS & DIRECTIVE
+Title: About Us & Our Mission
 
-Pillar 01: SPEED & INTENSITY (48-Hour Sprint Mastery)
-  Description: We thrive in high-pressure hackathon sprints, taking complex ideas from theoretical whitepapers to functional production code in under 48 hours.
-  Protocol: EXTREME_VELOCITY
+Opening Paragraph:
+  We started as a handful of college students with more ambition than resources. No labs. No funding. No institutional backing. Just a group of young engineers who believed they could compete with anyone and set out to prove it.
 
-Pillar 02: DEEP TECHNOLOGY (Hardcore Infrastructure)
-  Description: We engineer core Web3 primitives, zero-knowledge privacy circuits, DePIN edge-compute nodes, and agentic AI security auditors that scale globally.
-  Focus: WEBSPEC_DEPIN_ZK
+The Lore Paragraph:
+  From our sophomore year, we were building — different ideas, different team combinations, different hackathons. For two years, we failed. Eliminated early. We watched other teams take the prize while we figured out what we were missing. But we never stopped building, never lost hope. Every loss was a lesson. We believed in ourselves as a team.
 
-Pillar 03: GLOBAL IMPACT (From India, For The World)
-  Description: Born as a collegiate collective, our goal is to build world-class open-source software with zero rent-extraction and maximum developer utility.
-  Impact: OPEN_SOURCE_GLOBAL
+  We challenged ourselves to be winners. We packed into buses, trains, and shared hotel rooms — traveling across South India on a shoestring budget, from Tamil Nadu to Kerala, Karnataka, Odisha, and Bengaluru. We walked into venues where IIT and IISc teams had faculty mentors, funding, and credibility behind them. We had one thing: our capabilities and each other. We won anyway. Twenty times over.
+
+The Team Character Paragraph:
+  What makes SEA-KERS isn't a tech stack — it's a mindset. We are diverse: different colleges, different backgrounds, different disciplines. But every challenge we faced taught us one thing: never quit, never settle. Passion and grit drive us to give 200%.
+
+  The name says it all. SEA-KERS are seekers — a ship charting its own course toward a ocean of oppurtunites. Our symbol is the caret ^ — because we believe in powering upward. As individuals. As a team. As a nation.
+
+Mission Statement Banner:
+  Young Minds Innovating from India to the World
+
+Three Core Pillars:
+
+Pillar 01: SPEED & INTENSITY
+  Subtitle: 48-Hour Sprint Mastery
+  Description: Complex ideas to functional code in under 48 hours. We've done it twenty times. The clock is never an excuse — it's the condition we were trained in.
+  Protocol Tag: PROTOCOL: EXTREME_VELOCITY
+
+Pillar 02: DEEP TECHNOLOGY
+  Subtitle: Hardcore Infrastructure
+  Description: We don't build demos. We build ZK circuits, DePIN edge nodes, agentic AI systems, and cross-chain relayers that hold up in production. The hard problems are the ones we choose first.
+  Focus Tag: FOCUS: WEBSPEC_DEPIN_ZK
+
+Pillar 03: GLOBAL IMPACT
+  Subtitle: From India, For The World
+  Description: We come from a tier-3 college that didn't believe in us. We're building open-source software that the world actually uses. That's the whole point.
+  Impact Tag: IMPACT: OPEN_SOURCE_GLOBAL
 
 
 --------------------------------------------------------------------------------
