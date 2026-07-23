@@ -1,37 +1,48 @@
-# Team SEA-KERS Website 🚀
+# Team SEA-KERS Website
 
-Official production website for **Team SEA-KERS** (Builders Collective)—showcasing 20+ global hackathon victories, open-source repositories, engineering roster, and our core mission.
+The official website for Team SEA-KERS, showcasing hackathon victories, open-source projects, the engineering roster, and the collective's mission.
 
-- **Live Production URL**: [https://seakers.vercel.app](https://seakers.vercel.app)
+The app uses TanStack Start with streaming server-side rendering on Cloudflare Workers. Source code is strict TypeScript, Vite development runs inside the Workers runtime through Cloudflare's Vite plugin, and pnpm manages dependencies.
 
----
+## Local development
 
-## 💻 Local Development Setup
+Requirements: Node.js 20.19 or newer and pnpm 11.
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/fightermanoj/Team-SEA-KERS.git
-   cd Team-SEA-KERS
-   ```
+```bash
+pnpm install
+pnpm dev
+```
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+Open `http://localhost:3000`.
 
-3. **Run local dev server**:
-   ```bash
-   npm run dev
-   ```
-   Open `http://127.0.0.1:5173/` in your browser.
+## Verification
 
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
+```bash
+pnpm lint
+pnpm typecheck
+pnpm build
+pnpm preview
+```
 
----
+`pnpm preview` runs the production Worker build locally.
 
-## 📄 License
+## Cloudflare Workers
 
-Licensed under the **MIT Open Source Protocol**. Precision engineered from India, for the world.
+Authenticate once, then deploy:
+
+```bash
+pnpm dlx wrangler login
+pnpm deploy
+```
+
+Generate TypeScript declarations after adding or changing Cloudflare bindings:
+
+```bash
+pnpm cf-typegen
+```
+
+Worker settings live in `wrangler.jsonc`; the fetch entry is `src/server.ts`.
+
+## License
+
+Licensed under the MIT Open Source Protocol.
