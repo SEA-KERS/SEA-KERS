@@ -1,13 +1,26 @@
 import { HeadContent, Link, Outlet, Scripts } from "@tanstack/react-router";
+import { SITE_CONFIG } from "../config/site";
 
 export function RootLayout() {
   return (
-    <html lang="en" className="light">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
       <body>
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
         <Outlet />
+        {SITE_CONFIG.cloudflareAnalyticsToken ? (
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({
+              token: SITE_CONFIG.cloudflareAnalyticsToken,
+            })}
+          />
+        ) : null}
         <Scripts />
       </body>
     </html>
@@ -16,21 +29,17 @@ export function RootLayout() {
 
 export function NotFoundPage() {
   return (
-    <main className="min-h-screen bg-(--bg-page) px-6 py-24 text-(--text-main)">
-      <div className="mx-auto max-w-2xl border-2 border-(--border-main) bg-(--bg-surface) p-8 shadow-[6px_6px_0px_rgba(0,0,0,0.8)]">
-        <p className="font-mono text-sm font-bold text-[#da261c]">
-          404 // ROUTE_NOT_FOUND
-        </p>
-        <h1 className="mt-3 font-headline text-4xl font-black uppercase">
-          Signal lost
-        </h1>
-        <p className="mt-3 text-(--text-muted)">
+    <main
+      id="main-content"
+      className="grid min-h-screen place-items-center bg-(--background) px-6 py-24 text-(--foreground)"
+    >
+      <div className="surface-card w-full max-w-2xl p-8">
+        <p className="section-kicker">404 / Route not found</p>
+        <h1 className="mt-3 font-headline text-4xl font-bold">Signal lost</h1>
+        <p className="mt-3 text-(--muted-foreground)">
           The page you requested does not exist.
         </p>
-        <Link
-          to="/"
-          className="mt-6 inline-block border-2 border-black bg-[#da261c] px-4 py-2 font-mono text-sm font-bold text-white"
-        >
+        <Link to="/" className="button-primary mt-6">
           Return home
         </Link>
       </div>
