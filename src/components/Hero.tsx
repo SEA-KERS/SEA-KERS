@@ -1,74 +1,56 @@
 import CyberDotMatrix from "./CyberDotMatrix";
+import type { Theme } from "../types";
 
-export default function Hero() {
+interface HeroProps {
+  theme: Theme;
+}
+
+const stats = [
+  ["20+", "Hackathon wins"],
+  ["$350K+", "Grants and prizes"],
+  ["12.4K+", "Active nodes"],
+  ["100%", "Open source"],
+] as const;
+
+export default function Hero({ theme }: HeroProps) {
   return (
     <section
       id="hero-section"
-      className="relative flex flex-col justify-center px-4 md:px-8 overflow-hidden pt-24 pb-8 border-b-2 border-(--border-main)"
+      aria-labelledby="hero-title"
+      className="border-b border-(--border) px-4 pb-16 pt-44 md:px-8 md:pt-32"
     >
-      <div className="max-w-7xl mx-auto w-full flex flex-col justify-center">
-        {/* Top Grid: Headline + Logo */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-6">
-          {/* Left Column: Headline & Subtitle */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <h1 className="font-headline font-black text-4xl sm:text-6xl md:text-7xl text-(--text-main) leading-[1.05] uppercase tracking-tight mb-6">
-              WE ARE
+      <div className="mx-auto max-w-7xl">
+        <div className="grid items-center gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <p className="section-kicker">Engineering collective / India</p>
+            <h1
+              id="hero-title"
+              className="mt-4 max-w-4xl font-headline text-5xl font-bold leading-[1.02] tracking-[-0.04em] sm:text-6xl md:text-7xl"
+            >
+              Curious minds.
               <br />
-              <span className="text-[#da261c]">TEAM SEA-KERS</span>
+              <span className="text-(--primary-text)">Persistent builders.</span>
             </h1>
-
-            <p className="font-headline text-lg sm:text-xl md:text-2xl text-(--text-muted) max-w-2xl font-normal leading-relaxed">
-              Young engineers. Hungry builders. Innovating from India to the
-              World
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-(--muted-foreground) md:text-xl">
+              Team SEA-KERS builds rigorous open technology and competes on the
+              world stage across AI, Web3, and decentralized infrastructure.
             </p>
           </div>
-
-          {/* Right Column: Animated Logo Canvas */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end items-center w-full">
-            <CyberDotMatrix />
+          <div className="lg:col-span-5">
+            <CyberDotMatrix theme={theme} />
           </div>
         </div>
 
-        {/* Stats Box (Aligned to max-w-7xl container) */}
-        <div className="w-full">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 border-2 border-(--border-main) bg-(--bg-surface) p-4 shadow-[4px_4px_0px_rgba(0,0,0,0.15)] text-center">
-            <div className="flex flex-col items-center p-2 border-r-2 border-(--border-main) last:border-r-0">
-              <span className="font-headline font-black text-2xl sm:text-3xl text-[#da261c]">
-                20+
-              </span>
-              <span className="font-mono text-xs text-(--text-muted) uppercase tracking-wider font-bold mt-0.5">
-                Hackathon Wins
-              </span>
+        <dl className="surface-card mt-12 grid grid-cols-2 divide-x divide-y divide-(--border) overflow-hidden sm:grid-cols-4 sm:divide-y-0">
+          {stats.map(([value, label]) => (
+            <div key={label} className="p-5 sm:p-6">
+              <dt className="text-sm text-(--muted-foreground)">{label}</dt>
+              <dd className="mt-1 font-headline text-2xl font-bold text-(--foreground)">
+                {value}
+              </dd>
             </div>
-
-            <div className="flex flex-col items-center p-2 border-r-2 border-(--border-main) last:border-r-0">
-              <span className="font-headline font-black text-2xl sm:text-3xl text-(--text-main)">
-                $350K+
-              </span>
-              <span className="font-mono text-xs text-(--text-muted) uppercase tracking-wider font-bold mt-0.5">
-                Grants & Prizes
-              </span>
-            </div>
-
-            <div className="flex flex-col items-center p-2 border-r-2 border-(--border-main) last:border-r-0">
-              <span className="font-headline font-black text-2xl sm:text-3xl text-[#001dc2]">
-                12.4K+
-              </span>
-              <span className="font-mono text-xs text-(--text-muted) uppercase tracking-wider font-bold mt-0.5">
-                Active Nodes
-              </span>
-            </div>
-
-            <div className="flex flex-col items-center p-2">
-              <span className="font-headline font-black text-2xl sm:text-3xl text-[#da261c]">
-                100%
-              </span>
-              <span className="font-mono text-xs text-(--text-muted) uppercase tracking-wider font-bold mt-0.5">
-                Open Source
-              </span>
-            </div>
-          </div>
-        </div>
+          ))}
+        </dl>
       </div>
     </section>
   );

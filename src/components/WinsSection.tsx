@@ -1,15 +1,17 @@
 import { useState } from "react";
 import {
   Award,
-  Search,
-  ExternalLink,
-  Info,
-  MapPin,
   Calendar,
   ChevronLeft,
   ChevronRight,
+  Info,
+  MapPin,
+  Search,
+  X,
 } from "lucide-react";
 import { WINS_DATA } from "../data/teamData";
+import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
+import { getImageSrcSet } from "../utils/images";
 import type { WinRecord } from "../types";
 
 interface WinsSectionProps {
@@ -17,7 +19,7 @@ interface WinsSectionProps {
 }
 
 const tracks = [
-  { label: "ALL", value: "ALL" },
+  { label: "All", value: "ALL" },
   { label: "E-Cell", value: "ecell" },
   { label: "IEEE", value: "IEEE" },
   { label: "IISc", value: "IISc" },
@@ -30,86 +32,87 @@ type TrackFilter = (typeof tracks)[number]["value"];
 export default function WinsSection({ onSelectProject }: WinsSectionProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTrack, setSelectedTrack] = useState<TrackFilter>("ALL");
-  const [activeWinModal, setActiveWinModal] = useState<WinRecord | null>(null);
-  const [currentModalImageIdx, setCurrentModalImageIdx] = useState(0);
+  const [activeWin, setActiveWin] = useState<WinRecord | null>(null);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const { dialogRef, rememberTrigger } = useAccessibleDialog(
+    activeWin !== null,
+    () => setActiveWin(null),
+  );
 
   const filteredWins = WINS_DATA.filter((win) => {
-    const matchesSearch =
-      win.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      win.hackathon.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      win.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesTrack = selectedTrack === "ALL" || win.track === selectedTrack;
-    return matchesSearch && matchesTrack;
+    const query = searchQuery.toLowerCase();
+    return (
+      (selectedTrack === "ALL" || win.track === selectedTrack) &&
+      [win.title, win.hackathon, win.description].some((value) =>
+        value.toLowerCase().includes(query),
+      )
+    );
   });
 
-  const openWinModal = (win: WinRecord) => {
-    setActiveWinModal(win);
-    setCurrentModalImageIdx(0);
+  const openWin = (win: WinRecord, trigger: HTMLElement) => {
+    rememberTrigger(trigger);
+    setActiveImageIndex(0);
+    setActiveWin(win);
   };
 
-  const nextModalImage = () => {
-    if (!activeWinModal || !activeWinModal.images) return;
-    setCurrentModalImageIdx(
-      (prev) => (prev + 1) % activeWinModal.images.length,
-    );
-  };
-
-  const prevModalImage = () => {
-    if (!activeWinModal || !activeWinModal.images) return;
-    setCurrentModalImageIdx((prev) =>
-      prev === 0 ? activeWinModal.images.length - 1 : prev - 1,
+  const moveImage = (direction: -1 | 1) => {
+    if (!activeWin) return;
+    setActiveImageIndex(
+      (current) =>
+        (current + direction + activeWin.images.length) % activeWin.images.length,
     );
   };
 
   return (
     <section
       id="wins-section"
-      className="py-16 px-4 md:px-8 bg-(--bg-surface) border-b-2 border-(--border-main)"
+      aria-labelledby="wins-title"
+      className="border-b border-(--border) px-4 py-20 md:px-8"
     >
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 border-b-2 border-(--border-main) pb-6 gap-4">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-6 md:grid-cols-[1fr_18rem] md:items-end">
           <div>
-            <div className="inline-flex items-center gap-2 font-mono text-xs text-[#001dc2] font-bold uppercase tracking-widest mb-2 border-2 border-(--border-main) px-3 py-1 bg-(--bg-surface-subtle)">
-              <Award className="w-4 h-4 text-[#da261c]" />
-              <span>OUR TRACK RECORD</span>
-            </div>
-            <h2 className="font-headline font-black text-3xl md:text-5xl uppercase text-(--text-main) tracking-tight">
-              Challenges Conquered
+            <p className="section-kicker">
+              <Award aria-hidden="true" className="h-4 w-4" />
+              Track record
+            </p>
+            <h2 id="wins-title" className="mt-3 font-headline text-4xl font-bold md:text-5xl">
+              Challenges conquered
             </h2>
-            <p className="font-headline text-(--text-muted) text-base md:text-lg max-w-2xl mt-2 font-normal leading-relaxed">
-              We don't claim capability we prove it. Every win on this list is a
-              timestamp of what we built under pressure, on a deadline, against
-              the best in the room.
+            <p className="mt-4 max-w-3xl leading-7 text-(--muted-foreground)">
+              Every record represents a working system built under pressure,
+              tested against a deadline, and presented to expert judges.
             </p>
           </div>
-
-          {/* Search Input */}
-          <div className="relative w-full md:w-72">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-(--text-muted)" />
-            <input
-              type="text"
-              placeholder="Search challenges..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-(--bg-surface-subtle) border-2 border-(--border-main) pl-9 pr-4 py-2 font-mono text-xs text-(--text-main) focus:outline-none focus:border-[#da261c] transition-colors placeholder:text-(--text-muted) font-bold"
-            />
+          <div>
+            <label htmlFor="win-search" className="mb-1.5 block text-sm font-semibold">
+              Search challenges
+            </label>
+            <div className="relative">
+              <Search aria-hidden="true" className="pointer-events-none absolute right-3 top-3.5 h-4 w-4 text-(--muted-foreground)" />
+              <input
+                id="win-search"
+                type="search"
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                className="input-control search-control"
+                placeholder="Project or hackathon"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Track Filter Pills (ecell, IEEE, IISc, MSME, HAL) */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8">
-          <span className="font-mono text-xs font-bold text-(--text-muted) uppercase shrink-0 mr-2">
-            TRACK FILTER:
-          </span>
+        <div className="mt-8 flex items-center gap-2 overflow-x-auto pb-2" role="group" aria-label="Filter wins by track">
           {tracks.map((track) => (
             <button
               key={track.value}
+              type="button"
               onClick={() => setSelectedTrack(track.value)}
-              className={`font-mono text-xs px-3 py-1 font-bold border-2 transition-all shrink-0 ${
+              aria-pressed={selectedTrack === track.value}
+              className={`min-h-10 shrink-0 rounded-full px-4 text-sm font-semibold transition-colors ${
                 selectedTrack === track.value
-                  ? "bg-[#da261c] text-white border-black shadow-[2px_2px_0px_rgba(0,0,0,0.8)]"
-                  : "bg-(--bg-surface-subtle) text-(--text-main) border-(--border-main) hover:bg-(--bg-surface-high)"
+                  ? "bg-(--primary) text-(--primary-foreground)"
+                  : "bg-(--muted) text-(--muted-foreground) hover:text-(--foreground)"
               }`}
             >
               {track.label}
@@ -117,199 +120,142 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
           ))}
         </div>
 
-        {/* Wins Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredWins.map((win) => {
-            const displayImage = win.images[0];
-            return (
-              <div
-                key={win.id}
-                onClick={() => openWinModal(win)}
-                className="bg-(--bg-surface-subtle) border-2 border-(--border-main) hover:border-[#da261c] transition-all duration-200 group flex flex-col justify-between shadow-[4px_4px_0px_rgba(0,0,0,0.15)] overflow-hidden cursor-pointer"
-              >
-                <div>
-                  {/* Image Preview */}
-                  <div className="relative w-full h-44 border-b-2 border-(--border-main) overflow-hidden bg-black">
-                    <img
-                      src={displayImage}
-                      alt={win.title}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 opacity-90 group-hover:opacity-100"
-                    />
-                    <div className="absolute top-3 left-3 bg-[#da261c] text-white px-2.5 py-1 font-mono text-[11px] font-black uppercase border border-black shadow-[2px_2px_0px_rgba(0,0,0,0.9)]">
-                      {win.award}
-                    </div>
-                  </div>
+        <p className="mt-4 text-sm text-(--muted-foreground)" aria-live="polite">
+          {filteredWins.length} {filteredWins.length === 1 ? "result" : "results"}
+        </p>
 
-                  <div className="p-5">
-                    {/* Place & Date Info */}
-                    <div className="flex items-center justify-between font-mono text-xs text-(--text-muted) font-bold mb-3 pb-2 border-b border-(--border-main)">
-                      <div className="flex items-center gap-1 text-[#001dc2]">
-                        <MapPin className="w-3.5 h-3.5 text-[#da261c]" />
-                        <span>{win.location}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5 text-(--text-muted)" />
-                        <span>{win.date}</span>
-                      </div>
-                    </div>
-
-                    {/* Title & Hackathon */}
-                    <h3 className="font-headline font-black text-lg text-(--text-main) group-hover:text-[#da261c] transition-colors uppercase leading-tight mb-1">
-                      {win.title}
-                    </h3>
-                    <div className="font-mono text-xs text-(--text-muted) font-bold mb-3">
-                      {win.hackathon}
-                    </div>
-
-                    {/* One Line Project Summary */}
-                    <p className="font-headline text-xs text-(--text-muted) font-normal leading-relaxed mb-4">
-                      {win.tagline || win.description}
-                    </p>
-
-                    {/* Tech Stack Pills */}
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {win.techStack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="font-mono text-[10px] bg-(--bg-surface-high) text-(--text-main) border border-(--border-main) px-2 py-0.5 font-bold"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* More Details Button */}
-                <div className="p-5 pt-0 border-t border-(--border-main) flex items-center justify-end mt-auto">
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      openWinModal(win);
-                    }}
-                    className="w-full bg-[#da261c] hover:bg-[#b50004] text-white py-2 font-mono text-xs font-bold uppercase border border-black shadow-[2px_2px_0px_rgba(0,0,0,0.8)] active:translate-y-0.5 transition-all flex items-center justify-center gap-1.5"
-                  >
-                    <Info className="w-3.5 h-3.5" />
-                    <span>MORE DETAILS</span>
-                  </button>
-                </div>
+        <div className="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {filteredWins.map((win) => (
+            <article key={win.id} className="surface-card flex overflow-hidden flex-col">
+              <div className="relative aspect-[16/9] overflow-hidden bg-(--muted)">
+                <img
+                  src={win.images[0]}
+                  srcSet={getImageSrcSet(win.images[0])}
+                  sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  alt={`Presentation of ${win.title}`}
+                  className="h-full w-full object-cover"
+                />
+                <span className="absolute left-3 top-3 rounded-full bg-(--accent) px-3 py-1 text-xs font-bold text-(--accent-foreground)">
+                  {win.award}
+                </span>
               </div>
-            );
-          })}
+              <div className="flex flex-1 flex-col p-5">
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted-foreground)">
+                  <span className="inline-flex items-center gap-1">
+                    <MapPin aria-hidden="true" className="h-4 w-4" />
+                    {win.location}
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    <Calendar aria-hidden="true" className="h-4 w-4" />
+                    {win.date}
+                  </span>
+                </div>
+                <h3 className="mt-4 font-headline text-xl font-bold">{win.title}</h3>
+                <p className="mt-1 text-sm font-medium text-(--primary-text)">{win.hackathon}</p>
+                <p className="mt-3 flex-1 text-sm leading-6 text-(--muted-foreground)">
+                  {win.tagline || win.description}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-1.5">
+                  {win.techStack.map((tech) => (
+                    <span key={tech} className="tag">{tech}</span>
+                  ))}
+                </div>
+                <button
+                  type="button"
+                  onClick={(event) => openWin(win, event.currentTarget)}
+                  className="button-secondary mt-5 w-full"
+                  aria-label={`View details for ${win.title}`}
+                >
+                  <Info aria-hidden="true" className="h-4 w-4" />
+                  View details
+                </button>
+              </div>
+            </article>
+          ))}
         </div>
+
+        {filteredWins.length === 0 ? (
+          <div className="surface-card mt-6 p-8 text-center text-(--muted-foreground)">
+            No challenges match those filters.
+          </div>
+        ) : null}
       </div>
 
-      {/* Win Record Details Modal */}
-      {activeWinModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="bg-(--bg-surface) border-2 border-black max-w-xl w-full p-6 md:p-8 relative shadow-[8px_8px_0px_rgba(0,0,0,0.9)] max-h-[90vh] overflow-y-auto">
-            <button
-              onClick={() => setActiveWinModal(null)}
-              aria-label="Close win details"
-              className="absolute top-4 right-4 text-(--text-muted) hover:text-(--text-main) font-mono text-lg font-bold z-10"
-            >
-              ✕
+      {activeWin ? (
+        <div className="dialog-backdrop" onMouseDown={(event) => event.target === event.currentTarget && setActiveWin(null)}>
+          <div
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="win-dialog-title"
+            aria-describedby="win-dialog-description"
+            tabIndex={-1}
+            className="dialog-panel"
+          >
+            <button type="button" onClick={() => setActiveWin(null)} aria-label="Close win details" className="icon-button absolute right-4 top-4 z-10">
+              <X aria-hidden="true" className="h-5 w-5" />
             </button>
 
-            {/* Modal Image Carousel */}
-            <div className="relative w-full h-56 border-2 border-black mb-6 overflow-hidden bg-black group">
+            <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-lg bg-(--muted)">
               <img
-                src={activeWinModal.images[currentModalImageIdx]}
-                alt={activeWinModal.title}
-                className="w-full h-full object-cover transition-all duration-300"
+                src={activeWin.images[activeImageIndex]}
+                srcSet={getImageSrcSet(activeWin.images[activeImageIndex])}
+                sizes="(min-width: 768px) 42rem, 100vw"
+                width="960"
+                height="540"
+                decoding="async"
+                alt={`${activeWin.title}, image ${activeImageIndex + 1} of ${activeWin.images.length}`}
+                className="h-full w-full object-cover"
               />
-              <div className="absolute top-3 left-3 bg-[#da261c] text-white px-3 py-1 font-mono text-xs font-black uppercase border border-black shadow-[2px_2px_0px_rgba(0,0,0,0.9)]">
-                {activeWinModal.award}
-              </div>
-
-              {/* Carousel Controls if multiple images */}
-              {activeWinModal.images && activeWinModal.images.length > 1 && (
+              {activeWin.images.length > 1 ? (
                 <>
-                  <button
-                    onClick={prevModalImage}
-                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/80 hover:bg-[#da261c] text-white p-1.5 border border-white/20 transition-all"
-                    aria-label="Previous Image"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
+                  <button type="button" onClick={() => moveImage(-1)} aria-label="Previous image" className="icon-button absolute left-3 top-1/2 -translate-y-1/2 bg-(--card)">
+                    <ChevronLeft aria-hidden="true" className="h-5 w-5" />
                   </button>
-
-                  <button
-                    onClick={nextModalImage}
-                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/80 hover:bg-[#da261c] text-white p-1.5 border border-white/20 transition-all"
-                    aria-label="Next Image"
-                  >
-                    <ChevronRight className="w-5 h-5" />
+                  <button type="button" onClick={() => moveImage(1)} aria-label="Next image" className="icon-button absolute right-3 top-1/2 -translate-y-1/2 bg-(--card)">
+                    <ChevronRight aria-hidden="true" className="h-5 w-5" />
                   </button>
-
-                  {/* Carousel Dots */}
-                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-black/70 px-3 py-1 border border-white/20">
-                    {activeWinModal.images.map((_, idx) => (
+                  <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-(--card) p-2" role="group" aria-label="Choose image">
+                    {activeWin.images.map((_, index) => (
                       <button
-                        key={idx}
-                        onClick={() => setCurrentModalImageIdx(idx)}
-                        className={`h-2 transition-all ${
-                          currentModalImageIdx === idx
-                            ? "w-5 bg-[#da261c]"
-                            : "w-2 bg-white/60"
-                        }`}
+                        key={index}
+                        type="button"
+                        onClick={() => setActiveImageIndex(index)}
+                        aria-label={`Show image ${index + 1}`}
+                        aria-current={activeImageIndex === index ? "true" : undefined}
+                        className={`h-3 w-3 rounded-full ${activeImageIndex === index ? "bg-(--primary)" : "bg-(--input)"}`}
                       />
                     ))}
                   </div>
                 </>
-              )}
+              ) : null}
             </div>
 
-            <div className="flex items-center gap-2 font-mono text-xs text-[#001dc2] font-bold uppercase mb-1">
-              <MapPin className="w-3.5 h-3.5 text-[#da261c]" />
-              <span>
-                {activeWinModal.location} • {activeWinModal.date}
-              </span>
+            <p className="section-kicker mt-6">{activeWin.location} / {activeWin.date}</p>
+            <h2 id="win-dialog-title" className="mt-2 pr-12 font-headline text-3xl font-bold">{activeWin.title}</h2>
+            <p className="mt-1 text-sm font-semibold text-(--primary-text)">{activeWin.hackathon}</p>
+            <p id="win-dialog-description" className="mt-4 leading-7 text-(--muted-foreground)">{activeWin.description}</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {activeWin.techStack.map((tech) => <span key={tech} className="tag">{tech}</span>)}
             </div>
-
-            <h3 className="font-headline font-black text-2xl text-(--text-main) uppercase mb-1">
-              {activeWinModal.title}
-            </h3>
-            <div className="font-mono text-xs text-(--text-muted) font-bold mb-4">
-              {activeWinModal.hackathon}
-            </div>
-
-            <p className="font-headline text-sm text-(--text-muted) leading-relaxed mb-6 bg-(--bg-surface-subtle) p-4 border-2 border-(--border-main) font-normal">
-              {activeWinModal.description}
-            </p>
-
-            <div className="mb-6">
-              <span className="font-mono text-xs text-(--text-muted) uppercase block mb-2 font-bold">
-                TECHNOLOGY STACK:
-              </span>
-              <div className="flex flex-wrap gap-1.5">
-                {activeWinModal.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="font-mono text-xs bg-(--bg-surface-high) text-(--text-main) border border-(--border-main) px-3 py-1 font-bold"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex items-center justify-end pt-4 border-t-2 border-(--border-main)">
-              <button
-                onClick={() => {
-                  setActiveWinModal(null);
-                  if (activeWinModal.projectRef) {
-                    onSelectProject(activeWinModal.projectRef);
-                  }
-                }}
-                className="bg-[#da261c] hover:bg-[#b50004] text-white px-5 py-2.5 font-mono text-xs font-bold uppercase border-2 border-black shadow-[3px_3px_0px_rgba(0,0,0,0.8)] flex items-center gap-1.5"
-              >
-                <span>VIEW REPOSITORY</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => {
+                const projectId = activeWin.projectRef;
+                setActiveWin(null);
+                onSelectProject(projectId);
+              }}
+              className="button-primary mt-6"
+            >
+              View matching project
+            </button>
           </div>
         </div>
-      )}
+      ) : null}
     </section>
   );
 }

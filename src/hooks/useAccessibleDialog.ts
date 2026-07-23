@@ -19,29 +19,25 @@ export function useAccessibleDialog(isOpen: boolean, onClose: () => void) {
   }, [onClose]);
 
   useEffect(() => {
-    if (!isOpen) {
-      return;
-    }
+    if (!isOpen) return;
 
     const dialog = dialogRef.current;
-    if (!dialog) {
-      return;
-    }
+    if (!dialog) return;
 
     const fallbackTrigger =
       document.activeElement instanceof HTMLElement
         ? document.activeElement
         : null;
     const trigger = triggerRef.current ?? fallbackTrigger;
+    const previousBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
 
     const getFocusableElements = () =>
-      Array.from(
-        dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR),
-      ).filter((element) => element.tabIndex >= 0);
+      Array.from(dialog.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter(
+        (element) => element.tabIndex >= 0,
+      );
 
-    const focusableElements = getFocusableElements();
-    const initialFocusTarget = focusableElements[0] ?? dialog;
-    initialFocusTarget.focus();
+    (getFocusableElements()[0] ?? dialog).focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -49,21 +45,17 @@ export function useAccessibleDialog(isOpen: boolean, onClose: () => void) {
         onCloseRef.current();
         return;
       }
+      if (event.key !== "Tab") return;
 
-      if (event.key !== "Tab") {
-        return;
-      }
-
-      const currentFocusableElements = getFocusableElements();
-      if (currentFocusableElements.length === 0) {
+      const focusableElements = getFocusableElements();
+      if (focusableElements.length === 0) {
         event.preventDefault();
         dialog.focus();
         return;
       }
 
-      const firstElement = currentFocusableElements[0];
-      const lastElement =
-        currentFocusableElements[currentFocusableElements.length - 1];
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
       const activeElement = document.activeElement;
       const focusIsOutsideDialog =
         !activeElement || !dialog.contains(activeElement);
@@ -84,14 +76,11 @@ export function useAccessibleDialog(isOpen: boolean, onClose: () => void) {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousBodyOverflow;
       triggerRef.current = null;
-
-      if (trigger?.isConnected) {
-        trigger.focus();
-      }
+      if (trigger?.isConnected) trigger.focus();
     };
   }, [isOpen]);
 

@@ -1,4 +1,5 @@
-import { Target, Award, Code2, Users, Sun, Moon } from "lucide-react";
+import { Award, Code2, Moon, Sun, Target, Users } from "lucide-react";
+import brandIcon from "../assets/brand/sea-kers-icon-color.svg";
 import type { SectionId, Theme } from "../types";
 
 interface NavbarProps {
@@ -9,6 +10,13 @@ interface NavbarProps {
   toggleTheme: () => void;
 }
 
+const navItems = [
+  { id: "wins", label: "Wins", icon: Award },
+  { id: "projects", label: "Projects", icon: Code2 },
+  { id: "team", label: "Team", icon: Users },
+  { id: "about", label: "About", icon: Target },
+] as const;
+
 export default function Navbar({
   activeTab,
   setActiveTab,
@@ -16,29 +24,25 @@ export default function Navbar({
   theme,
   toggleTheme,
 }: NavbarProps) {
-  const navItems = [
-    { id: "wins", label: "Wins", icon: Award },
-    { id: "projects", label: "Projects", icon: Code2 },
-    { id: "team", label: "Team", icon: Users },
-    { id: "about", label: "About Us", icon: Target },
-  ] as const;
-
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 md:px-8 z-50 transition-all">
-      <div className="w-full bg-(--bg-surface)/95 backdrop-blur-md border-2 border-(--border-main) px-4 md:px-6 h-14 md:h-16 flex items-center justify-between shadow-[4px_4px_0px_rgba(0,0,0,0.8)]">
-        {/* Left: Team SEA-KERS (Red) */}
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-(--border) bg-(--background)/95">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3 md:flex-nowrap md:px-8">
         <a
           href="#hero-section"
           onClick={() => setActiveTab("all")}
-          className="flex items-center cursor-pointer group shrink-0"
+          className="flex min-h-11 items-center gap-2 rounded-lg pr-2 font-headline font-bold tracking-tight"
+          aria-label="Team SEA-KERS home"
         >
-          <span className="font-headline font-black tracking-tight text-base md:text-lg text-[#da261c] uppercase hover:opacity-90 transition-opacity">
-            Team SEA-KERS
+          <span className="brand-logo-tile h-9 w-9">
+            <img src={brandIcon} width="28" height="28" alt="" />
           </span>
+          <span className="hidden sm:inline">SEA-KERS</span>
         </a>
 
-        {/* Middle: Nav Tabs */}
-        <div className="flex items-center gap-1 md:gap-2 bg-(--bg-surface-subtle) p-1 border-2 border-(--border-main) overflow-x-auto">
+        <nav
+          aria-label="Primary navigation"
+          className="order-3 flex w-full items-center gap-1 overflow-x-auto rounded-lg bg-(--muted) p-1 md:order-none md:ml-auto md:w-auto"
+        >
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -48,43 +52,34 @@ export default function Navbar({
                 href={`#${item.id}-section`}
                 onClick={() => setActiveTab(item.id)}
                 aria-current={isActive ? "location" : undefined}
-                className={`flex items-center gap-1.5 px-3 py-1 font-headline text-xs md:text-sm font-bold transition-all shrink-0 ${
+                className={`flex min-h-10 shrink-0 items-center gap-1.5 rounded-md px-3 text-sm font-semibold transition-colors ${
                   isActive
-                    ? "bg-[#da261c] text-white border border-black shadow-[1.5px_1.5px_0px_rgba(0,0,0,0.9)]"
-                    : "text-(--text-main) hover:bg-(--bg-surface-high)"
+                    ? "bg-(--card) text-(--primary-text)"
+                    : "text-(--muted-foreground) hover:bg-(--card) hover:text-(--foreground)"
                 }`}
               >
-                <Icon className="w-3.5 h-3.5" />
+                <Icon aria-hidden="true" className="h-4 w-4" />
                 <span>{item.label}</span>
               </a>
             );
           })}
-        </div>
+        </nav>
 
-        {/* Right: Join action and theme toggle */}
-        <div className="flex items-center gap-2 shrink-0">
-          <button
-            onClick={onOpenJoinModal}
-            className="bg-[#da261c] px-3 py-1.5 font-mono text-xs font-bold text-white border-2 border-black shadow-[1.5px_1.5px_0px_rgba(0,0,0,0.8)] transition-all active:translate-y-0.5"
-          >
-            JOIN
+        <div className="ml-auto flex items-center gap-2 md:ml-2">
+          <button type="button" onClick={onOpenJoinModal} className="button-primary">
+            Join
           </button>
           <button
+            type="button"
             onClick={toggleTheme}
-            className="flex items-center gap-1.5 bg-(--bg-surface-subtle) hover:bg-(--bg-surface-high) text-(--text-main) px-3 py-1.5 font-mono text-xs font-bold uppercase border-2 border-(--border-main) shadow-[1.5px_1.5px_0px_rgba(0,0,0,0.15)] active:translate-y-0.5 transition-all"
-            title={`Switch to ${theme === "light" ? "Dark" : "Light"} Mode`}
+            className="icon-button"
+            title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
             aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
           >
             {theme === "light" ? (
-              <>
-                <Moon className="w-3.5 h-3.5 text-[#001dc2]" />
-                <span>DARK</span>
-              </>
+              <Moon aria-hidden="true" className="h-5 w-5" />
             ) : (
-              <>
-                <Sun className="w-3.5 h-3.5 text-amber-400" />
-                <span>LIGHT</span>
-              </>
+              <Sun aria-hidden="true" className="h-5 w-5" />
             )}
           </button>
         </div>

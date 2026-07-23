@@ -27,9 +27,7 @@ const getSectionIdFromHash = (hash: string): SectionId => {
 export default function HomePage() {
   const [theme, setTheme] = useState<Theme>("light");
   const [activeTab, setActiveTab] = useState<SectionId>("all");
-  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(
-    null,
-  );
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
   const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
 
   useEffect(() => {
@@ -39,10 +37,28 @@ export default function HomePage() {
 
     syncActiveTabWithHash();
     window.addEventListener("hashchange", syncActiveTabWithHash);
+    return () => window.removeEventListener("hashchange", syncActiveTabWithHash);
+  }, []);
 
-    return () => {
-      window.removeEventListener("hashchange", syncActiveTabWithHash);
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const storedTheme = window.localStorage.getItem("sea-kers-theme");
+    setTheme(
+      storedTheme === "dark" || storedTheme === "light"
+        ? storedTheme
+        : media.matches
+          ? "dark"
+          : "light",
+    );
+
+    const syncSystemTheme = (event: MediaQueryListEvent) => {
+      if (!window.localStorage.getItem("sea-kers-theme")) {
+        setTheme(event.matches ? "dark" : "light");
+      }
     };
+
+    media.addEventListener("change", syncSystemTheme);
+    return () => media.removeEventListener("change", syncSystemTheme);
   }, []);
 
   useEffect(() => {
@@ -51,55 +67,40 @@ export default function HomePage() {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((previousTheme) => (previousTheme === "light" ? "dark" : "light"));
-  };
-
-  const handleSelectSection = (sectionId: SectionId) => {
-    setActiveTab(sectionId);
+    setTheme((currentTheme) => {
+      const nextTheme = currentTheme === "light" ? "dark" : "light";
+      window.localStorage.setItem("sea-kers-theme", nextTheme);
+      return nextTheme;
+    });
   };
 
   const handleSelectProject = (projectId: string) => {
     setSelectedProjectId(projectId);
     setActiveTab("projects");
-    const element = document.getElementById("projects-section");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    document.getElementById("projects-section")?.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+    });
   };
 
   return (
-    <div className="min-h-screen bg-(--bg-page) text-(--text-main) font-headline relative selection:bg-[#da261c] selection:text-white transition-colors duration-200">
-      {/* Top Navbar */}
+    <div className="min-h-screen bg-(--background) text-(--foreground)">
       <Navbar
         activeTab={activeTab}
-        setActiveTab={handleSelectSection}
+        setActiveTab={setActiveTab}
         onOpenJoinModal={() => setIsJoinModalOpen(true)}
         theme={theme}
         toggleTheme={toggleTheme}
       />
-
-      {/* Main Content Area */}
-      <main>
-        {/* 1. Landing First Page */}
-        <Hero />
-
-        {/* 2. Track Record Section (20+ Wins) */}
+      <main id="main-content" tabIndex={-1}>
+        <Hero theme={theme} />
         <WinsSection onSelectProject={handleSelectProject} />
-
-        {/* 3. Repositories Section (Projects) */}
         <ProjectsSection selectedProjectId={selectedProjectId} />
-
-        {/* 4. Engineering Roster Section (Core Team & Team Members) */}
         <TeamSection />
-
-        {/* 5. About Us Section (Our Mission) - Moved to bottom after Team */}
         <MissionSection />
       </main>
-
-      {/* Footer */}
-      <Footer setActiveTab={handleSelectSection} />
-
-      {/* Intake Modal */}
+      <Footer setActiveTab={setActiveTab} />
       <JoinModal
         isOpen={isJoinModalOpen}
         onClose={() => setIsJoinModalOpen(false)}
