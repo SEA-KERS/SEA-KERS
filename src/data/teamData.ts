@@ -1,4 +1,4 @@
-import type { Project, TeamMember, WinRecord } from '../types'
+import type { Project, TeamMember, WinRecord } from "../types";
 
 // Data store for SEA_KERS / Builders Collective Website
 // Showcasing Wins (20+), Projects, and Team (12 Members: 8 Core Team, 4 Team Members)
@@ -13,14 +13,16 @@ export const WINS_DATA: readonly WinRecord[] = [
     award: "WINNERS",
     date: "Jan 2025",
     projectRef: "neon-mesh",
-    tagline: "Sub-second DePIN edge compute orchestration layer for 10,000+ IoT nodes.",
+    tagline:
+      "Sub-second DePIN edge compute orchestration layer for 10,000+ IoT nodes.",
     techStack: ["Solana", "Rust", "DePIN", "gRPC"],
-    description: "Built Neon Mesh, a distributed edge-compute orchestration layer capable of routing sub-second telemetry across 10,000+ IoT nodes.",
+    description:
+      "Built Neon Mesh, a distributed edge-compute orchestration layer capable of routing sub-second telemetry across 10,000+ IoT nodes.",
     images: [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
-    ]
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+    ],
   },
   {
     id: "win-02",
@@ -31,14 +33,16 @@ export const WINS_DATA: readonly WinRecord[] = [
     award: "GRAND PRIZE",
     date: "Dec 2024",
     projectRef: "zk-pulse",
-    tagline: "Zero-knowledge identity verification protocol with biometric zero-leakage.",
+    tagline:
+      "Zero-knowledge identity verification protocol with biometric zero-leakage.",
     techStack: ["Circom", "Solidity", "SnarkJS", "Ethereum"],
-    description: "Created zero-knowledge identity proof verification for decentralized identity without revealing sensitive biometric data.",
+    description:
+      "Created zero-knowledge identity proof verification for decentralized identity without revealing sensitive biometric data.",
     images: [
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-    ]
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    ],
   },
   {
     id: "win-03",
@@ -49,14 +53,16 @@ export const WINS_DATA: readonly WinRecord[] = [
     award: "WINNERS",
     date: "Nov 2024",
     projectRef: "kodex-sentinel",
-    tagline: "Real-time AI smart contract auditor & consensus vulnerability scanner.",
+    tagline:
+      "Real-time AI smart contract auditor & consensus vulnerability scanner.",
     techStack: ["Python", "PyTorch", "LangGraph", "FastAPI"],
-    description: "Developed multi-agent consensus verification preventing model hallucination in smart contract automated code generation.",
+    description:
+      "Developed multi-agent consensus verification preventing model hallucination in smart contract automated code generation.",
     images: [
       "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80"
-    ]
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
+    ],
   },
   {
     id: "win-04",
@@ -67,13 +73,15 @@ export const WINS_DATA: readonly WinRecord[] = [
     award: "BEST TEAM",
     date: "Oct 2024",
     projectRef: "hyper-bridge",
-    tagline: "Zero-latency cross-chain packet relay engine with threshold multi-sig.",
+    tagline:
+      "Zero-latency cross-chain packet relay engine with threshold multi-sig.",
     techStack: ["Cosmos SDK", "IBC", "Go", "Tendermint"],
-    description: "Zero-latency cross-chain packet relay engine connecting EVM and Cosmos SDK chains with threshold signature validation.",
+    description:
+      "Zero-latency cross-chain packet relay engine connecting EVM and Cosmos SDK chains with threshold signature validation.",
     images: [
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80"
-    ]
+      "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80",
+    ],
   },
   {
     id: "win-05",
@@ -84,13 +92,15 @@ export const WINS_DATA: readonly WinRecord[] = [
     award: "WINNERS",
     date: "Sep 2024",
     projectRef: "vector-trade",
-    tagline: "Vectorized SIMD order matching engine running directly on WebAssembly.",
+    tagline:
+      "Vectorized SIMD order matching engine running directly on WebAssembly.",
     techStack: ["C++", "WebAssembly", "TypeScript", "Solana"],
-    description: "Sub-millisecond order matching engine executing on-chain limit orders using vectorized CPU operations.",
+    description:
+      "Sub-millisecond order matching engine executing on-chain limit orders using vectorized CPU operations.",
     images: [
       "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-    ]
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    ],
   },
   {
     id: "win-06",
@@ -101,13 +111,15 @@ export const WINS_DATA: readonly WinRecord[] = [
     award: "RUNNER UP",
     date: "Aug 2024",
     projectRef: "oracle-sentinel",
-    tagline: "Real-time oracle anomaly detector for price manipulation vectors.",
+    tagline:
+      "Real-time oracle anomaly detector for price manipulation vectors.",
     techStack: ["Chainlink CCIP", "Solidity", "Next.js"],
-    description: "Real-time anomaly detector monitoring price oracle feeds for latency spikes and flash loan manipulation vectors.",
+    description:
+      "Real-time anomaly detector monitoring price oracle feeds for latency spikes and flash loan manipulation vectors.",
     images: [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
-    ]
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    ],
   },
   {
     id: "win-07",
@@ -120,11 +132,12 @@ export const WINS_DATA: readonly WinRecord[] = [
     projectRef: "ecs-realm",
     tagline: "On-chain Entity-Component-System spatial physics engine.",
     techStack: ["MUD Framework", "Solidity", "Three.js"],
-    description: "Entity-Component-System engine executing complex spatial physics completely on Ethereum L2 state contracts.",
+    description:
+      "Entity-Component-System engine executing complex spatial physics completely on Ethereum L2 state contracts.",
     images: [
       "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
-    ]
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+    ],
   },
   {
     id: "win-08",
@@ -135,23 +148,27 @@ export const WINS_DATA: readonly WinRecord[] = [
     award: "GRAND PRIZE",
     date: "Jun 2024",
     projectRef: "edge-vision-ai",
-    tagline: "Autonomous drone navigation AI optimized for Jetson CUDA microprocessors.",
+    tagline:
+      "Autonomous drone navigation AI optimized for Jetson CUDA microprocessors.",
     techStack: ["TensorRT", "CUDA", "C++", "OpenCV"],
-    description: "Ultra-fast thermal detection algorithm running on low-power Jetson Orin microprocessors for drone autonomous flight.",
+    description:
+      "Ultra-fast thermal detection algorithm running on low-power Jetson Orin microprocessors for drone autonomous flight.",
     images: [
       "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
-    ]
-  }
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    ],
+  },
 ];
 
 export const PROJECTS_DATA: readonly Project[] = [
   {
     id: "neon-mesh",
     title: "NEON_MESH PROTOCOL",
-    tagline: "Sub-second DePIN edge compute orchestration layer for IoT node clusters.",
+    tagline:
+      "Sub-second DePIN edge compute orchestration layer for IoT node clusters.",
     category: "DePIN Infrastructure",
-    description: "A high-throughput DePIN orchestration layer designed to synchronize compute across 10,000+ edge nodes with sub-second latency. Built for zero-downtime micro-agent execution.",
+    description:
+      "A high-throughput DePIN orchestration layer designed to synchronize compute across 10,000+ edge nodes with sub-second latency. Built for zero-downtime micro-agent execution.",
     techStack: ["Solana", "Rust", "gRPC", "DePIN"],
     stars: 1420,
     forks: 310,
@@ -159,14 +176,16 @@ export const PROJECTS_DATA: readonly Project[] = [
     demoUrl: "#",
     badge: "GLOBAL WINNER",
     featured: true,
-    metrics: { nodes: "12.4K+", latency: "14ms", uptime: "99.99%" }
+    metrics: { nodes: "12.4K+", latency: "14ms", uptime: "99.99%" },
   },
   {
     id: "kodex-sentinel",
     title: "KODEX_SENTINEL",
-    tagline: "Real-time AI smart contract auditor & consensus vulnerability scanner.",
+    tagline:
+      "Real-time AI smart contract auditor & consensus vulnerability scanner.",
     category: "AI & Security",
-    description: "Real-time AI security auditor that scans smart contracts for vulnerabilities during compilation using custom fine-tuned transformer models.",
+    description:
+      "Real-time AI security auditor that scans smart contracts for vulnerabilities during compilation using custom fine-tuned transformer models.",
     techStack: ["Python", "PyTorch", "LLM", "AST Parsing"],
     stars: 980,
     forks: 185,
@@ -174,14 +193,16 @@ export const PROJECTS_DATA: readonly Project[] = [
     demoUrl: "#",
     badge: "1st PLACE AI",
     featured: true,
-    metrics: { audits: "8,500+", accuracy: "99.2%", speed: "1.2s" }
+    metrics: { audits: "8,500+", accuracy: "99.2%", speed: "1.2s" },
   },
   {
     id: "zk-pulse",
     title: "ZK_PULSE SHIELD",
-    tagline: "Zero-Knowledge identity verification protocol with biometric zero-leakage.",
+    tagline:
+      "Zero-Knowledge identity verification protocol with biometric zero-leakage.",
     category: "ZK & Privacy",
-    description: "Cryptographic protocol enabling private biometric verification on EVM networks without revealing raw hash data or PII metadata.",
+    description:
+      "Cryptographic protocol enabling private biometric verification on EVM networks without revealing raw hash data or PII metadata.",
     techStack: ["Circom", "SnarkJS", "Solidity", "React"],
     stars: 870,
     forks: 142,
@@ -189,14 +210,16 @@ export const PROJECTS_DATA: readonly Project[] = [
     demoUrl: "#",
     badge: "GRAND PRIZE",
     featured: true,
-    metrics: { proofs: "150K+", circuitTime: "320ms", gasUsed: "42K" }
+    metrics: { proofs: "150K+", circuitTime: "320ms", gasUsed: "42K" },
   },
   {
     id: "hyper-bridge",
     title: "HYPER_RELAY INTEROP",
-    tagline: "Zero-latency cross-chain packet relay engine with threshold multi-sig.",
+    tagline:
+      "Zero-latency cross-chain packet relay engine with threshold multi-sig.",
     category: "Cross-Chain",
-    description: "Decentralized relayer engine facilitating instant state transfers between Tendermint, Cosmos SDK, and EVM subnets.",
+    description:
+      "Decentralized relayer engine facilitating instant state transfers between Tendermint, Cosmos SDK, and EVM subnets.",
     techStack: ["Cosmos SDK", "IBC", "Go", "EVM"],
     stars: 640,
     forks: 92,
@@ -204,14 +227,16 @@ export const PROJECTS_DATA: readonly Project[] = [
     demoUrl: "#",
     badge: "TOP TRACK WINNER",
     featured: false,
-    metrics: { totalVolume: "$45M+", txs: "1.2M", finality: "< 1s" }
+    metrics: { totalVolume: "$45M+", txs: "1.2M", finality: "< 1s" },
   },
   {
     id: "vector-trade",
     title: "VECTOR_TRADE HFT",
-    tagline: "Vectorized SIMD order matching engine running directly on WebAssembly.",
+    tagline:
+      "Vectorized SIMD order matching engine running directly on WebAssembly.",
     category: "FinTech & Systems",
-    description: "Ultra low-latency matching engine leveraging AVX-512 SIMD instructions compiled to WebAssembly for decentralized liquidity pools.",
+    description:
+      "Ultra low-latency matching engine leveraging AVX-512 SIMD instructions compiled to WebAssembly for decentralized liquidity pools.",
     techStack: ["C++20", "WebAssembly", "TypeScript", "Solana"],
     stars: 520,
     forks: 88,
@@ -219,14 +244,16 @@ export const PROJECTS_DATA: readonly Project[] = [
     demoUrl: "#",
     badge: "1st PLACE MIT",
     featured: false,
-    metrics: { tps: "250K", latency: "0.8ms", memory: "12MB" }
+    metrics: { tps: "250K", latency: "0.8ms", memory: "12MB" },
   },
   {
     id: "edge-vision-ai",
     title: "EDGE_VISION CORE",
-    tagline: "Autonomous drone navigation AI optimized for NVIDIA Jetson microprocessors.",
+    tagline:
+      "Autonomous drone navigation AI optimized for NVIDIA Jetson microprocessors.",
     category: "Robotics & Edge AI",
-    description: "Real-time spatial object tracking model compressed for embedded CUDA GPUs, enabling high-speed obstacle avoidance in GPS-denied arenas.",
+    description:
+      "Real-time spatial object tracking model compressed for embedded CUDA GPUs, enabling high-speed obstacle avoidance in GPS-denied arenas.",
     techStack: ["TensorRT", "CUDA", "C++", "ROS2"],
     stars: 790,
     forks: 160,
@@ -234,8 +261,8 @@ export const PROJECTS_DATA: readonly Project[] = [
     demoUrl: "#",
     badge: "GRAND WINNER",
     featured: false,
-    metrics: { fps: "120 FPS", power: "15W", precision: "98.7%" }
-  }
+    metrics: { fps: "120 FPS", power: "15W", precision: "98.7%" },
+  },
 ];
 
 // CORE TEAM (8 Members)
@@ -252,7 +279,8 @@ export const CORE_TEAM_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "meera-v",
@@ -266,7 +294,8 @@ export const CORE_TEAM_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "rohan-k",
@@ -280,7 +309,8 @@ export const CORE_TEAM_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "zayn-x",
@@ -294,7 +324,8 @@ export const CORE_TEAM_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "ananya-r",
@@ -308,7 +339,8 @@ export const CORE_TEAM_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "dev-p",
@@ -322,7 +354,8 @@ export const CORE_TEAM_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "kabir-m",
@@ -336,7 +369,8 @@ export const CORE_TEAM_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "tara-s",
@@ -350,8 +384,9 @@ export const CORE_TEAM_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
-  }
+    avatar:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+  },
 ];
 
 // TEAM MEMBERS (4 Members)
@@ -368,7 +403,8 @@ export const TEAM_MEMBERS_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "riya-k",
@@ -382,7 +418,8 @@ export const TEAM_MEMBERS_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "siddharth-b",
@@ -396,7 +433,8 @@ export const TEAM_MEMBERS_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=400&q=80"
+    avatar:
+      "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: "neha-g",
@@ -410,11 +448,12 @@ export const TEAM_MEMBERS_DATA: readonly TeamMember[] = [
     github: "https://github.com",
     twitter: "https://x.com",
     linkedin: "https://linkedin.com",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
-  }
+    avatar:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+  },
 ];
 
 export const TEAM_DATA: readonly TeamMember[] = [
   ...CORE_TEAM_DATA,
   ...TEAM_MEMBERS_DATA,
-]
+];
