@@ -1,28 +1,52 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
+
+interface Point {
+  x: number;
+  y: number;
+}
+
+interface Particle extends Point {
+  baseX: number;
+  baseY: number;
+  size: number;
+  alpha: number;
+  speed: number;
+  isBottomLeg: boolean;
+  isDispersed: boolean;
+  driftX: number;
+  driftY: number;
+  phase: number;
+}
 
 export default function CyberDotMatrix() {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let animationFrameId;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let disposed = false;
+    let animationFrameId: number | undefined;
 
     const width = (canvas.width = 650);
     const height = (canvas.height = 650);
 
-    let particles = [];
+    let particles: Particle[] = [];
     let time = 0;
     let mouse = { x: -1000, y: -1000, active: false };
 
     const img = new Image();
-    img.src = '/logo-white.png';
+    img.src = "/logo-white.png";
 
     img.onload = () => {
+      if (disposed) return;
+
       // Offscreen canvas for pixel sampling
-      const offCanvas = document.createElement('canvas');
-      const offCtx = offCanvas.getContext('2d');
+      const offCanvas = document.createElement("canvas");
+      const offCtx = offCanvas.getContext("2d");
+      if (!offCtx) return;
       const sampleSize = 140;
       offCanvas.width = sampleSize;
       offCanvas.height = sampleSize;
@@ -31,8 +55,11 @@ export default function CyberDotMatrix() {
       const imgData = offCtx.getImageData(0, 0, sampleSize, sampleSize).data;
 
       // 1. First pass: find exact bounding box of the logo in the image
-      let minX = sampleSize, maxX = 0, minY = sampleSize, maxY = 0;
-      const rawPoints = [];
+      let minX = sampleSize,
+        maxX = 0,
+        minY = sampleSize,
+        maxY = 0;
+      const rawPoints: Point[] = [];
 
       for (let y = 0; y < sampleSize; y += 1) {
         for (let x = 0; x < sampleSize; x += 1) {
@@ -88,17 +115,17 @@ export default function CyberDotMatrix() {
           isDispersed,
           driftX: (Math.random() - 0.5) * (isBottomLeg ? 40 : 10),
           driftY: (Math.random() - 0.5) * (isBottomLeg ? 40 : 10),
-          phase: Math.random() * Math.PI * 2
+          phase: Math.random() * Math.PI * 2,
         });
       }
 
       render();
     };
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (event: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
+      mouse.x = (event.clientX - rect.left) * (canvas.width / rect.width);
+      mouse.y = (event.clientY - rect.top) * (canvas.height / rect.height);
       mouse.active = true;
     };
 
@@ -108,10 +135,12 @@ export default function CyberDotMatrix() {
       mouse.active = false;
     };
 
-    canvas.addEventListener('mousemove', handleMouseMove);
-    canvas.addEventListener('mouseleave', handleMouseLeave);
+    canvas.addEventListener("mousemove", handleMouseMove);
+    canvas.addEventListener("mouseleave", handleMouseLeave);
 
     const render = () => {
+      if (disposed) return;
+
       time += 0.035;
       ctx.clearRect(0, 0, width, height);
 
@@ -158,7 +187,7 @@ export default function CyberDotMatrix() {
         // Draw rotated square pixel matching logo's diamond pixel geometry
         ctx.save();
         ctx.translate(p.x, p.y);
-        ctx.fillStyle = '#da261c';
+        ctx.fillStyle = "#da261c";
         ctx.globalAlpha = opacity;
 
         const half = p.size / 2;
@@ -171,9 +200,13 @@ export default function CyberDotMatrix() {
     };
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
-      canvas.removeEventListener('mousemove', handleMouseMove);
-      canvas.removeEventListener('mouseleave', handleMouseLeave);
+      disposed = true;
+      img.onload = null;
+      if (animationFrameId !== undefined) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      canvas.removeEventListener("mousemove", handleMouseMove);
+      canvas.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
@@ -181,7 +214,9 @@ export default function CyberDotMatrix() {
     <div className="relative flex justify-center lg:justify-end items-center w-full">
       <canvas
         ref={canvasRef}
-        className="w-[380px] h-[380px] sm:w-[480px] sm:h-[480px] lg:w-[560px] lg:h-[560px] cursor-pointer drop-shadow-[0_0_35px_rgba(218,38,28,0.45)] transition-all"
+        aria-label="Animated Team SEA-KERS logo"
+        role="img"
+        className="w-95 h-95 sm:w-120 sm:h-120 lg:w-140 lg:h-140 cursor-pointer drop-shadow-[0_0_35px_rgba(218,38,28,0.45)] transition-all"
       />
     </div>
   );

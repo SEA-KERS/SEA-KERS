@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -9,6 +8,11 @@
 :root {
   font-family: 'Space Grotesk', sans-serif;
   color-scheme: light dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 /* Light Theme (DEFAULT STARTING POINT per light Mode/DESIGN.md) */
