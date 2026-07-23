@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Award, Sparkles, Shield, UserCheck, Quote } from 'lucide-react';
 import { GithubIcon, TwitterIcon, LinkedinIcon } from './SocialIcons';
 import { CORE_TEAM_DATA, TEAM_MEMBERS_DATA } from '../data/teamData';
+import type { TeamMember } from '../types'
 
 export default function TeamSection() {
-  const [activeMemberModal, setActiveMemberModal] = useState(null);
+  const [activeMemberModal, setActiveMemberModal] = useState<TeamMember | null>(null);
 
-  const renderMemberCard = (member) => (
+  const renderMemberCard = (member: TeamMember) => (
     <div
       key={member.id}
       className="bg-[var(--bg-surface)] border-2 border-[var(--border-main)] hover:border-[#da261c] p-5 transition-all duration-200 group flex flex-col justify-between shadow-[4px_4px_0px_rgba(0,0,0,0.15)] rounded-none"
@@ -155,6 +156,7 @@ export default function TeamSection() {
           <div className="bg-[var(--bg-surface)] border-2 border-black max-w-xl w-full p-6 md:p-8 relative shadow-[8px_8px_0px_rgba(0,0,0,0.9)]">
             <button
               onClick={() => setActiveMemberModal(null)}
+              aria-label="Close member spotlight"
               className="absolute top-4 right-4 text-[var(--text-muted)] hover:text-[var(--text-main)] font-mono text-lg font-bold"
             >
               ✕

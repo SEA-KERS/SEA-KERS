@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Award, Search, ExternalLink, Info, MapPin, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import { WINS_DATA } from '../data/teamData';
+import type { WinRecord } from '../types'
 
-export default function WinsSection({ onSelectProject }) {
+interface WinsSectionProps {
+  onSelectProject: (projectId: string) => void
+}
+
+const tracks = [
+  { label: 'ALL', value: 'ALL' },
+  { label: 'E-Cell', value: 'ecell' },
+  { label: 'IEEE', value: 'IEEE' },
+  { label: 'IISc', value: 'IISc' },
+  { label: 'MSME', value: 'MSME' },
+  { label: 'HAL', value: 'HAL' },
+] as const
+
+type TrackFilter = (typeof tracks)[number]['value']
+
+export default function WinsSection({ onSelectProject }: WinsSectionProps) {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedTrack, setSelectedTrack] = useState('ALL');
-  const [activeWinModal, setActiveWinModal] = useState(null);
+  const [selectedTrack, setSelectedTrack] = useState<TrackFilter>('ALL');
+  const [activeWinModal, setActiveWinModal] = useState<WinRecord | null>(null);
   const [currentModalImageIdx, setCurrentModalImageIdx] = useState(0);
-
-  const tracks = ['ALL', 'E-Cell', 'IEEE', 'IISc', 'MSME', 'HAL'];
 
   const filteredWins = WINS_DATA.filter((win) => {
     const matchesSearch =
@@ -19,7 +33,7 @@ export default function WinsSection({ onSelectProject }) {
     return matchesSearch && matchesTrack;
   });
 
-  const openWinModal = (win) => {
+  const openWinModal = (win: WinRecord) => {
     setActiveWinModal(win);
     setCurrentModalImageIdx(0);
   };
@@ -75,14 +89,14 @@ export default function WinsSection({ onSelectProject }) {
           </span>
           {tracks.map((track) => (
             <button
-              key={track}
-              onClick={() => setSelectedTrack(track)}
-              className={`font-mono text-xs px-3 py-1 font-bold border-2 transition-all shrink-0 ${selectedTrack === track
+              key={track.value}
+              onClick={() => setSelectedTrack(track.value)}
+              className={`font-mono text-xs px-3 py-1 font-bold border-2 transition-all shrink-0 ${selectedTrack === track.value
                 ? 'bg-[#da261c] text-white border-black shadow-[2px_2px_0px_rgba(0,0,0,0.8)]'
                 : 'bg-[var(--bg-surface-subtle)] text-[var(--text-main)] border-[var(--border-main)] hover:bg-[var(--bg-surface-high)]'
                 }`}
             >
-              {track}
+              {track.label}
             </button>
           ))}
         </div>
@@ -90,7 +104,7 @@ export default function WinsSection({ onSelectProject }) {
         {/* Wins Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredWins.map((win) => {
-            const displayImage = win.images && win.images.length > 0 ? win.images[0] : win.image;
+            const displayImage = win.images[0];
             return (
               <div
                 key={win.id}
@@ -175,6 +189,7 @@ export default function WinsSection({ onSelectProject }) {
           <div className="bg-[var(--bg-surface)] border-2 border-black max-w-xl w-full p-6 md:p-8 relative shadow-[8px_8px_0px_rgba(0,0,0,0.9)] max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setActiveWinModal(null)}
+              aria-label="Close win details"
               className="absolute top-4 right-4 text-[var(--text-muted)] hover:text-[var(--text-main)] font-mono text-lg font-bold z-10"
             >
               ✕
@@ -184,9 +199,7 @@ export default function WinsSection({ onSelectProject }) {
             <div className="relative w-full h-56 border-2 border-black mb-6 overflow-hidden bg-black group">
               <img
                 src={
-                  activeWinModal.images && activeWinModal.images.length > 0
-                    ? activeWinModal.images[currentModalImageIdx]
-                    : activeWinModal.image
+                  activeWinModal.images[currentModalImageIdx]
                 }
                 alt={activeWinModal.title}
                 className="w-full h-full object-cover transition-all duration-300"

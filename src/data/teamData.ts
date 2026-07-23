@@ -1,7 +1,9 @@
+import type { Project, TeamMember, WinRecord } from '../types'
+
 // Data store for SEA_KERS / Builders Collective Website
 // Showcasing Wins (20+), Projects, and Team (12 Members: 8 Core Team, 4 Team Members)
 
-export const WINS_DATA = [
+export const WINS_DATA: readonly WinRecord[] = [
   {
     id: "win-01",
     title: "1st Place: DePIN Infrastructure",
@@ -143,7 +145,7 @@ export const WINS_DATA = [
   }
 ];
 
-export const PROJECTS_DATA = [
+export const PROJECTS_DATA: readonly Project[] = [
   {
     id: "neon-mesh",
     title: "NEON_MESH PROTOCOL",
@@ -237,7 +239,7 @@ export const PROJECTS_DATA = [
 ];
 
 // CORE TEAM (8 Members)
-export const CORE_TEAM_DATA = [
+export const CORE_TEAM_DATA: readonly TeamMember[] = [
   {
     id: "arjun-s",
     name: "ARJUN_S",
@@ -353,7 +355,7 @@ export const CORE_TEAM_DATA = [
 ];
 
 // TEAM MEMBERS (4 Members)
-export const TEAM_MEMBERS_DATA = [
+export const TEAM_MEMBERS_DATA: readonly TeamMember[] = [
   {
     id: "vikram-n",
     name: "VIKRAM_N",
@@ -412,4 +414,7 @@ export const TEAM_MEMBERS_DATA = [
   }
 ];
 
-export const TEAM_DATA = [...CORE_TEAM_DATA, ...TEAM_MEMBERS_DATA];
+export const TEAM_DATA: readonly TeamMember[] = [
+  ...CORE_TEAM_DATA,
+  ...TEAM_MEMBERS_DATA,
+]

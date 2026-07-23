@@ -1,4 +1,3 @@
-import React from 'react';
 import CyberDotMatrix from './CyberDotMatrix';
 
 export default function Hero() {

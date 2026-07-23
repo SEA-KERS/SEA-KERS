@@ -1,12 +1,30 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Code2, GitFork, Star, ExternalLink, Activity, Terminal } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import { PROJECTS_DATA } from '../data/teamData';
+import type { Project } from '../types'
 
-export default function ProjectsSection({ selectedProjectId }) {
-  const [activeProjectModal, setActiveProjectModal] = useState(
-    selectedProjectId ? PROJECTS_DATA.find((p) => p.id === selectedProjectId) : null
-  );
+interface ProjectsSectionProps {
+  selectedProjectId: string | null
+}
+
+export default function ProjectsSection({
+  selectedProjectId,
+}: ProjectsSectionProps) {
+  const [activeProjectModal, setActiveProjectModal] = useState<Project | null>(
+    () =>
+      selectedProjectId
+        ? (PROJECTS_DATA.find((project) => project.id === selectedProjectId) ?? null)
+        : null,
+  )
+
+  useEffect(() => {
+    if (!selectedProjectId) return
+
+    setActiveProjectModal(
+      PROJECTS_DATA.find((project) => project.id === selectedProjectId) ?? null,
+    )
+  }, [selectedProjectId])
 
   return (
     <section id="projects-section" className="py-16 px-4 md:px-8 bg-[var(--bg-surface-subtle)] border-b-2 border-[var(--border-main)]">
@@ -129,6 +147,7 @@ export default function ProjectsSection({ selectedProjectId }) {
           <div className="bg-[var(--bg-surface)] border-2 border-black max-w-xl w-full p-6 md:p-8 relative shadow-[8px_8px_0px_rgba(0,0,0,0.9)]">
             <button
               onClick={() => setActiveProjectModal(null)}
+              aria-label="Close project specification"
               className="absolute top-4 right-4 text-[var(--text-muted)] hover:text-[var(--text-main)] font-mono text-lg font-bold"
             >
               ✕

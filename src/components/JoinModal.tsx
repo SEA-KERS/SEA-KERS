@@ -1,9 +1,22 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react'
 import { Terminal, Send, CheckCircle2 } from 'lucide-react';
 
-export default function JoinModal({ isOpen, onClose }) {
+interface JoinFormData {
+  handle: string
+  email: string
+  role: string
+  proofOfWork: string
+}
+
+interface JoinModalProps {
+  isOpen: boolean
+  onClose: () => void
+}
+
+export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<JoinFormData>({
     handle: '',
     email: '',
     role: 'Systems & Distributed Engineer',
@@ -12,8 +25,8 @@ export default function JoinModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -24,8 +37,9 @@ export default function JoinModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
       <div className="bg-[var(--bg-surface)] border-2 border-black max-w-lg w-full p-6 md:p-8 relative shadow-[8px_8px_0px_rgba(0,0,0,0.9)]">
-        <button
-          onClick={onClose}
+            <button
+              onClick={onClose}
+              aria-label="Close join form"
           className="absolute top-4 right-4 text-[var(--text-muted)] hover:text-[var(--text-main)] font-mono text-lg font-bold"
         >
           ✕
@@ -52,6 +66,7 @@ export default function JoinModal({ isOpen, onClose }) {
                   NAME / HANDLE:
                 </label>
                 <input
+                  name="handle"
                   type="text"
                   required
                   placeholder="@your_handle"
@@ -66,6 +81,7 @@ export default function JoinModal({ isOpen, onClose }) {
                   EMAIL ADDRESS:
                 </label>
                 <input
+                  name="email"
                   type="email"
                   required
                   placeholder="USER@COLLECTIVE.IO"
@@ -80,6 +96,7 @@ export default function JoinModal({ isOpen, onClose }) {
                   PRIMARY DISCIPLINE:
                 </label>
                 <select
+                  name="role"
                   value={formData.role}
                   onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                   className="w-full bg-[var(--bg-surface-subtle)] border-2 border-[var(--border-main)] focus:border-[#da261c] p-3 text-sm text-[var(--text-main)] outline-none font-bold"
@@ -98,6 +115,7 @@ export default function JoinModal({ isOpen, onClose }) {
                   GITHUB / REPO OR PROOF OF WORK LINK:
                 </label>
                 <input
+                  name="proofOfWork"
                   type="url"
                   required
                   placeholder="https://github.com/yourusername"

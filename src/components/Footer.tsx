@@ -1,8 +1,12 @@
-import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { GithubIcon, TwitterIcon, LinkedinIcon } from './SocialIcons';
+import type { SectionId } from '../types'
 
-export default function Footer({ setActiveTab }) {
+interface FooterProps {
+  setActiveTab: (sectionId: SectionId) => void
+}
+
+export default function Footer({ setActiveTab }: FooterProps) {
   return (
     <footer className="w-full py-16 px-4 md:px-8 border-t-2 border-[var(--border-main)] bg-[var(--bg-surface-subtle)] text-[var(--text-main)] relative z-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -26,24 +30,24 @@ export default function Footer({ setActiveTab }) {
           </h5>
           <ul className="flex flex-col gap-2.5 font-headline text-sm text-[var(--text-muted)] font-bold">
             <li>
-              <button onClick={() => setActiveTab('about')} className="hover:text-[#da261c] transition-colors">
+              <a href="#about-section" onClick={() => setActiveTab('about')} className="hover:text-[#da261c] transition-colors">
                 About Us & Mission
-              </button>
+              </a>
             </li>
             <li>
-              <button onClick={() => setActiveTab('wins')} className="hover:text-[#da261c] transition-colors">
+              <a href="#wins-section" onClick={() => setActiveTab('wins')} className="hover:text-[#da261c] transition-colors">
                 Hackathon Victories (20+)
-              </button>
+              </a>
             </li>
             <li>
-              <button onClick={() => setActiveTab('projects')} className="hover:text-[#da261c] transition-colors">
+              <a href="#projects-section" onClick={() => setActiveTab('projects')} className="hover:text-[#da261c] transition-colors">
                 Open Source Projects
-              </button>
+              </a>
             </li>
             <li>
-              <button onClick={() => setActiveTab('team')} className="hover:text-[#da261c] transition-colors">
+              <a href="#team-section" onClick={() => setActiveTab('team')} className="hover:text-[#da261c] transition-colors">
                 Engineering Roster
-              </button>
+              </a>
             </li>
           </ul>
         </div>

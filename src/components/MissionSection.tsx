@@ -1,4 +1,3 @@
-import React from 'react';
 import { Target, Compass, Award, Flame } from 'lucide-react';
 
 export default function MissionSection() {
