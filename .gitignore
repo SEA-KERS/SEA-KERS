@@ -13,6 +13,7 @@ dist
 dist-ssr
 .wrangler
 .tanstack
+.lighthouseci
 *.local
 
 # Editor directories and files

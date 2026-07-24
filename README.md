@@ -1,8 +1,8 @@
 # Team SEA-KERS Website
 
-The official website for Team SEA-KERS, showcasing hackathon victories, open-source projects, the engineering roster, and the collective's mission.
+The official Team SEA-KERS website showcases hackathon victories, engineering projects, the team, and its mission.
 
-The app uses TanStack Start with streaming server-side rendering on Cloudflare Workers. Source code is strict TypeScript, Vite development runs inside the Workers runtime through Cloudflare's Vite plugin, and pnpm manages dependencies.
+It uses TanStack Start with streaming SSR on Cloudflare Workers. The codebase is strict TypeScript, Vite runs inside the Workers runtime through Cloudflare's adapter, and pnpm manages dependencies.
 
 ## Local development
 
@@ -15,16 +15,19 @@ pnpm dev
 
 Open `http://localhost:3000`.
 
+Copy `.env.example` to `.env.local` for local configuration. `VITE_SITE_URL` is required for absolute production canonical, Open Graph, robots, and sitemap URLs. `VITE_CLOUDFLARE_ANALYTICS_TOKEN` is optional and enables Cloudflare Web Analytics when set.
+
 ## Verification
 
 ```bash
 pnpm lint
 pnpm typecheck
+pnpm test
 pnpm build
-pnpm preview
+pnpm audit:lighthouse
 ```
 
-`pnpm preview` runs the production Worker build locally.
+`pnpm validate` runs lint, type checking, tests, and the production build. `pnpm preview` runs the production Worker build locally.
 
 ## Cloudflare Workers
 
@@ -41,7 +44,11 @@ Generate TypeScript declarations after adding or changing Cloudflare bindings:
 pnpm cf-typegen
 ```
 
-Worker settings live in `wrangler.jsonc`; the fetch entry is `src/server.ts`.
+Worker settings live in `wrangler.jsonc`; the fetch entry is `src/server.ts`. The Worker serves `robots.txt` and `sitemap.xml` and applies production security headers.
+
+## Design
+
+The visual language, theme tokens, typography, accessibility constraints, and asset requirements live in [`DESIGN.md`](./DESIGN.md).
 
 ## License
 

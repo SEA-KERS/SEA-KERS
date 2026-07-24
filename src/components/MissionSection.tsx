@@ -1,103 +1,58 @@
-import { Target, Compass, Award, Flame } from "lucide-react";
+import { Award, Compass, Flame, Target } from "lucide-react";
+
+const chapters = [
+  {
+    title: "The beginning",
+    Icon: Flame,
+    copy: "We started as college students with more ambition than resources: no dedicated lab, funding, or institutional advantage. We had a shared belief that disciplined engineering could compete with the best.",
+  },
+  {
+    title: "The trials",
+    Icon: Award,
+    copy: "For two years we lost early and often. We kept building, studied every result, and travelled across India on limited budgets. Each setback became evidence, and each iteration made the team stronger.",
+  },
+  {
+    title: "The mindset",
+    Icon: Compass,
+    copy: "SEA-KERS is a multidisciplinary crew defined less by a stack than by curiosity, resilience, and respect for craft. The caret is our reminder to keep learning and power upward together.",
+  },
+] as const;
 
 export default function MissionSection() {
   return (
     <section
       id="about-section"
-      className="py-16 px-4 md:px-8 bg-(--bg-surface) border-b-2 border-(--border-main) relative"
+      aria-labelledby="mission-title"
+      className="border-b border-(--border) bg-(--muted) px-4 py-20 md:px-8"
     >
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 border-b-2 border-(--border-main) pb-6 gap-4">
-          <div>
-            <div className="flex items-center gap-2 font-mono text-xs text-[#001dc2] font-bold uppercase tracking-widest mb-2">
-              <Target className="w-4 h-4 text-[#da261c]" />
-              <span>OUR LORE //</span>
-            </div>
-            <h2 className="font-headline font-black text-3xl md:text-5xl uppercase text-[#da261c] tracking-tight">
-              About Us & Our Mission
-            </h2>
-          </div>
+      <div className="mx-auto max-w-7xl">
+        <p className="section-kicker">
+          <Target aria-hidden="true" className="h-4 w-4" />
+          Our story
+        </p>
+        <h2 id="mission-title" className="mt-3 font-headline text-4xl font-bold md:text-5xl">
+          Seek farther. Build better.
+        </h2>
+        <p className="mt-4 max-w-3xl leading-7 text-(--muted-foreground)">
+          SEA-KERS grew through repeated experiments, shared constraints, and a
+          commitment to turn every hard problem into a working system.
+        </p>
+
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          {chapters.map(({ title, Icon, copy }) => (
+            <article key={title} className="surface-card p-6">
+              <Icon aria-hidden="true" className="h-5 w-5 text-(--primary-text)" />
+              <h3 className="mt-4 font-headline text-xl font-bold">{title}</h3>
+              <p className="mt-3 leading-7 text-(--muted-foreground)">{copy}</p>
+            </article>
+          ))}
         </div>
 
-        {/* Story & Lore Cards Container */}
-        <div className="grid grid-cols-1 gap-8 mb-14">
-          {/* Opening Paragraph Card */}
-          <div className="bg-(--bg-surface-subtle) border-2 border-(--border-main) p-6 md:p-8 shadow-[4px_4px_0px_rgba(0,0,0,0.15)] relative">
-            <div className="flex items-center gap-2 font-mono text-xs text-[#da261c] font-black uppercase mb-3">
-              <Flame className="w-4 h-4 text-[#da261c]" />
-              <span>THE BEGINNING</span>
-            </div>
-            <p className="font-headline text-base md:text-lg text-(--text-main) leading-relaxed font-normal">
-              We started as a handful of college students with more ambition
-              than resources. No labs. No funding. No institutional backing.
-              Just a group of young engineers who believed they could compete
-              with the best and set out to prove it.
-            </p>
-          </div>
-
-          {/* The Lore Paragraph Card */}
-          <div className="bg-(--bg-surface-subtle) border-2 border-(--border-main) p-6 md:p-8 shadow-[4px_4px_0px_rgba(0,0,0,0.15)] border-l-4 border-l-[#da261c]">
-            <div className="flex items-center gap-2 font-mono text-xs text-[#001dc2] font-black uppercase mb-3">
-              <Award className="w-4 h-4 text-[#001dc2]" />
-              <span>THE JOURNEY & THE TRIALS</span>
-            </div>
-            <div className="space-y-4 font-headline text-base md:text-lg text-(--text-main) leading-relaxed font-normal">
-              <p>
-                From our sophomore year, we were building — different ideas,
-                different team combinations, different hackathons. For two
-                years, we failed. Eliminated early. We watched other teams take
-                the prize while we figured out what we were missing. But we
-                never stopped building, never lost hope. Every loss was a
-                lesson. We believed in ourselves as a team.
-              </p>
-              <p>
-                We challenged ourselves to be winners. We packed into buses,
-                trains, and shared hotel rooms — traveling across South India on
-                a shoestring budget, from Tamil Nadu to Kerala, Karnataka,
-                Odisha, and Bengaluru. We walked into venues where IIT and IISc
-                teams had faculty mentors, funding, and credibility behind them.
-                We had one thing: our capabilities and each other. We won
-                anyway. Twenty times over.
-              </p>
-            </div>
-          </div>
-
-          {/* The Team Character & Caret Symbol Card */}
-          <div className="bg-(--bg-surface-subtle) border-2 border-(--border-main) p-6 md:p-8 shadow-[4px_4px_0px_rgba(0,0,0,0.15)]">
-            <div className="flex items-center gap-2 font-mono text-xs text-[#da261c] font-black uppercase mb-3">
-              <Compass className="w-4 h-4 text-[#da261c]" />
-              <span>THE MINDSET & THE CARET (^)</span>
-            </div>
-            <div className="space-y-4 font-headline text-base md:text-lg text-(--text-main) leading-relaxed font-normal">
-              <p>
-                What makes SEA-KERS isn't a tech stack — it's a mindset. We are
-                diverse: different backgrounds and different disciplines. But
-                every challenge we faced taught us one thing: never quit, never
-                settle. Passion and grit drive us to give 200%.
-              </p>
-              <p className="font-semibold text-(--text-main)">
-                The name says it all. SEA-KERS are seekers — a ship charting its
-                own course toward a ocean of oppurtunites. Our symbol is the
-                caret{" "}
-                <span className="text-[#da261c] font-black text-xl font-mono">
-                  ^
-                </span>{" "}
-                — because we believe in powering upward. As individuals. As a
-                team. As a nation.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Mission Statement Banner */}
-        <div className="bg-[#da261c] text-white p-6 md:p-8 border-2 border-black shadow-[6px_6px_0px_rgba(0,0,0,0.9)] text-center">
-          <span className="font-mono text-xs uppercase tracking-widest font-black block mb-2 opacity-90">
-            THE MISSION STATEMENT
-          </span>
-          <h3 className="font-headline font-black text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight">
-            Young Minds Innovating from India to the World
-          </h3>
+        <div className="mt-8 rounded-xl bg-(--primary) px-6 py-10 text-center text-(--primary-foreground) md:px-10">
+          <p className="text-sm font-bold uppercase tracking-[0.16em]">Our mission</p>
+          <p className="mx-auto mt-3 max-w-4xl font-headline text-3xl font-bold md:text-5xl">
+            Young minds innovating from India to the world.
+          </p>
         </div>
       </div>
     </section>
