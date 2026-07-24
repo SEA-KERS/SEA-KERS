@@ -1,6 +1,5 @@
 import { createRootRoute } from "@tanstack/react-router";
 import { NotFoundPage, RootLayout } from "../components/RootLayout";
-import brandIcon from "../assets/brand/sea-kers-icon-color.svg";
 import headingFont from "@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2?url";
 import appCss from "../index.css?url";
 
@@ -33,7 +32,21 @@ export const Route = createRootRoute({
       },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: brandIcon },
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico",
+        sizes: "16x16 32x32 48x48 64x64",
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "/apple-touch-icon.png",
+        sizes: "180x180",
+      },
+      {
+        rel: "manifest",
+        href: "/site.webmanifest",
+      },
       {
         rel: "preload",
         href: headingFont,
