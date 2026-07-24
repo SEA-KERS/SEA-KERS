@@ -96,7 +96,10 @@ export default function HomePage() {
       <main id="main-content" tabIndex={-1}>
         <Hero theme={theme} />
         <WinsSection onSelectProject={handleSelectProject} />
-        <ProjectsSection selectedProjectId={selectedProjectId} />
+        <ProjectsSection
+          selectedProjectId={selectedProjectId}
+          onClose={() => setSelectedProjectId(null)}
+        />
         <TeamSection />
         <MissionSection />
       </main>

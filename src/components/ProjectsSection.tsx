@@ -6,13 +6,21 @@ import type { Project } from "../types";
 
 interface ProjectsSectionProps {
   selectedProjectId: string | null;
+  onClose: () => void;
 }
 
-export default function ProjectsSection({ selectedProjectId }: ProjectsSectionProps) {
+export default function ProjectsSection({
+  selectedProjectId,
+  onClose,
+}: ProjectsSectionProps) {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const closeActiveProject = () => {
+    setActiveProject(null);
+    onClose();
+  };
   const { dialogRef, rememberTrigger } = useAccessibleDialog(
     activeProject !== null,
-    () => setActiveProject(null),
+    closeActiveProject,
   );
 
   useEffect(() => {
@@ -107,7 +115,7 @@ export default function ProjectsSection({ selectedProjectId }: ProjectsSectionPr
       </div>
 
       {activeProject ? (
-        <div className="dialog-backdrop" onMouseDown={(event) => event.target === event.currentTarget && setActiveProject(null)}>
+        <div className="dialog-backdrop" onMouseDown={(event) => event.target === event.currentTarget && closeActiveProject()}>
           <div
             ref={dialogRef}
             role="dialog"
@@ -117,7 +125,7 @@ export default function ProjectsSection({ selectedProjectId }: ProjectsSectionPr
             tabIndex={-1}
             className="dialog-panel"
           >
-            <button type="button" onClick={() => setActiveProject(null)} aria-label="Close project specification" className="icon-button absolute right-4 top-4">
+            <button type="button" onClick={closeActiveProject} aria-label="Close project specification" className="icon-button absolute right-4 top-4">
               <X aria-hidden="true" className="h-5 w-5" />
             </button>
             <p className="section-kicker pr-12">

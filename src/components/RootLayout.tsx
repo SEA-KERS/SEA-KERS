@@ -31,6 +31,7 @@ export function NotFoundPage() {
   return (
     <main
       id="main-content"
+      tabIndex={-1}
       className="grid min-h-screen place-items-center bg-(--background) px-6 py-24 text-(--foreground)"
     >
       <div className="surface-card w-full max-w-2xl p-8">
