@@ -46,6 +46,21 @@ pnpm cf-typegen
 
 Worker settings live in `wrangler.jsonc`; the fetch entry is `src/server.ts`. The Worker serves `robots.txt` and `sitemap.xml` and applies production security headers.
 
+### GitHub Actions deployment
+
+`.github/workflows/deploy.yml` validates and deploys production on pushes to `main` only. Pull requests do not trigger the workflow. The deployment step runs only after linting, strict type checking, tests, and the production build all pass.
+
+Configure these GitHub Actions repository secrets before relying on automated deployment:
+
+- `CLOUDFLARE_ACCOUNT_ID` — the Cloudflare account containing `team-seakers.com`.
+- `CLOUDFLARE_API_TOKEN` — a token scoped to that account and zone using Cloudflare's **Edit Cloudflare Workers** permission policy.
+
+To push a commit to `main` without deploying it, include `[skip deploy]` in the head commit message. Validation still runs, but the Cloudflare deployment step is skipped:
+
+```bash
+git commit -m "docs: update contributor guide [skip deploy]"
+```
+
 ## Design
 
 The visual language, theme tokens, typography, accessibility constraints, and asset requirements live in [`DESIGN.md`](./DESIGN.md).
