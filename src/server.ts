@@ -4,7 +4,7 @@ import { SITE_CONFIG } from "./config/site";
 const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
   "base-uri 'self'",
-  "connect-src 'self' https://cloudflareinsights.com ws: wss:",
+  "connect-src 'self' https://cloudflareinsights.com",
   "font-src 'self' data:",
   "form-action 'self'",
   "frame-ancestors 'none'",
