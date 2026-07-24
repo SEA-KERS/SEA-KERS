@@ -108,11 +108,12 @@ export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
 
       for (const particle of particles) {
         const isArc = particle.kind === "arc";
-        const motion = Math.sin(elapsed * 1.7 + particle.phase);
-        let targetX = particle.baseX + (isArc ? motion * 3 : motion * 0.7);
-        let targetY =
-          particle.baseY +
-          (isArc ? Math.cos(elapsed + particle.phase) * 2 : 0);
+        const horizontalMotion =
+          Math.sin(elapsed * 1.7 + particle.phase) * 6;
+        const verticalMotion =
+          Math.cos(elapsed * 1.35 + particle.phase) * 4;
+        let targetX = particle.baseX + horizontalMotion;
+        let targetY = particle.baseY + verticalMotion;
 
         if (pointer.active) {
           const dx = particle.x - pointer.x;
@@ -201,10 +202,7 @@ export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
             baseX,
             baseY,
             kind: point.kind,
-            size:
-              point.kind === "caret"
-                ? Math.max(2.2, mappedPoint.scale * 0.72)
-                : Math.max(4.2, mappedPoint.scale * 1.28),
+            size: Math.max(3.6, mappedPoint.scale * 1.2),
             phase: (index * 0.618) % (Math.PI * 2),
           };
         });
