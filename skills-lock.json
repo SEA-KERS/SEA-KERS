@@ -19,6 +19,12 @@
       "skillPath": "skills/core-web-vitals/SKILL.md",
       "computedHash": "4684e264c8e3dd529aefe97c3102814e3b63a9ea21a163d0f835ed506773e3f8"
     },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/impeccable/SKILL.md",
+      "computedHash": "783a73dcbf7bbba8d46f30ca29bca493cc53867e9740eb6984c324d07609f002"
+    },
     "performance": {
       "source": "addyosmani/web-quality-skills",
       "sourceType": "github",
