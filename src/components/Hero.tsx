@@ -8,7 +8,7 @@ interface HeroProps {
 const stats = [
   ["15+", "Hackathon wins"],
   ["$350K+", "Grants and prizes"],
-  ["5", "Indian states"],
+  ["5", "Won across states"],
 ] as const;
 
 export default function Hero({ theme }: HeroProps) {

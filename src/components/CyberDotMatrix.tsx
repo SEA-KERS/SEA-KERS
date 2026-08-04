@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import brandIcon from "../assets/brand/sea-kers-icon-color.svg";
+import brandIconDarkCaret from "../assets/brand/sea-kers-icon-dark-caret.svg";
 import type { Theme } from "../types";
 import {
   mapParticleSampleToCanvas,
@@ -61,9 +62,14 @@ const getParticleBudget = () => {
   return clamp(Math.round(budget / 50) * 50, 650, 2200);
 };
 
-export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
+export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isAnimated, setIsAnimated] = useState(false);
+  const themeRef = useRef(theme);
+
+  useEffect(() => {
+    themeRef.current = theme;
+  }, [theme]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -106,6 +112,9 @@ export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
       lastFrame = timestamp;
       context.clearRect(0, 0, canvasSize, canvasSize);
 
+      const isLight = themeRef.current === "light";
+      const caretColor = isLight ? "#11131a" : "#f4f6fb";
+
       for (const particle of particles) {
         const isArc = particle.kind === "arc";
         const horizontalMotion =
@@ -128,7 +137,7 @@ export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
 
         particle.x += (targetX - particle.x) * 0.12;
         particle.y += (targetY - particle.y) * 0.12;
-        context.fillStyle = isArc ? "#4361ee" : "#f4f6fb";
+        context.fillStyle = isArc ? "#4361ee" : caretColor;
         context.globalAlpha = isArc ? 0.95 : 0.86;
         context.fillRect(
           particle.x,
@@ -256,9 +265,15 @@ export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
   }, []);
 
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[12rem] overflow-hidden rounded-2xl bg-[#0d0d0d] p-4 md:max-w-[25rem]">
+    <div
+      className={`relative mx-auto aspect-square w-full max-w-[12rem] overflow-hidden rounded-2xl p-4 transition-colors duration-200 md:max-w-[25rem] ${
+        theme === "light"
+          ? "border border-(--border) bg-white shadow-md"
+          : "bg-[#0d0d0d]"
+      }`}
+    >
       <img
-        src={brandIcon}
+        src={theme === "light" ? brandIconDarkCaret : brandIcon}
         width="512"
         height="512"
         fetchPriority="high"
