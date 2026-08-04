@@ -6,7 +6,7 @@ import type { Project, TeamMember, WinRecord } from "../types";
 export const WINS_DATA: readonly WinRecord[] = [
   {
     "id": "win-01",
-    "title": "1st Place: Realtime Vision & Voice LLM",
+    "title": "Moondream Vision & Voice LLM",
     "hackathon": "E-Cell x BMSIT Code Red 2.0",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -32,7 +32,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-02",
-    "title": "Grand Prize: Wearable AI Second Brain",
+    "title": "Wearable AI Second Brain",
     "hackathon": "Google Developer Group Kristu Hackverse",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -58,7 +58,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-03",
-    "title": "1st Place: Autonomous Depth Navigation",
+    "title": "Autonomous Vision Navigation",
     "hackathon": "IEEE X PES Confluence",
     "location": "Bengaluru, India",
     "track": "IEEE",
@@ -84,7 +84,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-04",
-    "title": "1st Place: DBOTT Healthcare Voice AI",
+    "title": "DBOTT Healthcare Voice Assistant",
     "hackathon": "IVIS Lab X SIMBA GPT",
     "location": "Bengaluru, India",
     "track": "IISc",
@@ -111,7 +111,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-05",
-    "title": "Grand Prize: ROBERTT Intelligence Engine",
+    "title": "ROBERTT",
     "hackathon": "Hackverse Mumbai",
     "location": "Mumbai, India",
     "track": "ecell",
@@ -137,7 +137,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-06",
-    "title": "1st Place: Darshan Glasses Assistive Tech",
+    "title": "Darshan Glasses",
     "hackathon": "IIC X Geenovate Foundation Hackathon",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -163,7 +163,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-07",
-    "title": "Grand Prize: Investigative AI Telemetry",
+    "title": "Investigative AI",
     "hackathon": "Karnataka State Police X Presidency Namma Suraksha Hackathon",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -191,7 +191,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-08",
-    "title": "1st Place: EO/IR Sensor Classifier",
+    "title": "EO/IR Sensor Classification System",
     "hackathon": "HAL Aerothon 2025",
     "location": "Bengaluru, India",
     "track": "HAL",
@@ -217,7 +217,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-09",
-    "title": "1st Place: Pre-Consultation Doctor Calling Agent",
+    "title": "DocCall Pre-Consultation Agent",
     "hackathon": "IIT BBS X Jazzee GenAI Hackathon",
     "location": "Bhubaneswar, India",
     "track": "ecell",
@@ -243,7 +243,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-10",
-    "title": "1st Place: GAJA Heavy-Duty UAV Platform",
+    "title": "GAJA",
     "hackathon": "Geeks for Geeks CBC Hackathon 1.0",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -269,7 +269,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-11",
-    "title": "Winner: GAJA Signal Processing",
+    "title": "GAJA",
     "hackathon": "IEEE RVCE SPS Hackathon",
     "location": "Bengaluru, India",
     "track": "IEEE",
@@ -295,7 +295,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-12",
-    "title": "Winner: Darshan Glasses State Edition",
+    "title": "Darshan Glasses",
     "hackathon": "Tamil Nadu State Innovation Hackathon",
     "location": "Tamil Nadu, India",
     "track": "ecell",
@@ -309,18 +309,11 @@ export const WINS_DATA: readonly WinRecord[] = [
       "OpenCV"
     ],
     "description": "Deployed a lightweight version of Darshan Glasses optimized for low-power edge vision processing.",
-    "images": [
-      "/images/wins/win-12/img-1.jpg",
-      "/images/wins/win-12/img-2.jpg",
-      "/images/wins/win-12/img-3.jpg",
-      "/images/wins/win-12/img-4.jpeg",
-      "/images/wins/win-12/img-5.jpeg",
-      "/images/wins/win-12/img-6.jpg"
-    ]
+    "images": []
   },
   {
     "id": "win-13",
-    "title": "1st Place: SalesCall Automated Handover AI",
+    "title": "SalesCall AI Agent",
     "hackathon": "BTI Ignite Foundation Hackfinity Hackathon",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -346,7 +339,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-14",
-    "title": "Winner: VAANI Industrial Voice Intelligence",
+    "title": "VAANI",
     "hackathon": "IISc X TATA Steel MSME 4.0 Hackathon",
     "location": "Bengaluru, India",
     "track": "IISc",
@@ -368,7 +361,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-15",
-    "title": "Grand Prize: GAJA MSME Drone Fleet",
+    "title": "GAJA",
     "hackathon": "MSME 5.0 Hackathon",
     "location": "India",
     "track": "MSME",
@@ -382,18 +375,11 @@ export const WINS_DATA: readonly WinRecord[] = [
       "IoT"
     ],
     "description": "Adapted GAJA UAV platform for MSME facility inspection and local automated payload logistics.",
-    "images": [
-      "/images/wins/win-15/img-1.jpg",
-      "/images/wins/win-15/img-2.jpg",
-      "/images/wins/win-15/img-3.jpg",
-      "/images/wins/win-15/img-4.jpg",
-      "/images/wins/win-15/img-5.jpg",
-      "/images/wins/win-15/img-6.jpg"
-    ]
+    "images": []
   },
   {
     "id": "win-16",
-    "title": "Winner: Airavatha Vibe Coding Engine",
+    "title": "Airavatha",
     "hackathon": "Ai Brewery Vibe Coding Hackathon",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -419,7 +405,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-17",
-    "title": "Best Innovation: Darshan Glasses Platform",
+    "title": "Darshan Glasses",
     "hackathon": "UST Sight 2.0 Project Presentation",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -444,7 +430,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-18",
-    "title": "1st Place: Posture Correction Wearable",
+    "title": "Posture Correction",
     "hackathon": "Lion Circuits X PCB Cupid Hardware Hackathon 1.0",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -470,7 +456,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-19",
-    "title": "Best Project: Darshan Glasses Hardware",
+    "title": "Darshan Glasses",
     "hackathon": "AIT Project Presentation",
     "location": "Bengaluru, India",
     "track": "ecell",
@@ -492,7 +478,7 @@ export const WINS_DATA: readonly WinRecord[] = [
   },
   {
     "id": "win-20",
-    "title": "AICTE National Fellowship: GAJA Robotics",
+    "title": "GAJA",
     "hackathon": "AICTE Fellowship",
     "location": "India",
     "track": "ecell",

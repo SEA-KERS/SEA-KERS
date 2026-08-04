@@ -137,17 +137,24 @@ export default function WinsSection() {
               className="surface-card flex overflow-hidden flex-col cursor-pointer transition-all duration-200 hover:border-(--primary) focus-visible:outline-2 focus-visible:outline-(--ring)"
             >
               <div className="relative aspect-[16/9] overflow-hidden bg-(--muted)">
-                <img
-                  src={win.images[0]}
-                  srcSet={getImageSrcSet(win.images[0])}
-                  sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                  alt={`Presentation of ${win.title}`}
-                  className="h-full w-full object-cover"
-                />
+                {win.images.length > 0 ? (
+                  <img
+                    src={win.images[0]}
+                    srcSet={getImageSrcSet(win.images[0])}
+                    sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
+                    width="640"
+                    height="360"
+                    loading="lazy"
+                    decoding="async"
+                    alt={`Presentation of ${win.title}`}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  <div className="flex h-full w-full flex-col items-center justify-center p-6 text-center text-(--muted-foreground)">
+                    <Award aria-hidden="true" className="h-10 w-10 text-(--primary-text) opacity-60" />
+                    <span className="mt-2 text-xs font-semibold uppercase tracking-wider">No Photo Available</span>
+                  </div>
+                )}
                 <span className="absolute left-3 top-3 rounded-full bg-(--accent) px-3 py-1 text-xs font-bold text-(--accent-foreground)">
                   {win.award}
                 </span>
@@ -204,40 +211,47 @@ export default function WinsSection() {
               <X aria-hidden="true" className="h-5 w-5" />
             </button>
 
-            <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-lg bg-(--muted)">
-              <img
-                src={activeWin.images[activeImageIndex]}
-                srcSet={getImageSrcSet(activeWin.images[activeImageIndex])}
-                sizes="(min-width: 768px) 42rem, 100vw"
-                width="960"
-                height="540"
-                decoding="async"
-                alt={`${activeWin.title}, image ${activeImageIndex + 1} of ${activeWin.images.length}`}
-                className="h-full w-full object-cover"
-              />
-              {activeWin.images.length > 1 ? (
-                <>
-                  <button type="button" onClick={() => moveImage(-1)} aria-label="Previous image" className="icon-button absolute left-3 top-1/2 -translate-y-1/2 bg-(--card)">
-                    <ChevronLeft aria-hidden="true" className="h-5 w-5" />
-                  </button>
-                  <button type="button" onClick={() => moveImage(1)} aria-label="Next image" className="icon-button absolute right-3 top-1/2 -translate-y-1/2 bg-(--card)">
-                    <ChevronRight aria-hidden="true" className="h-5 w-5" />
-                  </button>
-                  <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-(--card) p-2" role="group" aria-label="Choose image">
-                    {activeWin.images.map((_, index) => (
-                      <button
-                        key={index}
-                        type="button"
-                        onClick={() => setActiveImageIndex(index)}
-                        aria-label={`Show image ${index + 1}`}
-                        aria-current={activeImageIndex === index ? "true" : undefined}
-                        className={`h-3 w-3 rounded-full ${activeImageIndex === index ? "bg-(--primary)" : "bg-(--input)"}`}
-                      />
-                    ))}
-                  </div>
-                </>
-              ) : null}
-            </div>
+            {activeWin.images.length > 0 ? (
+              <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-lg bg-(--muted)">
+                <img
+                  src={activeWin.images[activeImageIndex]}
+                  srcSet={getImageSrcSet(activeWin.images[activeImageIndex])}
+                  sizes="(min-width: 768px) 42rem, 100vw"
+                  width="960"
+                  height="540"
+                  decoding="async"
+                  alt={`${activeWin.title}, image ${activeImageIndex + 1} of ${activeWin.images.length}`}
+                  className="h-full w-full object-cover"
+                />
+                {activeWin.images.length > 1 ? (
+                  <>
+                    <button type="button" onClick={() => moveImage(-1)} aria-label="Previous image" className="icon-button absolute left-3 top-1/2 -translate-y-1/2 bg-(--card)">
+                      <ChevronLeft aria-hidden="true" className="h-5 w-5" />
+                    </button>
+                    <button type="button" onClick={() => moveImage(1)} aria-label="Next image" className="icon-button absolute right-3 top-1/2 -translate-y-1/2 bg-(--card)">
+                      <ChevronRight aria-hidden="true" className="h-5 w-5" />
+                    </button>
+                    <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-(--card) p-2" role="group" aria-label="Choose image">
+                      {activeWin.images.map((_, index) => (
+                        <button
+                          key={index}
+                          type="button"
+                          onClick={() => setActiveImageIndex(index)}
+                          aria-label={`Show image ${index + 1}`}
+                          aria-current={activeImageIndex === index ? "true" : undefined}
+                          className={`h-3 w-3 rounded-full ${activeImageIndex === index ? "bg-(--primary)" : "bg-(--input)"}`}
+                        />
+                      ))}
+                    </div>
+                  </>
+                ) : null}
+              </div>
+            ) : (
+              <div className="mt-10 flex aspect-[16/9] w-full flex-col items-center justify-center rounded-lg bg-(--muted) p-6 text-center text-(--muted-foreground)">
+                <Award aria-hidden="true" className="h-12 w-12 text-(--primary-text) opacity-60" />
+                <span className="mt-2 text-sm font-semibold uppercase tracking-wider">No Preview Photo Available</span>
+              </div>
+            )}
 
             <p className="section-kicker mt-6">{activeWin.location} / {activeWin.date}</p>
             <h2 id="win-dialog-title" className="mt-2 pr-12 font-headline text-3xl font-bold">{activeWin.hackathon}</h2>
