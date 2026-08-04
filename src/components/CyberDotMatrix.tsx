@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import brandIcon from "../assets/brand/sea-kers-icon-color.svg";
-import brandIconDarkCaret from "../assets/brand/sea-kers-icon-dark-caret.svg";
 import type { Theme } from "../types";
 import {
   mapParticleSampleToCanvas,
@@ -112,8 +111,7 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
       lastFrame = timestamp;
       context.clearRect(0, 0, canvasSize, canvasSize);
 
-      const isLight = themeRef.current === "light";
-      const caretColor = isLight ? "#11131a" : "#f4f6fb";
+      const caretColor = "#f4f6fb";
 
       for (const particle of particles) {
         const isArc = particle.kind === "arc";
@@ -266,14 +264,10 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
 
   return (
     <div
-      className={`relative mx-auto aspect-square w-full max-w-[12rem] overflow-hidden rounded-2xl p-4 transition-colors duration-200 md:max-w-[25rem] ${
-        theme === "light"
-          ? "border border-(--border) bg-white shadow-md"
-          : "bg-[#0d0d0d]"
-      }`}
+      className="relative mx-auto aspect-square w-full max-w-[12rem] overflow-hidden rounded-2xl bg-[#0d0d0d] p-4 transition-colors duration-200 md:max-w-[25rem]"
     >
       <img
-        src={theme === "light" ? brandIconDarkCaret : brandIcon}
+        src={brandIcon}
         width="512"
         height="512"
         fetchPriority="high"
