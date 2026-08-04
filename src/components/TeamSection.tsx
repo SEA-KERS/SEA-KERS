@@ -39,42 +39,55 @@ export default function TeamSection() {
           />
           <div className="hidden h-full w-full flex-col items-center justify-center p-6 text-center text-(--muted-foreground) [img[style*='display: none'] ~ &]:flex">
             <span className="font-headline text-3xl font-bold text-(--primary-text)">{member.name.charAt(0)}</span>
-            <span className="mt-1 text-xs font-semibold uppercase tracking-wider">{member.role}</span>
           </div>
         </div>
         <div className="flex flex-1 flex-col p-5">
-          <p className="text-xs font-bold uppercase tracking-wider text-(--primary-text)">{member.role}</p>
-          <h4 className="mt-1 font-headline text-xl font-bold">{member.name}</h4>
-          <p className="mt-1 text-sm text-(--muted-foreground)">{member.handle}</p>
-          <p className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-(--secondary-text)">
-            <Award aria-hidden="true" className="h-4 w-4" />
-            {member.winsCount} victories
-          </p>
-          <p className="mt-3 flex-1 text-sm leading-6 text-(--muted-foreground)">{member.bio}</p>
-          <div className="mt-4 flex flex-wrap gap-1.5">
-            {member.skills.map((skill) => <span key={skill} className="tag">{skill}</span>)}
-          </div>
-          <div className="mt-5 flex min-h-11 items-center justify-between gap-3 border-t border-(--border) pt-4">
-            <div className="flex gap-1">
-              {socialLinks.map(({ href, label, Icon }) => (
-                <a key={label} href={href} target="_blank" rel="noreferrer" className="icon-button" aria-label={label}>
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+          {member.role ? (
+            <p className="text-xs font-bold uppercase tracking-wider text-(--primary-text)">{member.role}</p>
+          ) : null}
+          <h4 className="font-headline text-xl font-bold">{member.name}</h4>
+          {member.handle ? (
+            <p className="mt-1 text-sm text-(--muted-foreground)">{member.handle}</p>
+          ) : null}
+          {member.winsCount !== undefined ? (
+            <p className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-(--secondary-text)">
+              <Award aria-hidden="true" className="h-4 w-4" />
+              {member.winsCount} victories
+            </p>
+          ) : null}
+          {member.bio ? (
+            <p className="mt-3 flex-1 text-sm leading-6 text-(--muted-foreground)">{member.bio}</p>
+          ) : null}
+          {member.skills && member.skills.length > 0 ? (
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {member.skills.map((skill) => <span key={skill} className="tag">{skill}</span>)}
             </div>
-            <button
-              type="button"
-              onClick={(event) => {
-                rememberTrigger(event.currentTarget);
-                setActiveMember(member);
-              }}
-              className="button-quiet"
-              aria-label={`Open spotlight for ${member.name}`}
-            >
-              <Sparkles aria-hidden="true" className="h-4 w-4" />
-              Spotlight
-            </button>
-          </div>
+          ) : null}
+          {socialLinks.length > 0 || member.bio ? (
+            <div className="mt-auto flex min-h-11 items-center justify-between gap-3 border-t border-(--border) pt-4">
+              <div className="flex gap-1">
+                {socialLinks.map(({ href, label, Icon }) => (
+                  <a key={label} href={href} target="_blank" rel="noreferrer" className="icon-button" aria-label={label}>
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+              {member.bio ? (
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    rememberTrigger(event.currentTarget);
+                    setActiveMember(member);
+                  }}
+                  className="button-quiet"
+                  aria-label={`Open spotlight for ${member.name}`}
+                >
+                  <Sparkles aria-hidden="true" className="h-4 w-4" />
+                  Spotlight
+                </button>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </article>
     );
@@ -146,17 +159,29 @@ export default function TeamSection() {
                 className="h-32 w-32 rounded-lg object-cover"
               />
               <div>
-                <p className="section-kicker">{activeMember.role}</p>
+                {activeMember.role ? (
+                  <p className="section-kicker">{activeMember.role}</p>
+                ) : null}
                 <h2 id="member-dialog-title" className="mt-2 font-headline text-3xl font-bold">{activeMember.name}</h2>
-                <p className="mt-1 text-(--primary-text)">{activeMember.handle}</p>
-                <p className="mt-2 text-sm text-(--muted-foreground)">{activeMember.specialization}</p>
+                {activeMember.handle ? (
+                  <p className="mt-1 text-(--primary-text)">{activeMember.handle}</p>
+                ) : null}
+                {activeMember.specialization ? (
+                  <p className="mt-2 text-sm text-(--muted-foreground)">{activeMember.specialization}</p>
+                ) : null}
               </div>
             </div>
-            <p id="member-dialog-description" className="mt-6 leading-7 text-(--muted-foreground)">{activeMember.bio}</p>
-            <p className="mt-5 font-semibold text-(--secondary-text)">{activeMember.winsCount} hackathon victories</p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {activeMember.skills.map((skill) => <span key={skill} className="tag">{skill}</span>)}
-            </div>
+            {activeMember.bio ? (
+              <p id="member-dialog-description" className="mt-6 leading-7 text-(--muted-foreground)">{activeMember.bio}</p>
+            ) : null}
+            {activeMember.winsCount !== undefined ? (
+              <p className="mt-5 font-semibold text-(--secondary-text)">{activeMember.winsCount} hackathon victories</p>
+            ) : null}
+            {activeMember.skills && activeMember.skills.length > 0 ? (
+              <div className="mt-5 flex flex-wrap gap-2">
+                {activeMember.skills.map((skill) => <span key={skill} className="tag">{skill}</span>)}
+              </div>
+            ) : null}
             <button type="button" onClick={() => setActiveMember(null)} className="button-primary mt-7 w-full">Close spotlight</button>
           </div>
         </div>

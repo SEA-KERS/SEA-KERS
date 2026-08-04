@@ -1,11 +1,13 @@
 id,name,role,handle,specialization,winsCount,bio,skills,github,twitter,linkedin,avatar
-arjun-s,ARJUN_S,PROTOCOL ARCHITECT,@arjun_builds,DePIN & Distributed Systems,8,"Lead builder on Neon Mesh. Obsessed with distributed consensus, memory models, and kernel-level networking.",Rust;Solana;gRPC;C++,,,,/images/team/arjun-s.jpg
-meera-v,MEERA_V,ZK RESEARCHER,@meera_zk,Zero-Knowledge Cryptography,7,Designing succinct cryptographic proof systems and custom arithmetic circuits. ETHIndia Grand Winner.,Circom;SnarkJS;Halo2;Solidity,,,,/images/team/meera-v.jpg
-rohan-k,ROHAN_K,INFRA LEAD,@rohan_infra,Cross-Chain & Systems,6,"Building zero-downtime relayer nodes, high-throughput RPC indexers, and custom database plugins.",Go;Cosmos SDK;ClickHouse;Docker,,,,/images/team/rohan-k.jpg
-zayn-x,ZAYN_X,AI ENGINEER,@zayn_ai,Agentic AI & Security,6,Train multi-agent LLM systems and static analysis parsers. Grand Winner at Global AI Safety Hack.,Python;PyTorch;CUDA;LangGraph,,,,/images/team/zayn-x.jpg
-ananya-r,ANANYA_R,SMART CONTRACT AUDITOR,@ananya_sec,EVM Invariants & Formal Verification,5,"Specialist in smart contract security audits, reentrancy invariant testing, and bytecode analysis.",Solidity;Foundry;Echidna;Yul,,,,/images/team/ananya-r.jpg
-dev-p,DEV_P,HARDWARE LEAD,@dev_robotics,ROS2 & Autonomous Systems,4,"Hacking embedded hardware, Jetson microcontrollers, and autonomous swarm robotics protocols.",C++;ROS2;LiDAR;CUDA,,,,/images/team/dev-p.jpg
-vikram-n,VIKRAM_N,BACKEND ENGINEER,@vikram_dev,gRPC & High-Scale Microservices,3,"Building microservices, telemetry streaming endpoints, and state indexing pipelines.",Go;gRPC;PostgreSQL;Redis,,,,/images/team/vikram-n.jpg
-riya-k,RIYA_K,ZK CIRCUIT DEVELOPER,@riya_zk,SnarkJS & Identity Proofs,3,Focusing on polynomial commitment schemes and client-side zero-knowledge proof generation.,Circom;SnarkJS;JavaScript;Rust,,,,/images/team/riya-k.jpg
-siddharth-b,SIDDHARTH_B,SMART CONTRACT DEV,@sid_sol,Anchor & Solana Programs,2,Developing custom Solana on-chain state transition rules and Anchor framework contracts.,Rust;Anchor;Solana CLI;TypeScript,,,,/images/team/siddharth-b.jpg
-neha-g,NEHA_G,DATA ENGINE RESEARCHER,@neha_data,ClickHouse & SIMD Indexing,2,Optimizing database queries and log ingestion benchmarks for EVM historical state storage.,Python;SQL;ClickHouse;Docker,,,,/images/team/neha-g.jpg
+kashvi-v,Kashvi V,,,,,,,,,,/images/team/kashvi-v.jpg
+spoorthi-r,Spoorthi R,,,,,,,,,,/images/team/spoorthi-r.jpg
+anusha-rao,Anusha Rao,,,,,,,,,,/images/team/anusha-rao.jpg
+fardeen-s-khadri,Fardeen S Khadri,,,,,,,,,,/images/team/fardeen-s-khadri.jpg
+pramoda-s-r,Pramoda S R,,,,,,,,,,/images/team/pramoda-s-r.jpg
+manoj-gowda-r,Manoj Gowda R,,,,,,,,,,/images/team/manoj-gowda-r.jpg
+reddy,Reddy,,,,,,,,,,/images/team/reddy.jpg
+sujan,Sujan,,,,,,,,,,/images/team/sujan.jpg
+afnaan,Afnaan,,,,,,,,,,/images/team/afnaan.jpg
+swathi,Swathi,,,,,,,,,,/images/team/swathi.jpg
+manasa-r,Manasa R,,,,,,,,,,/images/team/manasa-r.jpg
+priya,Priya,,,,,,,,,,/images/team/priya.jpg
