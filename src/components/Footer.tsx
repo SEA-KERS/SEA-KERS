@@ -8,7 +8,6 @@ interface FooterProps {
 const footerLinks = [
   ["Mission", "about"],
   ["Wins", "wins"],
-  ["Projects", "projects"],
   ["Team", "team"],
 ] as const;
 
