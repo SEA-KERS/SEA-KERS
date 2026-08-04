@@ -4,7 +4,7 @@ import { SITE_CONFIG } from "../config/site";
 
 const title = "Team SEA-KERS | Engineering Collective in India";
 const description =
-  "Meet Team SEA-KERS, a collegiate engineering collective with 20+ hackathon wins building open technology across AI, Web3, and DePIN.";
+  "Meet Team SEA-KERS, a collegiate engineering collective with 15+ hackathon wins building open technology across AI, Web3, and DePIN.";
 const pageUrl = SITE_CONFIG.url ? `${SITE_CONFIG.url}/` : null;
 const socialPreviewUrl = SITE_CONFIG.url
   ? new URL("/social-preview.jpg", SITE_CONFIG.url).href

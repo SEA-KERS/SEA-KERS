@@ -43,9 +43,14 @@ export default function ProjectsSection({
               <Code2 aria-hidden="true" className="h-4 w-4" />
               Code artifacts
             </p>
-            <h2 id="projects-title" className="mt-3 font-headline text-4xl font-bold md:text-5xl">
-              Our repositories
-            </h2>
+            <div className="mt-3 flex flex-wrap items-center gap-3">
+              <h2 id="projects-title" className="font-headline text-4xl font-bold md:text-5xl">
+                Our repositories
+              </h2>
+              <span className="rounded-full bg-red-500/15 border border-red-500/30 px-3 py-1 text-xs font-bold uppercase tracking-wider text-red-600 dark:text-red-400">
+                Publishing Soon
+              </span>
+            </div>
             <p className="mt-4 max-w-3xl leading-7 text-(--muted-foreground)">
               Focused proofs of concept, designed, validated, and shipped within
               demanding time constraints.
@@ -53,6 +58,16 @@ export default function ProjectsSection({
           </div>
           <p className="text-sm font-semibold text-(--muted-foreground)">
             {PROJECTS_DATA.length} project specifications
+          </p>
+        </div>
+
+        <div className="mt-6 flex items-center gap-3 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-red-600 dark:text-red-400">
+          <span className="relative flex h-3 w-3 shrink-0">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75"></span>
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-red-500"></span>
+          </span>
+          <p className="text-sm font-semibold">
+            Repositories coming soon! Public access and source code releases are currently undergoing final documentation and preparation.
           </p>
         </div>
 
