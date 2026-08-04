@@ -9,6 +9,13 @@ interface ProjectsSectionProps {
   onClose: () => void;
 }
 
+/**
+ * Renders project specifications and an optional project-detail dialog.
+ *
+ * @param selectedProjectId - Identifies the project whose specification dialog should open.
+ * @param onClose - Called when the active project dialog is closed.
+ * @returns The projects section with project cards and, when applicable, a specification dialog.
+ */
 export default function ProjectsSection({
   selectedProjectId,
   onClose,

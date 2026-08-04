@@ -29,6 +29,11 @@ const tracks = [
 
 type TrackFilter = (typeof tracks)[number]["value"];
 
+/**
+ * Displays searchable, filterable team win records with expandable details and project links.
+ *
+ * @param onSelectProject - Handles navigation to the project associated with a selected win.
+ */
 export default function WinsSection({ onSelectProject }: WinsSectionProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTrack, setSelectedTrack] = useState<TrackFilter>("ALL");

@@ -11,6 +11,12 @@ const stats = [
   ["5", "Indian states"],
 ] as const;
 
+/**
+ * Renders the team's introductory hero section with themed visuals and key statistics.
+ *
+ * @param theme - The visual theme applied to the hero illustration
+ * @returns The rendered hero section
+ */
 export default function Hero({ theme }: HeroProps) {
   return (
     <section
