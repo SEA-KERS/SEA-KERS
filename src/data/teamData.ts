@@ -28,7 +28,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-01/img-4.jpg",
       "/images/wins/win-01/img-5.jpg",
       "/images/wins/win-01/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b935,000 Cash Prize"
   },
   {
     "id": "win-02",
@@ -54,7 +55,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-02/img-4.jpg",
       "/images/wins/win-02/img-5.jpg",
       "/images/wins/win-02/img-6.jpg"
-    ]
+    ],
+    "prize": "Swags & Goodies"
   },
   {
     "id": "win-03",
@@ -80,7 +82,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-03/img-4.jpeg",
       "/images/wins/win-03/img-5.jpeg",
       "/images/wins/win-03/img-6.jpeg"
-    ]
+    ],
+    "prize": "\u20b930,000 Cash Prize"
   },
   {
     "id": "win-04",
@@ -107,7 +110,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-04/img-5.jpg",
       "/images/wins/win-04/img-6.jpg",
       "/images/wins/win-04/img-7.jpg"
-    ]
+    ],
+    "prize": "\u20b910,000 Cash Prize"
   },
   {
     "id": "win-05",
@@ -133,7 +137,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-05/img-4.jpeg",
       "/images/wins/win-05/img-5.jpeg",
       "/images/wins/win-05/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b950,000 Cash Prize"
   },
   {
     "id": "win-06",
@@ -159,7 +164,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-06/img-4.jpeg",
       "/images/wins/win-06/img-5.jpeg",
       "/images/wins/win-06/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b910,000 Cash Prize"
   },
   {
     "id": "win-07",
@@ -187,7 +193,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-07/img-6.jpg",
       "/images/wins/win-07/img-7.jpg",
       "/images/wins/win-07/img-8.jpg"
-    ]
+    ],
+    "prize": "\u20b930,000 Cash Prize"
   },
   {
     "id": "win-08",
@@ -213,7 +220,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-08/img-4.jpg",
       "/images/wins/win-08/img-5.jpg",
       "/images/wins/win-08/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b975,000 Cash Prize"
   },
   {
     "id": "win-09",
@@ -239,7 +247,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-09/img-4.jpg",
       "/images/wins/win-09/img-5.jpg",
       "/images/wins/win-09/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b92,000 Cash Prize"
   },
   {
     "id": "win-10",
@@ -265,7 +274,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-10/img-4.jpg",
       "/images/wins/win-10/img-5.jpg",
       "/images/wins/win-10/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b920,000 Cash Prize"
   },
   {
     "id": "win-11",
@@ -291,7 +301,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-11/img-4.jpg",
       "/images/wins/win-11/img-5.jpg",
       "/images/wins/win-11/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b910,000 Cash Prize"
   },
   {
     "id": "win-12",
@@ -309,7 +320,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "OpenCV"
     ],
     "description": "Deployed a lightweight version of Darshan Glasses optimized for low-power edge vision processing.",
-    "images": []
+    "images": [],
+    "prize": "\u20b92,000 Cash Prize"
   },
   {
     "id": "win-13",
@@ -335,7 +347,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-13/img-4.png",
       "/images/wins/win-13/img-5.jpg",
       "/images/wins/win-13/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b910,000 Cash Prize"
   },
   {
     "id": "win-14",
@@ -357,7 +370,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-14/img-1.png",
       "/images/wins/win-14/img-2.png",
       "/images/wins/win-14/img-3.png"
-    ]
+    ],
+    "prize": "Offered Incubation"
   },
   {
     "id": "win-15",
@@ -375,7 +389,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "IoT"
     ],
     "description": "Adapted GAJA UAV platform for MSME facility inspection and local automated payload logistics.",
-    "images": []
+    "images": [],
+    "prize": "\u20b915 Lakh Grant to Develop Idea"
   },
   {
     "id": "win-16",
@@ -401,7 +416,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-16/img-4.webp",
       "/images/wins/win-16/img-5.webp",
       "/images/wins/win-16/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b95,000 Cash Prize"
   },
   {
     "id": "win-17",
@@ -426,7 +442,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-17/img-4.jpg",
       "/images/wins/win-17/img-5.jpg",
       "/images/wins/win-17/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b925,000 Cash Prize"
   },
   {
     "id": "win-18",
@@ -452,7 +469,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-18/img-4.jpg",
       "/images/wins/win-18/img-5.jpg",
       "/images/wins/win-18/img-6.jpg"
-    ]
+    ],
+    "prize": "\u20b93,000 Cash Prize"
   },
   {
     "id": "win-19",
@@ -474,7 +492,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-19/img-1.png",
       "/images/wins/win-19/img-2.png",
       "/images/wins/win-19/img-3.png"
-    ]
+    ],
+    "prize": "\u20b910,000 Cash Prize"
   },
   {
     "id": "win-20",
@@ -499,7 +518,8 @@ export const WINS_DATA: readonly WinRecord[] = [
       "/images/wins/win-20/img-4.jpg",
       "/images/wins/win-20/img-5.jpg",
       "/images/wins/win-20/img-6.jpg"
-    ]
+    ],
+    "prize": "AICTE National Fellowship"
   }
 ];
 

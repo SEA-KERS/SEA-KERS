@@ -5,6 +5,7 @@ export type SectionId = "all" | "wins" | "team" | "about";
 export interface WinRecord {
   id: string;
   title: string;
+  prize?: string;
   hackathon: string;
   location: string;
   track: string;

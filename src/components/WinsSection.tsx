@@ -160,7 +160,7 @@ export default function WinsSection() {
                 </span>
               </div>
               <div className="flex flex-1 flex-col p-5">
-                <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted-foreground)">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-(--muted-foreground)">
                   <span className="inline-flex items-center gap-1">
                     <MapPin aria-hidden="true" className="h-4 w-4" />
                     {win.location}
@@ -169,6 +169,11 @@ export default function WinsSection() {
                     <Calendar aria-hidden="true" className="h-4 w-4" />
                     {win.date}
                   </span>
+                  {win.prize ? (
+                    <span className="ml-auto inline-flex items-center rounded-md bg-(--primary-soft) px-2 py-0.5 text-xs font-bold text-(--primary-text)">
+                      {win.prize}
+                    </span>
+                  ) : null}
                 </div>
                 <h3 className="mt-4 font-headline text-xl font-bold">{win.hackathon}</h3>
                 <p className="mt-1 text-sm font-medium text-(--primary-text)">{win.title}</p>
@@ -256,6 +261,11 @@ export default function WinsSection() {
             <p className="section-kicker mt-6">{activeWin.location} / {activeWin.date}</p>
             <h2 id="win-dialog-title" className="mt-2 pr-12 font-headline text-3xl font-bold">{activeWin.hackathon}</h2>
             <p className="mt-1 text-sm font-semibold text-(--primary-text)">{activeWin.title}</p>
+            {activeWin.prize ? (
+              <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-(--primary-soft) px-3 py-1 text-xs font-bold text-(--primary-text)">
+                Awarded: {activeWin.prize}
+              </div>
+            ) : null}
             <p id="win-dialog-description" className="mt-4 leading-7 text-(--muted-foreground)">{activeWin.description}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {activeWin.techStack.map((tech) => <span key={tech} className="tag">{tech}</span>)}
