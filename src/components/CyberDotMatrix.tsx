@@ -128,7 +128,7 @@ export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
 
         particle.x += (targetX - particle.x) * 0.12;
         particle.y += (targetY - particle.y) * 0.12;
-        context.fillStyle = isArc ? "#4361ee" : "#f4f6fb";
+        context.fillStyle = isArc ? "#6f80e8" : "#f5f5f7";
         context.globalAlpha = isArc ? 0.95 : 0.86;
         context.fillRect(
           particle.x,
@@ -256,24 +256,24 @@ export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
   }, []);
 
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[12rem] overflow-hidden rounded-2xl bg-[#0d0d0d] p-4 md:max-w-[25rem]">
+    <div className="relative mx-auto aspect-square w-full max-w-[12rem] overflow-hidden rounded-2xl bg-[#030624] p-4 md:max-w-[25rem]">
       <img
         src={brandIcon}
         width="512"
         height="512"
         fetchPriority="high"
-        alt="Team SEA-KERS caret above a single primary-blue arc"
+        alt="Team SEA-KERS caret above a single ocean arc"
         aria-hidden={isAnimated || undefined}
         className={`absolute inset-4 h-[calc(100%-2rem)] w-[calc(100%-2rem)] transition-opacity duration-200 ${isAnimated ? "opacity-0" : "opacity-100"}`}
       />
       <canvas
         ref={canvasRef}
         role="img"
-        aria-label="Animated Team SEA-KERS caret above a primary-blue arc"
+        aria-label="Animated Team SEA-KERS caret above an ocean arc"
         aria-hidden={!isAnimated || undefined}
         className={`relative aspect-square h-auto w-full transition-opacity duration-200 ${isAnimated ? "opacity-100" : "opacity-0"}`}
       >
-        Team SEA-KERS caret logo above one primary-blue arc.
+        Team SEA-KERS caret logo above one ocean arc.
       </canvas>
     </div>
   );

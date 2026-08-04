@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="72 56 368 368" role="img" aria-labelledby="title desc">
   <title id="title">SEA-KERS icon</title>
-  <desc id="desc">A geometric upward caret above one primary-blue ocean arc.</desc>
+  <desc id="desc">A geometric upward caret above one ocean arc.</desc>
   <path fill="#FFFFFF" d="M256 88 132 296h55l69-116 69 116h55L256 88Z"/>
-  <path fill="#4361EE" d="M96 342c51-28 105-42 160-42s109 14 160 42l-34 24c-41-20-83-30-126-30s-85 10-126 30l-34-24Z"/>
+  <path fill="#0C1E8B" d="M96 342c51-28 105-42 160-42s109 14 160 42l-34 24c-41-20-83-30-126-30s-85 10-126 30l-34-24Z"/>
 </svg>

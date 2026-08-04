@@ -1,6 +1,6 @@
 export type Theme = "light" | "dark";
 
-export type SectionId = "all" | "wins" | "team" | "about";
+export type SectionId = "all" | "wins" | "projects" | "team" | "about";
 
 export interface WinRecord {
   id: string;

@@ -1,6 +1,6 @@
 import { createRootRoute } from "@tanstack/react-router";
 import { NotFoundPage, RootLayout } from "../components/RootLayout";
-import headingFont from "@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2?url";
+import headingFont from "@fontsource-variable/archivo/files/archivo-latin-wght-normal.woff2?url";
 import appCss from "../index.css?url";
 
 const themeBootstrap = `(() => {

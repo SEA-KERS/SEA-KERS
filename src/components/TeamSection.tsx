@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Award, Quote, Shield, Sparkles, UserCheck, X } from "lucide-react";
+import { X } from "lucide-react";
 import { CORE_TEAM_DATA, TEAM_MEMBERS_DATA } from "../data/teamData";
 import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
 import { getImageSrcSet } from "../utils/images";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "./SocialIcons";
 import type { TeamMember } from "../types";
 
 export default function TeamSection() {
@@ -13,106 +12,71 @@ export default function TeamSection() {
     () => setActiveMember(null),
   );
 
-  const renderMemberCard = (member: TeamMember) => {
-    const socialLinks = [
-      { href: member.github, label: `${member.name} on GitHub`, Icon: GithubIcon },
-      { href: member.twitter, label: `${member.name} on X`, Icon: TwitterIcon },
-      { href: member.linkedin, label: `${member.name} on LinkedIn`, Icon: LinkedinIcon },
-    ].filter((item) => Boolean(item.href));
-
-    return (
-      <article key={member.id} className="surface-card flex flex-col overflow-hidden">
-        <img
-          src={member.avatar}
-          srcSet={getImageSrcSet(member.avatar)}
-          sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw"
-          width="480"
-          height="320"
-          loading="lazy"
-          decoding="async"
-          alt={`Portrait of ${member.name}`}
-          className="aspect-[3/2] w-full object-cover"
-        />
-        <div className="flex flex-1 flex-col p-5">
-          <p className="text-xs font-bold uppercase tracking-wider text-(--primary-text)">{member.role}</p>
-          <h4 className="mt-1 font-headline text-xl font-bold">{member.name}</h4>
-          <p className="mt-1 text-sm text-(--muted-foreground)">{member.handle}</p>
-          <p className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-(--secondary-text)">
-            <Award aria-hidden="true" className="h-4 w-4" />
-            {member.winsCount} victories
-          </p>
-          <p className="mt-3 flex-1 text-sm leading-6 text-(--muted-foreground)">{member.bio}</p>
-          <div className="mt-4 flex flex-wrap gap-1.5">
-            {member.skills.map((skill) => <span key={skill} className="tag">{skill}</span>)}
-          </div>
-          <div className="mt-5 flex min-h-11 items-center justify-between gap-3 border-t border-(--border) pt-4">
-            <div className="flex gap-1">
-              {socialLinks.map(({ href, label, Icon }) => (
-                <a key={label} href={href} target="_blank" rel="noreferrer" className="icon-button" aria-label={label}>
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
-            <button
-              type="button"
-              onClick={(event) => {
-                rememberTrigger(event.currentTarget);
-                setActiveMember(member);
-              }}
-              className="button-quiet"
-              aria-label={`Open spotlight for ${member.name}`}
-            >
-              <Sparkles aria-hidden="true" className="h-4 w-4" />
-              Spotlight
-            </button>
-          </div>
-        </div>
-      </article>
-    );
-  };
-
   return (
     <section
       id="team-section"
       aria-labelledby="team-title"
-      className="border-b border-(--border) px-4 py-20 md:px-8"
+      className="border-t border-(--border) px-4 py-24 md:px-8 md:py-32"
     >
       <div className="mx-auto max-w-7xl">
-        <p className="section-kicker">Engineering roster</p>
-        <h2 id="team-title" className="mt-3 font-headline text-4xl font-bold md:text-5xl">Master minds</h2>
-        <p className="mt-4 max-w-3xl leading-7 text-(--muted-foreground)">A multidisciplinary team united by curiosity, craft, and the persistence to keep building.</p>
+        <div className="lg:grid lg:grid-cols-5 lg:gap-12">
+          <div className="lg:col-span-2 xl:col-span-1">
+            <p className="kicker">Engineering roster</p>
+            <h2
+              id="team-title"
+              className="mt-4 font-headline text-5xl font-black uppercase leading-[0.95] tracking-[-0.02em] md:text-6xl xl:text-5xl"
+            >
+              Master minds
+            </h2>
+            <p className="mt-5 text-base leading-7 text-(--muted-foreground)">
+              What you seek is seeking you. We choose harder problems and build
+              the systems we want to see in the world.
+            </p>
+          </div>
 
-        <blockquote className="surface-card mt-10 flex gap-4 p-6 text-lg leading-8">
-          <Quote aria-hidden="true" className="h-7 w-7 shrink-0 text-(--accent-text)" />
-          <p>
-            <strong className="font-headline">What you seek is seeking you.</strong>{" "}
-            We choose harder problems and build the systems we want to see in the world.
-          </p>
-        </blockquote>
-
-        <div className="mt-14">
-          <h3 className="flex items-center gap-2 font-headline text-2xl font-bold">
-            <Shield aria-hidden="true" className="h-5 w-5 text-(--primary-text)" />
-            Core team
-          </h3>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {CORE_TEAM_DATA.map(renderMemberCard)}
+          <div className="mt-12 lg:col-span-3 lg:mt-0 xl:col-span-4">
+            <div className="bg-(--muted) p-2 sm:p-3">
+              <ul className="grid grid-cols-2 gap-3 gap-y-16 md:grid-cols-4 md:gap-x-4 md:gap-y-24">
+                {CORE_TEAM_DATA.map((member, index) => (
+                  <li key={member.id} className={getStaggerClass(index)}>
+                    <RosterCard
+                      member={member}
+                      onOpen={(event) => {
+                        rememberTrigger(event.currentTarget);
+                        setActiveMember(member);
+                      }}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="mt-14">
-          <h3 className="flex items-center gap-2 font-headline text-2xl font-bold">
-            <UserCheck aria-hidden="true" className="h-5 w-5 text-(--secondary-text)" />
-            Team members
-          </h3>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {TEAM_MEMBERS_DATA.map(renderMemberCard)}
+        <div className="mt-24 border-b border-(--border)">
+          <p className="kicker">Team members</p>
+          <div className="mt-4">
+            {TEAM_MEMBERS_DATA.map((member) => (
+              <IndexRow
+                key={member.id}
+                member={member}
+                onOpen={(event) => {
+                  rememberTrigger(event.currentTarget);
+                  setActiveMember(member);
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>
 
       {activeMember ? (
-        <div className="dialog-backdrop" onMouseDown={(event) => event.target === event.currentTarget && setActiveMember(null)}>
+        <div
+          className="dialog-backdrop"
+          onMouseDown={(event) =>
+            event.target === event.currentTarget && setActiveMember(null)
+          }
+        >
           <div
             ref={dialogRef}
             role="dialog"
@@ -122,7 +86,12 @@ export default function TeamSection() {
             tabIndex={-1}
             className="dialog-panel max-w-xl"
           >
-            <button type="button" onClick={() => setActiveMember(null)} aria-label="Close member spotlight" className="icon-button absolute right-4 top-4">
+            <button
+              type="button"
+              onClick={() => setActiveMember(null)}
+              aria-label="Close member spotlight"
+              className="icon-button absolute right-4 top-4"
+            >
               <X aria-hidden="true" className="h-5 w-5" />
             </button>
             <div className="flex flex-col gap-5 pr-12 sm:flex-row sm:items-center">
@@ -137,21 +106,126 @@ export default function TeamSection() {
                 className="h-32 w-32 rounded-lg object-cover"
               />
               <div>
-                <p className="section-kicker">{activeMember.role}</p>
-                <h2 id="member-dialog-title" className="mt-2 font-headline text-3xl font-bold">{activeMember.name}</h2>
-                <p className="mt-1 text-(--primary-text)">{activeMember.handle}</p>
-                <p className="mt-2 text-sm text-(--muted-foreground)">{activeMember.specialization}</p>
+                <p className="kicker">{activeMember.role}</p>
+                <h2
+                  id="member-dialog-title"
+                  className="mt-2 font-headline text-3xl font-bold"
+                >
+                  {activeMember.name}
+                </h2>
+                <p className="mt-1 text-sm text-(--muted-foreground)">
+                  {activeMember.handle} · {activeMember.specialization}
+                </p>
               </div>
             </div>
-            <p id="member-dialog-description" className="mt-6 leading-7 text-(--muted-foreground)">{activeMember.bio}</p>
-            <p className="mt-5 font-semibold text-(--secondary-text)">{activeMember.winsCount} hackathon victories</p>
+            <p
+              id="member-dialog-description"
+              className="mt-6 leading-7 text-(--muted-foreground)"
+            >
+              {activeMember.bio}
+            </p>
+            <p className="mt-5 text-sm font-semibold text-(--accent-text)">
+              {activeMember.winsCount} hackathon victories
+            </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {activeMember.skills.map((skill) => <span key={skill} className="tag">{skill}</span>)}
+              {activeMember.skills.map((skill) => (
+                <span key={skill} className="tag">
+                  {skill}
+                </span>
+              ))}
             </div>
-            <button type="button" onClick={() => setActiveMember(null)} className="button-primary mt-7 w-full">Close spotlight</button>
+            <button
+              type="button"
+              onClick={() => setActiveMember(null)}
+              className="button-primary mt-8 w-full"
+            >
+              Close spotlight
+            </button>
           </div>
         </div>
       ) : null}
     </section>
+  );
+}
+
+const getStaggerClass = (index: number): string =>
+  index % 2 === 0 ? "-translate-y-8" : "translate-y-8";
+
+interface RosterCardProps {
+  member: TeamMember;
+  onOpen: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+function RosterCard({ member, onOpen }: RosterCardProps) {
+  return (
+    <button
+      type="button"
+      onClick={onOpen}
+      aria-label={`Open spotlight for ${member.name}`}
+      className="group relative block aspect-[9/16] w-full cursor-pointer border-0 bg-transparent p-0 text-left [clip-path:polygon(0_6%,100%_0,100%_94%,0_100%)]"
+    >
+      <span
+        aria-hidden="true"
+        className="absolute inset-y-0 left-0 w-[82%] bg-(--primary) transition-colors duration-300 group-hover:bg-(--primary-hover)"
+      />
+      <img
+        src={member.avatar}
+        srcSet={getImageSrcSet(member.avatar)}
+        sizes="(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 45vw"
+        width="480"
+        height="640"
+        loading="lazy"
+        decoding="async"
+        alt={`Portrait of ${member.name}`}
+        className="absolute bottom-0 right-0 h-[92%] w-[86%] object-cover object-top transition-transform duration-500 group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
+      />
+      <span
+        aria-hidden="true"
+        className="absolute bottom-8 left-4 top-8 z-10 flex items-start font-headline text-xl font-black uppercase leading-none tracking-[0.2em] text-(--primary-foreground) [writing-mode:vertical-rl] rotate-180 sm:text-2xl"
+      >
+        {member.name}
+      </span>
+    </button>
+  );
+}
+
+interface IndexRowProps {
+  member: TeamMember;
+  onOpen: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+function IndexRow({ member, onOpen }: IndexRowProps) {
+  return (
+    <article className="grid gap-4 border-t border-(--border) py-7 md:grid-cols-12 md:items-center">
+      <img
+        src={member.avatar}
+        srcSet={getImageSrcSet(member.avatar)}
+        sizes="4rem"
+        width="64"
+        height="64"
+        loading="lazy"
+        decoding="async"
+        alt=""
+        className="h-16 w-16 rounded-lg object-cover md:col-span-1"
+      />
+      <div className="md:col-span-4">
+        <h4 className="font-headline text-xl font-bold">{member.name}</h4>
+        <p className="mt-1 text-sm text-(--muted-foreground)">
+          {member.role} · {member.handle}
+        </p>
+      </div>
+      <p className="meta-label md:col-span-3">{member.specialization}</p>
+      <p className="meta-label md:col-span-2">{member.winsCount} victories</p>
+      <div className="flex justify-start md:col-span-2 md:justify-end">
+        <button
+          type="button"
+          onClick={onOpen}
+          className="index-link"
+          aria-label={`Open spotlight for ${member.name}`}
+        >
+          Spotlight
+        </button>
+      </div>
+    </article>
   );
 }

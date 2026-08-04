@@ -4,13 +4,13 @@ import {
   Calendar,
   ChevronLeft,
   ChevronRight,
-  Info,
   MapPin,
   Search,
   X,
 } from "lucide-react";
 import { WINS_DATA } from "../data/teamData";
 import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
+import { useReveal } from "../hooks/useReveal";
 import { getImageSrcSet } from "../utils/images";
 import type { WinRecord } from "../types";
 
@@ -25,7 +25,13 @@ const tracks = [
 
 type TrackFilter = (typeof tracks)[number]["value"];
 
-export default function WinsSection() {
+const formatIndex = (index: number) => String(index + 1).padStart(2, "0");
+
+interface WinsSectionProps {
+  onSelectProject: (projectId: string) => void;
+}
+
+export default function WinsSection({ onSelectProject }: WinsSectionProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTrack, setSelectedTrack] = useState<TrackFilter>("ALL");
   const [activeWin, setActiveWin] = useState<WinRecord | null>(null);
@@ -52,7 +58,7 @@ export default function WinsSection() {
   };
 
   const moveImage = (direction: -1 | 1) => {
-    if (!activeWin) return;
+    if (!activeWin || activeWin.images.length === 0) return;
     setActiveImageIndex(
       (current) =>
         (current + direction + activeWin.images.length) % activeWin.images.length,
@@ -63,29 +69,32 @@ export default function WinsSection() {
     <section
       id="wins-section"
       aria-labelledby="wins-title"
-      className="border-b border-(--border) px-4 py-20 md:px-8"
+      className="px-4 py-24 md:px-8 md:py-32"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-6 md:grid-cols-[1fr_18rem] md:items-end">
-          <div>
-            <p className="section-kicker">
-              <Award aria-hidden="true" className="h-4 w-4" />
-              Track record
-            </p>
-            <h2 id="wins-title" className="mt-3 font-headline text-4xl font-bold md:text-5xl">
+        <div className="grid gap-10 md:grid-cols-12 md:items-end">
+          <div className="md:col-span-8">
+            <p className="kicker">Track record</p>
+            <h2
+              id="wins-title"
+              className="mt-4 font-headline text-4xl font-bold leading-[1.02] tracking-[-0.02em] md:text-6xl"
+            >
               Challenges conquered
             </h2>
-            <p className="mt-4 max-w-3xl leading-7 text-(--muted-foreground)">
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-(--muted-foreground)">
               Every record represents a working system built under pressure,
               tested against a deadline, and presented to expert judges.
             </p>
           </div>
-          <div>
-            <label htmlFor="win-search" className="mb-1.5 block text-sm font-semibold">
+          <div className="md:col-span-4">
+            <label htmlFor="win-search" className="meta-label block">
               Search challenges
             </label>
-            <div className="relative">
-              <Search aria-hidden="true" className="pointer-events-none absolute right-3 top-3.5 h-4 w-4 text-(--muted-foreground)" />
+            <div className="relative mt-3">
+              <Search
+                aria-hidden="true"
+                className="pointer-events-none absolute right-3 top-3.5 h-4 w-4 text-(--muted-foreground)"
+              />
               <input
                 id="win-search"
                 type="search"
@@ -98,17 +107,21 @@ export default function WinsSection() {
           </div>
         </div>
 
-        <div className="mt-8 flex items-center gap-2 overflow-x-auto pb-2" role="group" aria-label="Filter wins by track">
+        <div
+          className="mt-12 flex items-center gap-7 overflow-x-auto border-b border-(--border)"
+          role="group"
+          aria-label="Filter wins by track"
+        >
           {tracks.map((track) => (
             <button
               key={track.value}
               type="button"
               onClick={() => setSelectedTrack(track.value)}
               aria-pressed={selectedTrack === track.value}
-              className={`min-h-10 shrink-0 rounded-full px-4 text-sm font-semibold transition-colors ${
+              className={`min-h-11 shrink-0 border-b-2 pb-3 text-[0.6875rem] font-bold uppercase tracking-[0.16em] transition-colors ${
                 selectedTrack === track.value
-                  ? "bg-(--primary) text-(--primary-foreground)"
-                  : "bg-(--muted) text-(--muted-foreground) hover:text-(--foreground)"
+                  ? "border-(--primary) text-(--primary)"
+                  : "border-transparent text-(--muted-foreground) hover:text-(--foreground)"
               }`}
             >
               {track.label}
@@ -116,93 +129,45 @@ export default function WinsSection() {
           ))}
         </div>
 
-        <p className="mt-4 text-sm text-(--muted-foreground)" aria-live="polite">
-          {filteredWins.length} {filteredWins.length === 1 ? "result" : "results"}
+        <p className="meta-label mt-4" aria-live="polite">
+          {filteredWins.length} {filteredWins.length === 1 ? "record" : "records"}
         </p>
 
-        <div className="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredWins.map((win) => (
-            <article
-              key={win.id}
-              onClick={(event) => openWin(win, event.currentTarget)}
-              onKeyDown={(event) => {
-                if (event.key === "Enter" || event.key === " ") {
-                  event.preventDefault();
-                  openWin(win, event.currentTarget);
-                }
-              }}
-              tabIndex={0}
-              role="button"
-              aria-label={`View details for ${win.hackathon}: ${win.title}`}
-              className="surface-card flex overflow-hidden flex-col cursor-pointer transition-all duration-200 hover:border-(--primary) focus-visible:outline-2 focus-visible:outline-(--ring)"
-            >
-              <div className="relative aspect-[16/9] overflow-hidden bg-(--muted)">
-                {win.images.length > 0 ? (
-                  <img
-                    src={win.images[0]}
-                    srcSet={getImageSrcSet(win.images[0])}
-                    sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
-                    width="640"
-                    height="360"
-                    loading="lazy"
-                    decoding="async"
-                    alt={`Presentation of ${win.title}`}
-                    className="h-full w-full object-cover"
-                  />
-                ) : (
-                  <div className="flex h-full w-full flex-col items-center justify-center p-6 text-center text-(--muted-foreground)">
-                    <Award aria-hidden="true" className="h-10 w-10 text-(--primary-text) opacity-60" />
-                    <span className="mt-2 text-xs font-semibold uppercase tracking-wider">No Photo Available</span>
-                  </div>
-                )}
-                <span className="absolute left-3 top-3 rounded-full bg-(--accent) px-3 py-1 text-xs font-bold text-(--accent-foreground)">
-                  {win.award}
-                </span>
-              </div>
-              <div className="flex flex-1 flex-col p-5">
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-(--muted-foreground)">
-                  <span className="inline-flex items-center gap-1">
-                    <MapPin aria-hidden="true" className="h-4 w-4" />
-                    {win.location}
-                  </span>
-                  <span className="inline-flex items-center gap-1">
-                    <Calendar aria-hidden="true" className="h-4 w-4" />
-                    {win.date}
-                  </span>
-                  {win.prize ? (
-                    <span className="ml-auto inline-flex items-center rounded-md bg-(--primary-soft) px-2 py-0.5 text-xs font-bold text-(--primary-text)">
-                      {win.prize}
-                    </span>
-                  ) : null}
-                </div>
-                <h3 className="mt-4 font-headline text-xl font-bold">{win.hackathon}</h3>
-                <p className="mt-1 text-sm font-medium text-(--primary-text)">{win.title}</p>
-                <p className="mt-3 flex-1 text-sm leading-6 text-(--muted-foreground)">
-                  {win.tagline || win.description}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {win.techStack.map((tech) => (
-                    <span key={tech} className="tag">{tech}</span>
-                  ))}
-                </div>
-                <div className="button-secondary mt-5 w-full text-center">
-                  <Info aria-hidden="true" className="h-4 w-4" />
-                  View details
-                </div>
-              </div>
-            </article>
-          ))}
+        <div className="mt-16 space-y-24 md:space-y-32">
+          {filteredWins.map((win, index) => {
+            const isEven = index % 2 === 0;
+            const stableIndex = WINS_DATA.indexOf(win);
+            return (
+              <WinRow
+                key={win.id}
+                win={win}
+                index={stableIndex}
+                isEven={isEven}
+                onOpen={openWin}
+              />
+            );
+          })}
         </div>
 
         {filteredWins.length === 0 ? (
-          <div className="surface-card mt-6 p-8 text-center text-(--muted-foreground)">
-            No challenges match those filters.
+          <div className="mt-16 border-t border-(--border) py-20 text-center">
+            <p className="font-headline text-2xl font-bold">
+              No records found
+            </p>
+            <p className="mt-3 text-sm text-(--muted-foreground)">
+              Try a different track or search term.
+            </p>
           </div>
         ) : null}
       </div>
 
       {activeWin ? (
-        <div className="dialog-backdrop" onMouseDown={(event) => event.target === event.currentTarget && setActiveWin(null)}>
+        <div
+          className="dialog-backdrop"
+          onMouseDown={(event) =>
+            event.target === event.currentTarget && setActiveWin(null)
+          }
+        >
           <div
             ref={dialogRef}
             role="dialog"
@@ -212,7 +177,12 @@ export default function WinsSection() {
             tabIndex={-1}
             className="dialog-panel"
           >
-            <button type="button" onClick={() => setActiveWin(null)} aria-label="Close win details" className="icon-button absolute right-4 top-4 z-10">
+            <button
+              type="button"
+              onClick={() => setActiveWin(null)}
+              aria-label="Close win details"
+              className="icon-button absolute right-4 top-4 z-10"
+            >
               <X aria-hidden="true" className="h-5 w-5" />
             </button>
 
@@ -230,21 +200,41 @@ export default function WinsSection() {
                 />
                 {activeWin.images.length > 1 ? (
                   <>
-                    <button type="button" onClick={() => moveImage(-1)} aria-label="Previous image" className="icon-button absolute left-3 top-1/2 -translate-y-1/2 bg-(--card)">
+                    <button
+                      type="button"
+                      onClick={() => moveImage(-1)}
+                      aria-label="Previous image"
+                      className="icon-button absolute left-3 top-1/2 -translate-y-1/2 bg-(--card)"
+                    >
                       <ChevronLeft aria-hidden="true" className="h-5 w-5" />
                     </button>
-                    <button type="button" onClick={() => moveImage(1)} aria-label="Next image" className="icon-button absolute right-3 top-1/2 -translate-y-1/2 bg-(--card)">
+                    <button
+                      type="button"
+                      onClick={() => moveImage(1)}
+                      aria-label="Next image"
+                      className="icon-button absolute right-3 top-1/2 -translate-y-1/2 bg-(--card)"
+                    >
                       <ChevronRight aria-hidden="true" className="h-5 w-5" />
                     </button>
-                    <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-(--card) p-2" role="group" aria-label="Choose image">
-                      {activeWin.images.map((_, index) => (
+                    <div
+                      className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-(--card) p-2"
+                      role="group"
+                      aria-label="Choose image"
+                    >
+                      {activeWin.images.map((_, imageIndex) => (
                         <button
-                          key={index}
+                          key={imageIndex}
                           type="button"
-                          onClick={() => setActiveImageIndex(index)}
-                          aria-label={`Show image ${index + 1}`}
-                          aria-current={activeImageIndex === index ? "true" : undefined}
-                          className={`h-3 w-3 rounded-full ${activeImageIndex === index ? "bg-(--primary)" : "bg-(--input)"}`}
+                          onClick={() => setActiveImageIndex(imageIndex)}
+                          aria-label={`Show image ${imageIndex + 1}`}
+                          aria-current={
+                            activeImageIndex === imageIndex ? "true" : undefined
+                          }
+                          className={`h-3 w-3 rounded-full ${
+                            activeImageIndex === imageIndex
+                              ? "bg-(--primary)"
+                              : "bg-(--input)"
+                          }`}
                         />
                       ))}
                     </div>
@@ -258,21 +248,144 @@ export default function WinsSection() {
               </div>
             )}
 
-            <p className="section-kicker mt-6">{activeWin.location} / {activeWin.date}</p>
-            <h2 id="win-dialog-title" className="mt-2 pr-12 font-headline text-3xl font-bold">{activeWin.hackathon}</h2>
-            <p className="mt-1 text-sm font-semibold text-(--primary-text)">{activeWin.title}</p>
+            <p className="kicker mt-8">
+              {activeWin.location} / {activeWin.date}
+            </p>
+            <h2
+              id="win-dialog-title"
+              className="mt-3 pr-12 font-headline text-3xl font-bold md:text-4xl"
+            >
+              {activeWin.hackathon}
+            </h2>
+            <p className="mt-2 font-semibold text-(--primary)">
+              {activeWin.title}
+            </p>
             {activeWin.prize ? (
               <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-(--primary-soft) px-3 py-1 text-xs font-bold text-(--primary-text)">
                 Awarded: {activeWin.prize}
               </div>
             ) : null}
-            <p id="win-dialog-description" className="mt-4 leading-7 text-(--muted-foreground)">{activeWin.description}</p>
+            <p
+              id="win-dialog-description"
+              className="mt-4 leading-7 text-(--muted-foreground)"
+            >
+              {activeWin.description}
+            </p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {activeWin.techStack.map((tech) => <span key={tech} className="tag">{tech}</span>)}
+              {activeWin.techStack.map((tech) => (
+                <span key={tech} className="tag">
+                  {tech}
+                </span>
+              ))}
             </div>
+            <button
+              type="button"
+              onClick={() => {
+                const projectId = activeWin.projectRef;
+                setActiveWin(null);
+                onSelectProject(projectId);
+              }}
+              className="button-primary mt-8"
+            >
+              View matching project
+            </button>
           </div>
         </div>
       ) : null}
     </section>
+  );
+}
+
+interface WinRowProps {
+  win: WinRecord;
+  index: number;
+  isEven: boolean;
+  onOpen: (win: WinRecord, trigger: HTMLElement) => void;
+}
+
+function WinRow({ win, index, isEven, onOpen }: WinRowProps) {
+  const revealRef = useReveal<HTMLElement>();
+
+  return (
+    <article
+      ref={revealRef}
+      className="reveal grid gap-10 lg:grid-cols-12 lg:items-center"
+    >
+      <div className={`lg:col-span-8 ${isEven ? "" : "lg:order-2"}`}>
+        <div className="relative">
+          <div
+            aria-hidden="true"
+            className={`absolute h-24 w-24 md:h-36 md:w-36 ${
+              isEven
+                ? "-right-5 -top-5 bg-(--accent) md:-right-8 md:-top-8"
+                : "-bottom-5 -left-5 bg-(--primary) md:-bottom-8 md:-left-8"
+            }`}
+          />
+          {win.images.length > 0 ? (
+            <img
+              src={win.images[0]}
+              srcSet={getImageSrcSet(win.images[0])}
+              sizes="(min-width: 1024px) 60vw, 100vw"
+              width="960"
+              height="540"
+              loading="lazy"
+              decoding="async"
+              alt={`Presentation of ${win.title}`}
+              className="relative aspect-[16/9] w-full object-cover"
+            />
+          ) : (
+            <div className="relative flex aspect-[16/9] w-full flex-col items-center justify-center bg-(--muted) p-6 text-center text-(--muted-foreground)">
+              <Award aria-hidden="true" className="h-12 w-12 text-(--primary-text) opacity-60" />
+              <span className="mt-2 text-sm font-semibold uppercase tracking-wider">No Photo Available</span>
+            </div>
+          )}
+          <div className="editorial-panel absolute -bottom-10 left-4 right-4 p-6 sm:left-8 sm:right-auto sm:max-w-md md:p-7">
+            <p className="kicker">{win.award}</p>
+            <h3 className="mt-2 font-headline text-2xl font-bold md:text-3xl">
+              {win.hackathon}
+            </h3>
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted-foreground)">
+              <span className="inline-flex items-center gap-1">
+                <MapPin aria-hidden="true" className="h-4 w-4" />
+                {win.location}
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <Calendar aria-hidden="true" className="h-4 w-4" />
+                {win.date}
+              </span>
+              {win.prize ? (
+                <span className="inline-flex items-center rounded-md bg-(--primary-soft) px-2 py-0.5 text-xs font-bold text-(--primary-text)">
+                  {win.prize}
+                </span>
+              ) : null}
+            </p>
+            <button
+              type="button"
+              onClick={(event) => onOpen(win, event.currentTarget)}
+              className="index-link mt-4"
+              aria-label={`View details for ${win.hackathon}: ${win.title}`}
+            >
+              View details
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className={`lg:col-span-4 ${isEven ? "" : "lg:order-1"}`}>
+        <p className="meta-label">{formatIndex(index)}</p>
+        <h3 className="mt-3 font-headline text-3xl font-bold leading-tight">
+          {win.title}
+        </h3>
+        <p className="mt-4 leading-7 text-(--muted-foreground)">
+          {win.tagline || win.description}
+        </p>
+        <div className="mt-5 flex flex-wrap gap-2">
+          {win.techStack.map((tech) => (
+            <span key={tech} className="tag">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </article>
   );
 }

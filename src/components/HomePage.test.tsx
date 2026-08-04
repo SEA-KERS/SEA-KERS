@@ -11,7 +11,7 @@ vi.mock("./ProjectsSection", () => ({ default: () => null }));
 vi.mock("./TeamSection", () => ({ default: () => null }));
 vi.mock("./MissionSection", () => ({ default: () => null }));
 vi.mock("./Footer", () => ({ default: () => null }));
-vi.mock("./JoinModal", () => ({ default: () => null }));
+vi.mock("./StatsBand", () => ({ default: () => null }));
 
 describe("HomePage URL hash navigation", () => {
   beforeEach(() => window.history.replaceState(null, "", "/"));

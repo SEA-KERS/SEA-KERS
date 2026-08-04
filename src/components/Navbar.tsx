@@ -1,35 +1,34 @@
-import { Award, Moon, Sun, Target, Users } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import brandIcon from "../assets/brand/sea-kers-icon-color.svg";
 import type { SectionId, Theme } from "../types";
 
 interface NavbarProps {
   activeTab: SectionId;
   setActiveTab: (sectionId: SectionId) => void;
-  onOpenJoinModal: () => void;
   theme: Theme;
   toggleTheme: () => void;
 }
 
 const navItems = [
-  { id: "wins", label: "Wins", icon: Award },
-  { id: "team", label: "Team", icon: Users },
-  { id: "about", label: "About", icon: Target },
+  { id: "wins", label: "Wins" },
+  { id: "projects", label: "Projects" },
+  { id: "team", label: "Team" },
+  { id: "about", label: "About" },
 ] as const;
 
 export default function Navbar({
   activeTab,
   setActiveTab,
-  onOpenJoinModal,
   theme,
   toggleTheme,
 }: NavbarProps) {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-(--border) bg-(--background)/95">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3 md:flex-nowrap md:px-8">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-(--border) bg-(--background)">
+      <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3 md:px-8">
         <a
           href="#hero-section"
           onClick={() => setActiveTab("all")}
-          className="flex min-h-11 items-center gap-2 rounded-lg pr-2 font-headline font-bold tracking-tight"
+          className="flex min-h-11 items-center gap-2.5 rounded-lg pr-2 font-headline font-bold tracking-tight"
           aria-label="Team SEA-KERS home"
         >
           <span className="brand-logo-tile h-9 w-9">
@@ -40,10 +39,9 @@ export default function Navbar({
 
         <nav
           aria-label="Primary navigation"
-          className="order-3 flex w-full items-center gap-1 overflow-x-auto rounded-lg bg-(--muted) p-1 md:order-none md:ml-auto md:w-auto"
+          className="ml-auto flex items-center gap-1 overflow-x-auto"
         >
           {navItems.map((item) => {
-            const Icon = item.icon;
             const isActive = activeTab === item.id;
             return (
               <a
@@ -51,37 +49,31 @@ export default function Navbar({
                 href={`#${item.id}-section`}
                 onClick={() => setActiveTab(item.id)}
                 aria-current={isActive ? "location" : undefined}
-                className={`flex min-h-10 shrink-0 items-center gap-1.5 rounded-md px-3 text-sm font-semibold transition-colors ${
+                className={`flex min-h-11 shrink-0 items-center border-b-2 px-3 text-[0.6875rem] font-bold uppercase tracking-[0.16em] transition-colors ${
                   isActive
-                    ? "bg-(--card) text-(--primary-text)"
-                    : "text-(--muted-foreground) hover:bg-(--card) hover:text-(--foreground)"
+                    ? "border-(--primary) text-(--primary)"
+                    : "border-transparent text-(--muted-foreground) hover:text-(--foreground)"
                 }`}
               >
-                <Icon aria-hidden="true" className="h-4 w-4" />
-                <span>{item.label}</span>
+                {item.label}
               </a>
             );
           })}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2 md:ml-2">
-          <button type="button" onClick={onOpenJoinModal} className="button-primary">
-            Join
-          </button>
-          <button
-            type="button"
-            onClick={toggleTheme}
-            className="icon-button"
-            title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-          >
-            {theme === "light" ? (
-              <Moon aria-hidden="true" className="h-5 w-5" />
-            ) : (
-              <Sun aria-hidden="true" className="h-5 w-5" />
-            )}
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className="icon-button"
+          title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+          aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+        >
+          {theme === "light" ? (
+            <Moon aria-hidden="true" className="h-5 w-5" />
+          ) : (
+            <Sun aria-hidden="true" className="h-5 w-5" />
+          )}
+        </button>
       </div>
     </header>
   );
