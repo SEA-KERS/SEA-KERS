@@ -22,17 +22,26 @@ export default function TeamSection() {
 
     return (
       <article key={member.id} className="surface-card flex flex-col overflow-hidden">
-        <img
-          src={member.avatar}
-          srcSet={getImageSrcSet(member.avatar)}
-          sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw"
-          width="480"
-          height="320"
-          loading="lazy"
-          decoding="async"
-          alt={`Portrait of ${member.name}`}
-          className="aspect-[3/2] w-full object-cover"
-        />
+        <div className="relative aspect-[3/2] w-full overflow-hidden bg-(--muted)">
+          <img
+            src={member.avatar}
+            srcSet={getImageSrcSet(member.avatar)}
+            sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 100vw"
+            width="480"
+            height="320"
+            loading="lazy"
+            decoding="async"
+            alt={`Portrait of ${member.name}`}
+            className="h-full w-full object-cover"
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+            }}
+          />
+          <div className="hidden h-full w-full flex-col items-center justify-center p-6 text-center text-(--muted-foreground) [img[style*='display: none'] ~ &]:flex">
+            <span className="font-headline text-3xl font-bold text-(--primary-text)">{member.name.charAt(0)}</span>
+            <span className="mt-1 text-xs font-semibold uppercase tracking-wider">{member.role}</span>
+          </div>
+        </div>
         <div className="flex flex-1 flex-col p-5">
           <p className="text-xs font-bold uppercase tracking-wider text-(--primary-text)">{member.role}</p>
           <h4 className="mt-1 font-headline text-xl font-bold">{member.name}</h4>
