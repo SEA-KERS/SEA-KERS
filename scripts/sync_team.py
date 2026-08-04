@@ -34,39 +34,16 @@ def sync_team():
 
         avatar = local_img if local_img else row.get('avatar', '').strip() or f"/images/team/{member_id}.jpg"
 
-        skills_raw = row.get('skills', '')
-        skills = [s.strip() for s in skills_raw.split(';') if s.strip()]
-
         member = {
             'id': member_id,
             'name': row.get('name', '').strip(),
             'avatar': avatar
         }
-        if row.get('role', '').strip():
-            member['role'] = row.get('role', '').strip()
-        if row.get('handle', '').strip():
-            member['handle'] = row.get('handle', '').strip()
-        if row.get('specialization', '').strip():
-            member['specialization'] = row.get('specialization', '').strip()
-        if row.get('winsCount', '').strip():
-            try:
-                member['winsCount'] = int(row.get('winsCount', 0))
-            except ValueError:
-                pass
-        if row.get('bio', '').strip():
-            member['bio'] = row.get('bio', '').strip()
-        if skills:
-            member['skills'] = skills
-        if row.get('github', '').strip():
-            member['github'] = row.get('github', '').strip()
-        if row.get('twitter', '').strip():
-            member['twitter'] = row.get('twitter', '').strip()
         if row.get('linkedin', '').strip():
             member['linkedin'] = row.get('linkedin', '').strip()
 
         team_members.append(member)
 
-    # Core (first 6) and Members (rest)
     core_team = team_members[:6]
     other_team = team_members[6:]
 
@@ -76,14 +53,6 @@ def sync_team():
             lines.append("  {\n")
             lines.append(f"    id: {json.dumps(m['id'])},\n")
             lines.append(f"    name: {json.dumps(m['name'])},\n")
-            if 'role' in m: lines.append(f"    role: {json.dumps(m['role'])},\n")
-            if 'handle' in m: lines.append(f"    handle: {json.dumps(m['handle'])},\n")
-            if 'specialization' in m: lines.append(f"    specialization: {json.dumps(m['specialization'])},\n")
-            if 'winsCount' in m: lines.append(f"    winsCount: {m['winsCount']},\n")
-            if 'bio' in m: lines.append(f"    bio: {json.dumps(m['bio'])},\n")
-            if 'skills' in m: lines.append(f"    skills: {json.dumps(m['skills'])},\n")
-            if 'github' in m: lines.append(f"    github: {json.dumps(m['github'])},\n")
-            if 'twitter' in m: lines.append(f"    twitter: {json.dumps(m['twitter'])},\n")
             if 'linkedin' in m: lines.append(f"    linkedin: {json.dumps(m['linkedin'])},\n")
             lines.append(f"    avatar: {json.dumps(m['avatar'])},\n")
             lines.append("  },\n")

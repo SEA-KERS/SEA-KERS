@@ -27,21 +27,13 @@ for m in core_members + other_members:
     rows.append({
         "id": m["id"],
         "name": m["name"],
-        "role": "",
-        "handle": "",
-        "specialization": "",
-        "winsCount": "",
-        "bio": "",
-        "skills": "",
-        "github": "",
-        "twitter": "",
         "linkedin": "",
         "avatar": f"/images/team/{m['id']}.jpg"
     })
 
 with open(csv_path, 'w', newline='', encoding='utf-8') as f:
-    writer = csv.DictWriter(f, fieldnames=['id', 'name', 'role', 'handle', 'specialization', 'winsCount', 'bio', 'skills', 'github', 'twitter', 'linkedin', 'avatar'])
+    writer = csv.DictWriter(f, fieldnames=['id', 'name', 'linkedin', 'avatar'])
     writer.writeheader()
     writer.writerows(rows)
 
-print(f"Successfully generated team.csv with {len(rows)} real team members!")
+print(f"Successfully generated simplified team.csv with {len(rows)} real team members!")

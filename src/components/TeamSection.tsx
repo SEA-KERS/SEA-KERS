@@ -1,25 +1,29 @@
-import { useState } from "react";
-import { Award, Quote, Shield, Sparkles, UserCheck, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Quote, Shield, UserCheck } from "lucide-react";
 import { CORE_TEAM_DATA, TEAM_MEMBERS_DATA } from "../data/teamData";
-import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
 import { getImageSrcSet } from "../utils/images";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "./SocialIcons";
+import { LinkedinIcon } from "./SocialIcons";
 import type { TeamMember } from "../types";
 
+function shuffleArray<T>(array: readonly T[]): T[] {
+  const copy = [...array];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
 export default function TeamSection() {
-  const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
-  const { dialogRef, rememberTrigger } = useAccessibleDialog(
-    activeMember !== null,
-    () => setActiveMember(null),
-  );
+  const [coreTeam, setCoreTeam] = useState<readonly TeamMember[]>(CORE_TEAM_DATA);
+  const [teamMembers, setTeamMembers] = useState<readonly TeamMember[]>(TEAM_MEMBERS_DATA);
+
+  useEffect(() => {
+    setCoreTeam(shuffleArray(CORE_TEAM_DATA));
+    setTeamMembers(shuffleArray(TEAM_MEMBERS_DATA));
+  }, []);
 
   const renderMemberCard = (member: TeamMember) => {
-    const socialLinks = [
-      { href: member.github, label: `${member.name} on GitHub`, Icon: GithubIcon },
-      { href: member.twitter, label: `${member.name} on X`, Icon: TwitterIcon },
-      { href: member.linkedin, label: `${member.name} on LinkedIn`, Icon: LinkedinIcon },
-    ].filter((item) => Boolean(item.href));
-
     return (
       <article key={member.id} className="surface-card flex flex-col overflow-hidden">
         <div className="relative aspect-[3/2] w-full overflow-hidden bg-(--muted)">
@@ -42,52 +46,26 @@ export default function TeamSection() {
           </div>
         </div>
         <div className="flex flex-1 flex-col p-5">
-          {member.role ? (
-            <p className="text-xs font-bold uppercase tracking-wider text-(--primary-text)">{member.role}</p>
-          ) : null}
           <h4 className="font-headline text-xl font-bold">{member.name}</h4>
-          {member.handle ? (
-            <p className="mt-1 text-sm text-(--muted-foreground)">{member.handle}</p>
-          ) : null}
-          {member.winsCount !== undefined ? (
-            <p className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-(--secondary-text)">
-              <Award aria-hidden="true" className="h-4 w-4" />
-              {member.winsCount} victories
-            </p>
-          ) : null}
-          {member.bio ? (
-            <p className="mt-3 flex-1 text-sm leading-6 text-(--muted-foreground)">{member.bio}</p>
-          ) : null}
-          {member.skills && member.skills.length > 0 ? (
-            <div className="mt-4 flex flex-wrap gap-1.5">
-              {member.skills.map((skill) => <span key={skill} className="tag">{skill}</span>)}
-            </div>
-          ) : null}
-          {socialLinks.length > 0 || member.bio ? (
-            <div className="mt-auto flex min-h-11 items-center justify-between gap-3 border-t border-(--border) pt-4">
-              <div className="flex gap-1">
-                {socialLinks.map(({ href, label, Icon }) => (
-                  <a key={label} href={href} target="_blank" rel="noreferrer" className="icon-button" aria-label={label}>
-                    <Icon className="h-4 w-4" />
-                  </a>
-                ))}
-              </div>
-              {member.bio ? (
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    rememberTrigger(event.currentTarget);
-                    setActiveMember(member);
-                  }}
-                  className="button-quiet"
-                  aria-label={`Open spotlight for ${member.name}`}
-                >
-                  <Sparkles aria-hidden="true" className="h-4 w-4" />
-                  Spotlight
-                </button>
-              ) : null}
-            </div>
-          ) : null}
+          <div className="mt-auto border-t border-(--border) pt-4">
+            {member.linkedin ? (
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex min-h-10 items-center gap-2 rounded-md text-xs font-semibold text-(--primary-text) transition-colors hover:text-(--foreground)"
+                aria-label={`${member.name} on LinkedIn`}
+              >
+                <LinkedinIcon className="h-4 w-4 text-(--primary-text)" />
+                <span>Connect on LinkedIn</span>
+              </a>
+            ) : (
+              <span className="inline-flex min-h-10 items-center gap-2 text-xs font-medium text-(--muted-foreground)">
+                <LinkedinIcon className="h-4 w-4 opacity-50" />
+                <span>LinkedIn coming soon</span>
+              </span>
+            )}
+          </div>
         </div>
       </article>
     );
@@ -118,7 +96,7 @@ export default function TeamSection() {
             Core team
           </h3>
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {CORE_TEAM_DATA.map(renderMemberCard)}
+            {coreTeam.map(renderMemberCard)}
           </div>
         </div>
 
@@ -128,64 +106,10 @@ export default function TeamSection() {
             Team members
           </h3>
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {TEAM_MEMBERS_DATA.map(renderMemberCard)}
+            {teamMembers.map(renderMemberCard)}
           </div>
         </div>
       </div>
-
-      {activeMember ? (
-        <div className="dialog-backdrop" onMouseDown={(event) => event.target === event.currentTarget && setActiveMember(null)}>
-          <div
-            ref={dialogRef}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="member-dialog-title"
-            aria-describedby="member-dialog-description"
-            tabIndex={-1}
-            className="dialog-panel max-w-xl"
-          >
-            <button type="button" onClick={() => setActiveMember(null)} aria-label="Close member spotlight" className="icon-button absolute right-4 top-4">
-              <X aria-hidden="true" className="h-5 w-5" />
-            </button>
-            <div className="flex flex-col gap-5 pr-12 sm:flex-row sm:items-center">
-              <img
-                src={activeMember.avatar}
-                srcSet={getImageSrcSet(activeMember.avatar)}
-                sizes="8rem"
-                width="128"
-                height="128"
-                decoding="async"
-                alt={`Portrait of ${activeMember.name}`}
-                className="h-32 w-32 rounded-lg object-cover"
-              />
-              <div>
-                {activeMember.role ? (
-                  <p className="section-kicker">{activeMember.role}</p>
-                ) : null}
-                <h2 id="member-dialog-title" className="mt-2 font-headline text-3xl font-bold">{activeMember.name}</h2>
-                {activeMember.handle ? (
-                  <p className="mt-1 text-(--primary-text)">{activeMember.handle}</p>
-                ) : null}
-                {activeMember.specialization ? (
-                  <p className="mt-2 text-sm text-(--muted-foreground)">{activeMember.specialization}</p>
-                ) : null}
-              </div>
-            </div>
-            {activeMember.bio ? (
-              <p id="member-dialog-description" className="mt-6 leading-7 text-(--muted-foreground)">{activeMember.bio}</p>
-            ) : null}
-            {activeMember.winsCount !== undefined ? (
-              <p className="mt-5 font-semibold text-(--secondary-text)">{activeMember.winsCount} hackathon victories</p>
-            ) : null}
-            {activeMember.skills && activeMember.skills.length > 0 ? (
-              <div className="mt-5 flex flex-wrap gap-2">
-                {activeMember.skills.map((skill) => <span key={skill} className="tag">{skill}</span>)}
-              </div>
-            ) : null}
-            <button type="button" onClick={() => setActiveMember(null)} className="button-primary mt-7 w-full">Close spotlight</button>
-          </div>
-        </div>
-      ) : null}
     </section>
   );
 }
