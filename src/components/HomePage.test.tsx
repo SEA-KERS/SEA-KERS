@@ -16,10 +16,10 @@ vi.mock("./JoinModal", () => ({ default: () => null }));
 describe("HomePage URL hash navigation", () => {
   beforeEach(() => window.history.replaceState(null, "", "/"));
 
-  it("derives the initial tab from a direct projects hash", () => {
-    window.history.replaceState(null, "", "/#projects-section");
+  it("derives the initial tab from a direct wins hash", () => {
+    window.history.replaceState(null, "", "/#wins-section");
     render(<HomePage />);
-    expect(screen.getByTestId("active-tab")).toHaveTextContent("projects");
+    expect(screen.getByTestId("active-tab")).toHaveTextContent("wins");
   });
 
   it("updates for hashchange and defaults unknown hashes to all", () => {

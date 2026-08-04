@@ -1,4 +1,4 @@
-import { Award, Code2, Moon, Sun, Target, Users } from "lucide-react";
+import { Award, Moon, Sun, Target, Users } from "lucide-react";
 import brandIcon from "../assets/brand/sea-kers-icon-color.svg";
 import type { SectionId, Theme } from "../types";
 
@@ -12,7 +12,6 @@ interface NavbarProps {
 
 const navItems = [
   { id: "wins", label: "Wins", icon: Award },
-  { id: "projects", label: "Projects", icon: Code2 },
   { id: "team", label: "Team", icon: Users },
   { id: "about", label: "About", icon: Target },
 ] as const;

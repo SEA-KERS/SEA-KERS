@@ -14,10 +14,6 @@ import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
 import { getImageSrcSet } from "../utils/images";
 import type { WinRecord } from "../types";
 
-interface WinsSectionProps {
-  onSelectProject: (projectId: string) => void;
-}
-
 const tracks = [
   { label: "All", value: "ALL" },
   { label: "E-Cell", value: "ecell" },
@@ -29,7 +25,7 @@ const tracks = [
 
 type TrackFilter = (typeof tracks)[number]["value"];
 
-export default function WinsSection({ onSelectProject }: WinsSectionProps) {
+export default function WinsSection() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTrack, setSelectedTrack] = useState<TrackFilter>("ALL");
   const [activeWin, setActiveWin] = useState<WinRecord | null>(null);
@@ -250,17 +246,6 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
             <div className="mt-5 flex flex-wrap gap-2">
               {activeWin.techStack.map((tech) => <span key={tech} className="tag">{tech}</span>)}
             </div>
-            <button
-              type="button"
-              onClick={() => {
-                const projectId = activeWin.projectRef;
-                setActiveWin(null);
-                onSelectProject(projectId);
-              }}
-              className="button-primary mt-6"
-            >
-              View matching project
-            </button>
           </div>
         </div>
       ) : null}
