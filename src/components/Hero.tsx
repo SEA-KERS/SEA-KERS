@@ -7,6 +7,7 @@ interface HeroProps {
 
 const stats = [
   ["15+", "Hackathon wins"],
+  ["₹19L+", "Grants & prizes"],
   ["5", "Won across states"],
 ] as const;
 
