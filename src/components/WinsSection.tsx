@@ -126,7 +126,20 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
 
         <div className="mt-5 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredWins.map((win) => (
-            <article key={win.id} className="surface-card flex overflow-hidden flex-col">
+            <article
+              key={win.id}
+              onClick={(event) => openWin(win, event.currentTarget)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  openWin(win, event.currentTarget);
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label={`View details for ${win.hackathon}: ${win.title}`}
+              className="surface-card flex overflow-hidden flex-col cursor-pointer transition-all duration-200 hover:border-(--primary) focus-visible:outline-2 focus-visible:outline-(--ring)"
+            >
               <div className="relative aspect-[16/9] overflow-hidden bg-(--muted)">
                 <img
                   src={win.images[0]}
@@ -154,8 +167,8 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
                     {win.date}
                   </span>
                 </div>
-                <h3 className="mt-4 font-headline text-xl font-bold">{win.title}</h3>
-                <p className="mt-1 text-sm font-medium text-(--primary-text)">{win.hackathon}</p>
+                <h3 className="mt-4 font-headline text-xl font-bold">{win.hackathon}</h3>
+                <p className="mt-1 text-sm font-medium text-(--primary-text)">{win.title}</p>
                 <p className="mt-3 flex-1 text-sm leading-6 text-(--muted-foreground)">
                   {win.tagline || win.description}
                 </p>
@@ -164,15 +177,10 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
                     <span key={tech} className="tag">{tech}</span>
                   ))}
                 </div>
-                <button
-                  type="button"
-                  onClick={(event) => openWin(win, event.currentTarget)}
-                  className="button-secondary mt-5 w-full"
-                  aria-label={`View details for ${win.title}`}
-                >
+                <div className="button-secondary mt-5 w-full text-center">
                   <Info aria-hidden="true" className="h-4 w-4" />
                   View details
-                </button>
+                </div>
               </div>
             </article>
           ))}
@@ -236,8 +244,8 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
             </div>
 
             <p className="section-kicker mt-6">{activeWin.location} / {activeWin.date}</p>
-            <h2 id="win-dialog-title" className="mt-2 pr-12 font-headline text-3xl font-bold">{activeWin.title}</h2>
-            <p className="mt-1 text-sm font-semibold text-(--primary-text)">{activeWin.hackathon}</p>
+            <h2 id="win-dialog-title" className="mt-2 pr-12 font-headline text-3xl font-bold">{activeWin.hackathon}</h2>
+            <p className="mt-1 text-sm font-semibold text-(--primary-text)">{activeWin.title}</p>
             <p id="win-dialog-description" className="mt-4 leading-7 text-(--muted-foreground)">{activeWin.description}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {activeWin.techStack.map((tech) => <span key={tech} className="tag">{tech}</span>)}
