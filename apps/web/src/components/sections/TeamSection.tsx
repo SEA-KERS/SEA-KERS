@@ -205,7 +205,7 @@ interface IndexRowProps {
 
 function IndexRow({ member, onOpen }: IndexRowProps) {
   return (
-    <article className="grid gap-4 border-t border-(--border) py-7 md:grid-cols-12 md:items-center">
+    <article className="grid grid-cols-[auto_1fr] items-start gap-x-4 gap-y-3 border-t border-(--border) py-7 md:grid-cols-12 md:items-center">
       <ResponsiveImage
         src={member.avatar}
         registryId={TEAM_AVATAR_IDS[member.id]}
@@ -217,35 +217,37 @@ function IndexRow({ member, onOpen }: IndexRowProps) {
         alt=""
         className="h-16 w-16 rounded-lg object-cover md:col-span-1"
       />
-      <div className="md:col-span-4">
-        <h3 className="font-headline text-xl font-bold">{member.name}</h3>
-      </div>
-      <div className="flex items-center md:col-span-3">
-        {member.linkedin ? (
-          <a
-            href={member.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`Connect on LinkedIn - ${member.name}`}
-            className="index-link inline-flex items-center gap-2"
+      <div className="flex min-w-0 flex-col gap-3 md:contents">
+        <div className="md:col-span-4">
+          <h3 className="font-headline text-xl font-bold">{member.name}</h3>
+        </div>
+        <div className="flex items-center md:col-span-3">
+          {member.linkedin ? (
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Connect on LinkedIn - ${member.name}`}
+              className="index-link inline-flex items-center gap-2"
+            >
+              <LinkedinIcon className="h-4 w-4" />
+              Connect on LinkedIn
+            </a>
+          ) : (
+            <span className="meta-label">No public profile yet</span>
+          )}
+        </div>
+        <p className="meta-label md:col-span-2">Team member</p>
+        <div className="flex justify-start md:col-span-2 md:justify-end">
+          <button
+            type="button"
+            onClick={onOpen}
+            className="index-link"
+            aria-label={`Open spotlight for ${member.name}`}
           >
-            <LinkedinIcon className="h-4 w-4" />
-            Connect on LinkedIn
-          </a>
-        ) : (
-          <span className="meta-label">No public profile yet</span>
-        )}
-      </div>
-      <p className="meta-label md:col-span-2">Team member</p>
-      <div className="flex justify-start md:col-span-2 md:justify-end">
-        <button
-          type="button"
-          onClick={onOpen}
-          className="index-link"
-          aria-label={`Open spotlight for ${member.name}`}
-        >
-          Spotlight
-        </button>
+            Spotlight
+          </button>
+        </div>
       </div>
     </article>
   );

@@ -182,6 +182,14 @@ a {
   background: var(--card);
 }
 
+/* Translucent variant for panels that sit over imagery: keeps text readable
+   while letting the image show through. */
+.editorial-panel--translucent {
+  background: color-mix(in oklab, var(--card) 90%, transparent);
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+}
+
 .brand-logo-tile {
   display: grid;
   place-items: center;

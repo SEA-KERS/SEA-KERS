@@ -121,7 +121,7 @@ export default function Navbar({
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
-            className="icon-button sm:hidden"
+            className="icon-button sm:hidden!"
           >
             {menuOpen ? (
               <X aria-hidden="true" className="h-5 w-5" />
@@ -135,7 +135,7 @@ export default function Navbar({
       {menuOpen ? (
         <div
           id="mobile-menu"
-          className="absolute inset-x-0 top-full border-b border-(--border) bg-(--background) px-4 pb-4 sm:hidden"
+          className="absolute inset-x-0 top-full border-b border-(--border) bg-(--background) px-4 pb-4 sm:hidden!"
         >
           <nav aria-label="Mobile navigation" className="flex flex-col">
             {navItems.map((item, index) => {

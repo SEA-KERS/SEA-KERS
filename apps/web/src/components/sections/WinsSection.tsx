@@ -337,35 +337,35 @@ function WinRow({ win, index, isEven, onOpen }: WinRowProps) {
               <span className="mt-2 text-sm font-semibold uppercase tracking-wider">No Photo Available</span>
             </div>
           )}
-          <div className="editorial-panel absolute -bottom-10 left-4 right-4 p-6 sm:left-8 sm:right-auto sm:max-w-md md:p-7">
-            <p className="kicker">{win.award}</p>
-            <h3 className="mt-2 font-headline text-2xl font-bold md:text-3xl">
-              {win.hackathon}
-            </h3>
-            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted-foreground)">
-              <span className="inline-flex items-center gap-1">
-                <MapPin aria-hidden="true" className="h-4 w-4" />
-                {win.location}
+        </div>
+        <div className="editorial-panel editorial-panel--translucent mt-4 p-6 sm:absolute sm:-bottom-10 sm:left-8 sm:right-auto sm:mt-0 sm:max-w-md md:p-7">
+          <p className="kicker">{win.award}</p>
+          <h3 className="mt-2 font-headline text-2xl font-bold md:text-3xl">
+            {win.hackathon}
+          </h3>
+          <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted-foreground)">
+            <span className="inline-flex items-center gap-1">
+              <MapPin aria-hidden="true" className="h-4 w-4" />
+              {win.location}
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <Calendar aria-hidden="true" className="h-4 w-4" />
+              {win.date}
+            </span>
+            {win.prize ? (
+              <span className="inline-flex items-center rounded-md bg-(--primary-soft) px-2 py-0.5 text-xs font-bold text-(--primary-text)">
+                {win.prize}
               </span>
-              <span className="inline-flex items-center gap-1">
-                <Calendar aria-hidden="true" className="h-4 w-4" />
-                {win.date}
-              </span>
-              {win.prize ? (
-                <span className="inline-flex items-center rounded-md bg-(--primary-soft) px-2 py-0.5 text-xs font-bold text-(--primary-text)">
-                  {win.prize}
-                </span>
-              ) : null}
-            </p>
-            <button
-              type="button"
-              onClick={(event) => onOpen(win, event.currentTarget)}
-              className="index-link mt-4"
-              aria-label={`View details for ${win.hackathon}: ${win.title}`}
-            >
-              View details
-            </button>
-          </div>
+            ) : null}
+          </p>
+          <button
+            type="button"
+            onClick={(event) => onOpen(win, event.currentTarget)}
+            className="index-link mt-4"
+            aria-label={`View details for ${win.hackathon}: ${win.title}`}
+          >
+            View details
+          </button>
         </div>
       </div>
       <div className={`lg:col-span-4 ${isEven ? "" : "lg:order-1"}`}>
