@@ -171,7 +171,7 @@ function RosterCard({ member, onOpen }: RosterCardProps) {
       type="button"
       onClick={onOpen}
       aria-label={`Open spotlight for ${member.name}`}
-      className="group relative block aspect-[9/16] w-full cursor-pointer border-0 bg-transparent p-0 text-left [clip-path:polygon(0_6%,100%_0,100%_94%,0_100%)]"
+      className="group relative block aspect-19/44 w-full cursor-pointer border-0 bg-transparent p-0 text-left [clip-path:polygon(0_6%,100%_0,100%_94%,0_100%)]"
     >
       <span
         aria-hidden="true"
@@ -186,11 +186,11 @@ function RosterCard({ member, onOpen }: RosterCardProps) {
         loading="lazy"
         decoding="async"
         alt={`Portrait of ${member.name}`}
-        className="absolute bottom-0 right-0 h-[92%] w-[86%] object-cover object-top"
+        className="absolute bottom-0 right-0 h-[82%] w-[86%] object-cover object-top"
       />
       <span
         aria-hidden="true"
-        className="absolute bottom-8 left-4 top-8 z-10 flex items-start font-headline text-xl font-black uppercase leading-none tracking-[0.2em] text-(--primary-foreground) [writing-mode:vertical-rl] rotate-180 sm:text-2xl"
+        className="absolute bottom-0 left-2 top-8 z-10 flex items-start font-headline text-2xl font-black uppercase leading-none tracking-[-0.02em] text-(--primary-foreground) [writing-mode:vertical-rl] rotate-180 scale-x-[1.25] scale-y-[0.9] sm:text-3xl"
       >
         {member.name}
       </span>
