@@ -132,9 +132,7 @@ a {
   color: var(--primary-foreground);
 }
 
-[id$="-section"] {
-  scroll-margin-top: 6rem;
-}
+
 
 .skip-link {
   position: fixed;
@@ -354,10 +352,8 @@ html.dark .brand-tile {
 }
 
 @media (max-width: 767px) {
-  html,
-  [id$="-section"] {
+  html {
     scroll-padding-top: 7.5rem;
-    scroll-margin-top: 7.5rem;
   }
 }
 
