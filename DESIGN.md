@@ -87,7 +87,7 @@ chosen to meet WCAG 2.2 AA contrast.
 | `card` / `popover` | `#0E1133` | Elevated surfaces (derived) |
 | `muted` | `#171A40` | Quiet surfaces (derived) |
 | `muted-foreground` | `#A6A9BE` | Secondary text (derived) |
-| `primary` | `#F0453B` | Main action and emphasis (lightened crimson) |
+| `primary` | `#DA261C` | Main action and emphasis |
 | `primary-hover` | `#D42219` | Main action hover |
 | `primary-foreground` | `#FFFFFF` | Text on primary |
 | `primary-soft` | `#3A1715` | Crimson-tinted surface (derived) |
@@ -106,8 +106,8 @@ Use crimson, burgundy, and accent blue as flat fields. Do not blend them.
 
 ## Typography
 
-- Display and headlines: Space Grotesk, weights 500 through 700.
-- UI and body: Inter, weights 400 through 700.
+- Display and headlines: Archivo, weights 500 through 700.
+- UI and body: Instrument Sans, weights 400 through 700.
 - Typography carries the visual weight: large headlines, bold uppercase
   labels, small descriptive text, wide spacing.
 - Push hierarchy aggressively; never make everything the same size.

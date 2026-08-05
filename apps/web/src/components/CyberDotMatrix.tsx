@@ -128,7 +128,7 @@ export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
 
         particle.x += (targetX - particle.x) * 0.12;
         particle.y += (targetY - particle.y) * 0.12;
-        context.fillStyle = isArc ? "#6f80e8" : "#f5f5f7";
+        context.fillStyle = isArc ? "#0c1e8b" : "#f5f5f7";
         context.globalAlpha = isArc ? 0.95 : 0.86;
         context.fillRect(
           particle.x,

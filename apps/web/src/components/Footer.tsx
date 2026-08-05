@@ -28,7 +28,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
               SEA-KERS
             </a>
             <p className="mt-5 max-w-sm text-sm leading-6 text-(--band-muted)">
-              An engineering collective building open technology across AI,
+              An engineering collective pursuing open technology across AI,
               Web3, and decentralized infrastructure.
             </p>
           </div>
@@ -56,14 +56,8 @@ export default function Footer({ setActiveTab }: FooterProps) {
             <h2 className="text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-(--band-muted)">
               Colophon
             </h2>
-            <p className="mt-4 text-sm font-semibold text-(--band-foreground)">
-              System active
-            </p>
-            <p className="mt-2 text-sm leading-6 text-(--band-muted)">
+            <p className="mt-4 text-sm leading-6 text-(--band-muted)">
               Precision engineered in India for the world.
-            </p>
-            <p className="mt-4 text-xs text-(--band-muted)">
-              MIT open-source protocol
             </p>
           </div>
         </div>

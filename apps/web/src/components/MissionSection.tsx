@@ -29,7 +29,7 @@ export default function MissionSection() {
           Seek farther. Build better.
         </h2>
         <p className="mt-5 max-w-2xl text-lg leading-8 text-(--band-muted)">
-          SEA-KERS grew through repeated experiments, shared constraints, and a
+          SEA-KERS grows through repeated experiments, shared constraints, and a
           commitment to turn every hard problem into a working system.
         </p>
 

@@ -24,8 +24,8 @@ understanding what it builds and why.
 
 An India-based collegiate engineering collective with no lab, funding, or
 institutional advantage, competing on the world stage across AI, Web3, and
-decentralized infrastructure — and winning (20+ hackathon wins, $350K+ in
-grants and prizes). The claim that disciplines engineering from outside the
+decentralized infrastructure. Preview record: 20+ hackathon wins, $350K+ in
+grants and prizes. The claim that disciplines engineering from outside the
 establishment can beat the best is the story the site tells and must not
 contradict.
 

@@ -23,13 +23,16 @@ export default function StatsBand() {
           </div>
           <dl className="grid grid-cols-2 gap-x-8 gap-y-10 md:col-span-7">
             {record.map((item) => (
-              <div key={item.label} className="border-t border-(--band-border) pt-6">
+              <div
+                key={item.label}
+                className="flex flex-col-reverse gap-2 border-t border-(--band-border) pt-6"
+              >
+                <dt className="text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-(--band-muted)">
+                  {item.label}
+                </dt>
                 <dd className="font-headline text-5xl font-bold tracking-[-0.02em] md:text-6xl">
                   {item.value}
                 </dd>
-                <dt className="mt-2 text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-(--band-muted)">
-                  {item.label}
-                </dt>
               </div>
             ))}
           </dl>
