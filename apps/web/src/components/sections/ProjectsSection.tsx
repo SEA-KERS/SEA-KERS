@@ -149,7 +149,9 @@ export default function ProjectsSection({
               {activeProject.description}
             </p>
 
-            <p className="meta-label mt-6">{metricLine(activeProject)}</p>
+            <p className="mt-6 text-sm font-semibold text-(--muted-foreground)">
+              {metricLine(activeProject)}
+            </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
               {activeProject.techStack.map((technology) => (
@@ -230,7 +232,9 @@ function FeaturedSpread({ project, isEven, onOpen }: SpreadProps) {
         <p className="mt-4 leading-7 text-(--muted-foreground)">
           {project.tagline}
         </p>
-        <p className="meta-label mt-5">{metricLine(project)}</p>
+        <p className="mt-5 text-sm font-semibold text-(--muted-foreground)">
+          {metricLine(project)}
+        </p>
         <div className="mt-5 flex flex-wrap gap-2">
           {project.techStack.map((technology) => (
             <span key={technology} className="tag">
