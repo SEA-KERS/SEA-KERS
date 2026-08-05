@@ -67,7 +67,7 @@ export default function ProjectsSection({
           <p className="kicker text-(--band-accent) md:col-span-3">
             Publishing soon
           </p>
-          <p className="text-sm leading-6 text-(--band-muted) md:col-span-9 md:text-base">
+          <p className="max-w-xl text-sm leading-6 text-(--band-muted) md:col-span-9 md:text-base">
             Public access and source code releases are currently undergoing
             final documentation and preparation.
           </p>
