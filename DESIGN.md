@@ -2,21 +2,26 @@
 
 ## Direction
 
-SEA-KERS should feel like professional engineering software: precise, calm,
-credible, and fast. Prefer generous whitespace, clean geometry, flat surfaces,
-and an 8px spacing rhythm. Every element should have a clear purpose.
+SEA-KERS should feel like a premium digital magazine or movie poster rather
+than a SaaS application. The design leads with storytelling, composition,
+typography, and whitespace; borders, gradients, and UI chrome recede. Every
+section is intentionally composed — no two consecutive sections share a
+layout — and every screen holds one clear focal point, a single "hero
+moment".
 
-Avoid gradients, glassmorphism, glow, neon treatments, decorative grids, heavy
-shadows, excessive borders, and ornamental animation.
+The experience communicates confidence, technical excellence, and creativity.
+
+Keywords: editorial, cinematic, premium, modern, architectural, intentional,
+spacious, layered, high contrast, bold.
 
 ## Brand mark
 
-The caret is the primary brand element. It sits above one primary-blue ocean
-arc. The mark uses only:
+The caret is the primary brand element. It sits above one ocean arc. The mark
+uses only:
 
 - caret: `#FFFFFF`
-- arc: `#4361EE`
-- dark presentation tile: `#0D0D0D`
+- arc: `#0C1E8B` (accent blue)
+- dark presentation tile: `#030624`
 
 Do not add gradients or secondary color fields to the logo.
 
@@ -30,94 +35,147 @@ The hero may reconstruct the mark with particles:
 - retain the static SVG for reduced motion and initial rendering;
 - never use glow or blur.
 
-## Color tokens
+## Color palette
+
+The palette is fixed and small. The interface is mostly neutral; accent
+colors appear sparingly for emphasis. Never color everything.
+
+| Role | Value | Use |
+| --- | --- | --- |
+| Deep Crimson | `#DA261C` | Primary accent, primary actions |
+| Dark Burgundy | `#741511` | Supporting emphasis |
+| Accent Blue | `#0C1E8B` | Sparse secondary accent, focus |
+| Background | `#030624` | Dark cinematic navy |
+| White | `#FFFFFF` | Light surfaces, text on dark |
+| Light Gray | `#EAEAEA` | Quiet surfaces, thin borders |
+| Dark Gray | `#222222` | Primary text on light |
+
+Tokens marked "derived" below are neutral or tinted mixes of the palette
+chosen to meet WCAG 2.2 AA contrast.
 
 ### Light mode
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `background` | `#F8F9FC` | Page background |
-| `foreground` | `#11131A` | Primary text |
-| `card` / `popover` | `#FFFFFF` | Elevated surfaces |
-| `muted` | `#EEF1F6` | Quiet surfaces |
-| `muted-foreground` | `#5D6474` | Secondary text |
-| `primary` | `#4361EE` | Main action and brand |
-| `primary-hover` | `#3651D4` | Main action hover |
-| `primary-soft` | `#E9EDFF` | Selected states |
-| `secondary` | `#7209B7` | Supporting emphasis |
-| `secondary-soft` | `#F4EAFB` | Supporting surface |
-| `accent` | `#F72585` | Sparse emphasis |
-| `accent-text` | `#D8176C` | Accessible accent text |
-| `accent-soft` | `#FDE8F2` | Accent surface |
-| `border` | `#D9DEE8` | Dividers and outlines |
-| `input` | `#8B94A7` | Form borders |
-| `ring` | `#4361EE` | Keyboard focus |
-| `destructive` | `#B42318` | Errors and destructive actions |
-| `success` | `#127A46` | Success |
-| `warning` | `#A15C00` | Warning text |
+| `background` | `#FFFFFF` | Page background |
+| `foreground` | `#222222` | Primary text |
+| `card` / `popover` | `#FFFFFF` | Floating content boxes |
+| `muted` | `#EAEAEA` | Quiet surfaces |
+| `muted-foreground` | `#555555` | Secondary text (derived) |
+| `primary` | `#DA261C` | Main action and emphasis |
+| `primary-hover` | `#B51E15` | Main action hover (darker crimson) |
+| `primary-foreground` | `#FFFFFF` | Text on primary |
+| `primary-soft` | `#FBEAE8` | Crimson-tinted callout surface (derived) |
+| `secondary` | `#741511` | Supporting emphasis |
+| `secondary-soft` | `#F3E8E7` | Burgundy-tinted surface (derived) |
+| `accent` | `#0C1E8B` | Sparse emphasis and links |
+| `accent-foreground` | `#FFFFFF` | Text on accent |
+| `accent-soft` | `#E9ECF7` | Blue-tinted surface (derived) |
+| `border` | `#EAEAEA` | Thin dividers only where needed |
+| `input` | `#D8D8D8` | Form borders (derived) |
+| `ring` | `#0C1E8B` | Keyboard focus |
+| `destructive` | `#A3130C` | Errors and destructive actions (derived) |
+| `success` | `#1E7A46` | Status only (semantic, outside accents) |
+| `warning` | `#A15C00` | Status only (semantic, outside accents) |
 
 ### Dark mode
 
-| Token | Value |
-| --- | --- |
-| `background` | `#0D0D0D` |
-| `foreground` | `#F4F6FB` |
-| `card` | `#141419` |
-| `popover` / `muted` | `#1A1A2E` |
-| `muted-foreground` | `#AEB4C2` |
-| `primary-text` / `ring` | `#8EA2FF` |
-| `primary-soft` | `#1B2344` |
-| `secondary-text` | `#C89BFF` |
-| `secondary-soft` | `#291636` |
-| `accent-text` | `#FF70AD` |
-| `accent-soft` | `#351426` |
-| `border` | `#343746` |
-| `input` | `#62697D` |
-| `destructive` | `#FF8277` |
-| `success` | `#68D39A` |
-| `warning` | `#F6C344` |
+| Token | Value | Use |
+| --- | --- | --- |
+| `background` | `#030624` | Page background |
+| `foreground` | `#F5F5F7` | Primary text |
+| `card` / `popover` | `#0E1133` | Elevated surfaces (derived) |
+| `muted` | `#171A40` | Quiet surfaces (derived) |
+| `muted-foreground` | `#A6A9BE` | Secondary text (derived) |
+| `primary` | `#DA261C` | Main action and emphasis |
+| `primary-hover` | `#D42219` | Main action hover |
+| `primary-foreground` | `#FFFFFF` | Text on primary |
+| `primary-soft` | `#3A1715` | Crimson-tinted surface (derived) |
+| `secondary` | `#B85A53` | Supporting emphasis (lightened burgundy) |
+| `secondary-soft` | `#2E1816` | Burgundy-tinted surface (derived) |
+| `accent` | `#6F80E8` | Sparse emphasis (lightened blue) |
+| `accent-soft` | `#131A4A` | Blue-tinted surface (derived) |
+| `border` | `#2A2E55` | Thin dividers (derived) |
+| `input` | `#3A3F6B` | Form borders (derived) |
+| `ring` | `#8B9BFF` | Keyboard focus (derived) |
+| `destructive` | `#FF7A72` | Errors and destructive actions |
+| `success` | `#68D39A` | Status only |
+| `warning` | `#F6C344` | Status only |
 
-Use primary, secondary, and accent as flat fields. Do not blend them.
+Use crimson, burgundy, and accent blue as flat fields. Do not blend them.
 
 ## Typography
 
-- Headings: Space Grotesk, weights 500 through 700.
-- UI and body: Inter, weights 400 through 700.
-- Use sentence case for interface copy.
-- Keep body text at least 16px where space allows and never below 14px.
-- Keep paragraphs near 65 characters per line.
+- Display and headlines: Archivo, weights 500 through 700.
+- UI and body: Instrument Sans, weights 400 through 700.
+- Typography carries the visual weight: large headlines, bold uppercase
+  labels, small descriptive text, wide spacing.
+- Push hierarchy aggressively; never make everything the same size.
+- Section labels: bold uppercase with wide letter spacing (about 0.16em) and
+  small size.
+- Headlines: display scale from 48px up to 96px, tight leading, slight
+  negative tracking on the largest sizes.
+- Body text at least 16px where space allows and never below 14px; keep
+  paragraphs near 65 characters per line.
+- Sentence case for interface copy; uppercase is reserved for labels and
+  kickers.
 
 ## Layout and geometry
 
-- Base spacing unit: 8px.
+- Asymmetry is the default: alternate left-heavy and right-heavy
+  compositions; no two consecutive sections share an identical layout.
+- Negative space is encouraged; large margins beat filling every pixel.
+- Allow intentional overlap: images behind text, floating content blocks over
+  imagery, cards extending outside containers.
+- Every screen contains at least one visual focal point.
+- Base spacing unit: 8px. Section padding: 64px small screens, 96px large.
 - Content width: 1280px maximum.
-- Section padding: 64px small screens, 80px large screens.
+- Prefer rectangles; radius 8px to 16px. Cut corners, offset blocks, and
+  floating panels are welcome; avoid pill shapes.
+- Depth comes from composition — overlap, transparent overlays, colored
+  rectangles, image masks, clipped sections — not shadows.
+- Borders are thin and semantic; remove borders that carry no meaning.
 - Control height: at least 44px.
-- Radius: 8px for controls, 12px for cards, 14px for dialogs.
-- Borders: 1px and semantic; do not outline every nested surface.
-- Shadows: reserved for dialogs and temporary overlays.
+
+## Imagery
+
+- Photography is part of the layout, not an afterthought: large, aggressively
+  cropped, overlapping neighboring sections, extending behind text, and
+  anchoring compositions.
+- Never place images inside generic rounded cards. Prefer image → overlay →
+  floating content block.
+- Images reserve dimensions and use responsive sources.
 
 ## Components
 
-- Navigation uses one clear active state and remains keyboard accessible.
-- Buttons use primary fill, neutral outline, or quiet treatment.
-- Cards use a flat surface, one border, and no decorative shadow.
-- Inputs always have a visible label, adequate padding, and a strong focus ring.
+- Cards are editorial callouts, not dashboard widgets: large image, floating
+  content box, accent block. No generic card grids.
+- Navigation stays minimal: generous spacing, thin typography, underline or
+  color transition on hover, no oversized buttons, one clear active state,
+  keyboard accessible.
+- Buttons: primary solid crimson; secondary outlined. Hover: slightly darker
+  with a small translateY(-2px). No glow, no gradients.
+- Inputs always have a visible label, adequate padding, and a strong focus
+  ring.
 - Tags are compact metadata, not primary actions.
-- Dialogs require a heading, Escape handling, focus trapping, and focus restore.
-- Images reserve dimensions and use responsive sources.
+- Dialogs require a heading, Escape handling, focus trapping, and focus
+  restore.
 
 ## Motion
 
-Normal transitions last 150 to 250ms and use opacity or transform. Motion must
-clarify state, not delay work. Respect `prefers-reduced-motion` everywhere.
+- Normal transitions last 250 to 500ms.
+- Preferred: fade, slide, parallax, image reveal, text reveal, hover lift.
+- Never use bounce, spin, elastic, flash, or overly dramatic effects.
+- Motion must clarify, not distract. Respect `prefers-reduced-motion`
+  everywhere.
 
 ## Accessibility
 
 Target WCAG 2.2 AA:
 
-- normal text contrast at least 4.5:1;
-- large text contrast at least 3:1;
+- normal text contrast at least 4.5:1; large text at least 3:1;
+- small crimson text on tinted or gray surfaces must use `#B51E15` or darker
+  to hold 4.5:1;
 - visible keyboard focus on every interactive element;
 - 44px minimum control targets;
 - semantic headings, landmarks, labels, and buttons;

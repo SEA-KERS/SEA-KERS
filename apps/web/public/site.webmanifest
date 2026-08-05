@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "Team SEA-KERS",
+  "short_name": "SEA-KERS",
+  "description": "A collegiate engineering collective building open technology across AI, Web3, and DePIN.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#030624",
+  "theme_color": "#da261c",
+  "icons": [
+    {
+      "src": "/android-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

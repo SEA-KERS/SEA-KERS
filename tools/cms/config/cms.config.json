@@ -1,0 +1,34 @@
+{
+  "projectPath": "../../../apps/web",
+  "registryOut": "src/data/imageRegistry.ts",
+  "sourceRoot": "public/images",
+  "sizes": [
+    { "name": "mobile", "width": 480, "device": "Phones (max-width: 640px)" },
+    { "name": "tablet", "width": 960, "device": "Tablets (641px-1024px)" },
+    { "name": "desktop", "width": 1920, "device": "Desktops (min-width: 1025px)" }
+  ],
+  "qualities": {
+    "avif": 55,
+    "webp": 80,
+    "jpeg": 82
+  },
+  "r2": {
+    "accountId": "8032cf81455c3a06d2995f40a386e0ba",
+    "bucketName": "sea-kers-images",
+    "publicUrl": "https://img.team-seakers.com"
+  },
+  "teamSeeds": [
+    { "memberId": "kashvi-v", "name": "Kashvi V" },
+    { "memberId": "spoorthi-r", "name": "Spoorthi R" },
+    { "memberId": "anusha-rao", "name": "Anusha Rao" },
+    { "memberId": "fardeen-s-khadri", "name": "Fardeen S Khadri" },
+    { "memberId": "pramoda-s-r", "name": "Pramoda S R" },
+    { "memberId": "manoj-gowda-r", "name": "Manoj Gowda R" },
+    { "memberId": "reddy", "name": "Sharan Reddy" },
+    { "memberId": "sujan", "name": "Sujan P" },
+    { "memberId": "afnaan", "name": "Afnaan Ayub" },
+    { "memberId": "swathi", "name": "Swathi" },
+    { "memberId": "manasa-r", "name": "Manasa G" },
+    { "memberId": "priya", "name": "Shree Priya v" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@sea-kers/turbo-cache",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "oxlint": "^1.75.0",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.113.0"
+  }
+}
