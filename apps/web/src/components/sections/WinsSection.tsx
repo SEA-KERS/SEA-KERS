@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+  ArrowRight,
   Award,
   Calendar,
   ChevronLeft,
@@ -8,7 +9,9 @@ import {
   Search,
   X,
 } from "lucide-react";
-import { useAccessibleDialog } from "../../hooks/useAccessibleDialog";
+import { Dialog } from "../ui/Dialog";
+import { Carousel } from "../ui/Carousel";
+import { ScrollArea } from "../ui/ScrollArea";
 import { useReveal } from "../../hooks/useReveal";
 import ResponsiveImage from "../ui/ResponsiveImage";
 import { WINS_DATA } from "../../data/wins";
@@ -35,11 +38,8 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTrack, setSelectedTrack] = useState<TrackFilter>("ALL");
   const [activeWin, setActiveWin] = useState<WinRecord | null>(null);
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const { dialogRef, rememberTrigger } = useAccessibleDialog(
-    activeWin !== null,
-    () => setActiveWin(null),
-  );
+  const [showText, setShowText] = useState(false);
+  const [spinBoost, setSpinBoost] = useState(false);
 
   const filteredWins = WINS_DATA.filter((win) => {
     const query = searchQuery.toLowerCase();
@@ -51,26 +51,29 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
     );
   });
 
-  const openWin = (win: WinRecord, trigger: HTMLElement) => {
-    rememberTrigger(trigger);
-    setActiveImageIndex(0);
+  const openWin = (win: WinRecord) => {
     setActiveWin(win);
   };
 
-  const moveImage = (direction: -1 | 1) => {
-    if (!activeWin || activeWin.images.length === 0) return;
-    setActiveImageIndex(
-      (current) =>
-        (current + direction + activeWin.images.length) % activeWin.images.length,
-    );
+  const handleSelectProject = () => {
+    if (!activeWin) return;
+    const projectId = activeWin.projectRef;
+    setActiveWin(null);
+    onSelectProject(projectId);
   };
 
   return (
-    <section
-      id="wins-section"
-      aria-labelledby="wins-title"
-      className="px-4 py-24 md:px-8 md:py-32"
+    <Dialog.Root
+      open={activeWin !== null}
+      onOpenChange={(open) => {
+        if (!open) setActiveWin(null);
+      }}
     >
+      <section
+        id="wins-section"
+        aria-labelledby="wins-title"
+        className="px-4 py-24 md:px-8 md:py-32"
+      >
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-8">
@@ -162,136 +165,151 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
       </div>
 
       {activeWin ? (
-        <div
-          className="dialog-backdrop"
-          onMouseDown={(event) =>
-            event.target === event.currentTarget && setActiveWin(null)
-          }
-        >
-          <div
-            ref={dialogRef}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="win-dialog-title"
-            aria-describedby="win-dialog-description"
-            tabIndex={-1}
-            className="dialog-panel"
-          >
-            <button
-              type="button"
-              onClick={() => setActiveWin(null)}
-              aria-label="Close win details"
-              className="icon-button absolute right-4 top-4 z-10"
-            >
-              <X aria-hidden="true" className="h-5 w-5" />
-            </button>
-
-            {activeWin.images.length > 0 ? (
-              <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-lg bg-(--muted)">
-                <ResponsiveImage
-                  src={activeWin.images[activeImageIndex]}
-                  sizes="(min-width: 768px) 42rem, 100vw"
-                  width="960"
-                  height="540"
-                  decoding="async"
-                  alt={`${activeWin.title}, image ${activeImageIndex + 1} of ${activeWin.images.length}`}
-                  className="h-full w-full object-cover"
-                />
-                {activeWin.images.length > 1 ? (
-                  <>
-                    <button
-                      type="button"
-                      onClick={() => moveImage(-1)}
-                      aria-label="Previous image"
-                      className="icon-button absolute left-3 top-1/2 -translate-y-1/2 bg-(--card)"
-                    >
-                      <ChevronLeft aria-hidden="true" className="h-5 w-5" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => moveImage(1)}
-                      aria-label="Next image"
-                      className="icon-button absolute right-3 top-1/2 -translate-y-1/2 bg-(--card)"
-                    >
-                      <ChevronRight aria-hidden="true" className="h-5 w-5" />
-                    </button>
-                    <div
-                      className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2 rounded-full bg-(--card) p-2"
-                      role="group"
-                      aria-label="Choose image"
-                    >
-                      {activeWin.images.map((_, imageIndex) => (
-                        <button
-                          key={imageIndex}
-                          type="button"
-                          onClick={() => setActiveImageIndex(imageIndex)}
-                          aria-label={`Show image ${imageIndex + 1}`}
-                          aria-current={
-                            activeImageIndex === imageIndex ? "true" : undefined
-                          }
-                          className={`h-3 w-3 rounded-full ${
-                            activeImageIndex === imageIndex
-                              ? "bg-(--primary)"
-                              : "bg-(--input)"
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </>
-                ) : null}
-              </div>
-            ) : (
-              <div className="mt-10 flex aspect-[16/9] w-full flex-col items-center justify-center rounded-lg bg-(--muted) p-6 text-center text-(--muted-foreground)">
-                <Award aria-hidden="true" className="h-12 w-12 text-(--primary-text) opacity-60" />
-                <span className="mt-2 text-sm font-semibold uppercase tracking-wider">No Preview Photo Available</span>
-              </div>
-            )}
-
-            <p className="kicker mt-8">
-              {activeWin.location} / {activeWin.date}
-            </p>
-            <h2
-              id="win-dialog-title"
-              className="mt-3 pr-12 font-headline text-3xl font-bold md:text-4xl"
-            >
-              {activeWin.hackathon}
-            </h2>
-            <p className="mt-2 font-semibold text-(--accent-text)">
-              {activeWin.title}
-            </p>
-            {activeWin.prize ? (
-              <div className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-(--primary-soft) px-3 py-1 text-xs font-bold text-(--primary-text)">
-                Awarded: {activeWin.prize}
-              </div>
-            ) : null}
-            <p
-              id="win-dialog-description"
-              className="mt-4 leading-7 text-(--muted-foreground)"
-            >
-              {activeWin.description}
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {activeWin.techStack.map((tech) => (
-                <span key={tech} className="tag">
-                  {tech}
-                </span>
-              ))}
+        <Dialog.Content className="modal-scroll max-h-[calc(100vh-2rem)] w-full max-w-[52rem] overflow-x-hidden overflow-y-auto rounded-lg bg-(--card) text-(--foreground)">
+          <div className="modal-stage">
+            <div className="absolute right-3 top-3 z-40 rounded-full bg-(--card)/80 p-0.5">
+              <Dialog.Close className="icon-button" aria-label="Close win details">
+                <X aria-hidden="true" className="h-5 w-5" />
+              </Dialog.Close>
             </div>
+
+            <div
+              className={`modal-stage-image ${showText ? "is-hidden" : ""}`}
+            >
+              {activeWin.images.length > 0 ? (
+                <Carousel.Root
+                  aria-label={`${activeWin.hackathon} images`}
+                  className="relative h-full w-full overflow-hidden bg-(--muted)"
+                >
+                  <Carousel.Content className="h-full">
+                    {activeWin.images.map((image, index) => (
+                      <Carousel.Item key={index}>
+                        <ResponsiveImage
+                          src={image}
+                          sizes="(min-width: 768px) 52rem, 100vw"
+                          width="960"
+                          height="540"
+                          decoding="async"
+                          alt={`${activeWin.title}, image ${index + 1} of ${activeWin.images.length}`}
+                          className="h-full w-full object-cover"
+                        />
+                      </Carousel.Item>
+                    ))}
+                  </Carousel.Content>
+                  {activeWin.images.length > 1 ? (
+                    <>
+                      <Carousel.Previous className="absolute left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-(--border)/60 bg-(--card)/80 text-(--foreground) transition-colors hover:bg-(--card) hover:text-(--primary)">
+                        <ChevronLeft aria-hidden="true" className="h-5 w-5" />
+                      </Carousel.Previous>
+                      <Carousel.Next className="absolute right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-(--border)/60 bg-(--card)/80 text-(--foreground) transition-colors hover:bg-(--card) hover:text-(--primary)">
+                        <ChevronRight aria-hidden="true" className="h-5 w-5" />
+                      </Carousel.Next>
+                      <Carousel.Dots
+                        className="absolute left-1/2 top-4 flex -translate-x-1/2 items-center gap-2 rounded-full bg-(--card)/70 p-2"
+                        dotClassName="h-1.5 w-1.5 rounded-full bg-(--muted-foreground)/50 transition-all data-active:w-4 data-active:bg-(--primary)"
+                      />
+                    </>
+                  ) : null}
+                </Carousel.Root>
+              ) : (
+                <div className="flex h-full w-full flex-col items-center justify-center bg-(--muted) p-6 text-center text-(--muted-foreground)">
+                  <Award aria-hidden="true" className="h-12 w-12 text-(--primary-text) opacity-60" />
+                  <span className="mt-2 text-sm font-semibold uppercase tracking-wider">No Preview Photo Available</span>
+                </div>
+              )}
+            </div>
+
+            <div className="modal-stage-text">
+              <div className="px-5 pb-5 pt-6 md:px-10 md:pb-6 md:pt-8">
+                <p className="kicker">
+                  {activeWin.location} / {activeWin.date}
+                </p>
+                <Dialog.Title className="mt-2 pr-10 font-headline text-3xl font-bold leading-[1.05] tracking-[-0.02em] md:mt-3 md:text-4xl">
+                  {activeWin.hackathon}
+                </Dialog.Title>
+                <p className="mt-1.5 text-xs font-bold uppercase tracking-[0.14em] text-(--accent-text) md:mt-2 md:text-sm">
+                  {activeWin.title}
+                </p>
+
+                {activeWin.prize ? (
+                  <div className="mt-4 border-t border-(--border) pt-3 md:mt-5 md:pt-4">
+                    <p className="meta-label">Awarded</p>
+                    <p className="mt-1 font-headline text-base font-bold tracking-[-0.01em] md:text-lg">
+                      {activeWin.prize}
+                    </p>
+                  </div>
+                ) : null}
+
+                <Dialog.Description className="mt-4 max-w-[34rem] text-sm leading-6 text-(--muted-foreground) md:mt-5 md:text-[15px] md:leading-7">
+                  {activeWin.description}
+                </Dialog.Description>
+
+                <div className="mt-5 border-t border-(--border) md:mt-6" />
+
+                <ScrollArea.Root className="modal-footer-scroll-root">
+                  <ScrollArea.Viewport className="modal-footer-scroll-viewport">
+                    <div className="pt-4 md:pt-5">
+                      <div className="flex flex-wrap gap-2">
+                        {activeWin.techStack.map((tech) => (
+                          <TechChip key={tech}>{tech}</TechChip>
+                        ))}
+                      </div>
+                      <div className="mt-5 flex items-center md:mt-6">
+                        <button
+                          type="button"
+                          onClick={handleSelectProject}
+                          className="group inline-flex items-center gap-2 border-b-2 border-(--primary) pb-1 font-headline text-sm font-bold uppercase tracking-[0.16em] text-(--primary) transition-colors hover:text-(--primary-hover)"
+                        >
+                          View matching project
+                          <ArrowRight
+                            aria-hidden="true"
+                            className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </ScrollArea.Viewport>
+                  <ScrollArea.Scrollbar
+                    orientation="vertical"
+                    className="modal-footer-scrollbar"
+                  >
+                    <ScrollArea.Thumb className="modal-footer-scroll-thumb" />
+                  </ScrollArea.Scrollbar>
+                </ScrollArea.Root>
+              </div>
+            </div>
+
             <button
               type="button"
               onClick={() => {
-                const projectId = activeWin.projectRef;
-                setActiveWin(null);
-                onSelectProject(projectId);
+                setShowText((value) => !value);
+                setSpinBoost(true);
+                window.setTimeout(() => setSpinBoost(false), 500);
               }}
-              className="button-primary mt-8"
+              aria-pressed={showText}
+              aria-label={showText ? "Switch to image view" : "Switch to text view"}
+              className="absolute bottom-4 right-4 z-30 hidden items-center gap-2.5 rounded-full border border-(--border)/60 bg-(--card)/85 py-2 pl-3 pr-4 font-headline text-xs font-bold uppercase tracking-[0.14em] text-(--foreground) shadow-sm transition-colors hover:border-(--primary) hover:text-(--primary) md:inline-flex"
             >
-              View matching project
+              <span
+                aria-hidden="true"
+                className={`voxel-cube ${showText ? "is-text" : "is-image"} ${
+                  spinBoost ? "is-fast" : ""
+                }`}
+              >
+                <span className="voxel-cube__face voxel-cube__face--front" />
+                <span className="voxel-cube__face voxel-cube__face--back" />
+                <span className="voxel-cube__face voxel-cube__face--right" />
+                <span className="voxel-cube__face voxel-cube__face--left" />
+                <span className="voxel-cube__face voxel-cube__face--top" />
+                <span className="voxel-cube__face voxel-cube__face--bottom" />
+              </span>
+              <span>View</span>
             </button>
           </div>
-        </div>
+        </Dialog.Content>
       ) : null}
-    </section>
+      </section>
+    </Dialog.Root>
   );
 }
 
@@ -299,7 +317,7 @@ interface WinRowProps {
   win: WinRecord;
   index: number;
   isEven: boolean;
-  onOpen: (win: WinRecord, trigger: HTMLElement) => void;
+  onOpen: (win: WinRecord) => void;
 }
 
 function WinRow({ win, index, isEven, onOpen }: WinRowProps) {
@@ -321,16 +339,22 @@ function WinRow({ win, index, isEven, onOpen }: WinRowProps) {
             }`}
           />
           {win.images.length > 0 ? (
-            <ResponsiveImage
-              src={win.images[0]}
-              sizes="(min-width: 1024px) 60vw, 100vw"
-              width="960"
-              height="540"
-              loading="lazy"
-              decoding="async"
-              alt={`Presentation of ${win.title}`}
-              className="relative aspect-[16/9] w-full object-cover"
-            />
+            <Dialog.Trigger
+              onClick={() => onOpen(win)}
+              aria-label={`View images of ${win.title}`}
+              className="relative block w-full cursor-pointer border-0 bg-transparent p-0"
+            >
+              <ResponsiveImage
+                src={win.images[0]}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                width="960"
+                height="540"
+                loading="lazy"
+                decoding="async"
+                alt={`Presentation of ${win.title}`}
+                className="relative aspect-[16/9] w-full object-cover"
+              />
+            </Dialog.Trigger>
           ) : (
             <div className="relative flex aspect-[16/9] w-full flex-col items-center justify-center bg-(--muted) p-6 text-center text-(--muted-foreground)">
               <Award aria-hidden="true" className="h-12 w-12 text-(--primary-text) opacity-60" />
@@ -358,14 +382,13 @@ function WinRow({ win, index, isEven, onOpen }: WinRowProps) {
               </span>
             ) : null}
           </p>
-          <button
-            type="button"
-            onClick={(event) => onOpen(win, event.currentTarget)}
+          <Dialog.Trigger
+            onClick={() => onOpen(win)}
             className="index-link mt-4"
             aria-label={`View details for ${win.hackathon}: ${win.title}`}
           >
             View details
-          </button>
+          </Dialog.Trigger>
         </div>
       </div>
       <div className={`lg:col-span-4 ${isEven ? "" : "lg:order-1"}`}>
@@ -385,5 +408,13 @@ function WinRow({ win, index, isEven, onOpen }: WinRowProps) {
         </div>
       </div>
     </article>
+  );
+}
+
+function TechChip({ children }: { children: string }) {
+  return (
+    <span className="inline-flex items-center rounded-md border border-(--border) px-2.5 py-1 text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-(--muted-foreground) transition-colors hover:border-(--primary) hover:text-(--primary)">
+      {children}
+    </span>
   );
 }
