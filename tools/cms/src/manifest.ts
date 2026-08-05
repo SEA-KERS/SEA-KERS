@@ -99,9 +99,9 @@ export function upsertImage(manifest: Manifest, input: NewImageInput): ManifestI
     createdAt: existing?.createdAt ?? now,
     updatedAt: now,
     ...(input.remoteUrl || existing?.remoteUrl
-      ? { remoteUrl: input.remoteUrl ?? existing?.remoteUrl }
+      ? { remoteUrl: input.remoteUrl || existing?.remoteUrl }
       : {}),
-    ...(input.ref || existing?.ref ? { ref: input.ref ?? existing?.ref } : {}),
+    ...(input.ref || existing?.ref ? { ref: input.ref || existing?.ref } : {}),
   };
   if (existing) {
     const index = manifest.images.indexOf(existing);
