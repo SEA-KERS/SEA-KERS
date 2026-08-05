@@ -32,20 +32,29 @@ const extensionOf = (path: string): string => {
 };
 
 const renderRecord = (image: ManifestImage): RegistryRecord => {
-  const record: RegistryRecord = {
-    id: image.id,
-    collection: image.collection,
-    alt: image.alt,
-    width: image.width,
-    height: image.height,
-    variants: image.variants.map((variant) => ({
+  const seen = new Set<string>();
+  const variants = image.variants
+    .map((variant) => ({
       format: variant.format,
       width: variant.width,
       height: variant.height,
       bytes: variant.bytes,
       uploaded: variant.uploadedAt !== null,
       key: variant.key,
-    })),
+    }))
+    .filter((variant) => {
+      const dedupeKey = `${variant.format}@${variant.width}`;
+      if (seen.has(dedupeKey)) return false;
+      seen.add(dedupeKey);
+      return true;
+    });
+  const record: RegistryRecord = {
+    id: image.id,
+    collection: image.collection,
+    alt: image.alt,
+    width: image.width,
+    height: image.height,
+    variants,
   };
   if (image.sourcePath) {
     record.legacyPath = `/images/${image.id}.${extensionOf(image.sourcePath)}`;

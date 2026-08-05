@@ -111,7 +111,7 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
       lastFrame = timestamp;
       context.clearRect(0, 0, canvasSize, canvasSize);
 
-      const caretColor = "#f4f6fb";
+      const caretColor = "#ffffff";
 
       for (const particle of particles) {
         const isArc = particle.kind === "arc";

@@ -79,30 +79,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 55930,
         "uploaded": true,
         "key": "wins/win-01/img-1-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 451,
-        "bytes": 32836,
-        "uploaded": true,
-        "key": "wins/win-01/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 451,
-        "bytes": 41996,
-        "uploaded": true,
-        "key": "wins/win-01/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 451,
-        "bytes": 55930,
-        "uploaded": true,
-        "key": "wins/win-01/img-1-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-01/img-1.jpg"
@@ -137,30 +113,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 26621,
         "uploaded": true,
         "key": "wins/win-01/img-2-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 35156,
-        "uploaded": true,
-        "key": "wins/win-01/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 44614,
-        "uploaded": true,
-        "key": "wins/win-01/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 57936,
-        "uploaded": true,
-        "key": "wins/win-01/img-2-800.jpeg"
       },
       {
         "format": "avif",
@@ -243,30 +195,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 58846,
         "uploaded": true,
         "key": "wins/win-01/img-3-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 32490,
-        "uploaded": true,
-        "key": "wins/win-01/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 44234,
-        "uploaded": true,
-        "key": "wins/win-01/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 58846,
-        "uploaded": true,
-        "key": "wins/win-01/img-3-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-01/img-3.jpg"
@@ -278,54 +206,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "width": 358,
     "height": 800,
     "variants": [
-      {
-        "format": "avif",
-        "width": 358,
-        "height": 800,
-        "bytes": 22360,
-        "uploaded": true,
-        "key": "wins/win-01/img-4-358.avif"
-      },
-      {
-        "format": "webp",
-        "width": 358,
-        "height": 800,
-        "bytes": 29264,
-        "uploaded": true,
-        "key": "wins/win-01/img-4-358.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 358,
-        "height": 800,
-        "bytes": 37309,
-        "uploaded": true,
-        "key": "wins/win-01/img-4-358.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 358,
-        "height": 800,
-        "bytes": 22360,
-        "uploaded": true,
-        "key": "wins/win-01/img-4-358.avif"
-      },
-      {
-        "format": "webp",
-        "width": 358,
-        "height": 800,
-        "bytes": 29264,
-        "uploaded": true,
-        "key": "wins/win-01/img-4-358.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 358,
-        "height": 800,
-        "bytes": 37309,
-        "uploaded": true,
-        "key": "wins/win-01/img-4-358.jpeg"
-      },
       {
         "format": "avif",
         "width": 358,
@@ -407,30 +287,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 60613,
         "uploaded": true,
         "key": "wins/win-01/img-5-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 33707,
-        "uploaded": true,
-        "key": "wins/win-01/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 45250,
-        "uploaded": true,
-        "key": "wins/win-01/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 60613,
-        "uploaded": true,
-        "key": "wins/win-01/img-5-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-01/img-5.jpg"
@@ -442,54 +298,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "width": 358,
     "height": 800,
     "variants": [
-      {
-        "format": "avif",
-        "width": 358,
-        "height": 800,
-        "bytes": 26189,
-        "uploaded": true,
-        "key": "wins/win-01/img-6-358.avif"
-      },
-      {
-        "format": "webp",
-        "width": 358,
-        "height": 800,
-        "bytes": 34010,
-        "uploaded": true,
-        "key": "wins/win-01/img-6-358.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 358,
-        "height": 800,
-        "bytes": 42615,
-        "uploaded": true,
-        "key": "wins/win-01/img-6-358.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 358,
-        "height": 800,
-        "bytes": 26189,
-        "uploaded": true,
-        "key": "wins/win-01/img-6-358.avif"
-      },
-      {
-        "format": "webp",
-        "width": 358,
-        "height": 800,
-        "bytes": 34010,
-        "uploaded": true,
-        "key": "wins/win-01/img-6-358.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 358,
-        "height": 800,
-        "bytes": 42615,
-        "uploaded": true,
-        "key": "wins/win-01/img-6-358.jpeg"
-      },
       {
         "format": "avif",
         "width": 358,
@@ -547,30 +355,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 35432,
         "uploaded": true,
         "key": "wins/win-02/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 50876,
-        "uploaded": true,
-        "key": "wins/win-02/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 67778,
-        "uploaded": true,
-        "key": "wins/win-02/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 81790,
-        "uploaded": true,
-        "key": "wins/win-02/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -653,30 +437,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 48761,
         "uploaded": true,
         "key": "wins/win-02/img-2-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 25212,
-        "uploaded": true,
-        "key": "wins/win-02/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 33580,
-        "uploaded": true,
-        "key": "wins/win-02/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 48761,
-        "uploaded": true,
-        "key": "wins/win-02/img-2-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-02/img-2.jpg"
@@ -711,30 +471,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 26464,
         "uploaded": true,
         "key": "wins/win-02/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 27115,
-        "uploaded": true,
-        "key": "wins/win-02/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 38448,
-        "uploaded": true,
-        "key": "wins/win-02/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 54641,
-        "uploaded": true,
-        "key": "wins/win-02/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -817,30 +553,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 32905,
         "uploaded": true,
         "key": "wins/win-02/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 12512,
-        "uploaded": true,
-        "key": "wins/win-02/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 18508,
-        "uploaded": true,
-        "key": "wins/win-02/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 32905,
-        "uploaded": true,
-        "key": "wins/win-02/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-02/img-4.jpg"
@@ -875,30 +587,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 24415,
         "uploaded": true,
         "key": "wins/win-02/img-5-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 25272,
-        "uploaded": true,
-        "key": "wins/win-02/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 35940,
-        "uploaded": true,
-        "key": "wins/win-02/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 53476,
-        "uploaded": true,
-        "key": "wins/win-02/img-5-800.jpeg"
       },
       {
         "format": "avif",
@@ -981,30 +669,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 32905,
         "uploaded": true,
         "key": "wins/win-02/img-6-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 12512,
-        "uploaded": true,
-        "key": "wins/win-02/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 18508,
-        "uploaded": true,
-        "key": "wins/win-02/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 32905,
-        "uploaded": true,
-        "key": "wins/win-02/img-6-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-02/img-6.jpg"
@@ -1039,30 +703,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 40692,
         "uploaded": true,
         "key": "wins/win-03/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 68422,
-        "uploaded": true,
-        "key": "wins/win-03/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 88922,
-        "uploaded": true,
-        "key": "wins/win-03/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 98238,
-        "uploaded": true,
-        "key": "wins/win-03/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -1145,30 +785,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 53494,
         "uploaded": true,
         "key": "wins/win-03/img-2-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 451,
-        "bytes": 32527,
-        "uploaded": true,
-        "key": "wins/win-03/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 451,
-        "bytes": 44244,
-        "uploaded": true,
-        "key": "wins/win-03/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 451,
-        "bytes": 53494,
-        "uploaded": true,
-        "key": "wins/win-03/img-2-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-03/img-2.jpeg"
@@ -1203,30 +819,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 20356,
         "uploaded": true,
         "key": "wins/win-03/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 27281,
-        "uploaded": true,
-        "key": "wins/win-03/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 35354,
-        "uploaded": true,
-        "key": "wins/win-03/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 45686,
-        "uploaded": true,
-        "key": "wins/win-03/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -1309,30 +901,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 98238,
         "uploaded": true,
         "key": "wins/win-03/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 68422,
-        "uploaded": true,
-        "key": "wins/win-03/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 88922,
-        "uploaded": true,
-        "key": "wins/win-03/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 98238,
-        "uploaded": true,
-        "key": "wins/win-03/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-03/img-4.jpeg"
@@ -1367,30 +935,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 40423,
         "uploaded": true,
         "key": "wins/win-03/img-5-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 67890,
-        "uploaded": true,
-        "key": "wins/win-03/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 88322,
-        "uploaded": true,
-        "key": "wins/win-03/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 98115,
-        "uploaded": true,
-        "key": "wins/win-03/img-5-800.jpeg"
       },
       {
         "format": "avif",
@@ -1473,30 +1017,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 46137,
         "uploaded": true,
         "key": "wins/win-03/img-6-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 27568,
-        "uploaded": true,
-        "key": "wins/win-03/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 35370,
-        "uploaded": true,
-        "key": "wins/win-03/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 46137,
-        "uploaded": true,
-        "key": "wins/win-03/img-6-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-03/img-6.jpeg"
@@ -1531,30 +1051,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 26809,
         "uploaded": true,
         "key": "wins/win-04/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 472,
-        "bytes": 38985,
-        "uploaded": true,
-        "key": "wins/win-04/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 472,
-        "bytes": 50822,
-        "uploaded": true,
-        "key": "wins/win-04/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 472,
-        "bytes": 60725,
-        "uploaded": true,
-        "key": "wins/win-04/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -1637,30 +1133,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 62866,
         "uploaded": true,
         "key": "wins/win-04/img-2-600.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 600,
-        "height": 800,
-        "bytes": 36611,
-        "uploaded": true,
-        "key": "wins/win-04/img-2-600.avif"
-      },
-      {
-        "format": "webp",
-        "width": 600,
-        "height": 800,
-        "bytes": 49306,
-        "uploaded": true,
-        "key": "wins/win-04/img-2-600.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 600,
-        "height": 800,
-        "bytes": 62866,
-        "uploaded": true,
-        "key": "wins/win-04/img-2-600.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-04/img-2.jpeg"
@@ -1695,30 +1167,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 25525,
         "uploaded": true,
         "key": "wins/win-04/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 566,
-        "bytes": 37703,
-        "uploaded": true,
-        "key": "wins/win-04/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 566,
-        "bytes": 51560,
-        "uploaded": true,
-        "key": "wins/win-04/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 566,
-        "bytes": 57573,
-        "uploaded": true,
-        "key": "wins/win-04/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -1801,30 +1249,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 57486,
         "uploaded": true,
         "key": "wins/win-04/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 566,
-        "bytes": 37629,
-        "uploaded": true,
-        "key": "wins/win-04/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 566,
-        "bytes": 51544,
-        "uploaded": true,
-        "key": "wins/win-04/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 566,
-        "bytes": 57486,
-        "uploaded": true,
-        "key": "wins/win-04/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-04/img-4.jpg"
@@ -1859,30 +1283,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 25806,
         "uploaded": true,
         "key": "wins/win-04/img-5-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 566,
-        "bytes": 38114,
-        "uploaded": true,
-        "key": "wins/win-04/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 566,
-        "bytes": 52056,
-        "uploaded": true,
-        "key": "wins/win-04/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 566,
-        "bytes": 58029,
-        "uploaded": true,
-        "key": "wins/win-04/img-5-800.jpeg"
       },
       {
         "format": "avif",
@@ -1965,30 +1365,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 57784,
         "uploaded": true,
         "key": "wins/win-04/img-6-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 566,
-        "bytes": 37806,
-        "uploaded": true,
-        "key": "wins/win-04/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 566,
-        "bytes": 51846,
-        "uploaded": true,
-        "key": "wins/win-04/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 566,
-        "bytes": 57784,
-        "uploaded": true,
-        "key": "wins/win-04/img-6-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-04/img-6.jpg"
@@ -2023,30 +1399,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 25757,
         "uploaded": true,
         "key": "wins/win-04/img-7-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 566,
-        "bytes": 38102,
-        "uploaded": true,
-        "key": "wins/win-04/img-7-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 566,
-        "bytes": 51998,
-        "uploaded": true,
-        "key": "wins/win-04/img-7-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 566,
-        "bytes": 58065,
-        "uploaded": true,
-        "key": "wins/win-04/img-7-800.jpeg"
       },
       {
         "format": "avif",
@@ -2129,30 +1481,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 56391,
         "uploaded": true,
         "key": "wins/win-05/img-1-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 32287,
-        "uploaded": true,
-        "key": "wins/win-05/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 42064,
-        "uploaded": true,
-        "key": "wins/win-05/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 56391,
-        "uploaded": true,
-        "key": "wins/win-05/img-1-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-05/img-1.jpg"
@@ -2187,30 +1515,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 30533,
         "uploaded": true,
         "key": "wins/win-05/img-2-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 48090,
-        "uploaded": true,
-        "key": "wins/win-05/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 63032,
-        "uploaded": true,
-        "key": "wins/win-05/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 70089,
-        "uploaded": true,
-        "key": "wins/win-05/img-2-800.jpeg"
       },
       {
         "format": "avif",
@@ -2293,30 +1597,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 48440,
         "uploaded": true,
         "key": "wins/win-05/img-3-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 25962,
-        "uploaded": true,
-        "key": "wins/win-05/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 34814,
-        "uploaded": true,
-        "key": "wins/win-05/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 48440,
-        "uploaded": true,
-        "key": "wins/win-05/img-3-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-05/img-3.jpg"
@@ -2351,30 +1631,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 32918,
         "uploaded": true,
         "key": "wins/win-05/img-4-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 37287,
-        "uploaded": true,
-        "key": "wins/win-05/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 50610,
-        "uploaded": true,
-        "key": "wins/win-05/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 69303,
-        "uploaded": true,
-        "key": "wins/win-05/img-4-800.jpeg"
       },
       {
         "format": "avif",
@@ -2457,30 +1713,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 61510,
         "uploaded": true,
         "key": "wins/win-05/img-5-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 358,
-        "bytes": 43979,
-        "uploaded": true,
-        "key": "wins/win-05/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 358,
-        "bytes": 57430,
-        "uploaded": true,
-        "key": "wins/win-05/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 358,
-        "bytes": 61510,
-        "uploaded": true,
-        "key": "wins/win-05/img-5-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-05/img-5.jpeg"
@@ -2515,30 +1747,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 27586,
         "uploaded": true,
         "key": "wins/win-05/img-6-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 35057,
-        "uploaded": true,
-        "key": "wins/win-05/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 45318,
-        "uploaded": true,
-        "key": "wins/win-05/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 59406,
-        "uploaded": true,
-        "key": "wins/win-05/img-6-800.jpeg"
       },
       {
         "format": "avif",
@@ -2621,30 +1829,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 74148,
         "uploaded": true,
         "key": "wins/win-06/img-1-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 41351,
-        "uploaded": true,
-        "key": "wins/win-06/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 55028,
-        "uploaded": true,
-        "key": "wins/win-06/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 74148,
-        "uploaded": true,
-        "key": "wins/win-06/img-1-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-06/img-1.jpg"
@@ -2679,30 +1863,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 54345,
         "uploaded": true,
         "key": "wins/win-06/img-2-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 540,
-        "height": 800,
-        "bytes": 40427,
-        "uploaded": true,
-        "key": "wins/win-06/img-2-540.avif"
-      },
-      {
-        "format": "webp",
-        "width": 540,
-        "height": 800,
-        "bytes": 54224,
-        "uploaded": true,
-        "key": "wins/win-06/img-2-540.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 540,
-        "height": 800,
-        "bytes": 67568,
-        "uploaded": true,
-        "key": "wins/win-06/img-2-540.jpeg"
       },
       {
         "format": "avif",
@@ -2785,30 +1945,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 76551,
         "uploaded": true,
         "key": "wins/win-06/img-3-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 45554,
-        "uploaded": true,
-        "key": "wins/win-06/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 58772,
-        "uploaded": true,
-        "key": "wins/win-06/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 76551,
-        "uploaded": true,
-        "key": "wins/win-06/img-3-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-06/img-3.jpg"
@@ -2843,30 +1979,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 21410,
         "uploaded": true,
         "key": "wins/win-06/img-4-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 358,
-        "bytes": 31274,
-        "uploaded": true,
-        "key": "wins/win-06/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 358,
-        "bytes": 41060,
-        "uploaded": true,
-        "key": "wins/win-06/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 358,
-        "bytes": 48657,
-        "uploaded": true,
-        "key": "wins/win-06/img-4-800.jpeg"
       },
       {
         "format": "avif",
@@ -2949,30 +2061,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 74820,
         "uploaded": true,
         "key": "wins/win-06/img-5-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 42405,
-        "uploaded": true,
-        "key": "wins/win-06/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 56430,
-        "uploaded": true,
-        "key": "wins/win-06/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 74820,
-        "uploaded": true,
-        "key": "wins/win-06/img-5-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-06/img-5.jpeg"
@@ -3007,30 +2095,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 32646,
         "uploaded": true,
         "key": "wins/win-06/img-6-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 41351,
-        "uploaded": true,
-        "key": "wins/win-06/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 55028,
-        "uploaded": true,
-        "key": "wins/win-06/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 74148,
-        "uploaded": true,
-        "key": "wins/win-06/img-6-800.jpeg"
       },
       {
         "format": "avif",
@@ -3113,30 +2177,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 63827,
         "uploaded": true,
         "key": "wins/win-07/img-1-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 42349,
-        "uploaded": true,
-        "key": "wins/win-07/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 54194,
-        "uploaded": true,
-        "key": "wins/win-07/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 63827,
-        "uploaded": true,
-        "key": "wins/win-07/img-1-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-07/img-1.jpeg"
@@ -3171,30 +2211,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 26220,
         "uploaded": true,
         "key": "wins/win-07/img-2-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 561,
-        "bytes": 33253,
-        "uploaded": true,
-        "key": "wins/win-07/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 561,
-        "bytes": 44432,
-        "uploaded": true,
-        "key": "wins/win-07/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 561,
-        "bytes": 60941,
-        "uploaded": true,
-        "key": "wins/win-07/img-2-800.jpeg"
       },
       {
         "format": "avif",
@@ -3277,30 +2293,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 60522,
         "uploaded": true,
         "key": "wins/win-07/img-3-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 532,
-        "bytes": 35150,
-        "uploaded": true,
-        "key": "wins/win-07/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 532,
-        "bytes": 45248,
-        "uploaded": true,
-        "key": "wins/win-07/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 532,
-        "bytes": 60522,
-        "uploaded": true,
-        "key": "wins/win-07/img-3-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-07/img-3.jpg"
@@ -3335,30 +2327,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 83405,
         "uploaded": true,
         "key": "wins/win-07/img-4-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 541,
-        "height": 764,
-        "bytes": 66825,
-        "uploaded": true,
-        "key": "wins/win-07/img-4-541.avif"
-      },
-      {
-        "format": "webp",
-        "width": 541,
-        "height": 764,
-        "bytes": 87098,
-        "uploaded": true,
-        "key": "wins/win-07/img-4-541.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 541,
-        "height": 764,
-        "bytes": 98537,
-        "uploaded": true,
-        "key": "wins/win-07/img-4-541.jpeg"
       },
       {
         "format": "avif",
@@ -3441,30 +2409,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 43545,
         "uploaded": true,
         "key": "wins/win-07/img-5-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 532,
-        "bytes": 20576,
-        "uploaded": true,
-        "key": "wins/win-07/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 532,
-        "bytes": 26854,
-        "uploaded": true,
-        "key": "wins/win-07/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 532,
-        "bytes": 43545,
-        "uploaded": true,
-        "key": "wins/win-07/img-5-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-07/img-5.jpg"
@@ -3499,30 +2443,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 87469,
         "uploaded": true,
         "key": "wins/win-07/img-6-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 568,
-        "height": 800,
-        "bytes": 85520,
-        "uploaded": true,
-        "key": "wins/win-07/img-6-568.avif"
-      },
-      {
-        "format": "webp",
-        "width": 568,
-        "height": 800,
-        "bytes": 107338,
-        "uploaded": true,
-        "key": "wins/win-07/img-6-568.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 568,
-        "height": 800,
-        "bytes": 112662,
-        "uploaded": true,
-        "key": "wins/win-07/img-6-568.jpeg"
       },
       {
         "format": "avif",
@@ -3605,30 +2525,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 110684,
         "uploaded": true,
         "key": "wins/win-07/img-7-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 762,
-        "bytes": 79975,
-        "uploaded": true,
-        "key": "wins/win-07/img-7-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 762,
-        "bytes": 101708,
-        "uploaded": true,
-        "key": "wins/win-07/img-7-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 762,
-        "bytes": 110684,
-        "uploaded": true,
-        "key": "wins/win-07/img-7-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-07/img-7.jpg"
@@ -3640,54 +2536,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "width": 372,
     "height": 800,
     "variants": [
-      {
-        "format": "avif",
-        "width": 372,
-        "height": 800,
-        "bytes": 44112,
-        "uploaded": true,
-        "key": "wins/win-07/img-8-372.avif"
-      },
-      {
-        "format": "webp",
-        "width": 372,
-        "height": 800,
-        "bytes": 54542,
-        "uploaded": true,
-        "key": "wins/win-07/img-8-372.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 372,
-        "height": 800,
-        "bytes": 63384,
-        "uploaded": true,
-        "key": "wins/win-07/img-8-372.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 372,
-        "height": 800,
-        "bytes": 44112,
-        "uploaded": true,
-        "key": "wins/win-07/img-8-372.avif"
-      },
-      {
-        "format": "webp",
-        "width": 372,
-        "height": 800,
-        "bytes": 54542,
-        "uploaded": true,
-        "key": "wins/win-07/img-8-372.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 372,
-        "height": 800,
-        "bytes": 63384,
-        "uploaded": true,
-        "key": "wins/win-07/img-8-372.jpeg"
-      },
       {
         "format": "avif",
         "width": 372,
@@ -3769,30 +2617,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 64815,
         "uploaded": true,
         "key": "wins/win-08/img-1-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 42718,
-        "uploaded": true,
-        "key": "wins/win-08/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 54990,
-        "uploaded": true,
-        "key": "wins/win-08/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 64815,
-        "uploaded": true,
-        "key": "wins/win-08/img-1-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-08/img-1.jpg"
@@ -3804,54 +2628,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "width": 450,
     "height": 800,
     "variants": [
-      {
-        "format": "avif",
-        "width": 450,
-        "height": 800,
-        "bytes": 30530,
-        "uploaded": true,
-        "key": "wins/win-08/img-2-450.avif"
-      },
-      {
-        "format": "webp",
-        "width": 450,
-        "height": 800,
-        "bytes": 39100,
-        "uploaded": true,
-        "key": "wins/win-08/img-2-450.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 450,
-        "height": 800,
-        "bytes": 49136,
-        "uploaded": true,
-        "key": "wins/win-08/img-2-450.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 450,
-        "height": 800,
-        "bytes": 30530,
-        "uploaded": true,
-        "key": "wins/win-08/img-2-450.avif"
-      },
-      {
-        "format": "webp",
-        "width": 450,
-        "height": 800,
-        "bytes": 39100,
-        "uploaded": true,
-        "key": "wins/win-08/img-2-450.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 450,
-        "height": 800,
-        "bytes": 49136,
-        "uploaded": true,
-        "key": "wins/win-08/img-2-450.jpeg"
-      },
       {
         "format": "avif",
         "width": 450,
@@ -3909,30 +2685,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 26210,
         "uploaded": true,
         "key": "wins/win-08/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 36371,
-        "uploaded": true,
-        "key": "wins/win-08/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 49644,
-        "uploaded": true,
-        "key": "wins/win-08/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 58206,
-        "uploaded": true,
-        "key": "wins/win-08/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -4015,30 +2767,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 67511,
         "uploaded": true,
         "key": "wins/win-08/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 534,
-        "bytes": 39704,
-        "uploaded": true,
-        "key": "wins/win-08/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 534,
-        "bytes": 52734,
-        "uploaded": true,
-        "key": "wins/win-08/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 534,
-        "bytes": 67511,
-        "uploaded": true,
-        "key": "wins/win-08/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-08/img-4.jpg"
@@ -4073,30 +2801,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 30037,
         "uploaded": true,
         "key": "wins/win-08/img-5-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 534,
-        "bytes": 37567,
-        "uploaded": true,
-        "key": "wins/win-08/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 534,
-        "bytes": 49868,
-        "uploaded": true,
-        "key": "wins/win-08/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 534,
-        "bytes": 65130,
-        "uploaded": true,
-        "key": "wins/win-08/img-5-800.jpeg"
       },
       {
         "format": "avif",
@@ -4179,30 +2883,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 75799,
         "uploaded": true,
         "key": "wins/win-08/img-6-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 534,
-        "bytes": 51160,
-        "uploaded": true,
-        "key": "wins/win-08/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 534,
-        "bytes": 66244,
-        "uploaded": true,
-        "key": "wins/win-08/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 534,
-        "bytes": 75799,
-        "uploaded": true,
-        "key": "wins/win-08/img-6-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-08/img-6.jpg"
@@ -4237,30 +2917,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 30528,
         "uploaded": true,
         "key": "wins/win-09/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 40086,
-        "uploaded": true,
-        "key": "wins/win-09/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 52518,
-        "uploaded": true,
-        "key": "wins/win-09/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 67926,
-        "uploaded": true,
-        "key": "wins/win-09/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -4343,30 +2999,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 61868,
         "uploaded": true,
         "key": "wins/win-09/img-2-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 34789,
-        "uploaded": true,
-        "key": "wins/win-09/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 45672,
-        "uploaded": true,
-        "key": "wins/win-09/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 61868,
-        "uploaded": true,
-        "key": "wins/win-09/img-2-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-09/img-2.jpg"
@@ -4401,30 +3033,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 28897,
         "uploaded": true,
         "key": "wins/win-09/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 42175,
-        "uploaded": true,
-        "key": "wins/win-09/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 56252,
-        "uploaded": true,
-        "key": "wins/win-09/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 65969,
-        "uploaded": true,
-        "key": "wins/win-09/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -4507,30 +3115,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 72407,
         "uploaded": true,
         "key": "wins/win-09/img-4-496.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 496,
-        "height": 526,
-        "bytes": 53921,
-        "uploaded": true,
-        "key": "wins/win-09/img-4-496.avif"
-      },
-      {
-        "format": "webp",
-        "width": 496,
-        "height": 526,
-        "bytes": 67610,
-        "uploaded": true,
-        "key": "wins/win-09/img-4-496.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 496,
-        "height": 526,
-        "bytes": 72407,
-        "uploaded": true,
-        "key": "wins/win-09/img-4-496.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-09/img-4.jpg"
@@ -4542,54 +3126,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "width": 408,
     "height": 487,
     "variants": [
-      {
-        "format": "avif",
-        "width": 408,
-        "height": 487,
-        "bytes": 41380,
-        "uploaded": true,
-        "key": "wins/win-09/img-5-408.avif"
-      },
-      {
-        "format": "webp",
-        "width": 408,
-        "height": 487,
-        "bytes": 51992,
-        "uploaded": true,
-        "key": "wins/win-09/img-5-408.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 408,
-        "height": 487,
-        "bytes": 55835,
-        "uploaded": true,
-        "key": "wins/win-09/img-5-408.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 408,
-        "height": 487,
-        "bytes": 41380,
-        "uploaded": true,
-        "key": "wins/win-09/img-5-408.avif"
-      },
-      {
-        "format": "webp",
-        "width": 408,
-        "height": 487,
-        "bytes": 51992,
-        "uploaded": true,
-        "key": "wins/win-09/img-5-408.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 408,
-        "height": 487,
-        "bytes": 55835,
-        "uploaded": true,
-        "key": "wins/win-09/img-5-408.jpeg"
-      },
       {
         "format": "avif",
         "width": 408,
@@ -4647,54 +3183,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 49092,
         "uploaded": true,
         "key": "wins/win-09/img-6-450.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 450,
-        "height": 800,
-        "bytes": 28494,
-        "uploaded": true,
-        "key": "wins/win-09/img-6-450.avif"
-      },
-      {
-        "format": "webp",
-        "width": 450,
-        "height": 800,
-        "bytes": 39134,
-        "uploaded": true,
-        "key": "wins/win-09/img-6-450.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 450,
-        "height": 800,
-        "bytes": 49092,
-        "uploaded": true,
-        "key": "wins/win-09/img-6-450.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 450,
-        "height": 800,
-        "bytes": 28494,
-        "uploaded": true,
-        "key": "wins/win-09/img-6-450.avif"
-      },
-      {
-        "format": "webp",
-        "width": 450,
-        "height": 800,
-        "bytes": 39134,
-        "uploaded": true,
-        "key": "wins/win-09/img-6-450.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 450,
-        "height": 800,
-        "bytes": 49092,
-        "uploaded": true,
-        "key": "wins/win-09/img-6-450.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-09/img-6.jpg"
@@ -4729,30 +3217,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 24235,
         "uploaded": true,
         "key": "wins/win-10/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 323,
-        "bytes": 39445,
-        "uploaded": true,
-        "key": "wins/win-10/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 323,
-        "bytes": 50206,
-        "uploaded": true,
-        "key": "wins/win-10/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 323,
-        "bytes": 55858,
-        "uploaded": true,
-        "key": "wins/win-10/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -4835,30 +3299,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 97898,
         "uploaded": true,
         "key": "wins/win-10/img-2-640.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 640,
-        "height": 800,
-        "bytes": 64086,
-        "uploaded": true,
-        "key": "wins/win-10/img-2-640.avif"
-      },
-      {
-        "format": "webp",
-        "width": 640,
-        "height": 800,
-        "bytes": 80794,
-        "uploaded": true,
-        "key": "wins/win-10/img-2-640.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 640,
-        "height": 800,
-        "bytes": 97898,
-        "uploaded": true,
-        "key": "wins/win-10/img-2-640.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-10/img-2.jpg"
@@ -4893,30 +3333,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 19772,
         "uploaded": true,
         "key": "wins/win-10/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 358,
-        "bytes": 24583,
-        "uploaded": true,
-        "key": "wins/win-10/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 358,
-        "bytes": 33698,
-        "uploaded": true,
-        "key": "wins/win-10/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 358,
-        "bytes": 43364,
-        "uploaded": true,
-        "key": "wins/win-10/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -4999,30 +3415,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 59927,
         "uploaded": true,
         "key": "wins/win-10/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 358,
-        "bytes": 41354,
-        "uploaded": true,
-        "key": "wins/win-10/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 358,
-        "bytes": 54738,
-        "uploaded": true,
-        "key": "wins/win-10/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 358,
-        "bytes": 59927,
-        "uploaded": true,
-        "key": "wins/win-10/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-10/img-4.jpg"
@@ -5057,30 +3449,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 20465,
         "uploaded": true,
         "key": "wins/win-10/img-5-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 358,
-        "bytes": 25385,
-        "uploaded": true,
-        "key": "wins/win-10/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 358,
-        "bytes": 35308,
-        "uploaded": true,
-        "key": "wins/win-10/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 358,
-        "bytes": 44477,
-        "uploaded": true,
-        "key": "wins/win-10/img-5-800.jpeg"
       },
       {
         "format": "avif",
@@ -5163,30 +3531,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 59927,
         "uploaded": true,
         "key": "wins/win-10/img-6-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 358,
-        "bytes": 41354,
-        "uploaded": true,
-        "key": "wins/win-10/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 358,
-        "bytes": 54738,
-        "uploaded": true,
-        "key": "wins/win-10/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 358,
-        "bytes": 59927,
-        "uploaded": true,
-        "key": "wins/win-10/img-6-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-10/img-6.jpg"
@@ -5221,30 +3565,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 35717,
         "uploaded": true,
         "key": "wins/win-11/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 49721,
-        "uploaded": true,
-        "key": "wins/win-11/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 66348,
-        "uploaded": true,
-        "key": "wins/win-11/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 81674,
-        "uploaded": true,
-        "key": "wins/win-11/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -5327,30 +3647,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 49324,
         "uploaded": true,
         "key": "wins/win-11/img-2-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 28057,
-        "uploaded": true,
-        "key": "wins/win-11/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 36534,
-        "uploaded": true,
-        "key": "wins/win-11/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 49324,
-        "uploaded": true,
-        "key": "wins/win-11/img-2-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-11/img-2.jpg"
@@ -5385,30 +3681,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 22962,
         "uploaded": true,
         "key": "wins/win-11/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 31204,
-        "uploaded": true,
-        "key": "wins/win-11/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 43162,
-        "uploaded": true,
-        "key": "wins/win-11/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 51412,
-        "uploaded": true,
-        "key": "wins/win-11/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -5491,30 +3763,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 112012,
         "uploaded": true,
         "key": "wins/win-11/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 640,
-        "bytes": 79097,
-        "uploaded": true,
-        "key": "wins/win-11/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 640,
-        "bytes": 98374,
-        "uploaded": true,
-        "key": "wins/win-11/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 640,
-        "bytes": 112012,
-        "uploaded": true,
-        "key": "wins/win-11/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-11/img-4.jpg"
@@ -5549,30 +3797,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 28419,
         "uploaded": true,
         "key": "wins/win-11/img-5-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 30093,
-        "uploaded": true,
-        "key": "wins/win-11/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 41136,
-        "uploaded": true,
-        "key": "wins/win-11/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 58606,
-        "uploaded": true,
-        "key": "wins/win-11/img-5-800.jpeg"
       },
       {
         "format": "avif",
@@ -5655,30 +3879,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 58606,
         "uploaded": true,
         "key": "wins/win-11/img-6-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 30093,
-        "uploaded": true,
-        "key": "wins/win-11/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 41136,
-        "uploaded": true,
-        "key": "wins/win-11/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 58606,
-        "uploaded": true,
-        "key": "wins/win-11/img-6-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-11/img-6.jpg"
@@ -5713,30 +3913,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 35789,
         "uploaded": true,
         "key": "wins/win-13/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 590,
-        "bytes": 50008,
-        "uploaded": true,
-        "key": "wins/win-13/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 590,
-        "bytes": 72448,
-        "uploaded": true,
-        "key": "wins/win-13/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 590,
-        "bytes": 83179,
-        "uploaded": true,
-        "key": "wins/win-13/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -5819,30 +3995,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 53769,
         "uploaded": true,
         "key": "wins/win-13/img-2-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 602,
-        "bytes": 28961,
-        "uploaded": true,
-        "key": "wins/win-13/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 602,
-        "bytes": 39006,
-        "uploaded": true,
-        "key": "wins/win-13/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 602,
-        "bytes": 53769,
-        "uploaded": true,
-        "key": "wins/win-13/img-2-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-13/img-2.jpg"
@@ -5877,30 +4029,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 35989,
         "uploaded": true,
         "key": "wins/win-13/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 602,
-        "bytes": 54226,
-        "uploaded": true,
-        "key": "wins/win-13/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 602,
-        "bytes": 84282,
-        "uploaded": true,
-        "key": "wins/win-13/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 602,
-        "bytes": 90125,
-        "uploaded": true,
-        "key": "wins/win-13/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -5983,30 +4111,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 19055,
         "uploaded": true,
         "key": "wins/win-13/img-4-507.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 507,
-        "height": 252,
-        "bytes": 11254,
-        "uploaded": true,
-        "key": "wins/win-13/img-4-507.avif"
-      },
-      {
-        "format": "webp",
-        "width": 507,
-        "height": 252,
-        "bytes": 14540,
-        "uploaded": true,
-        "key": "wins/win-13/img-4-507.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 507,
-        "height": 252,
-        "bytes": 19055,
-        "uploaded": true,
-        "key": "wins/win-13/img-4-507.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-13/img-4.png"
@@ -6041,30 +4145,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 28356,
         "uploaded": true,
         "key": "wins/win-13/img-5-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 602,
-        "bytes": 37567,
-        "uploaded": true,
-        "key": "wins/win-13/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 602,
-        "bytes": 51394,
-        "uploaded": true,
-        "key": "wins/win-13/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 602,
-        "bytes": 64864,
-        "uploaded": true,
-        "key": "wins/win-13/img-5-800.jpeg"
       },
       {
         "format": "avif",
@@ -6147,30 +4227,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 58960,
         "uploaded": true,
         "key": "wins/win-13/img-6-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 602,
-        "bytes": 32849,
-        "uploaded": true,
-        "key": "wins/win-13/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 602,
-        "bytes": 45268,
-        "uploaded": true,
-        "key": "wins/win-13/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 602,
-        "bytes": 58960,
-        "uploaded": true,
-        "key": "wins/win-13/img-6-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-13/img-6.jpg"
@@ -6182,54 +4238,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "width": 322,
     "height": 202,
     "variants": [
-      {
-        "format": "avif",
-        "width": 322,
-        "height": 202,
-        "bytes": 8504,
-        "uploaded": true,
-        "key": "wins/win-14/img-1-322.avif"
-      },
-      {
-        "format": "webp",
-        "width": 322,
-        "height": 202,
-        "bytes": 10196,
-        "uploaded": true,
-        "key": "wins/win-14/img-1-322.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 322,
-        "height": 202,
-        "bytes": 13055,
-        "uploaded": true,
-        "key": "wins/win-14/img-1-322.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 322,
-        "height": 202,
-        "bytes": 8504,
-        "uploaded": true,
-        "key": "wins/win-14/img-1-322.avif"
-      },
-      {
-        "format": "webp",
-        "width": 322,
-        "height": 202,
-        "bytes": 10196,
-        "uploaded": true,
-        "key": "wins/win-14/img-1-322.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 322,
-        "height": 202,
-        "bytes": 13055,
-        "uploaded": true,
-        "key": "wins/win-14/img-1-322.jpeg"
-      },
       {
         "format": "avif",
         "width": 322,
@@ -6311,30 +4319,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 44024,
         "uploaded": true,
         "key": "wins/win-14/img-2-648.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 648,
-        "height": 412,
-        "bytes": 26580,
-        "uploaded": true,
-        "key": "wins/win-14/img-2-648.avif"
-      },
-      {
-        "format": "webp",
-        "width": 648,
-        "height": 412,
-        "bytes": 33986,
-        "uploaded": true,
-        "key": "wins/win-14/img-2-648.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 648,
-        "height": 412,
-        "bytes": 44024,
-        "uploaded": true,
-        "key": "wins/win-14/img-2-648.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-14/img-2.png"
@@ -6346,54 +4330,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "width": 297,
     "height": 196,
     "variants": [
-      {
-        "format": "avif",
-        "width": 297,
-        "height": 196,
-        "bytes": 6154,
-        "uploaded": true,
-        "key": "wins/win-14/img-3-297.avif"
-      },
-      {
-        "format": "webp",
-        "width": 297,
-        "height": 196,
-        "bytes": 7384,
-        "uploaded": true,
-        "key": "wins/win-14/img-3-297.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 297,
-        "height": 196,
-        "bytes": 10218,
-        "uploaded": true,
-        "key": "wins/win-14/img-3-297.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 297,
-        "height": 196,
-        "bytes": 6154,
-        "uploaded": true,
-        "key": "wins/win-14/img-3-297.avif"
-      },
-      {
-        "format": "webp",
-        "width": 297,
-        "height": 196,
-        "bytes": 7384,
-        "uploaded": true,
-        "key": "wins/win-14/img-3-297.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 297,
-        "height": 196,
-        "bytes": 10218,
-        "uploaded": true,
-        "key": "wins/win-14/img-3-297.jpeg"
-      },
       {
         "format": "avif",
         "width": 297,
@@ -6451,30 +4387,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 26661,
         "uploaded": true,
         "key": "wins/win-16/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 510,
-        "bytes": 36157,
-        "uploaded": true,
-        "key": "wins/win-16/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 510,
-        "bytes": 47836,
-        "uploaded": true,
-        "key": "wins/win-16/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 510,
-        "bytes": 61324,
-        "uploaded": true,
-        "key": "wins/win-16/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -6557,30 +4469,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 58790,
         "uploaded": true,
         "key": "wins/win-16/img-2-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 539,
-        "bytes": 33982,
-        "uploaded": true,
-        "key": "wins/win-16/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 539,
-        "bytes": 45744,
-        "uploaded": true,
-        "key": "wins/win-16/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 539,
-        "bytes": 58790,
-        "uploaded": true,
-        "key": "wins/win-16/img-2-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-16/img-2.jpg"
@@ -6615,30 +4503,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 25687,
         "uploaded": true,
         "key": "wins/win-16/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 542,
-        "bytes": 30757,
-        "uploaded": true,
-        "key": "wins/win-16/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 542,
-        "bytes": 40712,
-        "uploaded": true,
-        "key": "wins/win-16/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 542,
-        "bytes": 56164,
-        "uploaded": true,
-        "key": "wins/win-16/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -6721,30 +4585,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 84219,
         "uploaded": true,
         "key": "wins/win-16/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 56828,
-        "uploaded": true,
-        "key": "wins/win-16/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 73102,
-        "uploaded": true,
-        "key": "wins/win-16/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 84219,
-        "uploaded": true,
-        "key": "wins/win-16/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-16/img-4.webp"
@@ -6779,30 +4619,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 29907,
         "uploaded": true,
         "key": "wins/win-16/img-5-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 533,
-        "bytes": 44608,
-        "uploaded": true,
-        "key": "wins/win-16/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 533,
-        "bytes": 58804,
-        "uploaded": true,
-        "key": "wins/win-16/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 533,
-        "bytes": 70481,
-        "uploaded": true,
-        "key": "wins/win-16/img-5-800.jpeg"
       },
       {
         "format": "avif",
@@ -6885,30 +4701,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 58790,
         "uploaded": true,
         "key": "wins/win-16/img-6-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 539,
-        "bytes": 33982,
-        "uploaded": true,
-        "key": "wins/win-16/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 539,
-        "bytes": 45744,
-        "uploaded": true,
-        "key": "wins/win-16/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 539,
-        "bytes": 58790,
-        "uploaded": true,
-        "key": "wins/win-16/img-6-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-16/img-6.jpg"
@@ -6943,30 +4735,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 25113,
         "uploaded": true,
         "key": "wins/win-17/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 401,
-        "bytes": 32854,
-        "uploaded": true,
-        "key": "wins/win-17/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 401,
-        "bytes": 40550,
-        "uploaded": true,
-        "key": "wins/win-17/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 401,
-        "bytes": 52919,
-        "uploaded": true,
-        "key": "wins/win-17/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -7049,30 +4817,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 33816,
         "uploaded": true,
         "key": "wins/win-17/img-2-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 358,
-        "bytes": 19166,
-        "uploaded": true,
-        "key": "wins/win-17/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 358,
-        "bytes": 25864,
-        "uploaded": true,
-        "key": "wins/win-17/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 358,
-        "bytes": 33816,
-        "uploaded": true,
-        "key": "wins/win-17/img-2-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-17/img-2.jpg"
@@ -7107,30 +4851,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 29443,
         "uploaded": true,
         "key": "wins/win-17/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 325,
-        "bytes": 48425,
-        "uploaded": true,
-        "key": "wins/win-17/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 325,
-        "bytes": 60492,
-        "uploaded": true,
-        "key": "wins/win-17/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 325,
-        "bytes": 64574,
-        "uploaded": true,
-        "key": "wins/win-17/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -7213,30 +4933,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 34373,
         "uploaded": true,
         "key": "wins/win-17/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 358,
-        "bytes": 18173,
-        "uploaded": true,
-        "key": "wins/win-17/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 358,
-        "bytes": 23722,
-        "uploaded": true,
-        "key": "wins/win-17/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 358,
-        "bytes": 34373,
-        "uploaded": true,
-        "key": "wins/win-17/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-17/img-4.jpg"
@@ -7295,30 +4991,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 40338,
         "uploaded": true,
         "key": "wins/win-17/img-5-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 358,
-        "bytes": 21730,
-        "uploaded": true,
-        "key": "wins/win-17/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 358,
-        "bytes": 29316,
-        "uploaded": true,
-        "key": "wins/win-17/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 358,
-        "bytes": 40338,
-        "uploaded": true,
-        "key": "wins/win-17/img-5-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-17/img-5.jpg"
@@ -7330,54 +5002,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "width": 358,
     "height": 800,
     "variants": [
-      {
-        "format": "avif",
-        "width": 358,
-        "height": 800,
-        "bytes": 30325,
-        "uploaded": true,
-        "key": "wins/win-17/img-6-358.avif"
-      },
-      {
-        "format": "webp",
-        "width": 358,
-        "height": 800,
-        "bytes": 39902,
-        "uploaded": true,
-        "key": "wins/win-17/img-6-358.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 358,
-        "height": 800,
-        "bytes": 49235,
-        "uploaded": true,
-        "key": "wins/win-17/img-6-358.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 358,
-        "height": 800,
-        "bytes": 30325,
-        "uploaded": true,
-        "key": "wins/win-17/img-6-358.avif"
-      },
-      {
-        "format": "webp",
-        "width": 358,
-        "height": 800,
-        "bytes": 39902,
-        "uploaded": true,
-        "key": "wins/win-17/img-6-358.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 358,
-        "height": 800,
-        "bytes": 49235,
-        "uploaded": true,
-        "key": "wins/win-17/img-6-358.jpeg"
-      },
       {
         "format": "avif",
         "width": 358,
@@ -7435,30 +5059,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 23409,
         "uploaded": true,
         "key": "wins/win-18/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 602,
-        "bytes": 23966,
-        "uploaded": true,
-        "key": "wins/win-18/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 602,
-        "bytes": 34130,
-        "uploaded": true,
-        "key": "wins/win-18/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 602,
-        "bytes": 49837,
-        "uploaded": true,
-        "key": "wins/win-18/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -7541,30 +5141,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 43541,
         "uploaded": true,
         "key": "wins/win-18/img-2-720.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 720,
-        "height": 762,
-        "bytes": 24708,
-        "uploaded": true,
-        "key": "wins/win-18/img-2-720.avif"
-      },
-      {
-        "format": "webp",
-        "width": 720,
-        "height": 762,
-        "bytes": 33412,
-        "uploaded": true,
-        "key": "wins/win-18/img-2-720.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 720,
-        "height": 762,
-        "bytes": 43541,
-        "uploaded": true,
-        "key": "wins/win-18/img-2-720.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-18/img-2.png"
@@ -7599,30 +5175,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 18404,
         "uploaded": true,
         "key": "wins/win-18/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 566,
-        "bytes": 20204,
-        "uploaded": true,
-        "key": "wins/win-18/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 566,
-        "bytes": 24768,
-        "uploaded": true,
-        "key": "wins/win-18/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 566,
-        "bytes": 35054,
-        "uploaded": true,
-        "key": "wins/win-18/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -7705,30 +5257,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 46348,
         "uploaded": true,
         "key": "wins/win-18/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 602,
-        "bytes": 21752,
-        "uploaded": true,
-        "key": "wins/win-18/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 602,
-        "bytes": 31274,
-        "uploaded": true,
-        "key": "wins/win-18/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 602,
-        "bytes": 46348,
-        "uploaded": true,
-        "key": "wins/win-18/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-18/img-4.jpg"
@@ -7763,30 +5291,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 31181,
         "uploaded": true,
         "key": "wins/win-18/img-5-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 54236,
-        "uploaded": true,
-        "key": "wins/win-18/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 73522,
-        "uploaded": true,
-        "key": "wins/win-18/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 77520,
-        "uploaded": true,
-        "key": "wins/win-18/img-5-800.jpeg"
       },
       {
         "format": "avif",
@@ -7869,30 +5373,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 46348,
         "uploaded": true,
         "key": "wins/win-18/img-6-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 602,
-        "bytes": 21752,
-        "uploaded": true,
-        "key": "wins/win-18/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 602,
-        "bytes": 31274,
-        "uploaded": true,
-        "key": "wins/win-18/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 602,
-        "bytes": 46348,
-        "uploaded": true,
-        "key": "wins/win-18/img-6-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-18/img-6.jpg"
@@ -7927,30 +5407,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 24894,
         "uploaded": true,
         "key": "wins/win-19/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 793,
-        "height": 505,
-        "bytes": 33476,
-        "uploaded": true,
-        "key": "wins/win-19/img-1-793.avif"
-      },
-      {
-        "format": "webp",
-        "width": 793,
-        "height": 505,
-        "bytes": 44394,
-        "uploaded": true,
-        "key": "wins/win-19/img-1-793.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 793,
-        "height": 505,
-        "bytes": 55716,
-        "uploaded": true,
-        "key": "wins/win-19/img-1-793.jpeg"
       },
       {
         "format": "avif",
@@ -8033,30 +5489,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 39328,
         "uploaded": true,
         "key": "wins/win-19/img-2-715.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 715,
-        "height": 505,
-        "bytes": 21378,
-        "uploaded": true,
-        "key": "wins/win-19/img-2-715.avif"
-      },
-      {
-        "format": "webp",
-        "width": 715,
-        "height": 505,
-        "bytes": 27842,
-        "uploaded": true,
-        "key": "wins/win-19/img-2-715.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 715,
-        "height": 505,
-        "bytes": 39328,
-        "uploaded": true,
-        "key": "wins/win-19/img-2-715.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-19/img-2.png"
@@ -8068,54 +5500,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "width": 459,
     "height": 646,
     "variants": [
-      {
-        "format": "avif",
-        "width": 459,
-        "height": 646,
-        "bytes": 40699,
-        "uploaded": true,
-        "key": "wins/win-19/img-3-459.avif"
-      },
-      {
-        "format": "webp",
-        "width": 459,
-        "height": 646,
-        "bytes": 50628,
-        "uploaded": true,
-        "key": "wins/win-19/img-3-459.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 459,
-        "height": 646,
-        "bytes": 60912,
-        "uploaded": true,
-        "key": "wins/win-19/img-3-459.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 459,
-        "height": 646,
-        "bytes": 40699,
-        "uploaded": true,
-        "key": "wins/win-19/img-3-459.avif"
-      },
-      {
-        "format": "webp",
-        "width": 459,
-        "height": 646,
-        "bytes": 50628,
-        "uploaded": true,
-        "key": "wins/win-19/img-3-459.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 459,
-        "height": 646,
-        "bytes": 60912,
-        "uploaded": true,
-        "key": "wins/win-19/img-3-459.jpeg"
-      },
       {
         "format": "avif",
         "width": 459,
@@ -8173,30 +5557,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 30065,
         "uploaded": true,
         "key": "wins/win-20/img-1-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 40987,
-        "uploaded": true,
-        "key": "wins/win-20/img-1-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 53924,
-        "uploaded": true,
-        "key": "wins/win-20/img-1-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 68943,
-        "uploaded": true,
-        "key": "wins/win-20/img-1-800.jpeg"
       },
       {
         "format": "avif",
@@ -8279,30 +5639,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 61209,
         "uploaded": true,
         "key": "wins/win-20/img-2-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 39325,
-        "uploaded": true,
-        "key": "wins/win-20/img-2-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 50590,
-        "uploaded": true,
-        "key": "wins/win-20/img-2-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 61209,
-        "uploaded": true,
-        "key": "wins/win-20/img-2-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-20/img-2.jpg"
@@ -8337,30 +5673,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 26932,
         "uploaded": true,
         "key": "wins/win-20/img-3-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 39436,
-        "uploaded": true,
-        "key": "wins/win-20/img-3-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 51214,
-        "uploaded": true,
-        "key": "wins/win-20/img-3-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 61024,
-        "uploaded": true,
-        "key": "wins/win-20/img-3-800.jpeg"
       },
       {
         "format": "avif",
@@ -8443,30 +5755,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 52988,
         "uploaded": true,
         "key": "wins/win-20/img-4-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 31531,
-        "uploaded": true,
-        "key": "wins/win-20/img-4-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 42238,
-        "uploaded": true,
-        "key": "wins/win-20/img-4-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 52988,
-        "uploaded": true,
-        "key": "wins/win-20/img-4-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-20/img-4.jpg"
@@ -8525,30 +5813,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 53413,
         "uploaded": true,
         "key": "wins/win-20/img-5-800.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 450,
-        "bytes": 31837,
-        "uploaded": true,
-        "key": "wins/win-20/img-5-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 450,
-        "bytes": 42258,
-        "uploaded": true,
-        "key": "wins/win-20/img-5-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 450,
-        "bytes": 53413,
-        "uploaded": true,
-        "key": "wins/win-20/img-5-800.jpeg"
       }
     ],
     "legacyPath": "/images/wins/win-20/img-5.jpg"
@@ -8583,30 +5847,6 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
         "bytes": 33071,
         "uploaded": true,
         "key": "wins/win-20/img-6-480.jpeg"
-      },
-      {
-        "format": "avif",
-        "width": 800,
-        "height": 600,
-        "bytes": 49231,
-        "uploaded": true,
-        "key": "wins/win-20/img-6-800.avif"
-      },
-      {
-        "format": "webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 65380,
-        "uploaded": true,
-        "key": "wins/win-20/img-6-800.webp"
-      },
-      {
-        "format": "jpeg",
-        "width": 800,
-        "height": 600,
-        "bytes": 76486,
-        "uploaded": true,
-        "key": "wins/win-20/img-6-800.jpeg"
       },
       {
         "format": "avif",

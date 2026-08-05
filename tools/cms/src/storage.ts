@@ -47,7 +47,10 @@ export async function ensureBucket(handle: R2ClientHandle): Promise<void> {
   const { client, bucket } = handle;
   try {
     await client.send(new HeadBucketCommand({ Bucket: bucket }));
-  } catch {
+  } catch (error) {
+    const status = (error as { $metadata?: { httpStatusCode?: number } })?.$metadata
+      ?.httpStatusCode;
+    if (status !== 404) throw error;
     await client.send(new CreateBucketCommand({ Bucket: bucket }));
   }
 }

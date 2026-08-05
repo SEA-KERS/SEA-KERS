@@ -1,8 +1,11 @@
 const replaceWidth = (url: string, width: number) => {
   try {
-    const isAbsolute = url.startsWith("http://") || url.startsWith("https://");
+    const isAbsolute =
+      url.startsWith("http://") ||
+      url.startsWith("https://") ||
+      url.startsWith("//");
     const parsed = isAbsolute
-      ? new URL(url)
+      ? new URL(url, "https://images.invalid")
       : new URL(url, "http://localhost");
     parsed.searchParams.set("w", String(width));
     parsed.searchParams.set("auto", "format");

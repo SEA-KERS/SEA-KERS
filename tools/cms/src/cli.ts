@@ -39,6 +39,11 @@ const printSummary = (summary: { total: number; uploaded: number; added: number;
   log(`\n${summary.total} total · ${summary.uploaded} uploaded · ${summary.added} added · ${summary.failed} failed`);
 };
 
+const parseConcurrency = (value: string | undefined): number => {
+  const parsed = value === undefined ? Number.NaN : Number(value);
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : 2;
+};
+
 async function main(): Promise<void> {
   const [command, ...rest] = process.argv.slice(2);
   const config = loadConfig();
@@ -60,7 +65,7 @@ async function main(): Promise<void> {
       const flags = parseFlags(rest);
       const summary = await runUpload(config, manifestPath, {
         onlyMissing: flags["only-missing"] === "true",
-        concurrency: flags.concurrency ? Number(flags.concurrency) : 2,
+        concurrency: parseConcurrency(flags.concurrency),
       }, log);
       printSummary(summary);
       return;

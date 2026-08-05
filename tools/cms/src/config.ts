@@ -36,7 +36,16 @@ interface RawConfig {
 
 const readRawConfig = (): RawConfig => {
   if (!existsSync(CONFIG_PATH)) return {};
-  return JSON.parse(readFileSync(CONFIG_PATH, "utf8")) as RawConfig;
+  try {
+    return JSON.parse(readFileSync(CONFIG_PATH, "utf8")) as RawConfig;
+  } catch (error) {
+    throw new Error(
+      `failed to read or parse CMS config at ${CONFIG_PATH}: ${
+        error instanceof Error ? error.message : String(error)
+      }`,
+      { cause: error },
+    );
+  }
 };
 
 const env = (key: string): string => process.env[key]?.trim() ?? "";

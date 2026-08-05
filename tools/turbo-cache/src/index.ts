@@ -40,11 +40,18 @@ export default {
     switch (request.method) {
       case 'GET':
       case 'HEAD': {
+        if (request.method === 'HEAD') {
+          const object = await env.TURBO_CACHE_BUCKET.head(key)
+          if (object === null) {
+            return new Response(null, { status: 404, headers: { 'Cache-Control': 'no-store' } })
+          }
+          return new Response(null, { status: 200, headers: OCTET_HEADERS })
+        }
         const object = await env.TURBO_CACHE_BUCKET.get(key)
         if (object === null) {
-          return new Response(null, { status: 404, headers: OCTET_HEADERS })
+          return new Response(null, { status: 404, headers: { 'Cache-Control': 'no-store' } })
         }
-        return new Response(request.method === 'HEAD' ? null : object.body, {
+        return new Response(object.body, {
           status: 200,
           headers: OCTET_HEADERS,
         })
@@ -62,7 +69,12 @@ export default {
         return json({ ok: true }, 200)
       }
       case 'DELETE': {
-        await env.TURBO_CACHE_BUCKET.delete(key)
+        try {
+          await env.TURBO_CACHE_BUCKET.delete(key)
+        } catch (error) {
+          console.error('failed to delete artifact', error)
+          return json({ error: 'storage failure' }, 500)
+        }
         return json({ ok: true }, 200)
       }
       default:

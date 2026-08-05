@@ -1,3 +1,4 @@
+import type { ImgHTMLAttributes } from "react";
 import {
   getImageRecord,
   imageUrl,
@@ -8,7 +9,7 @@ import {
 import { getImageSrcSet } from "../utils/images";
 
 type ResponsiveImageProps = Omit<
-  React.ImgHTMLAttributes<HTMLImageElement>,
+  ImgHTMLAttributes<HTMLImageElement>,
   "src" | "srcSet" | "alt"
 > & {
   src: string;

@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, relative, resolve, sep } from "node:path";
-import type { Manifest, ManifestImage, Variant } from "./types.js";
+import type { Manifest, ManifestImage, TeamSeed, Variant } from "./types.js";
 
 export const emptyManifest = (): Manifest => ({
   version: 1,
@@ -98,7 +98,9 @@ export function upsertImage(manifest: Manifest, input: NewImageInput): ManifestI
     variants: input.variants,
     createdAt: existing?.createdAt ?? now,
     updatedAt: now,
-    ...(input.remoteUrl ? { remoteUrl: input.remoteUrl } : {}),
+    ...(input.remoteUrl || existing?.remoteUrl
+      ? { remoteUrl: input.remoteUrl ?? existing?.remoteUrl }
+      : {}),
     ...(input.ref || existing?.ref ? { ref: input.ref ?? existing?.ref } : {}),
   };
   if (existing) {
@@ -110,8 +112,9 @@ export function upsertImage(manifest: Manifest, input: NewImageInput): ManifestI
   return next;
 }
 
-export function seedTeam(manifest: Manifest, seeds: Array<{ memberId: string; name: string }>): number {
+export function seedTeam(manifest: Manifest, seeds: readonly TeamSeed[]): number {
   let added = 0;
+  const now = new Date().toISOString();
   for (const seed of seeds) {
     const id = `team/${seed.memberId}`;
     if (findImage(manifest, id)) continue;
@@ -124,8 +127,8 @@ export function seedTeam(manifest: Manifest, seeds: Array<{ memberId: string; na
       width: 0,
       height: 0,
       variants: [],
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
+      createdAt: now,
+      updatedAt: now,
     });
     added += 1;
   }
