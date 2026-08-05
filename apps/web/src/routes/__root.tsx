@@ -1,6 +1,7 @@
 import { createRootRoute } from "@tanstack/react-router";
-import { NotFoundPage, RootLayout } from "../components/RootLayout";
+import { NotFoundPage, RootLayout } from "../components/layout/RootLayout";
 import headingFont from "@fontsource-variable/archivo/files/archivo-latin-wght-normal.woff2?url";
+import bodyFont from "@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2?url";
 import appCss from "../index.css?url";
 
 const themeBootstrap = `(() => {
@@ -50,6 +51,13 @@ export const Route = createRootRoute({
       {
         rel: "preload",
         href: headingFont,
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preload",
+        href: bodyFont,
         as: "font",
         type: "font/woff2",
         crossOrigin: "anonymous",

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import { CORE_TEAM_DATA, TEAM_MEMBERS_DATA } from "../data/teamData";
-import { TEAM_AVATAR_IDS } from "../data/imageRegistry";
-import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
-import ResponsiveImage from "./ResponsiveImage";
-import { LinkedinIcon } from "./SocialIcons";
-import type { TeamMember } from "../types";
+import { CORE_TEAM_DATA, TEAM_MEMBERS_DATA } from "../../data/team";
+import { TEAM_AVATAR_IDS } from "../../data/imageRegistry";
+import { useAccessibleDialog } from "../../hooks/useAccessibleDialog";
+import ResponsiveImage from "../ui/ResponsiveImage";
+import { LinkedinIcon } from "../ui/SocialIcons";
+import type { TeamMember } from "../../types";
 
 export default function TeamSection() {
   const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
@@ -217,7 +217,7 @@ function IndexRow({ member, onOpen }: IndexRowProps) {
         className="h-16 w-16 rounded-lg object-cover md:col-span-1"
       />
       <div className="md:col-span-4">
-        <h4 className="font-headline text-xl font-bold">{member.name}</h4>
+        <h3 className="font-headline text-xl font-bold">{member.name}</h3>
       </div>
       <div className="flex items-center md:col-span-3">
         {member.linkedin ? (

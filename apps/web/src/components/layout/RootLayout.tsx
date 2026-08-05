@@ -1,5 +1,5 @@
 import { HeadContent, Link, Outlet, Scripts } from "@tanstack/react-router";
-import { SITE_CONFIG } from "../config/site";
+import { SITE_CONFIG } from "../../config/site";
 
 const DIRECTION_CONTRACT = `SEA-KERS direction contract. THESIS: A world-stage engineering collective on a magazine cover, not a product dashboard: white ground, hairline rules, one crimson accent, oversized Archivo headlines, the particle caret mark as the centerpiece; refuses the SaaS hero-metric template and card grids. OWN-WORLD: White page, thin hairline rules, uppercase labels at 0.16em tracking, Archivo display type, deep crimson #DA261C as the primary accent and accent blue #0C1E8B for sparse emphasis, cinematic navy #030624 for the particle tile and closing dark chapters, editorial floats, image bleeds, asymmetry. STORY: The visitor reads the team like a cover story and acts by opening records and specifications. FIRST VIEWPORT: White canvas; left, a two-line oversized headline; right, the navy particle tile floating over an offset crimson block and a small accent-blue square; meta row beneath. FORM: Magazine cover split, pinned by the owner's design reference (DESIGN.md). FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md.`;
 

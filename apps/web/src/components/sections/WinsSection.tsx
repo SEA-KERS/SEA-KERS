@@ -8,11 +8,11 @@ import {
   Search,
   X,
 } from "lucide-react";
-import { WINS_DATA } from "../data/teamData";
-import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
-import { useReveal } from "../hooks/useReveal";
-import ResponsiveImage from "./ResponsiveImage";
-import type { WinRecord } from "../types";
+import { useAccessibleDialog } from "../../hooks/useAccessibleDialog";
+import { useReveal } from "../../hooks/useReveal";
+import ResponsiveImage from "../ui/ResponsiveImage";
+import { WINS_DATA } from "../../data/wins";
+import type { WinRecord } from "../../types";
 
 const tracks = [
   { label: "All", value: "ALL" },

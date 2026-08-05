@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import brandIcon from "../assets/brand/sea-kers-icon-color.svg";
-import type { Theme } from "../types";
+import brandIcon from "../../assets/brand/sea-kers-icon-color.svg";
+import type { Theme } from "../../types";
 import {
   mapParticleSampleToCanvas,
   selectParticleSamples,
   type ParticleSample,
-} from "../utils/particleSampling";
+} from "../../utils/particleSampling";
 
 interface CyberDotMatrixProps {
   theme: Theme;
@@ -43,22 +43,22 @@ const getParticleBudget = () => {
     connection?.effectiveType === "slow-2g" ||
     connection?.effectiveType === "2g"
   ) {
-    return 650;
+    return 400;
   }
 
-  let budget = 700;
-  if (connection?.effectiveType === "3g") budget += 250;
-  if (connection?.effectiveType === "4g") budget += 450;
-  if ((connection?.downlink ?? 0) >= 3) budget += 120;
-  if ((connection?.downlink ?? 0) >= 10) budget += 130;
+  let budget = 550;
+  if (connection?.effectiveType === "3g") budget += 150;
+  if (connection?.effectiveType === "4g") budget += 300;
+  if ((connection?.downlink ?? 0) >= 3) budget += 80;
+  if ((connection?.downlink ?? 0) >= 10) budget += 90;
 
-  budget += clamp((cores - 2) * 90, 0, 630);
-  budget += memory >= 8 ? 400 : memory >= 4 ? 180 : 0;
+  budget += clamp((cores - 2) * 60, 0, 420);
+  budget += memory >= 8 ? 260 : memory >= 4 ? 120 : 0;
 
-  if (cores <= 2 || memory <= 2) budget = Math.min(budget, 850);
-  if (cores <= 4 || memory <= 4) budget = Math.min(budget, 1600);
+  if (cores <= 2 || memory <= 2) budget = Math.min(budget, 550);
+  if (cores <= 4 || memory <= 4) budget = Math.min(budget, 1050);
 
-  return clamp(Math.round(budget / 50) * 50, 650, 2200);
+  return clamp(Math.round(budget / 50) * 50, 400, 1500);
 };
 
 export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
@@ -81,7 +81,7 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
     if (reducedMotion) return;
 
     const canvasSize = 512;
-    const frameInterval = 1000 / 30;
+    const frameInterval = 1000 / 24;
     canvas.width = canvasSize;
     canvas.height = canvasSize;
 
@@ -221,10 +221,10 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
 
     if ("requestIdleCallback" in window) {
       idleCallbackId = window.requestIdleCallback(startParticleUpgrade, {
-        timeout: 1800,
+        timeout: 4000,
       });
     } else {
-      timeoutId = globalThis.setTimeout(startParticleUpgrade, 1200);
+      timeoutId = globalThis.setTimeout(startParticleUpgrade, 4000);
     }
 
     const observer = new IntersectionObserver(([entry]) => {

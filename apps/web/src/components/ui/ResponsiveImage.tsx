@@ -5,8 +5,8 @@ import {
   type ImageFormat,
   type ImageRecord,
   type ImageVariant,
-} from "../data/imageRegistry";
-import { getImageSrcSet } from "../utils/images";
+} from "../../data/imageRegistry";
+import { getImageSrcSet } from "../../utils/images";
 
 type ResponsiveImageProps = Omit<
   ImgHTMLAttributes<HTMLImageElement>,

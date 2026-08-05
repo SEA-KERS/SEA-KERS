@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import HomePage from "../components/HomePage";
+import HomePage from "../components/pages/HomePage";
 import { SITE_CONFIG } from "../config/site";
 
 const title = "Team SEA-KERS | Engineering Collective in India";
@@ -17,6 +17,7 @@ export const Route = createFileRoute("/")({
       { name: "description", content: description },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "en_IN" },
       { property: "og:site_name", content: SITE_CONFIG.name },
       { property: "og:title", content: title },
       { property: "og:description", content: description },

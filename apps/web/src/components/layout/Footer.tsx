@@ -1,5 +1,5 @@
-import brandIcon from "../assets/brand/sea-kers-icon-color.svg";
-import type { SectionId } from "../types";
+import brandIcon from "../../assets/brand/sea-kers-icon-color.svg";
+import type { SectionId } from "../../types";
 
 interface FooterProps {
   setActiveTab: (sectionId: SectionId) => void;

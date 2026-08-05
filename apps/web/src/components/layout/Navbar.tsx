@@ -1,6 +1,6 @@
 import { Moon, Sun } from "lucide-react";
-import brandIcon from "../assets/brand/sea-kers-icon-color.svg";
-import type { SectionId, Theme } from "../types";
+import brandIcon from "../../assets/brand/sea-kers-icon-color.svg";
+import type { SectionId, Theme } from "../../types";
 
 interface NavbarProps {
   activeTab: SectionId;

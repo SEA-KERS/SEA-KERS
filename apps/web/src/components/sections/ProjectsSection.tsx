@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Activity, ExternalLink, X } from "lucide-react";
-import { PROJECTS_DATA, WINS_DATA } from "../data/teamData";
-import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
-import { useReveal } from "../hooks/useReveal";
-import ResponsiveImage from "./ResponsiveImage";
-import type { Project } from "../types";
+import { PROJECTS_DATA } from "../../data/projects";
+import { WINS_DATA } from "../../data/wins";
+import { useAccessibleDialog } from "../../hooks/useAccessibleDialog";
+import { useReveal } from "../../hooks/useReveal";
+import ResponsiveImage from "../ui/ResponsiveImage";
+import type { Project } from "../../types";
 
 interface ProjectsSectionProps {
   selectedProjectId: string | null;
@@ -263,7 +264,7 @@ function IndexRow({ project, index, onOpen }: IndexRowProps) {
         {String(index + 1).padStart(2, "0")}
       </p>
       <div className="md:col-span-5">
-        <h4 className="font-headline text-2xl font-bold">{project.title}</h4>
+        <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
         <p className="mt-2 text-sm leading-6 text-(--muted-foreground)">
           {project.tagline}
         </p>
