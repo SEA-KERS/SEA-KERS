@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sea-kers-turbo-cache",
+  "compatibility_date": "2026-07-23",
+  "main": "./src/index.ts",
+  "workers_dev": true,
+  // Create the R2 bucket first: `wrangler r2 bucket create sea-kers-turbo-cache`
+  // then set the shared secret with: `wrangler secret put TURBO_TOKEN`
+  "r2_buckets": [
+    {
+      "binding": "TURBO_CACHE_BUCKET",
+      "bucket_name": "sea-kers-turbo-cache"
+    }
+  ]
+}

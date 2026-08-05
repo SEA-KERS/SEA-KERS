@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022"],
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "allowJs": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts", "wrangler.jsonc", "worker-configuration.d.ts"]
+}
