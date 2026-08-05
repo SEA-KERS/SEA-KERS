@@ -4,7 +4,13 @@ import { basename, dirname, extname, join, relative, resolve, sep } from "node:p
 import { FORMATS, type CmsConfig, type ManifestImage, type Variant } from "./types.js";
 import { hasR2, r2Credentials } from "./config.js";
 import { inspectDimensions, previewDimensions, processImage } from "./pipeline.js";
-import { createR2Client, ensureBucket, uploadVariant, type R2ClientHandle } from "./storage.js";
+import {
+  contentDigest,
+  createR2Client,
+  ensureBucket,
+  uploadVariant,
+  type R2ClientHandle,
+} from "./storage.js";
 import {
   findImage,
   idKey,
@@ -97,8 +103,11 @@ export async function runScan(
         const existing = findImage(manifest, id);
         const dimensions = await inspectDimensions(file);
         const variants: Variant[] = [];
+        const seenWidths = new Set<number>();
         for (const size of config.sizes) {
           const preview = await previewDimensions(file, size.width);
+          if (seenWidths.has(preview.width)) continue;
+          seenWidths.add(preview.width);
           for (const format of FORMATS) {
             variants.push({
               format,
@@ -229,7 +238,7 @@ async function uploadOne(
   const result = await processImage(source, config.sizes, config.qualities);
   const variants: Variant[] = [];
   for (const variant of result.variants) {
-    const key = idKey(image.id, variant.width, variant.format);
+    const key = idKey(image.id, variant.width, variant.format, contentDigest(variant.buffer));
     const uploaded = await uploadVariant(handle, key, variant.buffer, variant.format, variant.width, variant.height);
     variants.push({
       format: variant.format,
@@ -278,13 +287,16 @@ export async function runImport(
   const handle = hasR2(config) ? createR2Client(config.r2, r2Credentials()) : null;
   if (handle) await ensureBucket(handle);
 
+  if (isDirectory && input.id?.trim()) {
+    onLog("note: explicit id is ignored for directory imports");
+  }
+
   for (const file of files) {
     const rel = slash(relative(config.projectPath, file));
-    const id =
-      input.id?.trim() ||
-      (isDirectory
-        ? sourceToId(rel, config.sourceRoot)
-        : input.collection
+    const id = isDirectory
+      ? sourceToId(rel, config.sourceRoot)
+      : input.id?.trim() ||
+        (input.collection
           ? `${input.collection}/${basename(file, extname(file))}`
           : basename(file, extname(file)));
     try {
@@ -292,7 +304,7 @@ export async function runImport(
       const result = await processImage(adopted, config.sizes, config.qualities);
       const variants: Variant[] = [];
       for (const variant of result.variants) {
-        const key = idKey(id, variant.width, variant.format);
+        const key = idKey(id, variant.width, variant.format, contentDigest(variant.buffer));
         const uploaded = handle
           ? await uploadVariant(handle, key, variant.buffer, variant.format, variant.width, variant.height)
           : null;
@@ -380,7 +392,8 @@ async function mapLimit<T>(
   fn: (item: T) => Promise<void>,
 ): Promise<void> {
   let index = 0;
-  const workers = Array.from({ length: Math.min(Math.max(limit, 1), items.length) }, async () => {
+  const workerCount = Number.isFinite(limit) ? Math.max(1, Math.floor(limit)) : 1;
+  const workers = Array.from({ length: Math.min(workerCount, items.length) }, async () => {
     while (index < items.length) {
       const current = index;
       index += 1;

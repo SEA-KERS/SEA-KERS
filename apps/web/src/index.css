@@ -164,7 +164,7 @@ a {
 }
 
 .kicker {
-  color: var(--primary);
+  color: var(--accent-text);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;

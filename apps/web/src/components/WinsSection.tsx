@@ -120,7 +120,7 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
               aria-pressed={selectedTrack === track.value}
               className={`min-h-11 shrink-0 border-b-2 pb-3 text-[0.6875rem] font-bold uppercase tracking-[0.16em] transition-colors ${
                 selectedTrack === track.value
-                  ? "border-(--primary) text-(--primary)"
+                  ? "border-(--primary) text-(--accent-text)"
                   : "border-transparent text-(--muted-foreground) hover:text-(--foreground)"
               }`}
             >
@@ -256,7 +256,7 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
             >
               {activeWin.hackathon}
             </h2>
-            <p className="mt-2 font-semibold text-(--primary)">
+            <p className="mt-2 font-semibold text-(--accent-text)">
               {activeWin.title}
             </p>
             {activeWin.prize ? (

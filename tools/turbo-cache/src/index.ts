@@ -50,9 +50,11 @@ export default {
         })
       }
       case 'PUT': {
-        const body = await request.arrayBuffer()
+        if (request.body === null) {
+          return json({ error: 'missing body' }, 400)
+        }
         try {
-          await env.TURBO_CACHE_BUCKET.put(key, body)
+          await env.TURBO_CACHE_BUCKET.put(key, request.body)
         } catch (error) {
           console.error('failed to store artifact', error)
           return json({ error: 'storage failure' }, 500)

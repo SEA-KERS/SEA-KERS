@@ -9,17 +9,23 @@ export const emptyManifest = (): Manifest => ({
 });
 
 export function loadManifest(path: string): Manifest {
+  if (!existsSync(path)) return emptyManifest();
+  let parsed: Manifest;
   try {
-    if (!existsSync(path)) return emptyManifest();
-    const parsed = JSON.parse(readFileSync(path, "utf8")) as Manifest;
-    return {
-      version: 1,
-      baseUrl: typeof parsed.baseUrl === "string" ? parsed.baseUrl : "",
-      images: Array.isArray(parsed.images) ? parsed.images : [],
-    };
-  } catch {
-    return emptyManifest();
+    parsed = JSON.parse(readFileSync(path, "utf8")) as Manifest;
+  } catch (error) {
+    throw new Error(
+      `failed to read or parse CMS manifest at ${path}: ${
+        error instanceof Error ? error.message : String(error)
+      }`,
+      { cause: error },
+    );
   }
+  return {
+    version: 1,
+    baseUrl: typeof parsed.baseUrl === "string" ? parsed.baseUrl : "",
+    images: Array.isArray(parsed.images) ? parsed.images : [],
+  };
 }
 
 export function saveManifest(path: string, manifest: Manifest): void {
@@ -47,8 +53,8 @@ export function legacyPathFor(sourceRel: string, sourceRoot: string): string {
   return `/images/${withoutRoot}`;
 }
 
-export function idKey(id: string, width: number, format: string): string {
-  return `${id}-${width}.${format}`;
+export function idKey(id: string, width: number, format: string, contentHash?: string): string {
+  return contentHash ? `${id}-${contentHash}-${width}.${format}` : `${id}-${width}.${format}`;
 }
 
 export function findImage(manifest: Manifest, id: string): ManifestImage | undefined {

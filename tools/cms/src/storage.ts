@@ -4,6 +4,7 @@ import {
   PutObjectCommand,
   S3Client,
 } from "@aws-sdk/client-s3";
+import { createHash } from "node:crypto";
 import type { ImageFormat, R2Config } from "./types.js";
 import type { R2Credentials } from "./config.js";
 
@@ -12,6 +13,11 @@ const MIME: Record<ImageFormat, string> = {
   webp: "image/webp",
   jpeg: "image/jpeg",
 };
+
+/** Deterministic short content hash, used to version R2 object keys so a
+ *  changed image produces a fresh URL instead of an overwritten one. */
+export const contentDigest = (buffer: Buffer): string =>
+  createHash("sha256").update(buffer).digest("hex").slice(0, 8);
 
 export interface R2ClientHandle {
   readonly bucket: string;

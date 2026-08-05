@@ -47,12 +47,11 @@ const uploadedVariants = (record: ImageRecord, format: ImageFormat) =>
         index === 0 || all[index - 1].width !== variant.width,
     );
 
-const variantSrc = (record: ImageRecord, variant: ImageVariant) =>
-  imageUrl(record.id, variant.width, variant.format);
+const variantSrc = (variant: ImageVariant) => imageUrl(variant.key);
 
-const variantSrcSet = (record: ImageRecord, variants: ImageVariant[]) =>
+const variantSrcSet = (variants: ImageVariant[]) =>
   variants
-    .map((variant) => `${variantSrc(record, variant)} ${variant.width}w`)
+    .map((variant) => `${variantSrc(variant)} ${variant.width}w`)
     .join(", ");
 
 /**
@@ -96,15 +95,15 @@ export default function ResponsiveImage({
           <source
             key={format}
             type={`image/${format}`}
-            srcSet={variantSrcSet(record, variants)}
+            srcSet={variantSrcSet(variants)}
             sizes={sizes}
           />
         );
       })}
       <img
         {...rest}
-        src={widestJpeg ? variantSrc(record, widestJpeg) : src}
-        srcSet={jpeg.length > 0 ? variantSrcSet(record, jpeg) : undefined}
+        src={widestJpeg ? variantSrc(widestJpeg) : src}
+        srcSet={jpeg.length > 0 ? variantSrcSet(jpeg) : undefined}
         sizes={sizes}
         alt={alt}
         className={className}

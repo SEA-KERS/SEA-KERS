@@ -51,7 +51,7 @@ export default function Navbar({
                 aria-current={isActive ? "location" : undefined}
                 className={`flex min-h-11 shrink-0 items-center border-b-2 px-3 text-[0.6875rem] font-bold uppercase tracking-[0.16em] transition-colors ${
                   isActive
-                    ? "border-(--primary) text-(--primary)"
+                    ? "border-(--primary) text-(--accent-text)"
                     : "border-transparent text-(--muted-foreground) hover:text-(--foreground)"
                 }`}
               >

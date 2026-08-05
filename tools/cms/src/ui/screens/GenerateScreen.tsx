@@ -22,7 +22,13 @@ export function GenerateScreen({ config, manifest, manifestPath }: Props) {
   useInput((input) => {
     if (input === "g") {
       setNotice("regenerating...");
-      void runGenerate(config, manifestPath, setNotice);
+      void runGenerate(config, manifestPath, setNotice)
+        .then(() => setNotice("done"))
+        .catch((error) => {
+          setNotice(
+            `generate failed: ${error instanceof Error ? error.message : String(error)}`,
+          );
+        });
     }
   });
 

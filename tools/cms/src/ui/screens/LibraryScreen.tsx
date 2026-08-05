@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Text, useInput } from "ink";
 import type { CmsConfig, Manifest, ManifestImage } from "../../types.js";
 import { FORMATS } from "../../types.js";
-import { collectionImages, collections } from "../../manifest.js";
+import { collectionImages, collections, findImage } from "../../manifest.js";
 import { runGenerate, runUploadImage } from "../../core.js";
 import { hasR2 } from "../../config.js";
 
@@ -19,8 +19,9 @@ export function LibraryScreen({ config, manifest, manifestPath, refresh }: Props
   const [view, setView] = useState<View>("collections");
   const [cursor, setCursor] = useState(0);
   const [collection, setCollection] = useState<string | null>(null);
-  const [image, setImage] = useState<ManifestImage | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const [notice, setNotice] = useState("");
+  const image = selectedId ? findImage(manifest, selectedId) : null;
 
   const collectionsList = collections(manifest);
   const imagesList = collection ? collectionImages(manifest, collection) : [];
@@ -56,7 +57,7 @@ export function LibraryScreen({ config, manifest, manifestPath, refresh }: Props
       } else if (view === "images") {
         const selected = imagesList[cursor];
         if (selected) {
-          setImage(selected);
+          setSelectedId(selected.id);
           setView("detail");
           setCursor(0);
         }
@@ -70,12 +71,25 @@ export function LibraryScreen({ config, manifest, manifestPath, refresh }: Props
     if (view === "detail" && image) {
       if (input === "u" && hasR2(config)) {
         setNotice(`uploading ${image.id}...`);
-        void runUploadImage(config, manifestPath, image.id, setNotice).then(() => {
-          setNotice("");
-          refresh();
-        });
+        void runUploadImage(config, manifestPath, image.id, setNotice)
+          .then(() => {
+            setNotice("");
+            refresh();
+          })
+          .catch((error) => {
+            setNotice(
+              `upload failed: ${error instanceof Error ? error.message : String(error)}`,
+            );
+          });
       } else if (input === "g") {
-        void runGenerate(config, manifestPath, setNotice).then(() => refresh());
+        setNotice("regenerating...");
+        void runGenerate(config, manifestPath, setNotice)
+          .then(() => refresh())
+          .catch((error) => {
+            setNotice(
+              `generate failed: ${error instanceof Error ? error.message : String(error)}`,
+            );
+          });
       } else if (input === "b") {
         goBack();
       }

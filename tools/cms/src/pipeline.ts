@@ -75,8 +75,11 @@ export async function processImage(
   const sourceHeight = sourceMetadata.height ?? 0;
 
   const variants: ProcessedVariant[] = [];
+  const seenWidths = new Set<number>();
   for (const size of sizes) {
     const targetWidth = Math.min(size.width, sourceWidth || size.width);
+    if (seenWidths.has(targetWidth)) continue;
+    seenWidths.add(targetWidth);
     const resized = source.clone().resize({ width: targetWidth, withoutEnlargement: true });
     for (const format of FORMATS) {
       const buffer = await encode(resized.clone(), format, qualities[format]);

@@ -4,7 +4,8 @@ import { IMAGE_BASE_URL } from "./data/imageRegistry";
 
 const imageSources = ["'self'", "data:", "blob:", "https://images.unsplash.com"];
 if (IMAGE_BASE_URL) {
-  imageSources.push(new URL(IMAGE_BASE_URL).origin);
+  const origin = URL.parse(IMAGE_BASE_URL)?.origin;
+  if (origin) imageSources.push(origin);
 }
 
 const CONTENT_SECURITY_POLICY = [

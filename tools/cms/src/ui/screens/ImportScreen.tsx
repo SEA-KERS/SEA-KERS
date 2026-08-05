@@ -18,7 +18,7 @@ const STEP_ORDER: readonly Step[] = ["path", "collection", "id", "alt"];
 const FIELD_LABEL: Record<Step, string> = {
   path: "Image file or folder to import",
   collection: "Collection (e.g. wins, team, hero)",
-  id: "ID (optional - defaults to the file path)",
+  id: "ID (optional - defaults to the file path, ignored for folders)",
   alt: "Alt text (optional)",
 };
 

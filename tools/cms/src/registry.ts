@@ -12,6 +12,7 @@ interface RegistryVariant {
   height: number;
   bytes: number;
   uploaded: boolean;
+  key: string;
 }
 
 interface RegistryRecord {
@@ -43,6 +44,7 @@ const renderRecord = (image: ManifestImage): RegistryRecord => {
       height: variant.height,
       bytes: variant.bytes,
       uploaded: variant.uploadedAt !== null,
+      key: variant.key,
     })),
   };
   if (image.sourcePath) {
@@ -53,7 +55,10 @@ const renderRecord = (image: ManifestImage): RegistryRecord => {
 
 export function renderRegistrySource(manifest: Manifest): string {
   const records = manifest.images
-    .filter((image) => image.sourcePath)
+    .filter(
+      (image) =>
+        image.sourcePath || image.variants.some((variant) => variant.uploadedAt !== null),
+    )
     .map(renderRecord);
 
   const avatarIds: Record<string, string> = {};
@@ -61,7 +66,7 @@ export function renderRegistrySource(manifest: Manifest): string {
     if (
       image.collection === "team" &&
       image.ref &&
-      image.variants.some((variant) => variant.uploadedAt)
+      image.variants.some((variant) => variant.uploadedAt !== null)
     ) {
       avatarIds[image.ref] = image.id;
     }
@@ -85,6 +90,7 @@ export interface ImageVariant {
   height: number;
   bytes: number;
   uploaded: boolean;
+  key: string;
 }
 
 export interface ImageRecord {
@@ -104,8 +110,8 @@ export const TEAM_AVATAR_IDS: Record<string, string> = ${avatarJson};
 export const getImageRecord = (id: string): ImageRecord | undefined =>
   IMAGE_REGISTRY[id];
 
-export const imageUrl = (id: string, width: number, format: ImageFormat): string =>
-  \`\${IMAGE_BASE_URL}/\${id}-\${width}.\${format}\`;
+export const imageUrl = (key: string): string =>
+  \`\${IMAGE_BASE_URL}/\${key}\`;
 `;
 }
 
