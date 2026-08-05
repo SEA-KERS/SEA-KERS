@@ -38,7 +38,7 @@ export default function TeamSection() {
 
           <div className="mt-12 lg:col-span-3 lg:mt-0 xl:col-span-4">
             <div className="bg-(--muted) p-2 sm:p-3">
-              <ul className="grid grid-cols-2 gap-3 gap-y-16 md:grid-cols-4 md:gap-x-4 md:gap-y-24">
+              <ul className="grid grid-cols-2 gap-3 gap-y-16 md:grid-cols-6 md:gap-x-4 md:gap-y-24">
                 {CORE_TEAM_DATA.map((member, index) => (
                   <li key={member.id} className={getStaggerClass(index)}>
                     <RosterCard
@@ -150,8 +150,14 @@ export default function TeamSection() {
   );
 }
 
-const getStaggerClass = (index: number): string =>
-  index % 2 === 0 ? "-translate-y-8" : "translate-y-8";
+const ROSTER_COLUMNS = 6;
+
+/** Row-wise stagger: parity is based on the column position within each row,
+ *  not the whole-list index, so every row offsets independently. */
+const getStaggerClass = (index: number): string => {
+  const column = index % ROSTER_COLUMNS;
+  return column % 2 === 0 ? "-translate-y-8" : "translate-y-8";
+};
 
 interface RosterCardProps {
   member: TeamMember;
@@ -219,7 +225,7 @@ function IndexRow({ member, onOpen }: IndexRowProps) {
             href={member.linkedin}
             target="_blank"
             rel="noreferrer"
-            aria-label={`${member.name} on LinkedIn`}
+            aria-label={`Connect on LinkedIn - ${member.name}`}
             className="index-link inline-flex items-center gap-2"
           >
             <LinkedinIcon className="h-4 w-4" />

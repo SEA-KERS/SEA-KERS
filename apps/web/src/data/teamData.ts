@@ -1,7 +1,7 @@
 import type { Project, TeamMember, WinRecord } from "../types";
 
 // Data store for SEA_KERS / Builders Collective Website
-// Showcasing Wins (20+), Projects, and Team (12 Members: 8 Core Team, 4 Team Members)
+// Showcasing Wins (20+), Projects, and Team (12 Members: 6 Core Team, 6 Team Members)
 
 export const WINS_DATA: readonly WinRecord[] = [
   {
@@ -628,7 +628,7 @@ export const PROJECTS_DATA: readonly Project[] = [
   },
 ];
 
-// CORE TEAM (8 Members)
+// CORE TEAM (6 Members)
 export const CORE_TEAM_DATA: readonly TeamMember[] = [
   {
     id: "kashvi-v",
@@ -701,7 +701,7 @@ export const TEAM_MEMBERS_DATA: readonly TeamMember[] = [
   },
   {
     id: "priya",
-    name: "Shree Priya v",
+    name: "Shree Priya V",
     linkedin: "https://www.linkedin.com/in/shree-priya-v/",
     avatar: "/images/team/priya.jpg",
   },

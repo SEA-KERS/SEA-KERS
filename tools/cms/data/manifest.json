@@ -63,33 +63,6 @@
           "key": "wins/win-01/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:06:52.901Z",
           "etag": "\"8c39eb98b4a001f525e726f55d401133\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 451,
-          "bytes": 32836,
-          "key": "wins/win-01/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:06:54.001Z",
-          "etag": "\"5a5be0c3c00d12c5e38fc43d742d2050\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 451,
-          "bytes": 41996,
-          "key": "wins/win-01/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:06:55.132Z",
-          "etag": "\"f6427a39f7bc2345f0c37443ce0947b5\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 451,
-          "bytes": 55930,
-          "key": "wins/win-01/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:06:56.166Z",
-          "etag": "\"8c39eb98b4a001f525e726f55d401133\""
         }
       ],
       "createdAt": "2026-08-05T05:51:59.618Z",
@@ -155,33 +128,6 @@
           "bytes": 57936,
           "key": "wins/win-01/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:06:53.371Z",
-          "etag": "\"3c6d7e295e7af8e8b870f75fc812b7f8\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 35156,
-          "key": "wins/win-01/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:06:54.346Z",
-          "etag": "\"0397ba01de15d6e8bc30935d45a24e4d\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 44614,
-          "key": "wins/win-01/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:06:55.457Z",
-          "etag": "\"b04cb9c3744434fb15de4e0524187df4\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 57936,
-          "key": "wins/win-01/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:06:56.572Z",
           "etag": "\"3c6d7e295e7af8e8b870f75fc812b7f8\""
         }
       ],
@@ -249,33 +195,6 @@
           "key": "wins/win-01/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:07:05.876Z",
           "etag": "\"1b4e270ddc15cb0e0954368fc8a1b5cf\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 32490,
-          "key": "wins/win-01/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:07:06.983Z",
-          "etag": "\"9f0c6003be10811977fb215a83ef27cb\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 44234,
-          "key": "wins/win-01/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:07:08.024Z",
-          "etag": "\"a983879172df2ca611ea438bdbd73295\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 58846,
-          "key": "wins/win-01/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:07:09.041Z",
-          "etag": "\"1b4e270ddc15cb0e0954368fc8a1b5cf\""
         }
       ],
       "createdAt": "2026-08-05T05:51:59.633Z",
@@ -314,60 +233,6 @@
           "bytes": 37309,
           "key": "wins/win-01/img-4-358.jpeg",
           "uploadedAt": "2026-08-05T07:07:01.966Z",
-          "etag": "\"298bd5e5b36cb9bc260aaabd4c997215\""
-        },
-        {
-          "format": "avif",
-          "width": 358,
-          "height": 800,
-          "bytes": 22360,
-          "key": "wins/win-01/img-4-358.avif",
-          "uploadedAt": "2026-08-05T07:07:03.084Z",
-          "etag": "\"684ec31b2ff5e29a41929e30c48e98e1\""
-        },
-        {
-          "format": "webp",
-          "width": 358,
-          "height": 800,
-          "bytes": 29264,
-          "key": "wins/win-01/img-4-358.webp",
-          "uploadedAt": "2026-08-05T07:07:04.455Z",
-          "etag": "\"5c972fae40abbc9f8e08c431f6ee49f0\""
-        },
-        {
-          "format": "jpeg",
-          "width": 358,
-          "height": 800,
-          "bytes": 37309,
-          "key": "wins/win-01/img-4-358.jpeg",
-          "uploadedAt": "2026-08-05T07:07:05.551Z",
-          "etag": "\"298bd5e5b36cb9bc260aaabd4c997215\""
-        },
-        {
-          "format": "avif",
-          "width": 358,
-          "height": 800,
-          "bytes": 22360,
-          "key": "wins/win-01/img-4-358.avif",
-          "uploadedAt": "2026-08-05T07:07:06.525Z",
-          "etag": "\"684ec31b2ff5e29a41929e30c48e98e1\""
-        },
-        {
-          "format": "webp",
-          "width": 358,
-          "height": 800,
-          "bytes": 29264,
-          "key": "wins/win-01/img-4-358.webp",
-          "uploadedAt": "2026-08-05T07:07:07.660Z",
-          "etag": "\"5c972fae40abbc9f8e08c431f6ee49f0\""
-        },
-        {
-          "format": "jpeg",
-          "width": 358,
-          "height": 800,
-          "bytes": 37309,
-          "key": "wins/win-01/img-4-358.jpeg",
-          "uploadedAt": "2026-08-05T07:07:08.760Z",
           "etag": "\"298bd5e5b36cb9bc260aaabd4c997215\""
         }
       ],
@@ -435,33 +300,6 @@
           "key": "wins/win-01/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:07:17.905Z",
           "etag": "\"34408b6bc5bc31a7435df2b32ab0202b\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 33707,
-          "key": "wins/win-01/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:07:19.018Z",
-          "etag": "\"85ffd7aa8f840b059f3df6a0f82f1441\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 45250,
-          "key": "wins/win-01/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:07:20.057Z",
-          "etag": "\"b91d1d77db02a24dce79d42f3c39cce3\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 60613,
-          "key": "wins/win-01/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:07:21.111Z",
-          "etag": "\"34408b6bc5bc31a7435df2b32ab0202b\""
         }
       ],
       "createdAt": "2026-08-05T05:51:59.645Z",
@@ -500,60 +338,6 @@
           "bytes": 42615,
           "key": "wins/win-01/img-6-358.jpeg",
           "uploadedAt": "2026-08-05T07:07:15.439Z",
-          "etag": "\"d8aa353c7b3533bcdc59d36635704d16\""
-        },
-        {
-          "format": "avif",
-          "width": 358,
-          "height": 800,
-          "bytes": 26189,
-          "key": "wins/win-01/img-6-358.avif",
-          "uploadedAt": "2026-08-05T07:07:16.449Z",
-          "etag": "\"5341d18375e8c568c14f9ed479ad4665\""
-        },
-        {
-          "format": "webp",
-          "width": 358,
-          "height": 800,
-          "bytes": 34010,
-          "key": "wins/win-01/img-6-358.webp",
-          "uploadedAt": "2026-08-05T07:07:17.582Z",
-          "etag": "\"71f3776f09711f482fcb74afb1c3de7a\""
-        },
-        {
-          "format": "jpeg",
-          "width": 358,
-          "height": 800,
-          "bytes": 42615,
-          "key": "wins/win-01/img-6-358.jpeg",
-          "uploadedAt": "2026-08-05T07:07:18.655Z",
-          "etag": "\"d8aa353c7b3533bcdc59d36635704d16\""
-        },
-        {
-          "format": "avif",
-          "width": 358,
-          "height": 800,
-          "bytes": 26189,
-          "key": "wins/win-01/img-6-358.avif",
-          "uploadedAt": "2026-08-05T07:07:19.752Z",
-          "etag": "\"5341d18375e8c568c14f9ed479ad4665\""
-        },
-        {
-          "format": "webp",
-          "width": 358,
-          "height": 800,
-          "bytes": 34010,
-          "key": "wins/win-01/img-6-358.webp",
-          "uploadedAt": "2026-08-05T07:07:20.788Z",
-          "etag": "\"71f3776f09711f482fcb74afb1c3de7a\""
-        },
-        {
-          "format": "jpeg",
-          "width": 358,
-          "height": 800,
-          "bytes": 42615,
-          "key": "wins/win-01/img-6-358.jpeg",
-          "uploadedAt": "2026-08-05T07:07:21.925Z",
           "etag": "\"d8aa353c7b3533bcdc59d36635704d16\""
         }
       ],
@@ -621,33 +405,6 @@
           "key": "wins/win-02/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:07:31.970Z",
           "etag": "\"2847069f9ca3392b4667260a4f3756c3\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 50876,
-          "key": "wins/win-02/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:07:33.042Z",
-          "etag": "\"566ed866dfd4c9c560c224d94bbdb0c9\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 67778,
-          "key": "wins/win-02/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:07:34.059Z",
-          "etag": "\"0f01e74f460ad5014e704a240cbbf9bb\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 81790,
-          "key": "wins/win-02/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:07:35.221Z",
-          "etag": "\"2847069f9ca3392b4667260a4f3756c3\""
         }
       ],
       "createdAt": "2026-08-05T05:51:59.688Z",
@@ -713,33 +470,6 @@
           "bytes": 48761,
           "key": "wins/win-02/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:07:33.661Z",
-          "etag": "\"7e337a2f80a855f453a480bc2ef742b5\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 25212,
-          "key": "wins/win-02/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:07:34.770Z",
-          "etag": "\"acc1f428082c65e8b843285062fbb33b\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 33580,
-          "key": "wins/win-02/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:07:35.800Z",
-          "etag": "\"70f3efecafc61f5e62423adf6b123164\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 48761,
-          "key": "wins/win-02/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:07:36.951Z",
           "etag": "\"7e337a2f80a855f453a480bc2ef742b5\""
         }
       ],
@@ -807,33 +537,6 @@
           "key": "wins/win-02/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:07:44.957Z",
           "etag": "\"cc4ebaf43d3738a0657be234a3a82b43\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 27115,
-          "key": "wins/win-02/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:07:46.015Z",
-          "etag": "\"0881436bcfc80af1314a2906f636bece\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 38448,
-          "key": "wins/win-02/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:07:47.079Z",
-          "etag": "\"fe8578de6604ddccd60078c1ba155330\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 54641,
-          "key": "wins/win-02/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:07:48.489Z",
-          "etag": "\"cc4ebaf43d3738a0657be234a3a82b43\""
         }
       ],
       "createdAt": "2026-08-05T05:51:59.744Z",
@@ -899,33 +602,6 @@
           "bytes": 32905,
           "key": "wins/win-02/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:07:46.364Z",
-          "etag": "\"c31dc73eeaf4629306300bded0b85fec\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 12512,
-          "key": "wins/win-02/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:07:47.556Z",
-          "etag": "\"3fe63f021feae99a372cd5cff2b056d6\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 18508,
-          "key": "wins/win-02/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:07:48.607Z",
-          "etag": "\"8985a54f9dcc528ed48f55bacce19a2e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 32905,
-          "key": "wins/win-02/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:07:49.604Z",
           "etag": "\"c31dc73eeaf4629306300bded0b85fec\""
         }
       ],
@@ -993,33 +669,6 @@
           "key": "wins/win-02/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:07:57.395Z",
           "etag": "\"97cedceab33ca533ddb2b7e069acc13a\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 25272,
-          "key": "wins/win-02/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:07:58.489Z",
-          "etag": "\"33915f4d23986d94ac2ea06302afa1a7\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 35940,
-          "key": "wins/win-02/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:07:59.635Z",
-          "etag": "\"d9760e681c0eab68d80bb36d440d992e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 53476,
-          "key": "wins/win-02/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:08:00.639Z",
-          "etag": "\"97cedceab33ca533ddb2b7e069acc13a\""
         }
       ],
       "createdAt": "2026-08-05T05:51:59.798Z",
@@ -1085,33 +734,6 @@
           "bytes": 32905,
           "key": "wins/win-02/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:07:58.561Z",
-          "etag": "\"c31dc73eeaf4629306300bded0b85fec\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 12512,
-          "key": "wins/win-02/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:07:59.658Z",
-          "etag": "\"3fe63f021feae99a372cd5cff2b056d6\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 18508,
-          "key": "wins/win-02/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:08:00.644Z",
-          "etag": "\"8985a54f9dcc528ed48f55bacce19a2e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 32905,
-          "key": "wins/win-02/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:08:01.618Z",
           "etag": "\"c31dc73eeaf4629306300bded0b85fec\""
         }
       ],
@@ -1179,33 +801,6 @@
           "key": "wins/win-03/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:08:16.206Z",
           "etag": "\"c21822891c7094c1355b916c8cdc35e1\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 68422,
-          "key": "wins/win-03/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:08:17.410Z",
-          "etag": "\"1b4971140fd33ace7ef9fa8434ef4f1b\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 88922,
-          "key": "wins/win-03/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:08:18.537Z",
-          "etag": "\"88636d1ba9780debbf8df68210003719\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 98238,
-          "key": "wins/win-03/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:08:19.956Z",
-          "etag": "\"c21822891c7094c1355b916c8cdc35e1\""
         }
       ],
       "createdAt": "2026-08-05T05:51:59.854Z",
@@ -1271,33 +866,6 @@
           "bytes": 53494,
           "key": "wins/win-03/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:08:14.088Z",
-          "etag": "\"c624b480999a00b7739e1a0570cec016\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 451,
-          "bytes": 32527,
-          "key": "wins/win-03/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:08:15.136Z",
-          "etag": "\"faa1d00e49ef79f65b76549b3bc6fc20\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 451,
-          "bytes": 44244,
-          "key": "wins/win-03/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:08:16.272Z",
-          "etag": "\"d9236c37262092415dcdd54dd375ea9a\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 451,
-          "bytes": 53494,
-          "key": "wins/win-03/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:08:17.333Z",
           "etag": "\"c624b480999a00b7739e1a0570cec016\""
         }
       ],
@@ -1365,33 +933,6 @@
           "key": "wins/win-03/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:08:26.612Z",
           "etag": "\"018c2a50ae28a7e7e275e7f5004b6f51\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 27281,
-          "key": "wins/win-03/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:08:27.634Z",
-          "etag": "\"b7c8d78111d4f702da8caafed05f968c\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 35354,
-          "key": "wins/win-03/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:08:28.728Z",
-          "etag": "\"e23985d49d1d304cd871d915f99955f0\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 45686,
-          "key": "wins/win-03/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:08:29.787Z",
-          "etag": "\"018c2a50ae28a7e7e275e7f5004b6f51\""
         }
       ],
       "createdAt": "2026-08-05T05:51:59.907Z",
@@ -1457,33 +998,6 @@
           "bytes": 98238,
           "key": "wins/win-03/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:08:32.040Z",
-          "etag": "\"c21822891c7094c1355b916c8cdc35e1\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 68422,
-          "key": "wins/win-03/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:08:33.113Z",
-          "etag": "\"1b4971140fd33ace7ef9fa8434ef4f1b\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 88922,
-          "key": "wins/win-03/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:08:34.190Z",
-          "etag": "\"88636d1ba9780debbf8df68210003719\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 98238,
-          "key": "wins/win-03/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:08:35.169Z",
           "etag": "\"c21822891c7094c1355b916c8cdc35e1\""
         }
       ],
@@ -1551,33 +1065,6 @@
           "key": "wins/win-03/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:08:41.517Z",
           "etag": "\"ecb1d1245cd9619927078f2d79f5c977\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 67890,
-          "key": "wins/win-03/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:08:42.614Z",
-          "etag": "\"11fa21b20626f4166b8129facc872b94\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 88322,
-          "key": "wins/win-03/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:08:44.205Z",
-          "etag": "\"e8749828ba1728e68b145d3c940f577e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 98115,
-          "key": "wins/win-03/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:08:45.202Z",
-          "etag": "\"ecb1d1245cd9619927078f2d79f5c977\""
         }
       ],
       "createdAt": "2026-08-05T05:51:59.962Z",
@@ -1643,33 +1130,6 @@
           "bytes": 46137,
           "key": "wins/win-03/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:08:46.172Z",
-          "etag": "\"d317d630da34256f5354c94beb672472\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 27568,
-          "key": "wins/win-03/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:08:47.291Z",
-          "etag": "\"1ad59cf14bf69e6421594a9d7eb94b88\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 35370,
-          "key": "wins/win-03/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:08:48.362Z",
-          "etag": "\"994acb7eaf56b36da725e262ce302050\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 46137,
-          "key": "wins/win-03/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:08:49.460Z",
           "etag": "\"d317d630da34256f5354c94beb672472\""
         }
       ],
@@ -1737,33 +1197,6 @@
           "key": "wins/win-04/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:08:53.633Z",
           "etag": "\"1fb9796bf685e5e9eea1b5b1781ef71c\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 472,
-          "bytes": 38985,
-          "key": "wins/win-04/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:08:54.729Z",
-          "etag": "\"12fa97f52140adcf4ba73df8bf549ebc\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 472,
-          "bytes": 50822,
-          "key": "wins/win-04/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:08:55.741Z",
-          "etag": "\"ddc44423aa6b89f9d57860e3db6c2a19\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 472,
-          "bytes": 60725,
-          "key": "wins/win-04/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:08:56.791Z",
-          "etag": "\"1fb9796bf685e5e9eea1b5b1781ef71c\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.022Z",
@@ -1829,33 +1262,6 @@
           "bytes": 62866,
           "key": "wins/win-04/img-2-600.jpeg",
           "uploadedAt": "2026-08-05T07:08:59.402Z",
-          "etag": "\"0e64a4ea06667b3aafeade4a056d6387\""
-        },
-        {
-          "format": "avif",
-          "width": 600,
-          "height": 800,
-          "bytes": 36611,
-          "key": "wins/win-04/img-2-600.avif",
-          "uploadedAt": "2026-08-05T07:09:00.619Z",
-          "etag": "\"5e089d9e7e8260c03cc96fd0af1c070a\""
-        },
-        {
-          "format": "webp",
-          "width": 600,
-          "height": 800,
-          "bytes": 49306,
-          "key": "wins/win-04/img-2-600.webp",
-          "uploadedAt": "2026-08-05T07:09:01.676Z",
-          "etag": "\"e63d2888db58f1553f54824f7dcb4c4b\""
-        },
-        {
-          "format": "jpeg",
-          "width": 600,
-          "height": 800,
-          "bytes": 62866,
-          "key": "wins/win-04/img-2-600.jpeg",
-          "uploadedAt": "2026-08-05T07:09:02.713Z",
           "etag": "\"0e64a4ea06667b3aafeade4a056d6387\""
         }
       ],
@@ -1923,33 +1329,6 @@
           "key": "wins/win-04/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:04.230Z",
           "etag": "\"06a686779a9a6af18653667835ff710e\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 566,
-          "bytes": 37703,
-          "key": "wins/win-04/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:09:05.240Z",
-          "etag": "\"5689ff4216111e4b7fde07a888ef553a\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 566,
-          "bytes": 51560,
-          "key": "wins/win-04/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:09:06.210Z",
-          "etag": "\"85da11ab40f4f0da42198cf35fb32c72\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 566,
-          "bytes": 57573,
-          "key": "wins/win-04/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:09:07.362Z",
-          "etag": "\"06a686779a9a6af18653667835ff710e\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.082Z",
@@ -2015,33 +1394,6 @@
           "bytes": 57486,
           "key": "wins/win-04/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:09.914Z",
-          "etag": "\"fdad7c00670f11037b449444aa2bb5d0\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 566,
-          "bytes": 37629,
-          "key": "wins/win-04/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:09:10.967Z",
-          "etag": "\"287bac6ef6c968cd88ccd77a9d8ebdb9\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 566,
-          "bytes": 51544,
-          "key": "wins/win-04/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:09:12.081Z",
-          "etag": "\"787ee24a5b1d9e04f01a707803913f1e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 566,
-          "bytes": 57486,
-          "key": "wins/win-04/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:09:13.112Z",
           "etag": "\"fdad7c00670f11037b449444aa2bb5d0\""
         }
       ],
@@ -2109,33 +1461,6 @@
           "key": "wins/win-04/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:15.479Z",
           "etag": "\"a4693dcab92ee5bff5dfd202c3f41424\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 566,
-          "bytes": 38114,
-          "key": "wins/win-04/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:09:16.567Z",
-          "etag": "\"ced62d176c3fd46ebcb0a4fa3f7107e2\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 566,
-          "bytes": 52056,
-          "key": "wins/win-04/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:09:17.683Z",
-          "etag": "\"fed032cae65559469487334dc7f6f7f6\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 566,
-          "bytes": 58029,
-          "key": "wins/win-04/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:09:18.739Z",
-          "etag": "\"a4693dcab92ee5bff5dfd202c3f41424\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.145Z",
@@ -2201,33 +1526,6 @@
           "bytes": 57784,
           "key": "wins/win-04/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:20.137Z",
-          "etag": "\"1626eafebc65147423fa0b7ee340a616\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 566,
-          "bytes": 37806,
-          "key": "wins/win-04/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:09:21.257Z",
-          "etag": "\"785aae1e74f62aab791b55b2d017bf15\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 566,
-          "bytes": 51846,
-          "key": "wins/win-04/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:09:22.294Z",
-          "etag": "\"57fc6c715441e8f1b47c354658dc4473\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 566,
-          "bytes": 57784,
-          "key": "wins/win-04/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:09:23.367Z",
           "etag": "\"1626eafebc65147423fa0b7ee340a616\""
         }
       ],
@@ -2295,33 +1593,6 @@
           "key": "wins/win-04/img-7-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:25.666Z",
           "etag": "\"822e8d5d0130975781fe1f801125face\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 566,
-          "bytes": 38102,
-          "key": "wins/win-04/img-7-800.avif",
-          "uploadedAt": "2026-08-05T07:09:26.976Z",
-          "etag": "\"df22af41f9d7ab661b298365135b2d43\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 566,
-          "bytes": 51998,
-          "key": "wins/win-04/img-7-800.webp",
-          "uploadedAt": "2026-08-05T07:09:27.975Z",
-          "etag": "\"36aeaa69c2cf8dd8d43fe78eb391dba2\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 566,
-          "bytes": 58065,
-          "key": "wins/win-04/img-7-800.jpeg",
-          "uploadedAt": "2026-08-05T07:09:29.044Z",
-          "etag": "\"822e8d5d0130975781fe1f801125face\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.205Z",
@@ -2387,33 +1658,6 @@
           "bytes": 56391,
           "key": "wins/win-05/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:31.266Z",
-          "etag": "\"92e17ed02cac0c7720d93333bb0065f9\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 32287,
-          "key": "wins/win-05/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:09:32.385Z",
-          "etag": "\"591b7ca009fa9cf56d33df05617ac21d\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 42064,
-          "key": "wins/win-05/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:09:33.389Z",
-          "etag": "\"8353f58428d265fa4c07747c0a75daa8\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 56391,
-          "key": "wins/win-05/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:09:34.372Z",
           "etag": "\"92e17ed02cac0c7720d93333bb0065f9\""
         }
       ],
@@ -2481,33 +1725,6 @@
           "key": "wins/win-05/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:38.623Z",
           "etag": "\"1d9dc5d9037f2fac69d0c4afd642564f\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 48090,
-          "key": "wins/win-05/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:09:39.673Z",
-          "etag": "\"05a2126c9473534e536bd3c006a4e864\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 63032,
-          "key": "wins/win-05/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:09:40.712Z",
-          "etag": "\"016da9ae08b9fa633b7d02c441ad3368\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 70089,
-          "key": "wins/win-05/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:09:41.687Z",
-          "etag": "\"1d9dc5d9037f2fac69d0c4afd642564f\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.265Z",
@@ -2573,33 +1790,6 @@
           "bytes": 48440,
           "key": "wins/win-05/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:42.564Z",
-          "etag": "\"7f38b3032cda128cbcc7502cfffc5792\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 25962,
-          "key": "wins/win-05/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:09:43.603Z",
-          "etag": "\"e636bc611ce9694d39a302b9a1acdf5d\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 34814,
-          "key": "wins/win-05/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:09:44.586Z",
-          "etag": "\"06f7c5ed83bcce61520b1976dfe19691\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 48440,
-          "key": "wins/win-05/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:09:45.625Z",
           "etag": "\"7f38b3032cda128cbcc7502cfffc5792\""
         }
       ],
@@ -2667,33 +1857,6 @@
           "key": "wins/win-05/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:57.367Z",
           "etag": "\"bfdb6ffe944bba01cc53de07c808cdbb\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 37287,
-          "key": "wins/win-05/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:09:58.499Z",
-          "etag": "\"ddc2ade2ddc54c769d37ac9d1966d96f\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 50610,
-          "key": "wins/win-05/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:09:59.580Z",
-          "etag": "\"c52443f22959ddc7f4dc28ef618d5472\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 69303,
-          "key": "wins/win-05/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:10:00.648Z",
-          "etag": "\"bfdb6ffe944bba01cc53de07c808cdbb\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.326Z",
@@ -2759,33 +1922,6 @@
           "bytes": 61510,
           "key": "wins/win-05/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:09:58.279Z",
-          "etag": "\"3b07070289039b28ac531589c30aa730\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 358,
-          "bytes": 43979,
-          "key": "wins/win-05/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:09:59.311Z",
-          "etag": "\"33e0369b21879d658da251035f2f6cda\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 358,
-          "bytes": 57430,
-          "key": "wins/win-05/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:10:00.294Z",
-          "etag": "\"142b3907ca0f52987e54a1baf88a4358\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 358,
-          "bytes": 61510,
-          "key": "wins/win-05/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:10:01.347Z",
           "etag": "\"3b07070289039b28ac531589c30aa730\""
         }
       ],
@@ -2853,33 +1989,6 @@
           "key": "wins/win-05/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:10:15.963Z",
           "etag": "\"adeed22ddb164206492efeb56046e49b\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 35057,
-          "key": "wins/win-05/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:10:17.148Z",
-          "etag": "\"309dde65212f7503b2c513957f2aa666\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 45318,
-          "key": "wins/win-05/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:10:17.542Z",
-          "etag": "\"f557948a90808fd50db991f58fd321bf\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 59406,
-          "key": "wins/win-05/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:10:17.873Z",
-          "etag": "\"adeed22ddb164206492efeb56046e49b\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.389Z",
@@ -2945,33 +2054,6 @@
           "bytes": 74148,
           "key": "wins/win-06/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:10:15.531Z",
-          "etag": "\"93afa9737a98f2fab13a97965cd2c26f\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 41351,
-          "key": "wins/win-06/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:10:16.725Z",
-          "etag": "\"4820f89f2ecb5ea4fd67b50f3d6f93dc\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 55028,
-          "key": "wins/win-06/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:10:17.532Z",
-          "etag": "\"1c2c3527d8e85f429f7c27dd693b4244\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 74148,
-          "key": "wins/win-06/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:10:17.906Z",
           "etag": "\"93afa9737a98f2fab13a97965cd2c26f\""
         }
       ],
@@ -3039,33 +2121,6 @@
           "key": "wins/win-06/img-2-540.jpeg",
           "uploadedAt": "2026-08-05T07:10:28.390Z",
           "etag": "\"84b18c31dc91716afc2828cd68b6bcf8\""
-        },
-        {
-          "format": "avif",
-          "width": 540,
-          "height": 800,
-          "bytes": 40427,
-          "key": "wins/win-06/img-2-540.avif",
-          "uploadedAt": "2026-08-05T07:10:28.733Z",
-          "etag": "\"dff3923ba926521b4027c519a7313ac4\""
-        },
-        {
-          "format": "webp",
-          "width": 540,
-          "height": 800,
-          "bytes": 54224,
-          "key": "wins/win-06/img-2-540.webp",
-          "uploadedAt": "2026-08-05T07:10:28.984Z",
-          "etag": "\"7cc5842f49f2a402f8e3b4b84d4846ee\""
-        },
-        {
-          "format": "jpeg",
-          "width": 540,
-          "height": 800,
-          "bytes": 67568,
-          "key": "wins/win-06/img-2-540.jpeg",
-          "uploadedAt": "2026-08-05T07:10:29.230Z",
-          "etag": "\"84b18c31dc91716afc2828cd68b6bcf8\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.449Z",
@@ -3131,33 +2186,6 @@
           "bytes": 76551,
           "key": "wins/win-06/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:10:28.971Z",
-          "etag": "\"38bb183f18fb891fb6b7cd0f3ebefc65\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 45554,
-          "key": "wins/win-06/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:10:29.288Z",
-          "etag": "\"c2b6bab2e9e1ebf9a5eeb52c714ec784\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 58772,
-          "key": "wins/win-06/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:10:29.532Z",
-          "etag": "\"c770195e4ded8eacaa4149dd54f3b50a\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 76551,
-          "key": "wins/win-06/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:10:30.007Z",
           "etag": "\"38bb183f18fb891fb6b7cd0f3ebefc65\""
         }
       ],
@@ -3225,33 +2253,6 @@
           "key": "wins/win-06/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:10:37.195Z",
           "etag": "\"ba590608029e5f11906b120e3fd03e27\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 358,
-          "bytes": 31274,
-          "key": "wins/win-06/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:10:37.474Z",
-          "etag": "\"8099dbf3b8b7b9800993c5876493acab\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 358,
-          "bytes": 41060,
-          "key": "wins/win-06/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:10:37.716Z",
-          "etag": "\"0db870808a1aca7b8093a0a80833a802\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 358,
-          "bytes": 48657,
-          "key": "wins/win-06/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:10:37.960Z",
-          "etag": "\"ba590608029e5f11906b120e3fd03e27\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.508Z",
@@ -3317,33 +2318,6 @@
           "bytes": 74820,
           "key": "wins/win-06/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:10:39.436Z",
-          "etag": "\"28db27a335546e84c6f4936c2d5f139e\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 42405,
-          "key": "wins/win-06/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:10:39.711Z",
-          "etag": "\"0debf3902efac961370aa6077133129e\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 56430,
-          "key": "wins/win-06/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:10:39.971Z",
-          "etag": "\"43041a32f296dd365eea4e0ccee0b4f6\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 74820,
-          "key": "wins/win-06/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:10:40.208Z",
           "etag": "\"28db27a335546e84c6f4936c2d5f139e\""
         }
       ],
@@ -3411,33 +2385,6 @@
           "key": "wins/win-06/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:10:48.592Z",
           "etag": "\"93afa9737a98f2fab13a97965cd2c26f\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 41351,
-          "key": "wins/win-06/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:10:48.857Z",
-          "etag": "\"4820f89f2ecb5ea4fd67b50f3d6f93dc\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 55028,
-          "key": "wins/win-06/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:10:49.109Z",
-          "etag": "\"1c2c3527d8e85f429f7c27dd693b4244\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 74148,
-          "key": "wins/win-06/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:10:49.447Z",
-          "etag": "\"93afa9737a98f2fab13a97965cd2c26f\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.573Z",
@@ -3503,33 +2450,6 @@
           "bytes": 63827,
           "key": "wins/win-07/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:10:48.374Z",
-          "etag": "\"c2d801b07666fe4916418fe85e95c7f0\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 42349,
-          "key": "wins/win-07/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:10:48.927Z",
-          "etag": "\"e1254bc5b5080ca27510485a9cea3b85\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 54194,
-          "key": "wins/win-07/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:10:49.186Z",
-          "etag": "\"c027d265caaf679b2b7e8191c2410b82\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 63827,
-          "key": "wins/win-07/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:10:49.456Z",
           "etag": "\"c2d801b07666fe4916418fe85e95c7f0\""
         }
       ],
@@ -3597,33 +2517,6 @@
           "key": "wins/win-07/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:11:00.760Z",
           "etag": "\"7f4da56d42b0d4856c30c58a71d8be55\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 561,
-          "bytes": 33253,
-          "key": "wins/win-07/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:11:01.085Z",
-          "etag": "\"cebfe3cb10fca14057e571f2800b075a\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 561,
-          "bytes": 44432,
-          "key": "wins/win-07/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:11:01.436Z",
-          "etag": "\"aad311ba413c4a9cdb8c192089d566aa\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 561,
-          "bytes": 60941,
-          "key": "wins/win-07/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:11:01.827Z",
-          "etag": "\"7f4da56d42b0d4856c30c58a71d8be55\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.644Z",
@@ -3689,33 +2582,6 @@
           "bytes": 60522,
           "key": "wins/win-07/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:11:01.740Z",
-          "etag": "\"d9d72699844f5c67bccdba1271fbe95e\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 532,
-          "bytes": 35150,
-          "key": "wins/win-07/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:11:02.021Z",
-          "etag": "\"0edc0562abe3ccb3857447553344411a\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 532,
-          "bytes": 45248,
-          "key": "wins/win-07/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:11:02.469Z",
-          "etag": "\"347a9a8b4c2a870fa10e55cbe5306814\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 532,
-          "bytes": 60522,
-          "key": "wins/win-07/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:11:02.794Z",
           "etag": "\"d9d72699844f5c67bccdba1271fbe95e\""
         }
       ],
@@ -3783,33 +2649,6 @@
           "key": "wins/win-07/img-4-541.jpeg",
           "uploadedAt": "2026-08-05T07:11:11.747Z",
           "etag": "\"7daf0feb508ae55dd3325245520bd089\""
-        },
-        {
-          "format": "avif",
-          "width": 541,
-          "height": 764,
-          "bytes": 66825,
-          "key": "wins/win-07/img-4-541.avif",
-          "uploadedAt": "2026-08-05T07:11:11.988Z",
-          "etag": "\"a6557d22596db5f99ecbb7276c77fe77\""
-        },
-        {
-          "format": "webp",
-          "width": 541,
-          "height": 764,
-          "bytes": 87098,
-          "key": "wins/win-07/img-4-541.webp",
-          "uploadedAt": "2026-08-05T07:11:12.318Z",
-          "etag": "\"cd5c70f3b259aa990442ff5db0968b00\""
-        },
-        {
-          "format": "jpeg",
-          "width": 541,
-          "height": 764,
-          "bytes": 98537,
-          "key": "wins/win-07/img-4-541.jpeg",
-          "uploadedAt": "2026-08-05T07:11:12.579Z",
-          "etag": "\"7daf0feb508ae55dd3325245520bd089\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.764Z",
@@ -3875,33 +2714,6 @@
           "bytes": 43545,
           "key": "wins/win-07/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:11:12.946Z",
-          "etag": "\"d94cc006570c30781252d64b9ebc8b18\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 532,
-          "bytes": 20576,
-          "key": "wins/win-07/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:11:13.293Z",
-          "etag": "\"8ba7e19424d88c976f95e41a0ef098f3\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 532,
-          "bytes": 26854,
-          "key": "wins/win-07/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:11:13.524Z",
-          "etag": "\"8677eeb39404564cebbf312935a0206e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 532,
-          "bytes": 43545,
-          "key": "wins/win-07/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:11:13.766Z",
           "etag": "\"d94cc006570c30781252d64b9ebc8b18\""
         }
       ],
@@ -3969,33 +2781,6 @@
           "key": "wins/win-07/img-6-568.jpeg",
           "uploadedAt": "2026-08-05T07:11:22.846Z",
           "etag": "\"81c0b0158486e6423dd65d0073f4e7a4\""
-        },
-        {
-          "format": "avif",
-          "width": 568,
-          "height": 800,
-          "bytes": 85520,
-          "key": "wins/win-07/img-6-568.avif",
-          "uploadedAt": "2026-08-05T07:11:23.104Z",
-          "etag": "\"1ad86e6b59db17bc57fe1397470dac07\""
-        },
-        {
-          "format": "webp",
-          "width": 568,
-          "height": 800,
-          "bytes": 107338,
-          "key": "wins/win-07/img-6-568.webp",
-          "uploadedAt": "2026-08-05T07:11:23.501Z",
-          "etag": "\"cc01738beae4a3220f97a390ce8674f9\""
-        },
-        {
-          "format": "jpeg",
-          "width": 568,
-          "height": 800,
-          "bytes": 112662,
-          "key": "wins/win-07/img-6-568.jpeg",
-          "uploadedAt": "2026-08-05T07:11:23.820Z",
-          "etag": "\"81c0b0158486e6423dd65d0073f4e7a4\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.883Z",
@@ -4062,33 +2847,6 @@
           "key": "wins/win-07/img-7-800.jpeg",
           "uploadedAt": "2026-08-05T07:11:24.728Z",
           "etag": "\"94e3d5fc021f71e52b5c114e693159f9\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 762,
-          "bytes": 79975,
-          "key": "wins/win-07/img-7-800.avif",
-          "uploadedAt": "2026-08-05T07:11:25.000Z",
-          "etag": "\"d8f663f5f07c63f218f73974a52d3a75\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 762,
-          "bytes": 101708,
-          "key": "wins/win-07/img-7-800.webp",
-          "uploadedAt": "2026-08-05T07:11:25.274Z",
-          "etag": "\"600885accb9deaed3f4a9728499a472a\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 762,
-          "bytes": 110684,
-          "key": "wins/win-07/img-7-800.jpeg",
-          "uploadedAt": "2026-08-05T07:11:25.559Z",
-          "etag": "\"94e3d5fc021f71e52b5c114e693159f9\""
         }
       ],
       "createdAt": "2026-08-05T05:52:00.925Z",
@@ -4127,60 +2885,6 @@
           "bytes": 63384,
           "key": "wins/win-07/img-8-372.jpeg",
           "uploadedAt": "2026-08-05T07:11:30.426Z",
-          "etag": "\"36f735f73b38ae98a4a436ffb0efc6a1\""
-        },
-        {
-          "format": "avif",
-          "width": 372,
-          "height": 800,
-          "bytes": 44112,
-          "key": "wins/win-07/img-8-372.avif",
-          "uploadedAt": "2026-08-05T07:11:30.698Z",
-          "etag": "\"09741335a55d0540114f7e9d46e16007\""
-        },
-        {
-          "format": "webp",
-          "width": 372,
-          "height": 800,
-          "bytes": 54542,
-          "key": "wins/win-07/img-8-372.webp",
-          "uploadedAt": "2026-08-05T07:11:31.043Z",
-          "etag": "\"c52180d6797ef1bbc5a455c32171a950\""
-        },
-        {
-          "format": "jpeg",
-          "width": 372,
-          "height": 800,
-          "bytes": 63384,
-          "key": "wins/win-07/img-8-372.jpeg",
-          "uploadedAt": "2026-08-05T07:11:31.387Z",
-          "etag": "\"36f735f73b38ae98a4a436ffb0efc6a1\""
-        },
-        {
-          "format": "avif",
-          "width": 372,
-          "height": 800,
-          "bytes": 44112,
-          "key": "wins/win-07/img-8-372.avif",
-          "uploadedAt": "2026-08-05T07:11:32.180Z",
-          "etag": "\"09741335a55d0540114f7e9d46e16007\""
-        },
-        {
-          "format": "webp",
-          "width": 372,
-          "height": 800,
-          "bytes": 54542,
-          "key": "wins/win-07/img-8-372.webp",
-          "uploadedAt": "2026-08-05T07:11:32.435Z",
-          "etag": "\"c52180d6797ef1bbc5a455c32171a950\""
-        },
-        {
-          "format": "jpeg",
-          "width": 372,
-          "height": 800,
-          "bytes": 63384,
-          "key": "wins/win-07/img-8-372.jpeg",
-          "uploadedAt": "2026-08-05T07:11:32.974Z",
           "etag": "\"36f735f73b38ae98a4a436ffb0efc6a1\""
         }
       ],
@@ -4248,33 +2952,6 @@
           "key": "wins/win-08/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:11:33.207Z",
           "etag": "\"2ee0f9fd3eb686dc5639f8ffbe12d2c7\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 42718,
-          "key": "wins/win-08/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:11:33.467Z",
-          "etag": "\"305b3a6529131492d5209a3edd35a9f4\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 54990,
-          "key": "wins/win-08/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:11:33.863Z",
-          "etag": "\"cb43e437d3a5e6a53d2edbb2a3ab3219\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 64815,
-          "key": "wins/win-08/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:11:34.152Z",
-          "etag": "\"2ee0f9fd3eb686dc5639f8ffbe12d2c7\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.002Z",
@@ -4313,60 +2990,6 @@
           "bytes": 49136,
           "key": "wins/win-08/img-2-450.jpeg",
           "uploadedAt": "2026-08-05T07:11:41.699Z",
-          "etag": "\"7320d9aac20654d7a8031c15d1899402\""
-        },
-        {
-          "format": "avif",
-          "width": 450,
-          "height": 800,
-          "bytes": 30530,
-          "key": "wins/win-08/img-2-450.avif",
-          "uploadedAt": "2026-08-05T07:11:41.989Z",
-          "etag": "\"91a7ff4e0c796c8c2373a3b1f8506d75\""
-        },
-        {
-          "format": "webp",
-          "width": 450,
-          "height": 800,
-          "bytes": 39100,
-          "key": "wins/win-08/img-2-450.webp",
-          "uploadedAt": "2026-08-05T07:11:42.444Z",
-          "etag": "\"6689cdf472408c9540b1fb0bd7ec084c\""
-        },
-        {
-          "format": "jpeg",
-          "width": 450,
-          "height": 800,
-          "bytes": 49136,
-          "key": "wins/win-08/img-2-450.jpeg",
-          "uploadedAt": "2026-08-05T07:11:42.692Z",
-          "etag": "\"7320d9aac20654d7a8031c15d1899402\""
-        },
-        {
-          "format": "avif",
-          "width": 450,
-          "height": 800,
-          "bytes": 30530,
-          "key": "wins/win-08/img-2-450.avif",
-          "uploadedAt": "2026-08-05T07:11:42.939Z",
-          "etag": "\"91a7ff4e0c796c8c2373a3b1f8506d75\""
-        },
-        {
-          "format": "webp",
-          "width": 450,
-          "height": 800,
-          "bytes": 39100,
-          "key": "wins/win-08/img-2-450.webp",
-          "uploadedAt": "2026-08-05T07:11:43.166Z",
-          "etag": "\"6689cdf472408c9540b1fb0bd7ec084c\""
-        },
-        {
-          "format": "jpeg",
-          "width": 450,
-          "height": 800,
-          "bytes": 49136,
-          "key": "wins/win-08/img-2-450.jpeg",
-          "uploadedAt": "2026-08-05T07:11:43.557Z",
           "etag": "\"7320d9aac20654d7a8031c15d1899402\""
         }
       ],
@@ -4434,33 +3057,6 @@
           "key": "wins/win-08/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:11:43.028Z",
           "etag": "\"91c147e3140628c1d9ed5f99de1ef282\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 36371,
-          "key": "wins/win-08/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:11:43.277Z",
-          "etag": "\"7b338cd423157c9e35ee308aaf606352\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 49644,
-          "key": "wins/win-08/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:11:43.563Z",
-          "etag": "\"9c4fa04bbe80812854e6217766bc423c\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 58206,
-          "key": "wins/win-08/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:11:43.878Z",
-          "etag": "\"91c147e3140628c1d9ed5f99de1ef282\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.074Z",
@@ -4526,33 +3122,6 @@
           "bytes": 67511,
           "key": "wins/win-08/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:11:53.650Z",
-          "etag": "\"f022768b98a56824c32d8d38fda7b0ed\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 534,
-          "bytes": 39704,
-          "key": "wins/win-08/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:11:53.901Z",
-          "etag": "\"944b3fb991850d9fa93cab6d9a67d3ab\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 534,
-          "bytes": 52734,
-          "key": "wins/win-08/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:11:54.135Z",
-          "etag": "\"635556e2df46ef678cde54b2579840fa\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 534,
-          "bytes": 67511,
-          "key": "wins/win-08/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:11:54.415Z",
           "etag": "\"f022768b98a56824c32d8d38fda7b0ed\""
         }
       ],
@@ -4620,33 +3189,6 @@
           "key": "wins/win-08/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:11:53.554Z",
           "etag": "\"f3a6972b4fe5d2b6daf1adc2882f285d\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 534,
-          "bytes": 37567,
-          "key": "wins/win-08/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:11:53.807Z",
-          "etag": "\"8f682d1cd6cb03bff63ba02b51c2c84d\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 534,
-          "bytes": 49868,
-          "key": "wins/win-08/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:11:54.031Z",
-          "etag": "\"e752c707afa79c1f8358cca25efde04e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 534,
-          "bytes": 65130,
-          "key": "wins/win-08/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:11:54.294Z",
-          "etag": "\"f3a6972b4fe5d2b6daf1adc2882f285d\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.151Z",
@@ -4712,33 +3254,6 @@
           "bytes": 75799,
           "key": "wins/win-08/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:03.944Z",
-          "etag": "\"d4a731f0c71aa64a6d92a76d71fd238b\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 534,
-          "bytes": 51160,
-          "key": "wins/win-08/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:12:04.345Z",
-          "etag": "\"d42dc6e9853ad54b3f5f13c17cf9a021\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 534,
-          "bytes": 66244,
-          "key": "wins/win-08/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:12:04.614Z",
-          "etag": "\"c8c467bcbc2b34eca3e2d1b93f1184af\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 534,
-          "bytes": 75799,
-          "key": "wins/win-08/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:04.863Z",
           "etag": "\"d4a731f0c71aa64a6d92a76d71fd238b\""
         }
       ],
@@ -4806,33 +3321,6 @@
           "key": "wins/win-09/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:05.376Z",
           "etag": "\"142702f3d527c245626d64e01f9b46cb\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 40086,
-          "key": "wins/win-09/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:12:05.772Z",
-          "etag": "\"744e535910ec2b3c8c8de234f9e13c1f\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 52518,
-          "key": "wins/win-09/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:12:06.055Z",
-          "etag": "\"4ed0d65d284cd5971b5f6617be3e6f3f\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 67926,
-          "key": "wins/win-09/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:06.264Z",
-          "etag": "\"142702f3d527c245626d64e01f9b46cb\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.222Z",
@@ -4898,33 +3386,6 @@
           "bytes": 61868,
           "key": "wins/win-09/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:14.356Z",
-          "etag": "\"6c49f86b6bfd639a6a6ec14cc61bc062\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 34789,
-          "key": "wins/win-09/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:12:14.655Z",
-          "etag": "\"0cfb3bb97c03bd3381794b167e70b0cc\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 45672,
-          "key": "wins/win-09/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:12:14.938Z",
-          "etag": "\"5d087214aba51a9b19b9bb3ec19ee948\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 61868,
-          "key": "wins/win-09/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:15.200Z",
           "etag": "\"6c49f86b6bfd639a6a6ec14cc61bc062\""
         }
       ],
@@ -4992,33 +3453,6 @@
           "key": "wins/win-09/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:14.541Z",
           "etag": "\"83b6f9e92f81754da49820a4c7b6f7b8\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 42175,
-          "key": "wins/win-09/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:12:14.808Z",
-          "etag": "\"059e884b4402db76f5ae7edd11f53bc8\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 56252,
-          "key": "wins/win-09/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:12:15.064Z",
-          "etag": "\"7bee8a8f83cbac8c5bd6db626e77b616\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 65969,
-          "key": "wins/win-09/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:15.351Z",
-          "etag": "\"83b6f9e92f81754da49820a4c7b6f7b8\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.285Z",
@@ -5085,33 +3519,6 @@
           "key": "wins/win-09/img-4-496.jpeg",
           "uploadedAt": "2026-08-05T07:12:22.267Z",
           "etag": "\"507eb69a047b1be18c0ed80a14a56860\""
-        },
-        {
-          "format": "avif",
-          "width": 496,
-          "height": 526,
-          "bytes": 53921,
-          "key": "wins/win-09/img-4-496.avif",
-          "uploadedAt": "2026-08-05T07:12:22.607Z",
-          "etag": "\"356711e1ff3f7501409960f01d82f7b8\""
-        },
-        {
-          "format": "webp",
-          "width": 496,
-          "height": 526,
-          "bytes": 67610,
-          "key": "wins/win-09/img-4-496.webp",
-          "uploadedAt": "2026-08-05T07:12:22.856Z",
-          "etag": "\"3cc7f8ef7cb65e818ad3f0bc81152afe\""
-        },
-        {
-          "format": "jpeg",
-          "width": 496,
-          "height": 526,
-          "bytes": 72407,
-          "key": "wins/win-09/img-4-496.jpeg",
-          "uploadedAt": "2026-08-05T07:12:23.111Z",
-          "etag": "\"507eb69a047b1be18c0ed80a14a56860\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.318Z",
@@ -5151,60 +3558,6 @@
           "key": "wins/win-09/img-5-408.jpeg",
           "uploadedAt": "2026-08-05T07:12:19.972Z",
           "etag": "\"046bdccbdcbd90b131498aa9eee46e0e\""
-        },
-        {
-          "format": "avif",
-          "width": 408,
-          "height": 487,
-          "bytes": 41380,
-          "key": "wins/win-09/img-5-408.avif",
-          "uploadedAt": "2026-08-05T07:12:20.242Z",
-          "etag": "\"7dc975ac2e516ebdd2be6932e4d461f5\""
-        },
-        {
-          "format": "webp",
-          "width": 408,
-          "height": 487,
-          "bytes": 51992,
-          "key": "wins/win-09/img-5-408.webp",
-          "uploadedAt": "2026-08-05T07:12:20.470Z",
-          "etag": "\"82153af7802a8b33ee8eccd643b95415\""
-        },
-        {
-          "format": "jpeg",
-          "width": 408,
-          "height": 487,
-          "bytes": 55835,
-          "key": "wins/win-09/img-5-408.jpeg",
-          "uploadedAt": "2026-08-05T07:12:20.730Z",
-          "etag": "\"046bdccbdcbd90b131498aa9eee46e0e\""
-        },
-        {
-          "format": "avif",
-          "width": 408,
-          "height": 487,
-          "bytes": 41380,
-          "key": "wins/win-09/img-5-408.avif",
-          "uploadedAt": "2026-08-05T07:12:20.989Z",
-          "etag": "\"7dc975ac2e516ebdd2be6932e4d461f5\""
-        },
-        {
-          "format": "webp",
-          "width": 408,
-          "height": 487,
-          "bytes": 51992,
-          "key": "wins/win-09/img-5-408.webp",
-          "uploadedAt": "2026-08-05T07:12:21.306Z",
-          "etag": "\"82153af7802a8b33ee8eccd643b95415\""
-        },
-        {
-          "format": "jpeg",
-          "width": 408,
-          "height": 487,
-          "bytes": 55835,
-          "key": "wins/win-09/img-5-408.jpeg",
-          "uploadedAt": "2026-08-05T07:12:21.584Z",
-          "etag": "\"046bdccbdcbd90b131498aa9eee46e0e\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.348Z",
@@ -5243,60 +3596,6 @@
           "bytes": 49092,
           "key": "wins/win-09/img-6-450.jpeg",
           "uploadedAt": "2026-08-05T07:12:28.344Z",
-          "etag": "\"635020b4635f37df8713534adce15623\""
-        },
-        {
-          "format": "avif",
-          "width": 450,
-          "height": 800,
-          "bytes": 28494,
-          "key": "wins/win-09/img-6-450.avif",
-          "uploadedAt": "2026-08-05T07:12:28.574Z",
-          "etag": "\"24d2b327da588f1cba4200857f240a60\""
-        },
-        {
-          "format": "webp",
-          "width": 450,
-          "height": 800,
-          "bytes": 39134,
-          "key": "wins/win-09/img-6-450.webp",
-          "uploadedAt": "2026-08-05T07:12:28.829Z",
-          "etag": "\"053645fb0d7b8e1f95a498085ef1dd06\""
-        },
-        {
-          "format": "jpeg",
-          "width": 450,
-          "height": 800,
-          "bytes": 49092,
-          "key": "wins/win-09/img-6-450.jpeg",
-          "uploadedAt": "2026-08-05T07:12:29.106Z",
-          "etag": "\"635020b4635f37df8713534adce15623\""
-        },
-        {
-          "format": "avif",
-          "width": 450,
-          "height": 800,
-          "bytes": 28494,
-          "key": "wins/win-09/img-6-450.avif",
-          "uploadedAt": "2026-08-05T07:12:29.363Z",
-          "etag": "\"24d2b327da588f1cba4200857f240a60\""
-        },
-        {
-          "format": "webp",
-          "width": 450,
-          "height": 800,
-          "bytes": 39134,
-          "key": "wins/win-09/img-6-450.webp",
-          "uploadedAt": "2026-08-05T07:12:29.592Z",
-          "etag": "\"053645fb0d7b8e1f95a498085ef1dd06\""
-        },
-        {
-          "format": "jpeg",
-          "width": 450,
-          "height": 800,
-          "bytes": 49092,
-          "key": "wins/win-09/img-6-450.jpeg",
-          "uploadedAt": "2026-08-05T07:12:29.863Z",
           "etag": "\"635020b4635f37df8713534adce15623\""
         }
       ],
@@ -5364,33 +3663,6 @@
           "key": "wins/win-10/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:30.407Z",
           "etag": "\"6ee62bfb2466fb5b793caaf19bd73bfb\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 323,
-          "bytes": 39445,
-          "key": "wins/win-10/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:12:30.729Z",
-          "etag": "\"f72c1420f40fad88988aa56054164d6c\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 323,
-          "bytes": 50206,
-          "key": "wins/win-10/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:12:30.982Z",
-          "etag": "\"b3b31a822f12914e0b7c5df3a6b54ad7\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 323,
-          "bytes": 55858,
-          "key": "wins/win-10/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:31.203Z",
-          "etag": "\"6ee62bfb2466fb5b793caaf19bd73bfb\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.409Z",
@@ -5456,33 +3728,6 @@
           "bytes": 97898,
           "key": "wins/win-10/img-2-640.jpeg",
           "uploadedAt": "2026-08-05T07:12:40.023Z",
-          "etag": "\"4b1d4e5d47ee9f95f9f3271c9bd0e39d\""
-        },
-        {
-          "format": "avif",
-          "width": 640,
-          "height": 800,
-          "bytes": 64086,
-          "key": "wins/win-10/img-2-640.avif",
-          "uploadedAt": "2026-08-05T07:12:40.308Z",
-          "etag": "\"fca66a95b32e9b24a97f58b1df54812f\""
-        },
-        {
-          "format": "webp",
-          "width": 640,
-          "height": 800,
-          "bytes": 80794,
-          "key": "wins/win-10/img-2-640.webp",
-          "uploadedAt": "2026-08-05T07:12:40.596Z",
-          "etag": "\"3cb4f493ea8bd109b4f4b28098837b11\""
-        },
-        {
-          "format": "jpeg",
-          "width": 640,
-          "height": 800,
-          "bytes": 97898,
-          "key": "wins/win-10/img-2-640.jpeg",
-          "uploadedAt": "2026-08-05T07:12:40.904Z",
           "etag": "\"4b1d4e5d47ee9f95f9f3271c9bd0e39d\""
         }
       ],
@@ -5550,33 +3795,6 @@
           "key": "wins/win-10/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:38.182Z",
           "etag": "\"7506f2a384cd12445605a9300e43e1a8\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 358,
-          "bytes": 24583,
-          "key": "wins/win-10/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:12:38.533Z",
-          "etag": "\"049eee7b9850bd13bead8038288ed3a3\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 358,
-          "bytes": 33698,
-          "key": "wins/win-10/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:12:38.788Z",
-          "etag": "\"ef69c81300fc9f48755b8a1d449bac74\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 358,
-          "bytes": 43364,
-          "key": "wins/win-10/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:39.071Z",
-          "etag": "\"7506f2a384cd12445605a9300e43e1a8\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.472Z",
@@ -5642,33 +3860,6 @@
           "bytes": 59927,
           "key": "wins/win-10/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:44.435Z",
-          "etag": "\"e00f889f4b4050c8e7c70364afd5a9b4\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 358,
-          "bytes": 41354,
-          "key": "wins/win-10/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:12:44.698Z",
-          "etag": "\"5d89745f19c55e24bff12c948da4ac0b\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 358,
-          "bytes": 54738,
-          "key": "wins/win-10/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:12:44.973Z",
-          "etag": "\"505646805c52ed637928000a62c0cfea\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 358,
-          "bytes": 59927,
-          "key": "wins/win-10/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:45.237Z",
           "etag": "\"e00f889f4b4050c8e7c70364afd5a9b4\""
         }
       ],
@@ -5736,33 +3927,6 @@
           "key": "wins/win-10/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:46.037Z",
           "etag": "\"ff6ff4315eb439cb2c2ab7e31ac6bf1d\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 358,
-          "bytes": 25385,
-          "key": "wins/win-10/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:12:46.335Z",
-          "etag": "\"14055bb45a3e85505f4e038363aef73c\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 358,
-          "bytes": 35308,
-          "key": "wins/win-10/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:12:46.599Z",
-          "etag": "\"5e0a462886daf481abccfb1f28343d9e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 358,
-          "bytes": 44477,
-          "key": "wins/win-10/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:46.885Z",
-          "etag": "\"ff6ff4315eb439cb2c2ab7e31ac6bf1d\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.533Z",
@@ -5828,33 +3992,6 @@
           "bytes": 59927,
           "key": "wins/win-10/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:51.169Z",
-          "etag": "\"e00f889f4b4050c8e7c70364afd5a9b4\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 358,
-          "bytes": 41354,
-          "key": "wins/win-10/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:12:51.388Z",
-          "etag": "\"5d89745f19c55e24bff12c948da4ac0b\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 358,
-          "bytes": 54738,
-          "key": "wins/win-10/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:12:51.719Z",
-          "etag": "\"505646805c52ed637928000a62c0cfea\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 358,
-          "bytes": 59927,
-          "key": "wins/win-10/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:52.003Z",
           "etag": "\"e00f889f4b4050c8e7c70364afd5a9b4\""
         }
       ],
@@ -5922,33 +4059,6 @@
           "key": "wins/win-11/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:56.684Z",
           "etag": "\"92f5dd1946b406b2d25ebbf0d1d1f27d\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 49721,
-          "key": "wins/win-11/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:12:56.945Z",
-          "etag": "\"7152c5b374d412a5d3219322c788baf5\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 66348,
-          "key": "wins/win-11/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:12:57.216Z",
-          "etag": "\"f2fe61a98762cb06d917cce7c3968466\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 81674,
-          "key": "wins/win-11/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:57.469Z",
-          "etag": "\"92f5dd1946b406b2d25ebbf0d1d1f27d\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.595Z",
@@ -6014,33 +4124,6 @@
           "bytes": 49324,
           "key": "wins/win-11/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:12:58.150Z",
-          "etag": "\"cb977a00ef38d97b951fb78c821fee99\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 28057,
-          "key": "wins/win-11/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:12:58.455Z",
-          "etag": "\"406faf64cd7c385e9c96a10003b759e6\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 36534,
-          "key": "wins/win-11/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:12:58.709Z",
-          "etag": "\"9a23698fb14a3444819332029e847bfc\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 49324,
-          "key": "wins/win-11/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:12:58.941Z",
           "etag": "\"cb977a00ef38d97b951fb78c821fee99\""
         }
       ],
@@ -6108,33 +4191,6 @@
           "key": "wins/win-11/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:03.151Z",
           "etag": "\"8b6b6cb3117f19c6ff06d39ef31c5b43\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 31204,
-          "key": "wins/win-11/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:13:03.401Z",
-          "etag": "\"208ad4b2a6609ac9cbb102e2a5b96cae\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 43162,
-          "key": "wins/win-11/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:13:03.656Z",
-          "etag": "\"d1cdfb9ee0242dcdd55d706c3f3bf8f2\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 51412,
-          "key": "wins/win-11/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:13:03.942Z",
-          "etag": "\"8b6b6cb3117f19c6ff06d39ef31c5b43\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.655Z",
@@ -6200,33 +4256,6 @@
           "bytes": 112012,
           "key": "wins/win-11/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:10.833Z",
-          "etag": "\"3d233f1b88d5422bb5db37e1c25738d5\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 640,
-          "bytes": 79097,
-          "key": "wins/win-11/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:13:11.108Z",
-          "etag": "\"5a44651ba2e354ad7b3c8ef58d5626da\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 640,
-          "bytes": 98374,
-          "key": "wins/win-11/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:13:11.446Z",
-          "etag": "\"3ca0e0fabc8e3851782cdaa79d1738e4\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 640,
-          "bytes": 112012,
-          "key": "wins/win-11/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:13:11.993Z",
           "etag": "\"3d233f1b88d5422bb5db37e1c25738d5\""
         }
       ],
@@ -6294,33 +4323,6 @@
           "key": "wins/win-11/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:11.973Z",
           "etag": "\"fc591516cb06e3cd5af864f7177db343\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 30093,
-          "key": "wins/win-11/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:13:12.242Z",
-          "etag": "\"a0d0d112937a72492500127733950190\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 41136,
-          "key": "wins/win-11/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:13:12.485Z",
-          "etag": "\"24291c63c582d3a96c234afb9458c91f\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 58606,
-          "key": "wins/win-11/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:13:12.765Z",
-          "etag": "\"fc591516cb06e3cd5af864f7177db343\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.743Z",
@@ -6386,33 +4388,6 @@
           "bytes": 58606,
           "key": "wins/win-11/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:19.642Z",
-          "etag": "\"fc591516cb06e3cd5af864f7177db343\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 30093,
-          "key": "wins/win-11/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:13:19.877Z",
-          "etag": "\"a0d0d112937a72492500127733950190\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 41136,
-          "key": "wins/win-11/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:13:20.159Z",
-          "etag": "\"24291c63c582d3a96c234afb9458c91f\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 58606,
-          "key": "wins/win-11/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:13:20.427Z",
           "etag": "\"fc591516cb06e3cd5af864f7177db343\""
         }
       ],
@@ -6480,33 +4455,6 @@
           "key": "wins/win-13/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:22.348Z",
           "etag": "\"e301de4c2b376084155e967e1b7dc1f7\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 590,
-          "bytes": 50008,
-          "key": "wins/win-13/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:13:22.742Z",
-          "etag": "\"bc493589f376837127fce25c80b06a97\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 590,
-          "bytes": 72448,
-          "key": "wins/win-13/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:13:23.329Z",
-          "etag": "\"b54cd1bce7051d20875ea70a03f35fde\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 590,
-          "bytes": 83179,
-          "key": "wins/win-13/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:13:23.639Z",
-          "etag": "\"e301de4c2b376084155e967e1b7dc1f7\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.851Z",
@@ -6572,33 +4520,6 @@
           "bytes": 53769,
           "key": "wins/win-13/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:26.505Z",
-          "etag": "\"057348ae3c1bd77a03335590d188fba4\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 602,
-          "bytes": 28961,
-          "key": "wins/win-13/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:13:26.733Z",
-          "etag": "\"64cc15cd319d00b3436975845e3c1103\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 602,
-          "bytes": 39006,
-          "key": "wins/win-13/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:13:27.062Z",
-          "etag": "\"28dfeee3e4ce0bb87ca6a33832e55919\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 602,
-          "bytes": 53769,
-          "key": "wins/win-13/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:13:27.321Z",
           "etag": "\"057348ae3c1bd77a03335590d188fba4\""
         }
       ],
@@ -6666,33 +4587,6 @@
           "key": "wins/win-13/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:33.341Z",
           "etag": "\"a58a3b52f370e60d8cea8f9e3e25828f\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 602,
-          "bytes": 54226,
-          "key": "wins/win-13/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:13:33.649Z",
-          "etag": "\"cfaf8404b7f6d67fb6767e98d77420b5\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 602,
-          "bytes": 84282,
-          "key": "wins/win-13/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:13:33.927Z",
-          "etag": "\"f1952659b62d601bc098eb0d5b3ec8a7\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 602,
-          "bytes": 90125,
-          "key": "wins/win-13/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:13:34.179Z",
-          "etag": "\"a58a3b52f370e60d8cea8f9e3e25828f\""
         }
       ],
       "createdAt": "2026-08-05T05:52:01.965Z",
@@ -6758,33 +4652,6 @@
           "bytes": 19055,
           "key": "wins/win-13/img-4-507.jpeg",
           "uploadedAt": "2026-08-05T07:13:31.758Z",
-          "etag": "\"0b2cc716148e7bfb2c66ad5edfc22acc\""
-        },
-        {
-          "format": "avif",
-          "width": 507,
-          "height": 252,
-          "bytes": 11254,
-          "key": "wins/win-13/img-4-507.avif",
-          "uploadedAt": "2026-08-05T07:13:32.012Z",
-          "etag": "\"a10597585496ddf0d6f301f68e7f3734\""
-        },
-        {
-          "format": "webp",
-          "width": 507,
-          "height": 252,
-          "bytes": 14540,
-          "key": "wins/win-13/img-4-507.webp",
-          "uploadedAt": "2026-08-05T07:13:32.275Z",
-          "etag": "\"665bb102d35045322a3dc782bcdc5f77\""
-        },
-        {
-          "format": "jpeg",
-          "width": 507,
-          "height": 252,
-          "bytes": 19055,
-          "key": "wins/win-13/img-4-507.jpeg",
-          "uploadedAt": "2026-08-05T07:13:32.527Z",
           "etag": "\"0b2cc716148e7bfb2c66ad5edfc22acc\""
         }
       ],
@@ -6852,33 +4719,6 @@
           "key": "wins/win-13/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:41.709Z",
           "etag": "\"0e0f73491752c3fdeab27f81c1ed28b3\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 602,
-          "bytes": 37567,
-          "key": "wins/win-13/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:13:41.970Z",
-          "etag": "\"15548fc0d95f3b7ad8b76536c2a6f859\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 602,
-          "bytes": 51394,
-          "key": "wins/win-13/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:13:42.222Z",
-          "etag": "\"f4025b766dc56b1834ad46050a41aa11\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 602,
-          "bytes": 64864,
-          "key": "wins/win-13/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:13:42.535Z",
-          "etag": "\"0e0f73491752c3fdeab27f81c1ed28b3\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.067Z",
@@ -6945,33 +4785,6 @@
           "key": "wins/win-13/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:43.058Z",
           "etag": "\"9ea227bb2364e21ac3970db1888402e5\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 602,
-          "bytes": 32849,
-          "key": "wins/win-13/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:13:43.339Z",
-          "etag": "\"16cead047a261ee9fdfb5c11bf1d9b38\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 602,
-          "bytes": 45268,
-          "key": "wins/win-13/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:13:43.580Z",
-          "etag": "\"883e033ca27e53f31f83c5965392eb7b\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 602,
-          "bytes": 58960,
-          "key": "wins/win-13/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:13:43.839Z",
-          "etag": "\"9ea227bb2364e21ac3970db1888402e5\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.103Z",
@@ -7010,60 +4823,6 @@
           "bytes": 13055,
           "key": "wins/win-14/img-1-322.jpeg",
           "uploadedAt": "2026-08-05T07:13:45.302Z",
-          "etag": "\"d2f61808873b278aaab448c61b0bfea2\""
-        },
-        {
-          "format": "avif",
-          "width": 322,
-          "height": 202,
-          "bytes": 8504,
-          "key": "wins/win-14/img-1-322.avif",
-          "uploadedAt": "2026-08-05T07:13:45.578Z",
-          "etag": "\"95923f42e5977fb9fd6f8ed61eeb68f5\""
-        },
-        {
-          "format": "webp",
-          "width": 322,
-          "height": 202,
-          "bytes": 10196,
-          "key": "wins/win-14/img-1-322.webp",
-          "uploadedAt": "2026-08-05T07:13:45.841Z",
-          "etag": "\"fcbb8121d6f02cfe58e1de0d702ecfea\""
-        },
-        {
-          "format": "jpeg",
-          "width": 322,
-          "height": 202,
-          "bytes": 13055,
-          "key": "wins/win-14/img-1-322.jpeg",
-          "uploadedAt": "2026-08-05T07:13:46.172Z",
-          "etag": "\"d2f61808873b278aaab448c61b0bfea2\""
-        },
-        {
-          "format": "avif",
-          "width": 322,
-          "height": 202,
-          "bytes": 8504,
-          "key": "wins/win-14/img-1-322.avif",
-          "uploadedAt": "2026-08-05T07:13:46.435Z",
-          "etag": "\"95923f42e5977fb9fd6f8ed61eeb68f5\""
-        },
-        {
-          "format": "webp",
-          "width": 322,
-          "height": 202,
-          "bytes": 10196,
-          "key": "wins/win-14/img-1-322.webp",
-          "uploadedAt": "2026-08-05T07:13:46.683Z",
-          "etag": "\"fcbb8121d6f02cfe58e1de0d702ecfea\""
-        },
-        {
-          "format": "jpeg",
-          "width": 322,
-          "height": 202,
-          "bytes": 13055,
-          "key": "wins/win-14/img-1-322.jpeg",
-          "uploadedAt": "2026-08-05T07:13:46.982Z",
           "etag": "\"d2f61808873b278aaab448c61b0bfea2\""
         }
       ],
@@ -7131,33 +4890,6 @@
           "key": "wins/win-14/img-2-648.jpeg",
           "uploadedAt": "2026-08-05T07:13:50.274Z",
           "etag": "\"852932966d9799e1ecf53d51114031cd\""
-        },
-        {
-          "format": "avif",
-          "width": 648,
-          "height": 412,
-          "bytes": 26580,
-          "key": "wins/win-14/img-2-648.avif",
-          "uploadedAt": "2026-08-05T07:13:50.651Z",
-          "etag": "\"3209ff11f691a10de4165fd28a5a3ec6\""
-        },
-        {
-          "format": "webp",
-          "width": 648,
-          "height": 412,
-          "bytes": 33986,
-          "key": "wins/win-14/img-2-648.webp",
-          "uploadedAt": "2026-08-05T07:13:51.216Z",
-          "etag": "\"24bc0d76c30d748f483e4f21e245347d\""
-        },
-        {
-          "format": "jpeg",
-          "width": 648,
-          "height": 412,
-          "bytes": 44024,
-          "key": "wins/win-14/img-2-648.jpeg",
-          "uploadedAt": "2026-08-05T07:13:51.490Z",
-          "etag": "\"852932966d9799e1ecf53d51114031cd\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.171Z",
@@ -7196,60 +4928,6 @@
           "bytes": 10218,
           "key": "wins/win-14/img-3-297.jpeg",
           "uploadedAt": "2026-08-05T07:13:50.241Z",
-          "etag": "\"7ab34a384bd8e4712629b5775d4c6986\""
-        },
-        {
-          "format": "avif",
-          "width": 297,
-          "height": 196,
-          "bytes": 6154,
-          "key": "wins/win-14/img-3-297.avif",
-          "uploadedAt": "2026-08-05T07:13:50.460Z",
-          "etag": "\"d07a36da49a14dd5ec05a9978c6332e1\""
-        },
-        {
-          "format": "webp",
-          "width": 297,
-          "height": 196,
-          "bytes": 7384,
-          "key": "wins/win-14/img-3-297.webp",
-          "uploadedAt": "2026-08-05T07:13:50.724Z",
-          "etag": "\"75a0cc2cc667eeb9f6c722fbfe2c2901\""
-        },
-        {
-          "format": "jpeg",
-          "width": 297,
-          "height": 196,
-          "bytes": 10218,
-          "key": "wins/win-14/img-3-297.jpeg",
-          "uploadedAt": "2026-08-05T07:13:50.982Z",
-          "etag": "\"7ab34a384bd8e4712629b5775d4c6986\""
-        },
-        {
-          "format": "avif",
-          "width": 297,
-          "height": 196,
-          "bytes": 6154,
-          "key": "wins/win-14/img-3-297.avif",
-          "uploadedAt": "2026-08-05T07:13:51.194Z",
-          "etag": "\"d07a36da49a14dd5ec05a9978c6332e1\""
-        },
-        {
-          "format": "webp",
-          "width": 297,
-          "height": 196,
-          "bytes": 7384,
-          "key": "wins/win-14/img-3-297.webp",
-          "uploadedAt": "2026-08-05T07:13:51.537Z",
-          "etag": "\"75a0cc2cc667eeb9f6c722fbfe2c2901\""
-        },
-        {
-          "format": "jpeg",
-          "width": 297,
-          "height": 196,
-          "bytes": 10218,
-          "key": "wins/win-14/img-3-297.jpeg",
-          "uploadedAt": "2026-08-05T07:13:51.786Z",
           "etag": "\"7ab34a384bd8e4712629b5775d4c6986\""
         }
       ],
@@ -7317,33 +4995,6 @@
           "key": "wins/win-16/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:13:59.349Z",
           "etag": "\"26fb13106f64ce3c32d9397091307a34\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 510,
-          "bytes": 36157,
-          "key": "wins/win-16/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:13:59.613Z",
-          "etag": "\"c8779fe7122e5f78ec4b345081eb3514\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 510,
-          "bytes": 47836,
-          "key": "wins/win-16/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:13:59.843Z",
-          "etag": "\"f977a5cb074f78e4ab4ba0193d656286\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 510,
-          "bytes": 61324,
-          "key": "wins/win-16/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:00.099Z",
-          "etag": "\"26fb13106f64ce3c32d9397091307a34\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.215Z",
@@ -7409,33 +5060,6 @@
           "bytes": 58790,
           "key": "wins/win-16/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:01.071Z",
-          "etag": "\"60f68aa57280c6905012f078d70439fa\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 539,
-          "bytes": 33982,
-          "key": "wins/win-16/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:14:01.295Z",
-          "etag": "\"dbb9b810d57c0165b8eaaf14abe0bb63\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 539,
-          "bytes": 45744,
-          "key": "wins/win-16/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:14:01.534Z",
-          "etag": "\"a0d182981a18bd7a72c8d5f841734522\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 539,
-          "bytes": 58790,
-          "key": "wins/win-16/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:01.765Z",
           "etag": "\"60f68aa57280c6905012f078d70439fa\""
         }
       ],
@@ -7503,33 +5127,6 @@
           "key": "wins/win-16/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:08.588Z",
           "etag": "\"5fb5d8b466f2624c2db7e49e6758b555\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 542,
-          "bytes": 30757,
-          "key": "wins/win-16/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:14:08.833Z",
-          "etag": "\"537b57582506a9e0e5861e6fbcdc5711\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 542,
-          "bytes": 40712,
-          "key": "wins/win-16/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:14:09.093Z",
-          "etag": "\"72c8711ff45ed39cdd61d7f0ff6fea50\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 542,
-          "bytes": 56164,
-          "key": "wins/win-16/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:09.326Z",
-          "etag": "\"5fb5d8b466f2624c2db7e49e6758b555\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.283Z",
@@ -7595,33 +5192,6 @@
           "bytes": 84219,
           "key": "wins/win-16/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:11.353Z",
-          "etag": "\"88ff5f66f169e6526fa65e95d43512e7\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 56828,
-          "key": "wins/win-16/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:14:11.647Z",
-          "etag": "\"485e7873989f3ddeae17b2cac118d7af\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 73102,
-          "key": "wins/win-16/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:14:11.913Z",
-          "etag": "\"c86a6b3a3e013dc09792be799b0e6fa0\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 84219,
-          "key": "wins/win-16/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:12.268Z",
           "etag": "\"88ff5f66f169e6526fa65e95d43512e7\""
         }
       ],
@@ -7689,33 +5259,6 @@
           "key": "wins/win-16/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:18.757Z",
           "etag": "\"2a0bdddb5856afb308c7aff6902ead05\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 533,
-          "bytes": 44608,
-          "key": "wins/win-16/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:14:19.005Z",
-          "etag": "\"3252e21cde0bfff5f804ad61ecb50573\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 533,
-          "bytes": 58804,
-          "key": "wins/win-16/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:14:19.322Z",
-          "etag": "\"42517ec10f938ccd13f0ccb08556f7d7\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 533,
-          "bytes": 70481,
-          "key": "wins/win-16/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:19.585Z",
-          "etag": "\"2a0bdddb5856afb308c7aff6902ead05\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.299Z",
@@ -7781,33 +5324,6 @@
           "bytes": 58790,
           "key": "wins/win-16/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:20.802Z",
-          "etag": "\"60f68aa57280c6905012f078d70439fa\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 539,
-          "bytes": 33982,
-          "key": "wins/win-16/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:14:21.075Z",
-          "etag": "\"dbb9b810d57c0165b8eaaf14abe0bb63\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 539,
-          "bytes": 45744,
-          "key": "wins/win-16/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:14:21.369Z",
-          "etag": "\"a0d182981a18bd7a72c8d5f841734522\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 539,
-          "bytes": 58790,
-          "key": "wins/win-16/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:21.635Z",
           "etag": "\"60f68aa57280c6905012f078d70439fa\""
         }
       ],
@@ -7875,33 +5391,6 @@
           "key": "wins/win-17/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:25.712Z",
           "etag": "\"b365ccb74f48e1ff9ea85a03483f29db\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 401,
-          "bytes": 32854,
-          "key": "wins/win-17/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:14:25.961Z",
-          "etag": "\"c40052081b5db66cc557ccca73b1da36\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 401,
-          "bytes": 40550,
-          "key": "wins/win-17/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:14:26.236Z",
-          "etag": "\"4c8253544a31f09f3bbf42e05f9dbb51\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 401,
-          "bytes": 52919,
-          "key": "wins/win-17/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:26.479Z",
-          "etag": "\"b365ccb74f48e1ff9ea85a03483f29db\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.368Z",
@@ -7967,33 +5456,6 @@
           "bytes": 33816,
           "key": "wins/win-17/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:26.928Z",
-          "etag": "\"043e50d6081d608f51e28a33b3700bac\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 358,
-          "bytes": 19166,
-          "key": "wins/win-17/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:14:27.195Z",
-          "etag": "\"96b6fec7b8b1cf1f7f25e68d01b4c24c\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 358,
-          "bytes": 25864,
-          "key": "wins/win-17/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:14:27.455Z",
-          "etag": "\"c4c2a634d913f6bc66d9860704183460\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 358,
-          "bytes": 33816,
-          "key": "wins/win-17/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:27.739Z",
           "etag": "\"043e50d6081d608f51e28a33b3700bac\""
         }
       ],
@@ -8061,33 +5523,6 @@
           "key": "wins/win-17/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:33.989Z",
           "etag": "\"c2ee18046540314e20e52451180e879b\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 325,
-          "bytes": 48425,
-          "key": "wins/win-17/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:14:34.225Z",
-          "etag": "\"70cc633a6ce517ecaf107a28845178c6\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 325,
-          "bytes": 60492,
-          "key": "wins/win-17/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:14:34.483Z",
-          "etag": "\"1991cb7fcd9621300799afca0f59d088\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 325,
-          "bytes": 64574,
-          "key": "wins/win-17/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:34.767Z",
-          "etag": "\"c2ee18046540314e20e52451180e879b\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.439Z",
@@ -8153,33 +5588,6 @@
           "bytes": 34373,
           "key": "wins/win-17/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:34.486Z",
-          "etag": "\"8615c993730fef8b5874bee2dfa08f2c\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 358,
-          "bytes": 18173,
-          "key": "wins/win-17/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:14:35.076Z",
-          "etag": "\"aad71fecb6732abd39e7b82c99de9f3c\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 358,
-          "bytes": 23722,
-          "key": "wins/win-17/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:14:35.400Z",
-          "etag": "\"97b3fe1b8bb7ede8858b6335a0e25f3e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 358,
-          "bytes": 34373,
-          "key": "wins/win-17/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:35.673Z",
           "etag": "\"8615c993730fef8b5874bee2dfa08f2c\""
         }
       ],
@@ -8247,33 +5655,6 @@
           "key": "wins/win-17/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:44.112Z",
           "etag": "\"0938520a1d332c5010ef4b28278a7e62\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 358,
-          "bytes": 21730,
-          "key": "wins/win-17/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:14:44.356Z",
-          "etag": "\"95cc780ff249e8d627a8c60f5bd639bf\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 358,
-          "bytes": 29316,
-          "key": "wins/win-17/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:14:44.637Z",
-          "etag": "\"bb518a1e173e6017c7b9f5f72f31773f\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 358,
-          "bytes": 40338,
-          "key": "wins/win-17/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:44.875Z",
-          "etag": "\"0938520a1d332c5010ef4b28278a7e62\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.507Z",
@@ -8312,60 +5693,6 @@
           "bytes": 49235,
           "key": "wins/win-17/img-6-358.jpeg",
           "uploadedAt": "2026-08-05T07:14:43.885Z",
-          "etag": "\"3241d44f5143b5b8310b10ef4ae014a7\""
-        },
-        {
-          "format": "avif",
-          "width": 358,
-          "height": 800,
-          "bytes": 30325,
-          "key": "wins/win-17/img-6-358.avif",
-          "uploadedAt": "2026-08-05T07:14:44.195Z",
-          "etag": "\"26fff0f8f76a8837d08d55186d574610\""
-        },
-        {
-          "format": "webp",
-          "width": 358,
-          "height": 800,
-          "bytes": 39902,
-          "key": "wins/win-17/img-6-358.webp",
-          "uploadedAt": "2026-08-05T07:14:44.450Z",
-          "etag": "\"592a878bf239215be14e791d4cb4c1dd\""
-        },
-        {
-          "format": "jpeg",
-          "width": 358,
-          "height": 800,
-          "bytes": 49235,
-          "key": "wins/win-17/img-6-358.jpeg",
-          "uploadedAt": "2026-08-05T07:14:44.717Z",
-          "etag": "\"3241d44f5143b5b8310b10ef4ae014a7\""
-        },
-        {
-          "format": "avif",
-          "width": 358,
-          "height": 800,
-          "bytes": 30325,
-          "key": "wins/win-17/img-6-358.avif",
-          "uploadedAt": "2026-08-05T07:14:45.021Z",
-          "etag": "\"26fff0f8f76a8837d08d55186d574610\""
-        },
-        {
-          "format": "webp",
-          "width": 358,
-          "height": 800,
-          "bytes": 39902,
-          "key": "wins/win-17/img-6-358.webp",
-          "uploadedAt": "2026-08-05T07:14:45.358Z",
-          "etag": "\"592a878bf239215be14e791d4cb4c1dd\""
-        },
-        {
-          "format": "jpeg",
-          "width": 358,
-          "height": 800,
-          "bytes": 49235,
-          "key": "wins/win-17/img-6-358.jpeg",
-          "uploadedAt": "2026-08-05T07:14:45.642Z",
           "etag": "\"3241d44f5143b5b8310b10ef4ae014a7\""
         }
       ],
@@ -8433,33 +5760,6 @@
           "key": "wins/win-18/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:14:51.286Z",
           "etag": "\"7545c9716226d444fbeed09e672d8ab8\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 602,
-          "bytes": 23966,
-          "key": "wins/win-18/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:14:51.534Z",
-          "etag": "\"3df1f28a94d1f9d91f8f4a9a05d9999f\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 602,
-          "bytes": 34130,
-          "key": "wins/win-18/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:14:51.841Z",
-          "etag": "\"b2a4efa5afe44c4cd9c314e3c52ac935\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 602,
-          "bytes": 49837,
-          "key": "wins/win-18/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:14:52.118Z",
-          "etag": "\"7545c9716226d444fbeed09e672d8ab8\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.573Z",
@@ -8525,33 +5825,6 @@
           "bytes": 43541,
           "key": "wins/win-18/img-2-720.jpeg",
           "uploadedAt": "2026-08-05T07:14:52.161Z",
-          "etag": "\"09c2668f6a9fd3b591af293bad08bfab\""
-        },
-        {
-          "format": "avif",
-          "width": 720,
-          "height": 762,
-          "bytes": 24708,
-          "key": "wins/win-18/img-2-720.avif",
-          "uploadedAt": "2026-08-05T07:14:52.389Z",
-          "etag": "\"b51c17179a60dba136a957585c16a0d3\""
-        },
-        {
-          "format": "webp",
-          "width": 720,
-          "height": 762,
-          "bytes": 33412,
-          "key": "wins/win-18/img-2-720.webp",
-          "uploadedAt": "2026-08-05T07:14:52.662Z",
-          "etag": "\"5641bd34db0fd046685bb5b373a04000\""
-        },
-        {
-          "format": "jpeg",
-          "width": 720,
-          "height": 762,
-          "bytes": 43541,
-          "key": "wins/win-18/img-2-720.jpeg",
-          "uploadedAt": "2026-08-05T07:14:52.976Z",
           "etag": "\"09c2668f6a9fd3b591af293bad08bfab\""
         }
       ],
@@ -8619,33 +5892,6 @@
           "key": "wins/win-18/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:00.258Z",
           "etag": "\"f6ba0acdaefd73314e9e0e0302771221\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 566,
-          "bytes": 20204,
-          "key": "wins/win-18/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:15:00.548Z",
-          "etag": "\"21eeeb5f6d973434e36260de5514dfd4\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 566,
-          "bytes": 24768,
-          "key": "wins/win-18/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:15:00.858Z",
-          "etag": "\"07ab4260453464882d9856cf133bc32f\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 566,
-          "bytes": 35054,
-          "key": "wins/win-18/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:01.113Z",
-          "etag": "\"f6ba0acdaefd73314e9e0e0302771221\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.643Z",
@@ -8711,33 +5957,6 @@
           "bytes": 46348,
           "key": "wins/win-18/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:00.657Z",
-          "etag": "\"ac5207327754160574beb9aea7d0b8c5\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 602,
-          "bytes": 21752,
-          "key": "wins/win-18/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:15:00.955Z",
-          "etag": "\"98c5b4519faf9252ccb149d8010a8438\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 602,
-          "bytes": 31274,
-          "key": "wins/win-18/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:15:01.239Z",
-          "etag": "\"65abca4d0bfab0727cb17675911433b3\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 602,
-          "bytes": 46348,
-          "key": "wins/win-18/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:01.660Z",
           "etag": "\"ac5207327754160574beb9aea7d0b8c5\""
         }
       ],
@@ -8805,33 +6024,6 @@
           "key": "wins/win-18/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:10.683Z",
           "etag": "\"cb7271e75a707f7918c6d87ea3fcf9ec\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 54236,
-          "key": "wins/win-18/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:15:10.993Z",
-          "etag": "\"6a9dca0842285fa2916a07a54d9d6d5b\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 73522,
-          "key": "wins/win-18/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:15:11.268Z",
-          "etag": "\"166279437676d33914d8f1294edc219f\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 77520,
-          "key": "wins/win-18/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:11.789Z",
-          "etag": "\"cb7271e75a707f7918c6d87ea3fcf9ec\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.709Z",
@@ -8897,33 +6089,6 @@
           "bytes": 46348,
           "key": "wins/win-18/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:09.845Z",
-          "etag": "\"ac5207327754160574beb9aea7d0b8c5\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 602,
-          "bytes": 21752,
-          "key": "wins/win-18/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:15:10.127Z",
-          "etag": "\"98c5b4519faf9252ccb149d8010a8438\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 602,
-          "bytes": 31274,
-          "key": "wins/win-18/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:15:10.371Z",
-          "etag": "\"65abca4d0bfab0727cb17675911433b3\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 602,
-          "bytes": 46348,
-          "key": "wins/win-18/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:10.620Z",
           "etag": "\"ac5207327754160574beb9aea7d0b8c5\""
         }
       ],
@@ -8991,33 +6156,6 @@
           "key": "wins/win-19/img-1-793.jpeg",
           "uploadedAt": "2026-08-05T07:15:17.200Z",
           "etag": "\"0324e48745380e5ede548ed3dcb84449\""
-        },
-        {
-          "format": "avif",
-          "width": 793,
-          "height": 505,
-          "bytes": 33476,
-          "key": "wins/win-19/img-1-793.avif",
-          "uploadedAt": "2026-08-05T07:15:17.447Z",
-          "etag": "\"01c65270910694e05e809a6a381eb6aa\""
-        },
-        {
-          "format": "webp",
-          "width": 793,
-          "height": 505,
-          "bytes": 44394,
-          "key": "wins/win-19/img-1-793.webp",
-          "uploadedAt": "2026-08-05T07:15:17.727Z",
-          "etag": "\"73bc6d202a5ccae4d77d6f3b6b2d0ffe\""
-        },
-        {
-          "format": "jpeg",
-          "width": 793,
-          "height": 505,
-          "bytes": 55716,
-          "key": "wins/win-19/img-1-793.jpeg",
-          "uploadedAt": "2026-08-05T07:15:18.014Z",
-          "etag": "\"0324e48745380e5ede548ed3dcb84449\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.772Z",
@@ -9084,33 +6222,6 @@
           "key": "wins/win-19/img-2-715.jpeg",
           "uploadedAt": "2026-08-05T07:15:18.082Z",
           "etag": "\"d556015712ec4c0d6777fde353f9d3b3\""
-        },
-        {
-          "format": "avif",
-          "width": 715,
-          "height": 505,
-          "bytes": 21378,
-          "key": "wins/win-19/img-2-715.avif",
-          "uploadedAt": "2026-08-05T07:15:18.445Z",
-          "etag": "\"2ac5063c085ef2ab60f6e8f28ff56341\""
-        },
-        {
-          "format": "webp",
-          "width": 715,
-          "height": 505,
-          "bytes": 27842,
-          "key": "wins/win-19/img-2-715.webp",
-          "uploadedAt": "2026-08-05T07:15:18.690Z",
-          "etag": "\"abe680e7d578fe3c860a56cdcbf91413\""
-        },
-        {
-          "format": "jpeg",
-          "width": 715,
-          "height": 505,
-          "bytes": 39328,
-          "key": "wins/win-19/img-2-715.jpeg",
-          "uploadedAt": "2026-08-05T07:15:18.959Z",
-          "etag": "\"d556015712ec4c0d6777fde353f9d3b3\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.813Z",
@@ -9149,60 +6260,6 @@
           "bytes": 60912,
           "key": "wins/win-19/img-3-459.jpeg",
           "uploadedAt": "2026-08-05T07:15:21.977Z",
-          "etag": "\"5ec2a6695afab87bc85805a97f55c2b8\""
-        },
-        {
-          "format": "avif",
-          "width": 459,
-          "height": 646,
-          "bytes": 40699,
-          "key": "wins/win-19/img-3-459.avif",
-          "uploadedAt": "2026-08-05T07:15:22.223Z",
-          "etag": "\"99eb351e3569434dc05752018a81e274\""
-        },
-        {
-          "format": "webp",
-          "width": 459,
-          "height": 646,
-          "bytes": 50628,
-          "key": "wins/win-19/img-3-459.webp",
-          "uploadedAt": "2026-08-05T07:15:22.488Z",
-          "etag": "\"ed82d19c55bbcdbf8244362158e3fb65\""
-        },
-        {
-          "format": "jpeg",
-          "width": 459,
-          "height": 646,
-          "bytes": 60912,
-          "key": "wins/win-19/img-3-459.jpeg",
-          "uploadedAt": "2026-08-05T07:15:22.743Z",
-          "etag": "\"5ec2a6695afab87bc85805a97f55c2b8\""
-        },
-        {
-          "format": "avif",
-          "width": 459,
-          "height": 646,
-          "bytes": 40699,
-          "key": "wins/win-19/img-3-459.avif",
-          "uploadedAt": "2026-08-05T07:15:23.000Z",
-          "etag": "\"99eb351e3569434dc05752018a81e274\""
-        },
-        {
-          "format": "webp",
-          "width": 459,
-          "height": 646,
-          "bytes": 50628,
-          "key": "wins/win-19/img-3-459.webp",
-          "uploadedAt": "2026-08-05T07:15:23.275Z",
-          "etag": "\"ed82d19c55bbcdbf8244362158e3fb65\""
-        },
-        {
-          "format": "jpeg",
-          "width": 459,
-          "height": 646,
-          "bytes": 60912,
-          "key": "wins/win-19/img-3-459.jpeg",
-          "uploadedAt": "2026-08-05T07:15:23.543Z",
           "etag": "\"5ec2a6695afab87bc85805a97f55c2b8\""
         }
       ],
@@ -9270,33 +6327,6 @@
           "key": "wins/win-20/img-1-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:25.669Z",
           "etag": "\"6e50d554d565a954d80a06ea74348cce\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 40987,
-          "key": "wins/win-20/img-1-800.avif",
-          "uploadedAt": "2026-08-05T07:15:25.934Z",
-          "etag": "\"041967eaded64f4f1b9324ee55972ae8\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 53924,
-          "key": "wins/win-20/img-1-800.webp",
-          "uploadedAt": "2026-08-05T07:15:26.172Z",
-          "etag": "\"d73ba3c6bb13b5df248c99cb86af9998\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 68943,
-          "key": "wins/win-20/img-1-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:26.441Z",
-          "etag": "\"6e50d554d565a954d80a06ea74348cce\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.876Z",
@@ -9362,33 +6392,6 @@
           "bytes": 61209,
           "key": "wins/win-20/img-2-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:28.359Z",
-          "etag": "\"593def8d23ba88d29e28f3e4a2176225\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 39325,
-          "key": "wins/win-20/img-2-800.avif",
-          "uploadedAt": "2026-08-05T07:15:28.886Z",
-          "etag": "\"69ef803ca3031d3578682af9b99ad25a\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 50590,
-          "key": "wins/win-20/img-2-800.webp",
-          "uploadedAt": "2026-08-05T07:15:29.153Z",
-          "etag": "\"cf260f62f8ffa5676eacc8f8b2c2da74\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 61209,
-          "key": "wins/win-20/img-2-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:29.514Z",
           "etag": "\"593def8d23ba88d29e28f3e4a2176225\""
         }
       ],
@@ -9456,33 +6459,6 @@
           "key": "wins/win-20/img-3-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:30.954Z",
           "etag": "\"ab146db2eea979f7f244b8fda8ba9b41\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 39436,
-          "key": "wins/win-20/img-3-800.avif",
-          "uploadedAt": "2026-08-05T07:15:31.212Z",
-          "etag": "\"ba66a7689cc58ac6d797a784523ed78d\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 51214,
-          "key": "wins/win-20/img-3-800.webp",
-          "uploadedAt": "2026-08-05T07:15:31.485Z",
-          "etag": "\"b54d508374d42113ab674f17d03bedbb\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 61024,
-          "key": "wins/win-20/img-3-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:31.766Z",
-          "etag": "\"ab146db2eea979f7f244b8fda8ba9b41\""
         }
       ],
       "createdAt": "2026-08-05T05:52:02.937Z",
@@ -9548,33 +6524,6 @@
           "bytes": 52988,
           "key": "wins/win-20/img-4-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:36.267Z",
-          "etag": "\"ae6ce8455e7018c06900f60026250d60\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 31531,
-          "key": "wins/win-20/img-4-800.avif",
-          "uploadedAt": "2026-08-05T07:15:36.544Z",
-          "etag": "\"1b5ff38e71e241b0e4e9fbd2aeae03e6\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 42238,
-          "key": "wins/win-20/img-4-800.webp",
-          "uploadedAt": "2026-08-05T07:15:36.830Z",
-          "etag": "\"5835e6432f5120c8761c8ce5be808658\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 52988,
-          "key": "wins/win-20/img-4-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:37.076Z",
           "etag": "\"ae6ce8455e7018c06900f60026250d60\""
         }
       ],
@@ -9642,33 +6591,6 @@
           "key": "wins/win-20/img-5-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:38.216Z",
           "etag": "\"e185918d837733d8631f0c0ac2bd10ce\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 450,
-          "bytes": 31837,
-          "key": "wins/win-20/img-5-800.avif",
-          "uploadedAt": "2026-08-05T07:15:38.517Z",
-          "etag": "\"4e993532d9aa7fba26cf9c6580fa8a39\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 450,
-          "bytes": 42258,
-          "key": "wins/win-20/img-5-800.webp",
-          "uploadedAt": "2026-08-05T07:15:38.761Z",
-          "etag": "\"7eb9fb11462ecfa057a86d589a70d41a\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 450,
-          "bytes": 53413,
-          "key": "wins/win-20/img-5-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:39.020Z",
-          "etag": "\"e185918d837733d8631f0c0ac2bd10ce\""
         }
       ],
       "createdAt": "2026-08-05T05:52:03.000Z",
@@ -9734,33 +6656,6 @@
           "bytes": 76486,
           "key": "wins/win-20/img-6-800.jpeg",
           "uploadedAt": "2026-08-05T07:15:45.016Z",
-          "etag": "\"0c104009df5fcd02ea70aaf9a2c447c1\""
-        },
-        {
-          "format": "avif",
-          "width": 800,
-          "height": 600,
-          "bytes": 49231,
-          "key": "wins/win-20/img-6-800.avif",
-          "uploadedAt": "2026-08-05T07:15:45.284Z",
-          "etag": "\"e105dd5cdde717a207d5bcf508805639\""
-        },
-        {
-          "format": "webp",
-          "width": 800,
-          "height": 600,
-          "bytes": 65380,
-          "key": "wins/win-20/img-6-800.webp",
-          "uploadedAt": "2026-08-05T07:15:45.525Z",
-          "etag": "\"b30ed8a80c52c070124308749bc10f2e\""
-        },
-        {
-          "format": "jpeg",
-          "width": 800,
-          "height": 600,
-          "bytes": 76486,
-          "key": "wins/win-20/img-6-800.jpeg",
-          "uploadedAt": "2026-08-05T07:15:45.834Z",
           "etag": "\"0c104009df5fcd02ea70aaf9a2c447c1\""
         }
       ],
