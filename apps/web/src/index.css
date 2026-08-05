@@ -98,6 +98,7 @@ html.dark {
 html {
   scroll-behavior: smooth;
   background: var(--background);
+  overflow-x: clip;
 }
 
 body {
@@ -109,6 +110,7 @@ body {
   font-family: "Instrument Sans Variable", "Instrument Sans", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
   transition:
     background-color 250ms ease,
     color 250ms ease;

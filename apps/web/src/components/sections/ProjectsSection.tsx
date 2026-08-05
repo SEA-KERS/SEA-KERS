@@ -206,8 +206,8 @@ function FeaturedSpread({ project, isEven, onOpen }: SpreadProps) {
             aria-hidden="true"
             className={`absolute h-20 w-20 md:h-28 md:w-28 ${
               isEven
-                ? "-right-4 -top-4 bg-(--primary) md:-right-6 md:-top-6"
-                : "-bottom-4 -left-4 bg-(--accent) md:-bottom-6 md:-left-6"
+                ? "-right-3 -top-3 bg-(--primary) sm:-right-4 sm:-top-4 md:-right-6 md:-top-6"
+                : "-bottom-3 -left-3 bg-(--accent) sm:-bottom-4 sm:-left-4 md:-bottom-6 md:-left-6"
             }`}
           />
           <ResponsiveImage

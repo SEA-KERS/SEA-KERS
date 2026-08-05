@@ -108,7 +108,7 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
         </div>
 
         <div
-          className="mt-12 flex items-center gap-7 overflow-x-auto border-b border-(--border)"
+          className="mt-12 flex items-center gap-4 overflow-x-auto border-b border-(--border) sm:gap-7"
           role="group"
           aria-label="Filter wins by track"
         >
@@ -314,10 +314,10 @@ function WinRow({ win, index, isEven, onOpen }: WinRowProps) {
         <div className="relative">
           <div
             aria-hidden="true"
-            className={`absolute h-24 w-24 md:h-36 md:w-36 ${
+            className={`absolute h-16 w-16 sm:h-24 sm:w-24 md:h-36 md:w-36 ${
               isEven
-                ? "-right-5 -top-5 bg-(--accent) md:-right-8 md:-top-8"
-                : "-bottom-5 -left-5 bg-(--primary) md:-bottom-8 md:-left-8"
+                ? "-right-3 -top-3 bg-(--accent) sm:-right-5 sm:-top-5 md:-right-8 md:-top-8"
+                : "-bottom-3 -left-3 bg-(--primary) sm:-bottom-5 sm:-left-5 md:-bottom-8 md:-left-8"
             }`}
           />
           {win.images.length > 0 ? (
