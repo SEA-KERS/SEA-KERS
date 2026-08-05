@@ -4,6 +4,7 @@ import { CORE_TEAM_DATA, TEAM_MEMBERS_DATA } from "../data/teamData";
 import { TEAM_AVATAR_IDS } from "../data/imageRegistry";
 import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
 import ResponsiveImage from "./ResponsiveImage";
+import { LinkedinIcon } from "./SocialIcons";
 import type { TeamMember } from "../types";
 
 export default function TeamSection() {
@@ -83,7 +84,6 @@ export default function TeamSection() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="member-dialog-title"
-            aria-describedby="member-dialog-description"
             tabIndex={-1}
             className="dialog-panel max-w-xl"
           >
@@ -107,7 +107,7 @@ export default function TeamSection() {
                 className="h-32 w-32 rounded-lg object-cover"
               />
               <div>
-                <p className="kicker">{activeMember.role}</p>
+                <p className="kicker">Team spotlight</p>
                 <h2
                   id="member-dialog-title"
                   className="mt-2 font-headline text-3xl font-bold"
@@ -115,25 +115,26 @@ export default function TeamSection() {
                   {activeMember.name}
                 </h2>
                 <p className="mt-1 text-sm text-(--muted-foreground)">
-                  {activeMember.handle} · {activeMember.specialization}
+                  Team SEA-KERS collective
                 </p>
               </div>
             </div>
-            <p
-              id="member-dialog-description"
-              className="mt-6 leading-7 text-(--muted-foreground)"
-            >
-              {activeMember.bio}
-            </p>
-            <p className="mt-5 text-sm font-semibold text-(--accent-text)">
-              {activeMember.winsCount} hackathon victories
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {activeMember.skills.map((skill) => (
-                <span key={skill} className="tag">
-                  {skill}
-                </span>
-              ))}
+            <div className="mt-6">
+              {activeMember.linkedin ? (
+                <a
+                  href={activeMember.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-md bg-(--primary) px-5 text-sm font-semibold text-(--primary-foreground) transition-colors hover:bg-(--primary-hover)"
+                >
+                  <LinkedinIcon className="h-4 w-4" />
+                  Connect on LinkedIn
+                </a>
+              ) : (
+                <p className="text-sm text-(--muted-foreground)">
+                  No public profile yet.
+                </p>
+              )}
             </div>
             <button
               type="button"
@@ -211,12 +212,24 @@ function IndexRow({ member, onOpen }: IndexRowProps) {
       />
       <div className="md:col-span-4">
         <h4 className="font-headline text-xl font-bold">{member.name}</h4>
-        <p className="mt-1 text-sm text-(--muted-foreground)">
-          {member.role} · {member.handle}
-        </p>
       </div>
-      <p className="meta-label md:col-span-3">{member.specialization}</p>
-      <p className="meta-label md:col-span-2">{member.winsCount} victories</p>
+      <div className="flex items-center md:col-span-3">
+        {member.linkedin ? (
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${member.name} on LinkedIn`}
+            className="index-link inline-flex items-center gap-2"
+          >
+            <LinkedinIcon className="h-4 w-4" />
+            Connect on LinkedIn
+          </a>
+        ) : (
+          <span className="meta-label">No public profile yet</span>
+        )}
+      </div>
+      <p className="meta-label md:col-span-2">Team member</p>
       <div className="flex justify-start md:col-span-2 md:justify-end">
         <button
           type="button"

@@ -117,6 +117,10 @@ export async function runScan(
           alt: existing?.alt ?? "",
           width: dimensions.width,
           height: dimensions.height,
+          ref:
+            id.split("/")[0] === "team"
+              ? id.slice("team/".length)
+              : existing?.ref,
           variants: carryUploadState(existing?.variants ?? [], variants),
         });
         if (existing) stats.updated += 1;

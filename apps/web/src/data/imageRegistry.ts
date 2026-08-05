@@ -7688,10 +7688,899 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
       }
     ],
     "legacyPath": "/images/wins/win-20/img-6.jpg"
+  },
+  "team/afnaan": {
+    "id": "team/afnaan",
+    "collection": "team",
+    "alt": "",
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 480,
+        "height": 480,
+        "bytes": 9913,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 14240,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 480,
+        "height": 480,
+        "bytes": 24088,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 11083,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 15616,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 27551,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 11083,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 15616,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 27551,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/afnaan.jpg"
+  },
+  "team/anusha-rao": {
+    "id": "team/anusha-rao",
+    "collection": "team",
+    "alt": "",
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 480,
+        "height": 480,
+        "bytes": 6972,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 9870,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 480,
+        "height": 480,
+        "bytes": 17193,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 7756,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 10562,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 19857,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 7756,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 10562,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 19857,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/anusha-rao.jpg"
+  },
+  "team/fardeen-s-khadri": {
+    "id": "team/fardeen-s-khadri",
+    "collection": "team",
+    "alt": "",
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 480,
+        "height": 480,
+        "bytes": 18774,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 28168,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 480,
+        "height": 480,
+        "bytes": 35343,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 22156,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 31070,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 41362,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 22156,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 31070,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 41362,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/fardeen-s-khadri.jpg"
+  },
+  "team/kashvi-v": {
+    "id": "team/kashvi-v",
+    "collection": "team",
+    "alt": "",
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 480,
+        "height": 480,
+        "bytes": 19128,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 26670,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 480,
+        "height": 480,
+        "bytes": 34962,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 21522,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 29116,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 39950,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 21522,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 29116,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 39950,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/kashvi-v.jpg"
+  },
+  "team/manasa-r": {
+    "id": "team/manasa-r",
+    "collection": "team",
+    "alt": "",
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 480,
+        "height": 480,
+        "bytes": 56725,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 71974,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 480,
+        "height": 480,
+        "bytes": 64081,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 64050,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 78542,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 73894,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 64050,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 78542,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 73894,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/manasa-r.jpg"
+  },
+  "team/manoj-gowda-r": {
+    "id": "team/manoj-gowda-r",
+    "collection": "team",
+    "alt": "",
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 480,
+        "height": 480,
+        "bytes": 9792,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 14430,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 480,
+        "height": 480,
+        "bytes": 21612,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 11677,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 16004,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 25645,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 11677,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 16004,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 25645,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/manoj-gowda-r.jpg"
+  },
+  "team/pramoda-s-r": {
+    "id": "team/pramoda-s-r",
+    "collection": "team",
+    "alt": "",
+    "width": 200,
+    "height": 200,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 200,
+        "height": 200,
+        "bytes": 12371,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 14232,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 200,
+        "height": 200,
+        "bytes": 13443,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 200,
+        "height": 200,
+        "bytes": 12371,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 14232,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 200,
+        "height": 200,
+        "bytes": 13443,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 200,
+        "height": 200,
+        "bytes": 12371,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 14232,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 200,
+        "height": 200,
+        "bytes": 13443,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/pramoda-s-r.jpg"
+  },
+  "team/priya": {
+    "id": "team/priya",
+    "collection": "team",
+    "alt": "",
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 480,
+        "height": 480,
+        "bytes": 19088,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 27648,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 480,
+        "height": 480,
+        "bytes": 35361,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 23052,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 30986,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 40931,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 23052,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 30986,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 40931,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/priya.jpg"
+  },
+  "team/reddy": {
+    "id": "team/reddy",
+    "collection": "team",
+    "alt": "",
+    "width": 500,
+    "height": 500,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 480,
+        "height": 480,
+        "bytes": 16484,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 24976,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 480,
+        "height": 480,
+        "bytes": 31995,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 18975,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 27350,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 36294,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 500,
+        "height": 500,
+        "bytes": 18975,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 500,
+        "height": 500,
+        "bytes": 27350,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 500,
+        "height": 500,
+        "bytes": 36294,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/reddy.jpg"
+  },
+  "team/spoorthi-r": {
+    "id": "team/spoorthi-r",
+    "collection": "team",
+    "alt": "",
+    "width": 200,
+    "height": 200,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 200,
+        "height": 200,
+        "bytes": 6373,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 7632,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 200,
+        "height": 200,
+        "bytes": 8950,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 200,
+        "height": 200,
+        "bytes": 6373,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 7632,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 200,
+        "height": 200,
+        "bytes": 8950,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 200,
+        "height": 200,
+        "bytes": 6373,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 7632,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 200,
+        "height": 200,
+        "bytes": 8950,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/spoorthi-r.jpg"
+  },
+  "team/sujan": {
+    "id": "team/sujan",
+    "collection": "team",
+    "alt": "",
+    "width": 400,
+    "height": 400,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 400,
+        "height": 400,
+        "bytes": 18846,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 26462,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 400,
+        "height": 400,
+        "bytes": 30617,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 400,
+        "height": 400,
+        "bytes": 18846,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 26462,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 400,
+        "height": 400,
+        "bytes": 30617,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 400,
+        "height": 400,
+        "bytes": 18846,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 400,
+        "height": 400,
+        "bytes": 26462,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 400,
+        "height": 400,
+        "bytes": 30617,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/sujan.jpg"
+  },
+  "team/swathi": {
+    "id": "team/swathi",
+    "collection": "team",
+    "alt": "",
+    "width": 200,
+    "height": 200,
+    "variants": [
+      {
+        "format": "avif",
+        "width": 200,
+        "height": 200,
+        "bytes": 3589,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 4546,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 200,
+        "height": 200,
+        "bytes": 6465,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 200,
+        "height": 200,
+        "bytes": 3589,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 4546,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 200,
+        "height": 200,
+        "bytes": 6465,
+        "uploaded": true
+      },
+      {
+        "format": "avif",
+        "width": 200,
+        "height": 200,
+        "bytes": 3589,
+        "uploaded": true
+      },
+      {
+        "format": "webp",
+        "width": 200,
+        "height": 200,
+        "bytes": 4546,
+        "uploaded": true
+      },
+      {
+        "format": "jpeg",
+        "width": 200,
+        "height": 200,
+        "bytes": 6465,
+        "uploaded": true
+      }
+    ],
+    "legacyPath": "/images/team/swathi.jpg"
   }
 };
 
-export const TEAM_AVATAR_IDS: Record<string, string> = {};
+export const TEAM_AVATAR_IDS: Record<string, string> = {
+  "afnaan": "team/afnaan",
+  "anusha-rao": "team/anusha-rao",
+  "fardeen-s-khadri": "team/fardeen-s-khadri",
+  "kashvi-v": "team/kashvi-v",
+  "manasa-r": "team/manasa-r",
+  "manoj-gowda-r": "team/manoj-gowda-r",
+  "pramoda-s-r": "team/pramoda-s-r",
+  "priya": "team/priya",
+  "reddy": "team/reddy",
+  "spoorthi-r": "team/spoorthi-r",
+  "sujan": "team/sujan",
+  "swathi": "team/swathi"
+};
 
 export const getImageRecord = (id: string): ImageRecord | undefined =>
   IMAGE_REGISTRY[id];

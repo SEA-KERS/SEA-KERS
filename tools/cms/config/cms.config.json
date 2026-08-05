@@ -18,17 +18,17 @@
     "publicUrl": "https://img.team-seakers.com"
   },
   "teamSeeds": [
-    { "memberId": "arjun-s", "name": "ARJUN_S" },
-    { "memberId": "meera-v", "name": "MEERA_V" },
-    { "memberId": "rohan-k", "name": "ROHAN_K" },
-    { "memberId": "zayn-x", "name": "ZAYN_X" },
-    { "memberId": "ananya-r", "name": "ANANYA_R" },
-    { "memberId": "dev-p", "name": "DEV_P" },
-    { "memberId": "kabir-m", "name": "KABIR_M" },
-    { "memberId": "tara-s", "name": "TARA_S" },
-    { "memberId": "vikram-n", "name": "VIKRAM_N" },
-    { "memberId": "riya-k", "name": "RIYA_K" },
-    { "memberId": "siddharth-b", "name": "SIDDHARTH_B" },
-    { "memberId": "neha-g", "name": "NEHA_G" }
+    { "memberId": "kashvi-v", "name": "Kashvi V" },
+    { "memberId": "spoorthi-r", "name": "Spoorthi R" },
+    { "memberId": "anusha-rao", "name": "Anusha Rao" },
+    { "memberId": "fardeen-s-khadri", "name": "Fardeen S Khadri" },
+    { "memberId": "pramoda-s-r", "name": "Pramoda S R" },
+    { "memberId": "manoj-gowda-r", "name": "Manoj Gowda R" },
+    { "memberId": "reddy", "name": "Sharan Reddy" },
+    { "memberId": "sujan", "name": "Sujan P" },
+    { "memberId": "afnaan", "name": "Afnaan Ayub" },
+    { "memberId": "swathi", "name": "Swathi" },
+    { "memberId": "manasa-r", "name": "Manasa G" },
+    { "memberId": "priya", "name": "Shree Priya v" }
   ]
 }

@@ -9768,148 +9768,1132 @@
       "updatedAt": "2026-08-05T07:15:45.834Z"
     },
     {
-      "id": "team/arjun-s",
+      "id": "team/afnaan",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "ARJUN_S",
-      "ref": "arjun-s",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/afnaan.jpg",
+      "alt": "",
+      "width": 500,
+      "height": 500,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 480,
+          "height": 480,
+          "bytes": 9913,
+          "key": "team/afnaan-480.avif",
+          "uploadedAt": "2026-08-05T07:53:54.220Z",
+          "etag": "\"f4896188e4a8c69705eae8e0352730fd\""
+        },
+        {
+          "format": "webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 14240,
+          "key": "team/afnaan-480.webp",
+          "uploadedAt": "2026-08-05T07:53:54.501Z",
+          "etag": "\"56c96d8c3fb0b0b7083fc971d2ecd8ea\""
+        },
+        {
+          "format": "jpeg",
+          "width": 480,
+          "height": 480,
+          "bytes": 24088,
+          "key": "team/afnaan-480.jpeg",
+          "uploadedAt": "2026-08-05T07:53:54.872Z",
+          "etag": "\"f9adc7f34c825e27523362e5f90db37e\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 11083,
+          "key": "team/afnaan-500.avif",
+          "uploadedAt": "2026-08-05T07:53:56.328Z",
+          "etag": "\"65adcbef941ecc194bb371094c3d8d67\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 15616,
+          "key": "team/afnaan-500.webp",
+          "uploadedAt": "2026-08-05T07:53:56.732Z",
+          "etag": "\"2d4540148aaea7b508ce2e6fbfa7092b\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 27551,
+          "key": "team/afnaan-500.jpeg",
+          "uploadedAt": "2026-08-05T07:53:57.157Z",
+          "etag": "\"1d3c5d4db1dfd40c5d8490d13b2d3f09\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 11083,
+          "key": "team/afnaan-500.avif",
+          "uploadedAt": "2026-08-05T07:53:56.328Z",
+          "etag": "\"65adcbef941ecc194bb371094c3d8d67\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 15616,
+          "key": "team/afnaan-500.webp",
+          "uploadedAt": "2026-08-05T07:53:56.732Z",
+          "etag": "\"2d4540148aaea7b508ce2e6fbfa7092b\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 27551,
+          "key": "team/afnaan-500.jpeg",
+          "uploadedAt": "2026-08-05T07:53:57.157Z",
+          "etag": "\"1d3c5d4db1dfd40c5d8490d13b2d3f09\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.157Z",
+      "updatedAt": "2026-08-05T07:55:29.771Z",
+      "ref": "afnaan"
     },
     {
-      "id": "team/meera-v",
+      "id": "team/anusha-rao",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "MEERA_V",
-      "ref": "meera-v",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/anusha-rao.jpg",
+      "alt": "",
+      "width": 500,
+      "height": 500,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 480,
+          "height": 480,
+          "bytes": 6972,
+          "key": "team/anusha-rao-480.avif",
+          "uploadedAt": "2026-08-05T07:53:55.376Z",
+          "etag": "\"2c5983d44e15dce6fe09f645edb3771c\""
+        },
+        {
+          "format": "webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 9870,
+          "key": "team/anusha-rao-480.webp",
+          "uploadedAt": "2026-08-05T07:53:55.709Z",
+          "etag": "\"cd213c623d7ef7189e54d3eae11c61dd\""
+        },
+        {
+          "format": "jpeg",
+          "width": 480,
+          "height": 480,
+          "bytes": 17193,
+          "key": "team/anusha-rao-480.jpeg",
+          "uploadedAt": "2026-08-05T07:53:56.145Z",
+          "etag": "\"75c6800a2ebe799986dbadaa6ae69bf2\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 7756,
+          "key": "team/anusha-rao-500.avif",
+          "uploadedAt": "2026-08-05T07:53:58.078Z",
+          "etag": "\"b72e3b3442010e9fda1b93c43257faa1\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 10562,
+          "key": "team/anusha-rao-500.webp",
+          "uploadedAt": "2026-08-05T07:53:58.355Z",
+          "etag": "\"2100b99933d524f80bef06c5af861b6f\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 19857,
+          "key": "team/anusha-rao-500.jpeg",
+          "uploadedAt": "2026-08-05T07:53:58.678Z",
+          "etag": "\"073fbf89e9fafc17a83f249ada6b8f6a\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 7756,
+          "key": "team/anusha-rao-500.avif",
+          "uploadedAt": "2026-08-05T07:53:58.078Z",
+          "etag": "\"b72e3b3442010e9fda1b93c43257faa1\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 10562,
+          "key": "team/anusha-rao-500.webp",
+          "uploadedAt": "2026-08-05T07:53:58.355Z",
+          "etag": "\"2100b99933d524f80bef06c5af861b6f\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 19857,
+          "key": "team/anusha-rao-500.jpeg",
+          "uploadedAt": "2026-08-05T07:53:58.678Z",
+          "etag": "\"073fbf89e9fafc17a83f249ada6b8f6a\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.227Z",
+      "updatedAt": "2026-08-05T07:55:29.829Z",
+      "ref": "anusha-rao"
     },
     {
-      "id": "team/rohan-k",
+      "id": "team/fardeen-s-khadri",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "ROHAN_K",
-      "ref": "rohan-k",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/fardeen-s-khadri.jpg",
+      "alt": "",
+      "width": 500,
+      "height": 500,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 480,
+          "height": 480,
+          "bytes": 18774,
+          "key": "team/fardeen-s-khadri-480.avif",
+          "uploadedAt": "2026-08-05T07:54:06.872Z",
+          "etag": "\"532448f4bfc6c4e06c8517f24ee81ebc\""
+        },
+        {
+          "format": "webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 28168,
+          "key": "team/fardeen-s-khadri-480.webp",
+          "uploadedAt": "2026-08-05T07:54:07.282Z",
+          "etag": "\"0e356e866900a88de231f020e730375b\""
+        },
+        {
+          "format": "jpeg",
+          "width": 480,
+          "height": 480,
+          "bytes": 35343,
+          "key": "team/fardeen-s-khadri-480.jpeg",
+          "uploadedAt": "2026-08-05T07:54:07.687Z",
+          "etag": "\"57a82680d1f925f62d4f9de291973dab\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 22156,
+          "key": "team/fardeen-s-khadri-500.avif",
+          "uploadedAt": "2026-08-05T07:54:08.818Z",
+          "etag": "\"318b0fe7122e60c0dcb6537107a3191c\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 31070,
+          "key": "team/fardeen-s-khadri-500.webp",
+          "uploadedAt": "2026-08-05T07:54:09.127Z",
+          "etag": "\"ace0bc182378eb1d8d8b858ba362a1de\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 41362,
+          "key": "team/fardeen-s-khadri-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:09.588Z",
+          "etag": "\"b796630c29402fe3ebb76eb89b6629f5\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 22156,
+          "key": "team/fardeen-s-khadri-500.avif",
+          "uploadedAt": "2026-08-05T07:54:08.818Z",
+          "etag": "\"318b0fe7122e60c0dcb6537107a3191c\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 31070,
+          "key": "team/fardeen-s-khadri-500.webp",
+          "uploadedAt": "2026-08-05T07:54:09.127Z",
+          "etag": "\"ace0bc182378eb1d8d8b858ba362a1de\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 41362,
+          "key": "team/fardeen-s-khadri-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:09.588Z",
+          "etag": "\"b796630c29402fe3ebb76eb89b6629f5\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.260Z",
+      "updatedAt": "2026-08-05T07:55:29.889Z",
+      "ref": "fardeen-s-khadri"
     },
     {
-      "id": "team/zayn-x",
+      "id": "team/kashvi-v",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "ZAYN_X",
-      "ref": "zayn-x",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/kashvi-v.jpg",
+      "alt": "",
+      "width": 500,
+      "height": 500,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 480,
+          "height": 480,
+          "bytes": 19128,
+          "key": "team/kashvi-v-480.avif",
+          "uploadedAt": "2026-08-05T07:54:06.668Z",
+          "etag": "\"c89184e0007ca2febfee8d6483ef3709\""
+        },
+        {
+          "format": "webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 26670,
+          "key": "team/kashvi-v-480.webp",
+          "uploadedAt": "2026-08-05T07:54:06.906Z",
+          "etag": "\"aa3e949ef99944356cff156a6fa936db\""
+        },
+        {
+          "format": "jpeg",
+          "width": 480,
+          "height": 480,
+          "bytes": 34962,
+          "key": "team/kashvi-v-480.jpeg",
+          "uploadedAt": "2026-08-05T07:54:07.249Z",
+          "etag": "\"907d5e7ed933f698c96eab29aa3e6687\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 21522,
+          "key": "team/kashvi-v-500.avif",
+          "uploadedAt": "2026-08-05T07:54:08.617Z",
+          "etag": "\"e5d361a744b14facdb0414163b245456\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 29116,
+          "key": "team/kashvi-v-500.webp",
+          "uploadedAt": "2026-08-05T07:54:08.938Z",
+          "etag": "\"a9831137c8c3d8816e9e659a19dc585f\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 39950,
+          "key": "team/kashvi-v-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:09.233Z",
+          "etag": "\"2c665d1a028ae6a3ef8b2ab9795297c6\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 21522,
+          "key": "team/kashvi-v-500.avif",
+          "uploadedAt": "2026-08-05T07:54:08.617Z",
+          "etag": "\"e5d361a744b14facdb0414163b245456\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 29116,
+          "key": "team/kashvi-v-500.webp",
+          "uploadedAt": "2026-08-05T07:54:08.938Z",
+          "etag": "\"a9831137c8c3d8816e9e659a19dc585f\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 39950,
+          "key": "team/kashvi-v-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:09.233Z",
+          "etag": "\"2c665d1a028ae6a3ef8b2ab9795297c6\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.291Z",
+      "updatedAt": "2026-08-05T07:55:29.949Z",
+      "ref": "kashvi-v"
     },
     {
-      "id": "team/ananya-r",
+      "id": "team/manasa-r",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "ANANYA_R",
-      "ref": "ananya-r",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/manasa-r.jpg",
+      "alt": "",
+      "width": 500,
+      "height": 500,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 480,
+          "height": 480,
+          "bytes": 56725,
+          "key": "team/manasa-r-480.avif",
+          "uploadedAt": "2026-08-05T07:54:12.914Z",
+          "etag": "\"0ef5c2cf106d7f27c2caa0b4cc57a978\""
+        },
+        {
+          "format": "webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 71974,
+          "key": "team/manasa-r-480.webp",
+          "uploadedAt": "2026-08-05T07:54:13.305Z",
+          "etag": "\"c31b6b35b7380151c0d87f959aacd4cd\""
+        },
+        {
+          "format": "jpeg",
+          "width": 480,
+          "height": 480,
+          "bytes": 64081,
+          "key": "team/manasa-r-480.jpeg",
+          "uploadedAt": "2026-08-05T07:54:13.970Z",
+          "etag": "\"0e759e5f39aaa27ffe75bf6764039cae\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 64050,
+          "key": "team/manasa-r-500.avif",
+          "uploadedAt": "2026-08-05T07:54:16.642Z",
+          "etag": "\"734c3146b3c6777e850441cce75828fa\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 78542,
+          "key": "team/manasa-r-500.webp",
+          "uploadedAt": "2026-08-05T07:54:17.575Z",
+          "etag": "\"9e4199c90e5724e99a32a8b621c2bfc2\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 73894,
+          "key": "team/manasa-r-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:17.859Z",
+          "etag": "\"4733984276032980c79003a96fbaf3cd\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 64050,
+          "key": "team/manasa-r-500.avif",
+          "uploadedAt": "2026-08-05T07:54:16.642Z",
+          "etag": "\"734c3146b3c6777e850441cce75828fa\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 78542,
+          "key": "team/manasa-r-500.webp",
+          "uploadedAt": "2026-08-05T07:54:17.575Z",
+          "etag": "\"9e4199c90e5724e99a32a8b621c2bfc2\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 73894,
+          "key": "team/manasa-r-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:17.859Z",
+          "etag": "\"4733984276032980c79003a96fbaf3cd\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.326Z",
+      "updatedAt": "2026-08-05T07:55:30.032Z",
+      "ref": "manasa-r"
     },
     {
-      "id": "team/dev-p",
+      "id": "team/manoj-gowda-r",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "DEV_P",
-      "ref": "dev-p",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/manoj-gowda-r.jpg",
+      "alt": "",
+      "width": 500,
+      "height": 500,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 480,
+          "height": 480,
+          "bytes": 9792,
+          "key": "team/manoj-gowda-r-480.avif",
+          "uploadedAt": "2026-08-05T07:54:13.083Z",
+          "etag": "\"80cf106b45c8219b04e94a77fb088aba\""
+        },
+        {
+          "format": "webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 14430,
+          "key": "team/manoj-gowda-r-480.webp",
+          "uploadedAt": "2026-08-05T07:54:13.967Z",
+          "etag": "\"749787b94384dbda6d12fe8f380c858c\""
+        },
+        {
+          "format": "jpeg",
+          "width": 480,
+          "height": 480,
+          "bytes": 21612,
+          "key": "team/manoj-gowda-r-480.jpeg",
+          "uploadedAt": "2026-08-05T07:54:14.358Z",
+          "etag": "\"14761b053fcd0cce5bcaa5b2a8ac7ace\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 11677,
+          "key": "team/manoj-gowda-r-500.avif",
+          "uploadedAt": "2026-08-05T07:54:16.029Z",
+          "etag": "\"59dec8b45756baf48e5d317d6dba971f\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 16004,
+          "key": "team/manoj-gowda-r-500.webp",
+          "uploadedAt": "2026-08-05T07:54:16.466Z",
+          "etag": "\"ad68caebe11192daa8c17fd42686c937\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 25645,
+          "key": "team/manoj-gowda-r-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:17.567Z",
+          "etag": "\"abe247e6e0cf3f1a5eeadedddd545c5b\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 11677,
+          "key": "team/manoj-gowda-r-500.avif",
+          "uploadedAt": "2026-08-05T07:54:16.029Z",
+          "etag": "\"59dec8b45756baf48e5d317d6dba971f\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 16004,
+          "key": "team/manoj-gowda-r-500.webp",
+          "uploadedAt": "2026-08-05T07:54:16.466Z",
+          "etag": "\"ad68caebe11192daa8c17fd42686c937\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 25645,
+          "key": "team/manoj-gowda-r-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:17.567Z",
+          "etag": "\"abe247e6e0cf3f1a5eeadedddd545c5b\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.367Z",
+      "updatedAt": "2026-08-05T07:55:30.095Z",
+      "ref": "manoj-gowda-r"
     },
     {
-      "id": "team/kabir-m",
+      "id": "team/pramoda-s-r",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "KABIR_M",
-      "ref": "kabir-m",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/pramoda-s-r.jpg",
+      "alt": "",
+      "width": 200,
+      "height": 200,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 200,
+          "height": 200,
+          "bytes": 12371,
+          "key": "team/pramoda-s-r-200.avif",
+          "uploadedAt": "2026-08-05T07:54:23.162Z",
+          "etag": "\"3151383b9f03477c99b4c89379a01c3b\""
+        },
+        {
+          "format": "webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 14232,
+          "key": "team/pramoda-s-r-200.webp",
+          "uploadedAt": "2026-08-05T07:54:23.562Z",
+          "etag": "\"72ba25a0f84a179ec773e7382e4b5877\""
+        },
+        {
+          "format": "jpeg",
+          "width": 200,
+          "height": 200,
+          "bytes": 13443,
+          "key": "team/pramoda-s-r-200.jpeg",
+          "uploadedAt": "2026-08-05T07:54:23.979Z",
+          "etag": "\"231142454059626a0dd0c7a749f50014\""
+        },
+        {
+          "format": "avif",
+          "width": 200,
+          "height": 200,
+          "bytes": 12371,
+          "key": "team/pramoda-s-r-200.avif",
+          "uploadedAt": "2026-08-05T07:54:23.162Z",
+          "etag": "\"3151383b9f03477c99b4c89379a01c3b\""
+        },
+        {
+          "format": "webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 14232,
+          "key": "team/pramoda-s-r-200.webp",
+          "uploadedAt": "2026-08-05T07:54:23.562Z",
+          "etag": "\"72ba25a0f84a179ec773e7382e4b5877\""
+        },
+        {
+          "format": "jpeg",
+          "width": 200,
+          "height": 200,
+          "bytes": 13443,
+          "key": "team/pramoda-s-r-200.jpeg",
+          "uploadedAt": "2026-08-05T07:54:23.979Z",
+          "etag": "\"231142454059626a0dd0c7a749f50014\""
+        },
+        {
+          "format": "avif",
+          "width": 200,
+          "height": 200,
+          "bytes": 12371,
+          "key": "team/pramoda-s-r-200.avif",
+          "uploadedAt": "2026-08-05T07:54:23.162Z",
+          "etag": "\"3151383b9f03477c99b4c89379a01c3b\""
+        },
+        {
+          "format": "webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 14232,
+          "key": "team/pramoda-s-r-200.webp",
+          "uploadedAt": "2026-08-05T07:54:23.562Z",
+          "etag": "\"72ba25a0f84a179ec773e7382e4b5877\""
+        },
+        {
+          "format": "jpeg",
+          "width": 200,
+          "height": 200,
+          "bytes": 13443,
+          "key": "team/pramoda-s-r-200.jpeg",
+          "uploadedAt": "2026-08-05T07:54:23.979Z",
+          "etag": "\"231142454059626a0dd0c7a749f50014\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.404Z",
+      "updatedAt": "2026-08-05T07:55:30.152Z",
+      "ref": "pramoda-s-r"
     },
     {
-      "id": "team/tara-s",
+      "id": "team/priya",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "TARA_S",
-      "ref": "tara-s",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/priya.jpg",
+      "alt": "",
+      "width": 500,
+      "height": 500,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 480,
+          "height": 480,
+          "bytes": 19088,
+          "key": "team/priya-480.avif",
+          "uploadedAt": "2026-08-05T07:54:23.155Z",
+          "etag": "\"5175d1c9258907ebc8dda25282cc3734\""
+        },
+        {
+          "format": "webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 27648,
+          "key": "team/priya-480.webp",
+          "uploadedAt": "2026-08-05T07:54:23.569Z",
+          "etag": "\"030079028179dfcc14c6e07cca72c057\""
+        },
+        {
+          "format": "jpeg",
+          "width": 480,
+          "height": 480,
+          "bytes": 35361,
+          "key": "team/priya-480.jpeg",
+          "uploadedAt": "2026-08-05T07:54:23.972Z",
+          "etag": "\"608b4ba03545a1f5e9be565355042753\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 23052,
+          "key": "team/priya-500.avif",
+          "uploadedAt": "2026-08-05T07:54:25.612Z",
+          "etag": "\"89571926b6e9b6447b21be7eaee1d1e4\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 30986,
+          "key": "team/priya-500.webp",
+          "uploadedAt": "2026-08-05T07:54:25.922Z",
+          "etag": "\"26d8dece8e3287a1ddee73539162502b\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 40931,
+          "key": "team/priya-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:26.690Z",
+          "etag": "\"682ef86b0c4b22273a60b7fa3897d9b3\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 23052,
+          "key": "team/priya-500.avif",
+          "uploadedAt": "2026-08-05T07:54:25.612Z",
+          "etag": "\"89571926b6e9b6447b21be7eaee1d1e4\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 30986,
+          "key": "team/priya-500.webp",
+          "uploadedAt": "2026-08-05T07:54:25.922Z",
+          "etag": "\"26d8dece8e3287a1ddee73539162502b\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 40931,
+          "key": "team/priya-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:26.690Z",
+          "etag": "\"682ef86b0c4b22273a60b7fa3897d9b3\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.434Z",
+      "updatedAt": "2026-08-05T07:55:30.215Z",
+      "ref": "priya"
     },
     {
-      "id": "team/vikram-n",
+      "id": "team/reddy",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "VIKRAM_N",
-      "ref": "vikram-n",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/reddy.jpg",
+      "alt": "",
+      "width": 500,
+      "height": 500,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 480,
+          "height": 480,
+          "bytes": 16484,
+          "key": "team/reddy-480.avif",
+          "uploadedAt": "2026-08-05T07:54:28.770Z",
+          "etag": "\"6192a6daa93da7a99864a5708d86c03f\""
+        },
+        {
+          "format": "webp",
+          "width": 480,
+          "height": 480,
+          "bytes": 24976,
+          "key": "team/reddy-480.webp",
+          "uploadedAt": "2026-08-05T07:54:29.025Z",
+          "etag": "\"cdf9d953e6b341d66ea01c613229ce68\""
+        },
+        {
+          "format": "jpeg",
+          "width": 480,
+          "height": 480,
+          "bytes": 31995,
+          "key": "team/reddy-480.jpeg",
+          "uploadedAt": "2026-08-05T07:54:29.398Z",
+          "etag": "\"4ed2783e0fbd47308c1922b83ab060da\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 18975,
+          "key": "team/reddy-500.avif",
+          "uploadedAt": "2026-08-05T07:54:30.501Z",
+          "etag": "\"a01836d0b671e69dc137f11d483d8c1b\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 27350,
+          "key": "team/reddy-500.webp",
+          "uploadedAt": "2026-08-05T07:54:30.836Z",
+          "etag": "\"ce149a41488501b79fdc58eca3ccdeef\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 36294,
+          "key": "team/reddy-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:31.144Z",
+          "etag": "\"f32fa291f4128fdb48d196ecc2725518\""
+        },
+        {
+          "format": "avif",
+          "width": 500,
+          "height": 500,
+          "bytes": 18975,
+          "key": "team/reddy-500.avif",
+          "uploadedAt": "2026-08-05T07:54:30.501Z",
+          "etag": "\"a01836d0b671e69dc137f11d483d8c1b\""
+        },
+        {
+          "format": "webp",
+          "width": 500,
+          "height": 500,
+          "bytes": 27350,
+          "key": "team/reddy-500.webp",
+          "uploadedAt": "2026-08-05T07:54:30.836Z",
+          "etag": "\"ce149a41488501b79fdc58eca3ccdeef\""
+        },
+        {
+          "format": "jpeg",
+          "width": 500,
+          "height": 500,
+          "bytes": 36294,
+          "key": "team/reddy-500.jpeg",
+          "uploadedAt": "2026-08-05T07:54:31.144Z",
+          "etag": "\"f32fa291f4128fdb48d196ecc2725518\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.475Z",
+      "updatedAt": "2026-08-05T07:55:30.301Z",
+      "ref": "reddy"
     },
     {
-      "id": "team/riya-k",
+      "id": "team/spoorthi-r",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "RIYA_K",
-      "ref": "riya-k",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/spoorthi-r.jpg",
+      "alt": "",
+      "width": 200,
+      "height": 200,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 200,
+          "height": 200,
+          "bytes": 6373,
+          "key": "team/spoorthi-r-200.avif",
+          "uploadedAt": "2026-08-05T07:54:32.926Z",
+          "etag": "\"4d25d76c0c9e79ddc60e54883619b697\""
+        },
+        {
+          "format": "webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 7632,
+          "key": "team/spoorthi-r-200.webp",
+          "uploadedAt": "2026-08-05T07:54:33.228Z",
+          "etag": "\"113b623ae5df07e6e17d14e5d791259d\""
+        },
+        {
+          "format": "jpeg",
+          "width": 200,
+          "height": 200,
+          "bytes": 8950,
+          "key": "team/spoorthi-r-200.jpeg",
+          "uploadedAt": "2026-08-05T07:54:33.597Z",
+          "etag": "\"75668087b01b0e9cbffe22f353a04df4\""
+        },
+        {
+          "format": "avif",
+          "width": 200,
+          "height": 200,
+          "bytes": 6373,
+          "key": "team/spoorthi-r-200.avif",
+          "uploadedAt": "2026-08-05T07:54:32.926Z",
+          "etag": "\"4d25d76c0c9e79ddc60e54883619b697\""
+        },
+        {
+          "format": "webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 7632,
+          "key": "team/spoorthi-r-200.webp",
+          "uploadedAt": "2026-08-05T07:54:33.228Z",
+          "etag": "\"113b623ae5df07e6e17d14e5d791259d\""
+        },
+        {
+          "format": "jpeg",
+          "width": 200,
+          "height": 200,
+          "bytes": 8950,
+          "key": "team/spoorthi-r-200.jpeg",
+          "uploadedAt": "2026-08-05T07:54:33.597Z",
+          "etag": "\"75668087b01b0e9cbffe22f353a04df4\""
+        },
+        {
+          "format": "avif",
+          "width": 200,
+          "height": 200,
+          "bytes": 6373,
+          "key": "team/spoorthi-r-200.avif",
+          "uploadedAt": "2026-08-05T07:54:32.926Z",
+          "etag": "\"4d25d76c0c9e79ddc60e54883619b697\""
+        },
+        {
+          "format": "webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 7632,
+          "key": "team/spoorthi-r-200.webp",
+          "uploadedAt": "2026-08-05T07:54:33.228Z",
+          "etag": "\"113b623ae5df07e6e17d14e5d791259d\""
+        },
+        {
+          "format": "jpeg",
+          "width": 200,
+          "height": 200,
+          "bytes": 8950,
+          "key": "team/spoorthi-r-200.jpeg",
+          "uploadedAt": "2026-08-05T07:54:33.597Z",
+          "etag": "\"75668087b01b0e9cbffe22f353a04df4\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.508Z",
+      "updatedAt": "2026-08-05T07:55:30.414Z",
+      "ref": "spoorthi-r"
     },
     {
-      "id": "team/siddharth-b",
+      "id": "team/sujan",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "SIDDHARTH_B",
-      "ref": "siddharth-b",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/sujan.jpg",
+      "alt": "",
+      "width": 400,
+      "height": 400,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 400,
+          "height": 400,
+          "bytes": 18846,
+          "key": "team/sujan-400.avif",
+          "uploadedAt": "2026-08-05T07:54:39.103Z",
+          "etag": "\"eb7cb4608da6a3c431dc15e7a0730b11\""
+        },
+        {
+          "format": "webp",
+          "width": 400,
+          "height": 400,
+          "bytes": 26462,
+          "key": "team/sujan-400.webp",
+          "uploadedAt": "2026-08-05T07:54:39.398Z",
+          "etag": "\"2b8259da2cdd3b2f24eb23205fb49d83\""
+        },
+        {
+          "format": "jpeg",
+          "width": 400,
+          "height": 400,
+          "bytes": 30617,
+          "key": "team/sujan-400.jpeg",
+          "uploadedAt": "2026-08-05T07:54:39.705Z",
+          "etag": "\"cd2519ecb90da68e2467d4676e1f5f1e\""
+        },
+        {
+          "format": "avif",
+          "width": 400,
+          "height": 400,
+          "bytes": 18846,
+          "key": "team/sujan-400.avif",
+          "uploadedAt": "2026-08-05T07:54:39.103Z",
+          "etag": "\"eb7cb4608da6a3c431dc15e7a0730b11\""
+        },
+        {
+          "format": "webp",
+          "width": 400,
+          "height": 400,
+          "bytes": 26462,
+          "key": "team/sujan-400.webp",
+          "uploadedAt": "2026-08-05T07:54:39.398Z",
+          "etag": "\"2b8259da2cdd3b2f24eb23205fb49d83\""
+        },
+        {
+          "format": "jpeg",
+          "width": 400,
+          "height": 400,
+          "bytes": 30617,
+          "key": "team/sujan-400.jpeg",
+          "uploadedAt": "2026-08-05T07:54:39.705Z",
+          "etag": "\"cd2519ecb90da68e2467d4676e1f5f1e\""
+        },
+        {
+          "format": "avif",
+          "width": 400,
+          "height": 400,
+          "bytes": 18846,
+          "key": "team/sujan-400.avif",
+          "uploadedAt": "2026-08-05T07:54:39.103Z",
+          "etag": "\"eb7cb4608da6a3c431dc15e7a0730b11\""
+        },
+        {
+          "format": "webp",
+          "width": 400,
+          "height": 400,
+          "bytes": 26462,
+          "key": "team/sujan-400.webp",
+          "uploadedAt": "2026-08-05T07:54:39.398Z",
+          "etag": "\"2b8259da2cdd3b2f24eb23205fb49d83\""
+        },
+        {
+          "format": "jpeg",
+          "width": 400,
+          "height": 400,
+          "bytes": 30617,
+          "key": "team/sujan-400.jpeg",
+          "uploadedAt": "2026-08-05T07:54:39.705Z",
+          "etag": "\"cd2519ecb90da68e2467d4676e1f5f1e\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.541Z",
+      "updatedAt": "2026-08-05T07:55:30.471Z",
+      "ref": "sujan"
     },
     {
-      "id": "team/neha-g",
+      "id": "team/swathi",
       "collection": "team",
-      "sourcePath": null,
-      "alt": "NEHA_G",
-      "ref": "neha-g",
-      "width": 0,
-      "height": 0,
-      "variants": [],
-      "createdAt": "2026-08-05T05:52:03.038Z",
-      "updatedAt": "2026-08-05T05:52:03.038Z"
+      "sourcePath": "../../../apps/web/public/images/team/swathi.jpg",
+      "alt": "",
+      "width": 200,
+      "height": 200,
+      "variants": [
+        {
+          "format": "avif",
+          "width": 200,
+          "height": 200,
+          "bytes": 3589,
+          "key": "team/swathi-200.avif",
+          "uploadedAt": "2026-08-05T07:54:38.825Z",
+          "etag": "\"6d73a23b064277eaa584e08ddb30e606\""
+        },
+        {
+          "format": "webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 4546,
+          "key": "team/swathi-200.webp",
+          "uploadedAt": "2026-08-05T07:54:39.228Z",
+          "etag": "\"d14738628015838eecd14433e36f4ff0\""
+        },
+        {
+          "format": "jpeg",
+          "width": 200,
+          "height": 200,
+          "bytes": 6465,
+          "key": "team/swathi-200.jpeg",
+          "uploadedAt": "2026-08-05T07:54:39.473Z",
+          "etag": "\"08baaaf2621e7e8436687949e16bb453\""
+        },
+        {
+          "format": "avif",
+          "width": 200,
+          "height": 200,
+          "bytes": 3589,
+          "key": "team/swathi-200.avif",
+          "uploadedAt": "2026-08-05T07:54:38.825Z",
+          "etag": "\"6d73a23b064277eaa584e08ddb30e606\""
+        },
+        {
+          "format": "webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 4546,
+          "key": "team/swathi-200.webp",
+          "uploadedAt": "2026-08-05T07:54:39.228Z",
+          "etag": "\"d14738628015838eecd14433e36f4ff0\""
+        },
+        {
+          "format": "jpeg",
+          "width": 200,
+          "height": 200,
+          "bytes": 6465,
+          "key": "team/swathi-200.jpeg",
+          "uploadedAt": "2026-08-05T07:54:39.473Z",
+          "etag": "\"08baaaf2621e7e8436687949e16bb453\""
+        },
+        {
+          "format": "avif",
+          "width": 200,
+          "height": 200,
+          "bytes": 3589,
+          "key": "team/swathi-200.avif",
+          "uploadedAt": "2026-08-05T07:54:38.825Z",
+          "etag": "\"6d73a23b064277eaa584e08ddb30e606\""
+        },
+        {
+          "format": "webp",
+          "width": 200,
+          "height": 200,
+          "bytes": 4546,
+          "key": "team/swathi-200.webp",
+          "uploadedAt": "2026-08-05T07:54:39.228Z",
+          "etag": "\"d14738628015838eecd14433e36f4ff0\""
+        },
+        {
+          "format": "jpeg",
+          "width": 200,
+          "height": 200,
+          "bytes": 6465,
+          "key": "team/swathi-200.jpeg",
+          "uploadedAt": "2026-08-05T07:54:39.473Z",
+          "etag": "\"08baaaf2621e7e8436687949e16bb453\""
+        }
+      ],
+      "createdAt": "2026-08-05T07:51:52.573Z",
+      "updatedAt": "2026-08-05T07:55:30.525Z",
+      "ref": "swathi"
     }
   ]
 }

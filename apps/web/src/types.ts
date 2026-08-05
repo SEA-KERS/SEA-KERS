@@ -37,14 +37,6 @@ export interface Project {
 export interface TeamMember {
   id: string;
   name: string;
-  role: string;
-  handle: string;
-  specialization: string;
-  winsCount: number;
-  bio: string;
-  skills: readonly string[];
-  github?: string;
-  twitter?: string;
   linkedin?: string;
   avatar: string;
 }
