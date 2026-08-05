@@ -175,7 +175,7 @@ function RosterCard({ member, onOpen }: RosterCardProps) {
     >
       <span
         aria-hidden="true"
-        className="absolute inset-y-0 left-0 w-[82%] bg-(--primary) transition-colors duration-300 group-hover:bg-(--primary-hover)"
+        className="absolute inset-y-0 left-0 w-[82%] bg-(--primary) transition-colors duration-300 group-hover:bg-(--primary-hover) group-focus-visible:w-full group-focus-visible:bg-(--primary-hover)"
       />
       <ResponsiveImage
         src={member.avatar}
@@ -186,7 +186,7 @@ function RosterCard({ member, onOpen }: RosterCardProps) {
         loading="lazy"
         decoding="async"
         alt={`Portrait of ${member.name}`}
-        className="absolute bottom-0 right-0 h-[92%] w-[86%] object-cover object-top transition-transform duration-500 group-hover:scale-[1.03] group-focus-visible:scale-[1.03]"
+        className="absolute bottom-0 right-0 h-[92%] w-[86%] object-cover object-top"
       />
       <span
         aria-hidden="true"
