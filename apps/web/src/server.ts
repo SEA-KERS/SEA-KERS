@@ -1,5 +1,11 @@
 import handler, { createServerEntry } from "@tanstack/react-start/server-entry";
 import { SITE_CONFIG } from "./config/site";
+import { IMAGE_BASE_URL } from "./data/imageRegistry";
+
+const imageSources = ["'self'", "data:", "blob:", "https://images.unsplash.com"];
+if (IMAGE_BASE_URL) {
+  imageSources.push(new URL(IMAGE_BASE_URL).origin);
+}
 
 const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
@@ -8,7 +14,7 @@ const CONTENT_SECURITY_POLICY = [
   "font-src 'self' data:",
   "form-action 'self'",
   "frame-ancestors 'none'",
-  "img-src 'self' data: blob: https://images.unsplash.com",
+  `img-src ${imageSources.join(" ")}`,
   "object-src 'none'",
   "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com",
   "style-src 'self' 'unsafe-inline'",

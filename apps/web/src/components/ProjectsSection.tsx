@@ -3,6 +3,7 @@ import { Activity, ExternalLink, X } from "lucide-react";
 import { PROJECTS_DATA, WINS_DATA } from "../data/teamData";
 import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
 import { useReveal } from "../hooks/useReveal";
+import ResponsiveImage from "./ResponsiveImage";
 import type { Project } from "../types";
 
 interface ProjectsSectionProps {
@@ -208,8 +209,9 @@ function FeaturedSpread({ project, isEven, onOpen }: SpreadProps) {
                 : "-bottom-4 -left-4 bg-(--accent) md:-bottom-6 md:-left-6"
             }`}
           />
-          <img
+          <ResponsiveImage
             src={projectBadgeImage(project)}
+            sizes="(min-width: 1024px) 60vw, 100vw"
             width="960"
             height="540"
             loading="lazy"

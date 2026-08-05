@@ -11,7 +11,7 @@ import {
 import { WINS_DATA } from "../data/teamData";
 import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
 import { useReveal } from "../hooks/useReveal";
-import { getImageSrcSet } from "../utils/images";
+import ResponsiveImage from "./ResponsiveImage";
 import type { WinRecord } from "../types";
 
 const tracks = [
@@ -188,9 +188,8 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
 
             {activeWin.images.length > 0 ? (
               <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-lg bg-(--muted)">
-                <img
+                <ResponsiveImage
                   src={activeWin.images[activeImageIndex]}
-                  srcSet={getImageSrcSet(activeWin.images[activeImageIndex])}
                   sizes="(min-width: 768px) 42rem, 100vw"
                   width="960"
                   height="540"
@@ -322,9 +321,8 @@ function WinRow({ win, index, isEven, onOpen }: WinRowProps) {
             }`}
           />
           {win.images.length > 0 ? (
-            <img
+            <ResponsiveImage
               src={win.images[0]}
-              srcSet={getImageSrcSet(win.images[0])}
               sizes="(min-width: 1024px) 60vw, 100vw"
               width="960"
               height="540"

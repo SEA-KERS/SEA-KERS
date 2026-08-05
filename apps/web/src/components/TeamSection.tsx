@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import { CORE_TEAM_DATA, TEAM_MEMBERS_DATA } from "../data/teamData";
+import { TEAM_AVATAR_IDS } from "../data/imageRegistry";
 import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
-import { getImageSrcSet } from "../utils/images";
+import ResponsiveImage from "./ResponsiveImage";
 import type { TeamMember } from "../types";
 
 export default function TeamSection() {
@@ -95,9 +96,9 @@ export default function TeamSection() {
               <X aria-hidden="true" className="h-5 w-5" />
             </button>
             <div className="flex flex-col gap-5 pr-12 sm:flex-row sm:items-center">
-              <img
+              <ResponsiveImage
                 src={activeMember.avatar}
-                srcSet={getImageSrcSet(activeMember.avatar)}
+                registryId={TEAM_AVATAR_IDS[activeMember.id]}
                 sizes="8rem"
                 width="128"
                 height="128"
@@ -168,9 +169,9 @@ function RosterCard({ member, onOpen }: RosterCardProps) {
         aria-hidden="true"
         className="absolute inset-y-0 left-0 w-[82%] bg-(--primary) transition-colors duration-300 group-hover:bg-(--primary-hover)"
       />
-      <img
+      <ResponsiveImage
         src={member.avatar}
-        srcSet={getImageSrcSet(member.avatar)}
+        registryId={TEAM_AVATAR_IDS[member.id]}
         sizes="(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 45vw"
         width="480"
         height="640"
@@ -197,9 +198,9 @@ interface IndexRowProps {
 function IndexRow({ member, onOpen }: IndexRowProps) {
   return (
     <article className="grid gap-4 border-t border-(--border) py-7 md:grid-cols-12 md:items-center">
-      <img
+      <ResponsiveImage
         src={member.avatar}
-        srcSet={getImageSrcSet(member.avatar)}
+        registryId={TEAM_AVATAR_IDS[member.id]}
         sizes="4rem"
         width="64"
         height="64"

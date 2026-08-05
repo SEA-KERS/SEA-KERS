@@ -1,0 +1,34 @@
+{
+  "projectPath": "../../../apps/web",
+  "registryOut": "src/data/imageRegistry.ts",
+  "sourceRoot": "public/images",
+  "sizes": [
+    { "name": "mobile", "width": 480, "device": "Phones (max-width: 640px)" },
+    { "name": "tablet", "width": 960, "device": "Tablets (641px-1024px)" },
+    { "name": "desktop", "width": 1920, "device": "Desktops (min-width: 1025px)" }
+  ],
+  "qualities": {
+    "avif": 55,
+    "webp": 80,
+    "jpeg": 82
+  },
+  "r2": {
+    "accountId": "8032cf81455c3a06d2995f40a386e0ba",
+    "bucketName": "sea-kers-images",
+    "publicUrl": "https://img.team-seakers.com"
+  },
+  "teamSeeds": [
+    { "memberId": "arjun-s", "name": "ARJUN_S" },
+    { "memberId": "meera-v", "name": "MEERA_V" },
+    { "memberId": "rohan-k", "name": "ROHAN_K" },
+    { "memberId": "zayn-x", "name": "ZAYN_X" },
+    { "memberId": "ananya-r", "name": "ANANYA_R" },
+    { "memberId": "dev-p", "name": "DEV_P" },
+    { "memberId": "kabir-m", "name": "KABIR_M" },
+    { "memberId": "tara-s", "name": "TARA_S" },
+    { "memberId": "vikram-n", "name": "VIKRAM_N" },
+    { "memberId": "riya-k", "name": "RIYA_K" },
+    { "memberId": "siddharth-b", "name": "SIDDHARTH_B" },
+    { "memberId": "neha-g", "name": "NEHA_G" }
+  ]
+}
