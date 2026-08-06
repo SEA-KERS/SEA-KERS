@@ -541,6 +541,7 @@ html.dark .brand-tile {
   --voxel-base: var(--primary);
   --voxel-dark: color-mix(in oklab, var(--primary) 60%, #000);
   --voxel-shadow: color-mix(in oklab, var(--primary) 35%, #000);
+
   animation: voxel-spin 6s linear infinite;
 }
 

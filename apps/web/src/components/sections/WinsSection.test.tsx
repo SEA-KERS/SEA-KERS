@@ -43,4 +43,39 @@ describe("WinsSection win dialog", () => {
     expect(onSelectProject).toHaveBeenCalledWith("moondream-voice");
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
+
+  it("resets text view state when opening a new win after toggling view mode", async () => {
+    const onSelectProject = vi.fn();
+    const user = userEvent.setup();
+    render(<WinsSection onSelectProject={onSelectProject} />);
+
+    const firstTrigger = screen.getAllByRole("button", {
+      name: /View details for/i,
+    })[0];
+    await user.click(firstTrigger);
+
+    const firstDialog = await screen.findByRole("dialog");
+    const viewToggle = within(firstDialog).getByRole("button", {
+      name: /Switch to text view/i,
+    });
+    await user.click(viewToggle);
+    expect(viewToggle).toHaveAccessibleName(/Switch to image view/i);
+
+    const closeButton = within(firstDialog).getByRole("button", {
+      name: "Close win details",
+    });
+    await user.click(closeButton);
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+
+    const secondTrigger = screen.getAllByRole("button", {
+      name: /View details for/i,
+    })[1];
+    await user.click(secondTrigger);
+
+    const secondDialog = await screen.findByRole("dialog");
+    const secondViewToggle = within(secondDialog).getByRole("button", {
+      name: /Switch to text view/i,
+    });
+    expect(secondViewToggle).toHaveAccessibleName(/Switch to text view/i);
+  });
 });

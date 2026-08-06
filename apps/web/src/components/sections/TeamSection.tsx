@@ -161,7 +161,7 @@ function SpotlightGlimmer() {
     <>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-10 bg-(--card) transition-[clip-path] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+        className="pointer-events-none absolute inset-0 z-10 bg-(--card) transition-[clip-path] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
         style={{
           clipPath: active ? "inset(100% 0 0 0)" : "inset(0 0 0 0)",
         }}
@@ -171,7 +171,7 @@ function SpotlightGlimmer() {
         className="pointer-events-none absolute inset-0 z-20 overflow-hidden"
       >
         <div
-          className={`absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          className={`absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${
             active ? "translate-y-[100%]" : "translate-y-0"
           }`}
         >

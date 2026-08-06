@@ -9,10 +9,10 @@ vi.mock("../layout/Navbar", () => ({
 }));
 vi.mock("../layout/Footer", () => ({ default: () => null }));
 vi.mock("../hero/Hero", () => ({ default: () => null }));
-vi.mock("../sections/WinsSection", () => ({ default: () => null }));
-vi.mock("../sections/ProjectsSection", () => ({ default: () => null }));
-vi.mock("../sections/TeamSection", () => ({ default: () => null }));
-vi.mock("../sections/MissionSection", () => ({ default: () => null }));
+vi.mock("../sections/WinsSection", () => ({ default: () => <section id="wins-section" /> }));
+vi.mock("../sections/ProjectsSection", () => ({ default: () => <section id="projects-section" /> }));
+vi.mock("../sections/TeamSection", () => ({ default: () => <section id="team-section" /> }));
+vi.mock("../sections/MissionSection", () => ({ default: () => <section id="about-section" /> }));
 vi.mock("../sections/StatsBand", () => ({ default: () => null }));
 
 const renderHome = async () => {
@@ -43,5 +43,20 @@ describe("HomePage URL hash navigation", () => {
       window.dispatchEvent(new HashChangeEvent("hashchange"));
     });
     expect(screen.getByTestId("active-tab")).toHaveTextContent("all");
+  });
+
+  it("finds section anchor during lazy component load via Suspense fallback", async () => {
+    await renderHome();
+    const winsAnchor = document.getElementById("wins-section");
+    expect(winsAnchor).toBeInTheDocument();
+
+    const projectsAnchor = document.getElementById("projects-section");
+    expect(projectsAnchor).toBeInTheDocument();
+
+    const teamAnchor = document.getElementById("team-section");
+    expect(teamAnchor).toBeInTheDocument();
+
+    const aboutAnchor = document.getElementById("about-section");
+    expect(aboutAnchor).toBeInTheDocument();
   });
 });

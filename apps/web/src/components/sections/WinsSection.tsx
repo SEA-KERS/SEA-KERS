@@ -52,6 +52,7 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
   });
 
   const openWin = (win: WinRecord) => {
+    setShowText(false);
     setActiveWin(win);
   };
 
