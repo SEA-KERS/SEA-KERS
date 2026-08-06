@@ -23,16 +23,17 @@
  * FINISH: unreviewed and undocumented is unfinished; this build ends with
  *   the finish review, the verdict, and DESIGN.md.
  */
-import { useEffect, useState } from "react";
-import Footer from "./Footer";
-import Hero from "./Hero";
-import MissionSection from "./MissionSection";
-import Navbar from "./Navbar";
-import ProjectsSection from "./ProjectsSection";
-import StatsBand from "./StatsBand";
-import TeamSection from "./TeamSection";
-import WinsSection from "./WinsSection";
-import type { SectionId, Theme } from "../types";
+import { lazy, Suspense, useEffect, useState } from "react";
+import Footer from "../layout/Footer";
+import Hero from "../hero/Hero";
+import Navbar from "../layout/Navbar";
+import StatsBand from "../sections/StatsBand";
+import type { SectionId, Theme } from "../../types";
+
+const WinsSection = lazy(() => import("../sections/WinsSection"));
+const ProjectsSection = lazy(() => import("../sections/ProjectsSection"));
+const TeamSection = lazy(() => import("../sections/TeamSection"));
+const MissionSection = lazy(() => import("../sections/MissionSection"));
 
 const getSectionIdFromHash = (hash: string): SectionId => {
   switch (hash) {
@@ -128,13 +129,21 @@ export default function HomePage() {
       <main id="main-content" tabIndex={-1}>
         <Hero theme={theme} onOpenRecord={handleOpenRecord} />
         <StatsBand />
-        <WinsSection onSelectProject={handleSelectProject} />
-        <ProjectsSection
-          selectedProjectId={selectedProjectId}
-          onClose={() => setSelectedProjectId(null)}
-        />
-        <TeamSection />
-        <MissionSection />
+        <Suspense fallback={<div id="wins-section" className="min-h-16" aria-hidden="true" />}>
+          <WinsSection onSelectProject={handleSelectProject} />
+        </Suspense>
+        <Suspense fallback={<div id="projects-section" className="min-h-16" aria-hidden="true" />}>
+          <ProjectsSection
+            selectedProjectId={selectedProjectId}
+            onClose={() => setSelectedProjectId(null)}
+          />
+        </Suspense>
+        <Suspense fallback={<div id="team-section" className="min-h-16" aria-hidden="true" />}>
+          <TeamSection />
+        </Suspense>
+        <Suspense fallback={<div id="about-section" className="min-h-16" aria-hidden="true" />}>
+          <MissionSection />
+        </Suspense>
       </main>
       <Footer setActiveTab={setActiveTab} />
     </div>

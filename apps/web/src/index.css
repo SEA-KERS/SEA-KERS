@@ -4,7 +4,8 @@
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url("@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2") format("woff2-variations");
+  src: url("@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2")
+    format("woff2-variations");
 }
 
 @font-face {
@@ -12,7 +13,8 @@
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url("@fontsource-variable/archivo/files/archivo-latin-wght-normal.woff2") format("woff2-variations");
+  src: url("@fontsource-variable/archivo/files/archivo-latin-wght-normal.woff2")
+    format("woff2-variations");
 }
 
 @theme {
@@ -95,8 +97,8 @@ html.dark {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
   background: var(--background);
+  overflow-x: clip;
 }
 
 body {
@@ -108,7 +110,10 @@ body {
   font-family: "Instrument Sans Variable", "Instrument Sans", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  transition: background-color 250ms ease, color 250ms ease;
+  overflow-x: clip;
+  transition:
+    background-color 250ms ease,
+    color 250ms ease;
 }
 
 button,
@@ -132,7 +137,35 @@ a {
   color: var(--primary-foreground);
 }
 
+/* Global custom scrollbar: deep navy track with a crimson thumb, applied
+   uniformly across the whole site in both themes. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) #030624;
+}
 
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #030624;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border: 3px solid #030624;
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: #030624;
+}
 
 .skip-link {
   position: fixed;
@@ -179,6 +212,14 @@ a {
   background: var(--card);
 }
 
+/* Translucent variant for panels that sit over imagery: keeps text readable
+   while letting the image show through. */
+.editorial-panel--translucent {
+  background: color-mix(in oklab, var(--card) 90%, transparent);
+  backdrop-filter: blur(0.75rem);
+  -webkit-backdrop-filter: blur(0.75rem);
+}
+
 .brand-logo-tile {
   display: grid;
   place-items: center;
@@ -208,8 +249,11 @@ html.dark .brand-tile {
   border-radius: 0.5rem;
   padding: 0.625rem 1.25rem;
   font-weight: 700;
-  transition: background-color 250ms ease, color 250ms ease,
-    border-color 250ms ease, transform 250ms ease;
+  transition:
+    background-color 250ms ease,
+    color 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
 }
 
 .button-primary {
@@ -271,7 +315,9 @@ html.dark .brand-tile {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  transition: color 250ms ease, border-color 250ms ease;
+  transition:
+    color 250ms ease,
+    border-color 250ms ease;
 }
 
 .index-link:hover {
@@ -326,6 +372,7 @@ html.dark .brand-tile {
   padding: 1rem;
 }
 
+/* Legacy dialog panel: includes padding and native overflow handling (used by ProjectsSection). */
 .dialog-panel {
   position: relative;
   width: min(100%, 46rem);
@@ -336,14 +383,232 @@ html.dark .brand-tile {
   background: var(--popover);
   color: var(--foreground);
   padding: clamp(1.25rem, 4vw, 2rem);
-  box-shadow: 0 18px 60px rgb(3 6 36 / 0.35);
+}
+
+/* Dialog popup positioning: fixed + centered above the backdrop so the panel
+   never scrolls with the page and always paints over the dimmed layer. */
+.dialog-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 70;
+  box-shadow:
+    0 1px 2px rgb(3 6 36 / 0.4),
+    0 8px 16px -4px rgb(3 6 36 / 0.5);
+  animation: dialog-enter 200ms ease-out both;
+}
+
+@keyframes dialog-enter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 0.5rem));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Scrollable footer inside the win detail dialog: native scrollbar hidden, a
+   slim custom thumb fades in on hover/scroll only when the footer overflows. */
+.modal-footer-scroll-root {
+  position: relative;
+  --scroll-area-corner-height: 0px;
+  --scroll-area-corner-width: 0px;
+}
+
+.modal-footer-scroll-viewport {
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+
+@media (min-width: 48rem) {
+  .modal-footer-scroll-viewport {
+    max-height: 26vh;
+  }
+}
+
+.modal-footer-scroll-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-footer-scrollbar {
+  width: 3px;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.modal-footer-scroll-root:hover .modal-footer-scrollbar[data-has-overflow-y],
+.modal-footer-scrollbar[data-hovering],
+.modal-footer-scrollbar[data-scrolling] {
+  opacity: 1;
+}
+
+.modal-footer-scroll-thumb {
+  width: 100%;
+  height: var(--scroll-area-thumb-height);
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--muted-foreground) 55%, transparent);
+}
+
+.modal-footer-scroll-thumb:hover {
+  background: color-mix(in oklab, var(--muted-foreground) 80%, transparent);
+}
+
+/* Modal scrollbar: hidden at rest, revealed on hover or keyboard focus so it
+   never competes with the content. The container stays keyboard-scrollable and
+   the crimson thumb keeps brand contrast when shown. */
+.modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.modal-scroll:hover,
+.modal-scroll:focus-visible {
+  scrollbar-color: var(--primary) transparent;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: 3px solid transparent;
+}
+
+.modal-scroll:hover::-webkit-scrollbar-thumb,
+.modal-scroll:focus-visible::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-color: #030624;
+}
+
+/* Reveal the footer thumb when a keyboard user focuses its scroll viewport. */
+.modal-footer-scroll-viewport:focus-visible ~ .modal-footer-scrollbar {
+  opacity: 1;
+}
+
+/* Wins modal stage: image + text panes. On small screens the panes stack so the
+   full record fits the taller portrait viewport; on md+ the image becomes a
+   sliding overlay and the two panes meet at a skewed (diagonal) edge. */
+.modal-stage {
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-stage-image {
+  position: relative;
+  z-index: 10;
+  aspect-ratio: 16 / 10;
+}
+
+.modal-stage-text {
+  position: relative;
+  z-index: 0;
+}
+
+@media (min-width: 48rem) {
+  .modal-stage-image {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
+    transition:
+      transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0s;
+  }
+
+  .modal-stage-image.is-hidden {
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition:
+      transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+      visibility 0s linear 500ms;
+  }
+}
+
+/* Voxel cube toggle indicator. The cube keeps spinning in both modes; every
+   face is crimson in image mode and accent blue in text mode, and clicking the
+   button briefly speeds up the spin. */
+.voxel-cube {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(-35deg);
+  --voxel-light: color-mix(in oklab, var(--primary) 85%, #fff);
+  --voxel-base: var(--primary);
+  --voxel-dark: color-mix(in oklab, var(--primary) 60%, #000);
+  --voxel-shadow: color-mix(in oklab, var(--primary) 35%, #000);
+
+  animation: voxel-spin 6s linear infinite;
+}
+
+.voxel-cube.is-text {
+  --voxel-light: color-mix(in oklab, var(--accent) 85%, #fff);
+  --voxel-base: var(--accent);
+  --voxel-dark: color-mix(in oklab, var(--accent) 60%, #000);
+  --voxel-shadow: color-mix(in oklab, var(--accent) 35%, #000);
+}
+
+.voxel-cube.is-fast {
+  animation-duration: 0.45s;
+}
+
+@keyframes voxel-spin {
+  from {
+    transform: rotateX(-20deg) rotateY(-35deg);
+  }
+  to {
+    transform: rotateX(-20deg) rotateY(325deg);
+  }
+}
+
+.voxel-cube__face {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgb(255 255 255 / 0.3);
+  transition: background-color 300ms ease;
+}
+
+.voxel-cube__face--front {
+  background: var(--voxel-base);
+  transform: translateZ(0.5rem);
+}
+
+.voxel-cube__face--back {
+  background: var(--voxel-base);
+  transform: rotateY(180deg) translateZ(0.5rem);
+}
+
+.voxel-cube__face--right {
+  background: var(--voxel-dark);
+  transform: rotateY(90deg) translateZ(0.5rem);
+}
+
+.voxel-cube__face--left {
+  background: var(--voxel-dark);
+  transform: rotateY(-90deg) translateZ(0.5rem);
+}
+
+.voxel-cube__face--top {
+  background: var(--voxel-light);
+  transform: rotateX(90deg) translateZ(0.5rem);
+}
+
+.voxel-cube__face--bottom {
+  background: var(--voxel-shadow);
+  transform: rotateX(-90deg) translateZ(0.5rem);
 }
 
 /* Scroll reveal. */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 500ms ease-out, transform 500ms ease-out;
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms ease-out;
 }
 
 .reveal.is-visible {

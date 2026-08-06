@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Activity, ExternalLink, X } from "lucide-react";
-import { PROJECTS_DATA, WINS_DATA } from "../data/teamData";
-import { useAccessibleDialog } from "../hooks/useAccessibleDialog";
-import { useReveal } from "../hooks/useReveal";
-import ResponsiveImage from "./ResponsiveImage";
-import type { Project } from "../types";
+import { PROJECTS_DATA } from "../../data/projects";
+import { WINS_DATA } from "../../data/wins";
+import { useAccessibleDialog } from "../../hooks/useAccessibleDialog";
+import { useReveal } from "../../hooks/useReveal";
+import ResponsiveImage from "../ui/ResponsiveImage";
+import type { Project } from "../../types";
 
 interface ProjectsSectionProps {
   selectedProjectId: string | null;
@@ -66,7 +67,7 @@ export default function ProjectsSection({
           <p className="kicker text-(--band-accent) md:col-span-3">
             Publishing soon
           </p>
-          <p className="text-sm leading-6 text-(--band-muted) md:col-span-9 md:text-base">
+          <p className="max-w-xl text-sm leading-6 text-(--band-muted) md:col-span-9 md:text-base">
             Public access and source code releases are currently undergoing
             final documentation and preparation.
           </p>
@@ -148,7 +149,9 @@ export default function ProjectsSection({
               {activeProject.description}
             </p>
 
-            <p className="meta-label mt-6">{metricLine(activeProject)}</p>
+            <p className="mt-6 text-sm font-semibold text-(--muted-foreground)">
+              {metricLine(activeProject)}
+            </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
               {activeProject.techStack.map((technology) => (
@@ -205,8 +208,8 @@ function FeaturedSpread({ project, isEven, onOpen }: SpreadProps) {
             aria-hidden="true"
             className={`absolute h-20 w-20 md:h-28 md:w-28 ${
               isEven
-                ? "-right-4 -top-4 bg-(--primary) md:-right-6 md:-top-6"
-                : "-bottom-4 -left-4 bg-(--accent) md:-bottom-6 md:-left-6"
+                ? "-right-3 -top-3 bg-(--primary) sm:-right-4 sm:-top-4 md:-right-6 md:-top-6"
+                : "-bottom-3 -left-3 bg-(--accent) sm:-bottom-4 sm:-left-4 md:-bottom-6 md:-left-6"
             }`}
           />
           <ResponsiveImage
@@ -229,7 +232,9 @@ function FeaturedSpread({ project, isEven, onOpen }: SpreadProps) {
         <p className="mt-4 leading-7 text-(--muted-foreground)">
           {project.tagline}
         </p>
-        <p className="meta-label mt-5">{metricLine(project)}</p>
+        <p className="mt-5 text-sm font-semibold text-(--muted-foreground)">
+          {metricLine(project)}
+        </p>
         <div className="mt-5 flex flex-wrap gap-2">
           {project.techStack.map((technology) => (
             <span key={technology} className="tag">
@@ -263,7 +268,7 @@ function IndexRow({ project, index, onOpen }: IndexRowProps) {
         {String(index + 1).padStart(2, "0")}
       </p>
       <div className="md:col-span-5">
-        <h4 className="font-headline text-2xl font-bold">{project.title}</h4>
+        <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
         <p className="mt-2 text-sm leading-6 text-(--muted-foreground)">
           {project.tagline}
         </p>

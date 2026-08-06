@@ -71,7 +71,7 @@ function Chapter({ index, title, copy }: ChapterProps) {
       <h3 className="font-headline text-2xl font-bold md:col-span-4 md:text-3xl">
         {title}
       </h3>
-      <p className="leading-8 text-(--band-muted) md:col-span-7">{copy}</p>
+      <p className="max-w-xl leading-8 text-(--band-muted) md:col-span-7">{copy}</p>
     </article>
   );
 }

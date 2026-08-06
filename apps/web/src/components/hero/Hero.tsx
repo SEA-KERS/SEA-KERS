@@ -1,6 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import CyberDotMatrix from "./CyberDotMatrix";
-import type { Theme } from "../types";
+import type { Theme } from "../../types";
 
 interface HeroProps {
   theme: Theme;
