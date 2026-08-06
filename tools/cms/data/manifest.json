@@ -7067,41 +7067,68 @@
     {
       "id": "team/pramoda-s-r",
       "collection": "team",
-      "sourcePath": "../../../apps/web/public/images/team/pramoda-s-r.jpg",
+      "sourcePath": "originals/team/pramoda-s-r.png",
       "alt": "",
-      "width": 200,
-      "height": 200,
+      "width": 780,
+      "height": 780,
       "variants": [
         {
           "format": "avif",
-          "width": 200,
-          "height": 200,
-          "bytes": 12371,
-          "key": "team/pramoda-s-r-200.avif",
-          "uploadedAt": "2026-08-05T07:54:23.162Z",
-          "etag": "\"3151383b9f03477c99b4c89379a01c3b\""
+          "width": 480,
+          "height": 480,
+          "bytes": 18800,
+          "key": "team/pramoda-s-r-c4318321-480.avif",
+          "uploadedAt": "2026-08-06T05:47:36.118Z",
+          "etag": "\"e69bd60bbb2672b314f1f99a56c5aebd\""
         },
         {
           "format": "webp",
-          "width": 200,
-          "height": 200,
-          "bytes": 14232,
-          "key": "team/pramoda-s-r-200.webp",
-          "uploadedAt": "2026-08-05T07:54:23.562Z",
-          "etag": "\"72ba25a0f84a179ec773e7382e4b5877\""
+          "width": 480,
+          "height": 480,
+          "bytes": 26402,
+          "key": "team/pramoda-s-r-f5f471ea-480.webp",
+          "uploadedAt": "2026-08-06T05:47:37.047Z",
+          "etag": "\"51a2f18f2b43943dfbc5217b8d74a3d9\""
         },
         {
           "format": "jpeg",
-          "width": 200,
-          "height": 200,
-          "bytes": 13443,
-          "key": "team/pramoda-s-r-200.jpeg",
-          "uploadedAt": "2026-08-05T07:54:23.979Z",
-          "etag": "\"231142454059626a0dd0c7a749f50014\""
+          "width": 480,
+          "height": 480,
+          "bytes": 34116,
+          "key": "team/pramoda-s-r-9d3f032c-480.jpeg",
+          "uploadedAt": "2026-08-06T05:47:37.955Z",
+          "etag": "\"16baa07fe3559f141cd5c356d40024d5\""
+        },
+        {
+          "format": "avif",
+          "width": 780,
+          "height": 780,
+          "bytes": 32763,
+          "key": "team/pramoda-s-r-a586e362-780.avif",
+          "uploadedAt": "2026-08-06T05:47:38.836Z",
+          "etag": "\"878b45902070595bd54985c3107713e1\""
+        },
+        {
+          "format": "webp",
+          "width": 780,
+          "height": 780,
+          "bytes": 50894,
+          "key": "team/pramoda-s-r-e0148645-780.webp",
+          "uploadedAt": "2026-08-06T05:47:39.743Z",
+          "etag": "\"9a45d930607e1465626f0c7dae0f8cbd\""
+        },
+        {
+          "format": "jpeg",
+          "width": 780,
+          "height": 780,
+          "bytes": 71241,
+          "key": "team/pramoda-s-r-e7f7aa8c-780.jpeg",
+          "uploadedAt": "2026-08-06T05:47:40.611Z",
+          "etag": "\"df3072fea09e75cab676180e3dfe20bb\""
         }
       ],
       "createdAt": "2026-08-05T07:51:52.404Z",
-      "updatedAt": "2026-08-05T08:10:37.986Z",
+      "updatedAt": "2026-08-06T05:47:40.612Z",
       "ref": "pramoda-s-r"
     },
     {

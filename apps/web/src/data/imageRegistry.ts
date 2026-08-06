@@ -6227,35 +6227,59 @@ export const IMAGE_REGISTRY: Record<string, ImageRecord> = {
     "id": "team/pramoda-s-r",
     "collection": "team",
     "alt": "",
-    "width": 200,
-    "height": 200,
+    "width": 780,
+    "height": 780,
     "variants": [
       {
         "format": "avif",
-        "width": 200,
-        "height": 200,
-        "bytes": 12371,
+        "width": 480,
+        "height": 480,
+        "bytes": 18800,
         "uploaded": true,
-        "key": "team/pramoda-s-r-200.avif"
+        "key": "team/pramoda-s-r-c4318321-480.avif"
       },
       {
         "format": "webp",
-        "width": 200,
-        "height": 200,
-        "bytes": 14232,
+        "width": 480,
+        "height": 480,
+        "bytes": 26402,
         "uploaded": true,
-        "key": "team/pramoda-s-r-200.webp"
+        "key": "team/pramoda-s-r-f5f471ea-480.webp"
       },
       {
         "format": "jpeg",
-        "width": 200,
-        "height": 200,
-        "bytes": 13443,
+        "width": 480,
+        "height": 480,
+        "bytes": 34116,
         "uploaded": true,
-        "key": "team/pramoda-s-r-200.jpeg"
+        "key": "team/pramoda-s-r-9d3f032c-480.jpeg"
+      },
+      {
+        "format": "avif",
+        "width": 780,
+        "height": 780,
+        "bytes": 32763,
+        "uploaded": true,
+        "key": "team/pramoda-s-r-a586e362-780.avif"
+      },
+      {
+        "format": "webp",
+        "width": 780,
+        "height": 780,
+        "bytes": 50894,
+        "uploaded": true,
+        "key": "team/pramoda-s-r-e0148645-780.webp"
+      },
+      {
+        "format": "jpeg",
+        "width": 780,
+        "height": 780,
+        "bytes": 71241,
+        "uploaded": true,
+        "key": "team/pramoda-s-r-e7f7aa8c-780.jpeg"
       }
     ],
-    "legacyPath": "/images/team/pramoda-s-r.jpg"
+    "legacyPath": "/images/team/pramoda-s-r.png"
   },
   "team/priya": {
     "id": "team/priya",
