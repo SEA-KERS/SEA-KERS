@@ -1,3 +1,4 @@
+/* oxlint-disable react/only-export-components */
 import type { ComponentProps } from "react";
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 

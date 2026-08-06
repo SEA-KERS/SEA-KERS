@@ -1,12 +1,13 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["pnpm-lock.yaml"],
-  "globalEnv": ["CI", "NODE_ENV"],
+  "globalEnv": ["NODE_ENV"],
+  "globalPassThroughEnv": ["CI"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"],
-      "env": ["VITE_SITE_URL", "VITE_CLOUDFLARE_ANALYTICS_TOKEN"]
+      "passThroughEnv": ["VITE_SITE_URL", "VITE_CLOUDFLARE_ANALYTICS_TOKEN"]
     },
     "lint": {},
     "typecheck": {},

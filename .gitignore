@@ -37,3 +37,6 @@ apps/web/public/images
 
 # Turbo cache (tools/turbo-cache)
 tools/turbo-cache/.env
+
+# Local environment overrides
+apps/web/.env

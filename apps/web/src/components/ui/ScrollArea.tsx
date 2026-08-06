@@ -1,3 +1,4 @@
+/* oxlint-disable react/only-export-components */
 import type { ComponentProps } from "react";
 import { ScrollArea as ScrollAreaPrimitive } from "@base-ui/react/scroll-area";
 
