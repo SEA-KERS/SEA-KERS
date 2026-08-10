@@ -72,11 +72,11 @@ surface; no submission or backend channels exist.
 
 Confirmed aspirational: all win records (hackathon names, placements,
 locations, dates), team member names, handles, bios, project metrics, and
-hero stats (20+ wins, $350K+, 12.4K+ nodes, 100% open source) are preview
-content, not verified real-world facts. Avatars and project images are
-placeholder stock photos from Unsplash. No real press, testimonials, data,
-or deployed project links exist. Future work must not present these as
-verified claims or add new fabricated specifics.
+hero stats (20+ wins, ₹18L+ grants & prizes, 14 build systems, 100% open
+source) are preview content, not verified real-world facts. Avatars and
+project images are placeholder stock photos from Unsplash. No real press,
+testimonials, data, or deployed project links exist. Future work must not
+present these as verified claims or add new fabricated specifics.
 
 ## Product Principles
 
