@@ -1,7 +1,7 @@
 const record = [
-  { value: "15+", label: "Hackathon wins" },
-  { value: "₹19L+", label: "Grants & prizes" },
-  { value: "12.4K+", label: "Active nodes" },
+  { value: "20+", label: "Hackathon wins" },
+  { value: "₹18L+", label: "Grants & prizes" },
+  { value: "14", label: "Build systems" },
   { value: "100%", label: "Open source" },
 ] as const;
 

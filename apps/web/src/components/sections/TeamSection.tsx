@@ -22,7 +22,7 @@ export default function TeamSection() {
       }}
     >
       <section
-        id="team-section"
+        id="team"
         aria-labelledby="team-title"
         className="border-t border-(--border) px-4 py-24 md:px-8 md:py-32"
       >

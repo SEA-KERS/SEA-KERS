@@ -71,7 +71,7 @@ export default function WinsSection({ onSelectProject }: WinsSectionProps) {
       }}
     >
       <section
-        id="wins-section"
+        id="wins"
         aria-labelledby="wins-title"
         className="px-4 py-24 md:px-8 md:py-32"
       >
@@ -362,34 +362,34 @@ function WinRow({ win, index, isEven, onOpen }: WinRowProps) {
               <span className="mt-2 text-sm font-semibold uppercase tracking-wider">No Photo Available</span>
             </div>
           )}
-        </div>
-        <div className="editorial-panel editorial-panel--translucent mt-4 p-6 sm:absolute sm:-bottom-10 sm:left-8 sm:right-auto sm:mt-0 sm:max-w-md md:p-7">
-          <p className="kicker">{win.award}</p>
-          <h3 className="mt-2 font-headline text-2xl font-bold md:text-3xl">
-            {win.hackathon}
-          </h3>
-          <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted-foreground)">
-            <span className="inline-flex items-center gap-1">
-              <MapPin aria-hidden="true" className="h-4 w-4" />
-              {win.location}
-            </span>
-            <span className="inline-flex items-center gap-1">
-              <Calendar aria-hidden="true" className="h-4 w-4" />
-              {win.date}
-            </span>
-            {win.prize ? (
-              <span className="inline-flex items-center rounded-md bg-(--primary-soft) px-2 py-0.5 text-xs font-bold text-(--primary-text)">
-                {win.prize}
+          <div className="editorial-panel editorial-panel--translucent mt-4 p-6 sm:absolute sm:-bottom-10 sm:left-8 sm:right-auto sm:mt-0 sm:max-w-md md:p-7">
+            <p className="kicker">{win.award}</p>
+            <h3 className="mt-2 font-headline text-2xl font-bold md:text-3xl">
+              {win.hackathon}
+            </h3>
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted-foreground)">
+              <span className="inline-flex items-center gap-1">
+                <MapPin aria-hidden="true" className="h-4 w-4" />
+                {win.location}
               </span>
-            ) : null}
-          </p>
-          <Dialog.Trigger
-            onClick={() => onOpen(win)}
-            className="index-link mt-4"
-            aria-label={`View details for ${win.hackathon}: ${win.title}`}
-          >
-            View details
-          </Dialog.Trigger>
+              <span className="inline-flex items-center gap-1">
+                <Calendar aria-hidden="true" className="h-4 w-4" />
+                {win.date}
+              </span>
+              {win.prize ? (
+                <span className="inline-flex items-center rounded-md bg-(--primary-soft) px-2 py-0.5 text-xs font-bold text-(--primary-text)">
+                  {win.prize}
+                </span>
+              ) : null}
+            </p>
+            <Dialog.Trigger
+              onClick={() => onOpen(win)}
+              className="index-link mt-4"
+              aria-label={`View details for ${win.hackathon}: ${win.title}`}
+            >
+              View details
+            </Dialog.Trigger>
+          </div>
         </div>
       </div>
       <div className={`lg:col-span-4 ${isEven ? "" : "lg:order-1"}`}>
