@@ -37,13 +37,13 @@ const MissionSection = lazy(() => import("../sections/MissionSection"));
 
 const getSectionIdFromHash = (hash: string): SectionId => {
   switch (hash) {
-    case "#wins-section":
+    case "#wins":
       return "wins";
-    case "#projects-section":
+    case "#projects":
       return "projects";
-    case "#team-section":
+    case "#team":
       return "team";
-    case "#about-section":
+    case "#about":
       return "about";
     default:
       return "all";
@@ -102,7 +102,7 @@ export default function HomePage() {
   const handleSelectProject = (projectId: string) => {
     setSelectedProjectId(projectId);
     setActiveTab("projects");
-    document.getElementById("projects-section")?.scrollIntoView({
+    document.getElementById("projects")?.scrollIntoView({
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ? "auto"
         : "smooth",
@@ -111,7 +111,7 @@ export default function HomePage() {
 
   const handleOpenRecord = () => {
     setActiveTab("wins");
-    document.getElementById("wins-section")?.scrollIntoView({
+    document.getElementById("wins")?.scrollIntoView({
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ? "auto"
         : "smooth",
@@ -129,19 +129,19 @@ export default function HomePage() {
       <main id="main-content" tabIndex={-1}>
         <Hero theme={theme} onOpenRecord={handleOpenRecord} />
         <StatsBand />
-        <Suspense fallback={<div id="wins-section" className="min-h-16" aria-hidden="true" />}>
+        <Suspense fallback={<div id="wins" className="min-h-16" aria-hidden="true" />}>
           <WinsSection onSelectProject={handleSelectProject} />
         </Suspense>
-        <Suspense fallback={<div id="projects-section" className="min-h-16" aria-hidden="true" />}>
+        <Suspense fallback={<div id="projects" className="min-h-16" aria-hidden="true" />}>
           <ProjectsSection
             selectedProjectId={selectedProjectId}
             onClose={() => setSelectedProjectId(null)}
           />
         </Suspense>
-        <Suspense fallback={<div id="team-section" className="min-h-16" aria-hidden="true" />}>
+        <Suspense fallback={<div id="team" className="min-h-16" aria-hidden="true" />}>
           <TeamSection />
         </Suspense>
-        <Suspense fallback={<div id="about-section" className="min-h-16" aria-hidden="true" />}>
+        <Suspense fallback={<div id="about" className="min-h-16" aria-hidden="true" />}>
           <MissionSection />
         </Suspense>
       </main>

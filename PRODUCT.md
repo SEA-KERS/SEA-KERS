@@ -23,8 +23,8 @@ understanding what it builds and why.
 ## Positioning
 
 An India-based collegiate engineering collective with no lab, funding, or
-institutional advantage, competing on the world stage across AI, Web3, and
-decentralized infrastructure. Preview record: 20+ hackathon wins, $350K+ in
+institutional advantage, competing on the world stage across AI, computer
+vision, and robotics. Preview record: 20+ hackathon wins, ₹18L+ in
 grants and prizes. The claim that disciplines engineering from outside the
 establishment can beat the best is the story the site tells and must not
 contradict.
@@ -87,7 +87,8 @@ verified claims or add new fabricated specifics.
 2. Aspirational content stays framed as preview: nothing may read as a
    verified claim until the owner supplies real facts.
 3. Mission before stack: "young minds innovating from India to the world"
-   anchors messaging; technology areas (AI, Web3, DePIN) serve that story.
+   anchors messaging; technology areas (AI, computer vision, robotics) serve
+   that story.
 4. Discipline wins: rigorous, accessible, fast — the same standards the team
    claims in its projects apply to the site itself.
 

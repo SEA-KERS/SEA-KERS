@@ -10,7 +10,7 @@ interface HeroProps {
 export default function Hero({ theme, onOpenRecord }: HeroProps) {
   return (
     <section
-      id="hero-section"
+      id="home"
       aria-labelledby="hero-title"
       className="px-4 pb-10 pt-36 md:px-8 md:pt-44"
     >
@@ -31,7 +31,7 @@ export default function Hero({ theme, onOpenRecord }: HeroProps) {
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-8 text-(--muted-foreground) md:text-xl">
               Team SEA-KERS builds rigorous open technology and competes on the
-              world stage across AI, Web3, and decentralized infrastructure.
+              world stage across AI, computer vision, and robotics.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <button type="button" onClick={onOpenRecord} className="button-primary">
@@ -61,7 +61,7 @@ export default function Hero({ theme, onOpenRecord }: HeroProps) {
         <div className="mt-16 flex flex-wrap items-center justify-between gap-3 border-t border-(--border) pt-5 md:mt-24">
           <span className="kicker">Engineering collective / India</span>
           <span className="meta-label hidden sm:inline">
-            AI · Web3 · DePIN
+            AI · Computer Vision · Robotics
           </span>
           <span className="meta-label">Open technology, world stage</span>
         </div>

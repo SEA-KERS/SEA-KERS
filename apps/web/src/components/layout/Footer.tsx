@@ -18,7 +18,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
         <div className="grid gap-12 border-t border-(--band-border) pt-14 md:grid-cols-12">
           <div className="md:col-span-6">
             <a
-              href="#hero-section"
+              href="#home"
               onClick={() => setActiveTab("all")}
               className="inline-flex min-h-11 items-center gap-2.5 rounded-lg font-headline text-xl font-bold"
             >
@@ -29,7 +29,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
             </a>
             <p className="mt-5 max-w-sm text-sm leading-6 text-(--band-muted)">
               An engineering collective pursuing open technology across AI,
-              Web3, and decentralized infrastructure.
+              computer vision, and robotics.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
               {footerLinks.map(([label, id]) => (
                 <li key={id}>
                   <a
-                    href={`#${id}-section`}
+                    href={`#${id}`}
                     onClick={() => setActiveTab(id)}
                     className="inline-flex min-h-11 items-center text-(--band-muted) transition-colors hover:text-(--band-foreground)"
                   >

@@ -43,7 +43,7 @@ export default function ProjectsSection({
 
   return (
     <section
-      id="projects-section"
+      id="projects"
       aria-labelledby="projects-title"
       className="border-t border-(--border) px-4 py-24 md:px-8 md:py-32"
     >

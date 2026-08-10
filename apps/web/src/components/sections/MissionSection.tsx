@@ -16,7 +16,7 @@ const chapters = [
 export default function MissionSection() {
   return (
     <section
-      id="about-section"
+      id="about"
       aria-labelledby="mission-title"
       className="bg-(--band) px-4 py-24 text-(--band-foreground) md:px-8 md:py-32"
     >

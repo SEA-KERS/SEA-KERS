@@ -65,7 +65,7 @@ export default function Navbar({
     >
       <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3 md:px-8">
         <a
-          href="#hero-section"
+          href="#home"
           onClick={() => navigate("all")}
           className="flex min-h-11 items-center gap-2.5 rounded-lg pr-2 font-headline font-bold tracking-tight"
           aria-label="Team SEA-KERS home"
@@ -85,7 +85,7 @@ export default function Navbar({
             return (
               <a
                 key={item.id}
-                href={`#${item.id}-section`}
+                href={`#${item.id}`}
                 onClick={() => navigate(item.id)}
                 aria-current={isActive ? "location" : undefined}
                 className={`flex min-h-11 shrink-0 items-center border-b-2 px-3 text-[0.6875rem] font-bold uppercase tracking-[0.16em] transition-colors ${
@@ -144,7 +144,7 @@ export default function Navbar({
                 <a
                   key={item.id}
                   ref={index === 0 ? firstLinkRef : undefined}
-                  href={`#${item.id}-section`}
+                  href={`#${item.id}`}
                   onClick={() => navigate(item.id)}
                   aria-current={isActive ? "location" : undefined}
                   className={`flex min-h-11 items-center gap-3 border-b border-(--border) py-3 text-sm font-bold uppercase tracking-[0.16em] transition-colors ${
