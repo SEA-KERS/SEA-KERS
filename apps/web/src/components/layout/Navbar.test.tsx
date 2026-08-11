@@ -3,24 +3,44 @@ import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import Navbar from "./Navbar";
 
+vi.mock("@tanstack/react-router", () => ({
+  Link: ({
+    to,
+    hash,
+    children,
+    ...props
+  }: {
+    to: string;
+    hash?: string;
+    children: React.ReactNode;
+  }) => (
+    <a href={`${to}${hash ? `#${hash}` : ""}`} {...props}>
+      {children}
+    </a>
+  ),
+  useLocation: () => ({ pathname: "/", hash: "" }),
+}));
+
 const props = {
-  activeTab: "all" as const,
-  setActiveTab: vi.fn(),
   theme: "dark" as const,
   toggleTheme: vi.fn(),
 };
 
 describe("Navbar", () => {
-  it("renders the desktop navigation links", () => {
+  it("renders the desktop navigation links pointing at their pages", () => {
     render(<Navbar {...props} />);
     const nav = screen.getByRole("navigation", { name: "Primary navigation" });
     expect(nav).toBeInTheDocument();
-    for (const label of ["Wins", "Projects", "Team", "About"]) {
-      expect(within(nav).getByRole("link", { name: label })).toBeInTheDocument();
-    }
-    expect(
-      screen.queryByRole("navigation", { name: "Mobile navigation" }),
-    ).not.toBeInTheDocument();
+
+    const winsLink = within(nav).getByRole("link", { name: "Wins" });
+    const projectsLink = within(nav).getByRole("link", { name: "Projects" });
+    const teamLink = within(nav).getByRole("link", { name: "Team" });
+    const aboutLink = within(nav).getByRole("link", { name: "About" });
+
+    expect(winsLink).toHaveAttribute("href", "/wins");
+    expect(projectsLink).toHaveAttribute("href", "/projects");
+    expect(teamLink).toHaveAttribute("href", "/team");
+    expect(aboutLink).toHaveAttribute("href", "/#about");
   });
 
   it("opens and closes the mobile menu from the toggle", async () => {
@@ -47,7 +67,7 @@ describe("Navbar", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("navigates from the mobile menu and closes it", async () => {
+  it("closes the mobile menu when a navigation link is activated", async () => {
     const user = userEvent.setup();
     render(<Navbar {...props} />);
     await user.click(screen.getByRole("button", { name: "Open menu" }));
@@ -57,7 +77,6 @@ describe("Navbar", () => {
     });
     await user.click(within(mobileNav).getByRole("link", { name: /Projects/ }));
 
-    expect(props.setActiveTab).toHaveBeenCalledWith("projects");
     expect(
       screen.queryByRole("navigation", { name: "Mobile navigation" }),
     ).not.toBeInTheDocument();
