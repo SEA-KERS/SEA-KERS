@@ -74,7 +74,7 @@ function ProjectIndexRow({ project, index }: ProjectIndexRowProps) {
       aria-label={`${project.title}: ${project.tagline}. View the specification.`}
       className="reveal group grid gap-4 border-t border-(--border) py-9 md:grid-cols-12 md:items-center md:gap-6"
     >
-      <p className="font-headline text-3xl font-black tracking-[-0.02em] text-(--muted) md:col-span-1">
+      <p className="font-headline text-3xl font-black tracking-[-0.02em] text-(--muted-foreground) md:col-span-1">
         {formatIndex(index + 1)}
       </p>
       <div className="md:col-span-5">

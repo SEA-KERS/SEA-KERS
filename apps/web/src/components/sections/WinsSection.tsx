@@ -77,7 +77,7 @@ function PodiumCard({ win, rank, isMiddle }: PodiumCardProps) {
       }`}
     >
       <div className="flex items-baseline justify-between gap-4">
-        <span className="font-headline text-5xl font-black tracking-[-0.02em] text-(--muted) md:text-6xl">
+        <span className="font-headline text-5xl font-black tracking-[-0.02em] text-(--muted-foreground) md:text-6xl">
           {formatIndex(rank)}
         </span>
         {prizeHeadline ? (

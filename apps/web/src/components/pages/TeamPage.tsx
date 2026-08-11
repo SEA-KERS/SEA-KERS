@@ -11,21 +11,20 @@ export default function TeamPage() {
   return (
     <div className="px-4 pb-24 pt-32 md:px-8 md:pb-32 md:pt-44">
       <div className="mx-auto max-w-7xl">
-        <header className="flex flex-wrap items-end justify-between gap-6">
-          <div>
-            <p className="kicker">Engineering roster</p>
-            <h1 className="mt-4 font-headline text-4xl font-bold leading-[1.02] tracking-[-0.02em] md:text-6xl">
-              The crew
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-(--muted-foreground)">
-              Twelve engineers, one collective. Every member of the SEA-KERS
-              crew, one by one.
+          <header className="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <h1 className="font-headline text-4xl font-bold leading-[1.02] tracking-[-0.02em] md:text-6xl">
+                The crew
+              </h1>
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-(--muted-foreground)">
+                Twelve engineers, one collective. Every member of the SEA-KERS
+                crew, one by one.
+              </p>
+            </div>
+            <p className="meta-label">
+              Engineering roster / {TEAM_DATA.length} members
             </p>
-          </div>
-          <p className="meta-label">
-            {TEAM_DATA.length} members / one collective
-          </p>
-        </header>
+          </header>
 
         <div className="mt-16">
           {TEAM_DATA.map((member, index) => (
@@ -74,7 +73,7 @@ function MemberRow({ member, index }: MemberRowProps) {
       </div>
 
       <div className={`md:col-span-8 ${isEven ? "" : "md:order-1"}`}>
-        <p className="font-headline text-3xl font-black tracking-[-0.02em] text-(--muted) md:text-5xl">
+        <p className="font-headline text-3xl font-black tracking-[-0.02em] text-(--muted-foreground) md:text-5xl">
           {formatIndex(index + 1)}
         </p>
         <h2 className="mt-2 font-headline text-2xl font-black uppercase leading-[0.95] tracking-[-0.02em] md:text-3xl">

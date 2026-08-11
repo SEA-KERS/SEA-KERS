@@ -152,7 +152,7 @@ function WinArchiveRow({
   onToggle,
 }: WinArchiveRowProps) {
   const revealRef = useReveal<HTMLElement>();
-  const { mounted, visible } = usePresence(expanded);
+  const { mounted, enter } = usePresence(expanded);
 
   return (
     <article
@@ -204,10 +204,9 @@ function WinArchiveRow({
       {mounted ? (
         <div
           id={`win-detail-${win.id}`}
-          hidden={!visible}
-          aria-hidden={!visible}
-          className={`grid gap-8 overflow-hidden border-t border-(--border) pb-10 pt-8 transition-[opacity,transform] duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none md:grid-cols-12 md:gap-10 ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+          aria-hidden={!enter}
+          className={`grid gap-8 overflow-hidden border-t border-(--border) pb-10 pt-8 md:grid-cols-12 md:gap-10 ${
+            enter ? "detail-enter" : "detail-exit"
           }`}
         >
           <div className="md:col-span-7">
