@@ -3,20 +3,22 @@ import type { Theme } from "../types";
 
 const THEME_STORAGE_KEY = "sea-kers-theme";
 
-const getInitialTheme = (): Theme => {
-  if (typeof window === "undefined") return "light";
-  const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
-  if (stored === "dark" || stored === "light") return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-
+/** SSR-safe theme state. Initial state is always "light" on both server and
+ *  client so hydration never mismatches; the stored / system preference is
+ *  applied in an effect after mount. */
 export function useTheme(): { theme: Theme; toggleTheme: () => void } {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+    setTheme(
+      storedTheme === "dark" || storedTheme === "light"
+        ? storedTheme
+        : media.matches
+          ? "dark"
+          : "light",
+    );
 
     const syncSystemTheme = (event: MediaQueryListEvent) => {
       if (!window.localStorage.getItem(THEME_STORAGE_KEY)) {
