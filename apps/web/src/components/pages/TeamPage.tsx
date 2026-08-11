@@ -42,13 +42,15 @@ interface MemberRowProps {
 }
 
 function MemberRow({ member, index }: MemberRowProps) {
-  const revealRef = useReveal<HTMLElement>();
+  const { ref: revealRef, isVisible } = useReveal<HTMLElement>();
   const isEven = index % 2 === 0;
 
   return (
     <article
       ref={revealRef}
-      className="reveal grid gap-8 border-t border-(--border) py-10 md:grid-cols-12 md:items-center md:gap-10 md:py-14"
+      className={`reveal grid gap-8 border-t border-(--border) py-10 md:grid-cols-12 md:items-center md:gap-10 md:py-14 ${
+        isVisible ? "is-visible" : ""
+      }`}
     >
       <div className={`relative md:col-span-4 ${isEven ? "" : "md:order-2"}`}>
         <div

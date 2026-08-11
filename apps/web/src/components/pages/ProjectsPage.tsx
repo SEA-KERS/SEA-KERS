@@ -161,13 +161,15 @@ function ProjectArchiveRow({
   expanded,
   onToggle,
 }: ProjectArchiveRowProps) {
-  const revealRef = useReveal<HTMLElement>();
+  const { ref: revealRef, isVisible } = useReveal<HTMLElement>();
   const { mounted, enter } = usePresence(expanded);
 
   return (
     <article
       ref={revealRef}
-      className={`reveal border-t border-(--border) ${expanded ? "bg-(--card)" : ""}`}
+      className={`reveal border-t border-(--border) ${isVisible ? "is-visible" : ""} ${
+        expanded ? "bg-(--card)" : ""
+      }`}
     >
       <button
         type="button"

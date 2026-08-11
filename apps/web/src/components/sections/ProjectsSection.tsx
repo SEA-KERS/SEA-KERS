@@ -65,14 +65,16 @@ interface ProjectIndexRowProps {
 }
 
 function ProjectIndexRow({ project, index }: ProjectIndexRowProps) {
-  const revealRef = useReveal<HTMLAnchorElement>();
+  const { ref: revealRef, isVisible } = useReveal<HTMLAnchorElement>();
 
   return (
     <Link
       to="/projects"
       ref={revealRef}
       aria-label={`${project.title}: ${project.tagline}. View the specification.`}
-      className="reveal group grid gap-4 border-t border-(--border) py-9 md:grid-cols-12 md:items-center md:gap-6"
+      className={`reveal group grid gap-4 border-t border-(--border) py-9 md:grid-cols-12 md:items-center md:gap-6 ${
+        isVisible ? "is-visible" : ""
+      }`}
     >
       <p className="font-headline text-3xl font-black tracking-[-0.02em] text-(--muted-foreground) md:col-span-1">
         {formatIndex(index + 1)}

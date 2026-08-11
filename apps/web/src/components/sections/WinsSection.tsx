@@ -64,7 +64,7 @@ interface PodiumCardProps {
 }
 
 function PodiumCard({ win, rank, isMiddle }: PodiumCardProps) {
-  const revealRef = useReveal<HTMLAnchorElement>();
+  const { ref: revealRef, isVisible } = useReveal<HTMLAnchorElement>();
   const prizeHeadline = formatPrizeHeadline(win.prize);
 
   return (
@@ -73,8 +73,8 @@ function PodiumCard({ win, rank, isMiddle }: PodiumCardProps) {
       ref={revealRef}
       aria-label={`${win.hackathon}: ${win.title}. View the full win record.`}
       className={`reveal group block border-t-2 border-(--primary) pt-6 ${
-        isMiddle ? "md:translate-y-10" : ""
-      }`}
+        isVisible ? "is-visible" : ""
+      } ${isMiddle ? "md:translate-y-10" : ""}`}
     >
       <div className="flex items-baseline justify-between gap-4">
         <span className="font-headline text-5xl font-black tracking-[-0.02em] text-(--muted-foreground) md:text-6xl">
