@@ -21,4 +21,19 @@ describe("TeamPage roster", () => {
       screen.getAllByRole("link", { name: "Connect on LinkedIn" }),
     ).toHaveLength(12);
   });
+
+  it("highlights the member targeted by the hash deep-link", () => {
+    render(<TeamPage activeMemberId="pramoda-s-r" />);
+
+    const row = screen
+      .getByRole("heading", { name: "Pramoda S R" })
+      .closest("article");
+    expect(row).toHaveClass("bg-(--card)");
+    expect(row).toHaveAttribute("id", "pramoda-s-r");
+
+    const otherRow = screen
+      .getByRole("heading", { name: "Kashvi V" })
+      .closest("article");
+    expect(otherRow).not.toHaveClass("bg-(--card)");
+  });
 });

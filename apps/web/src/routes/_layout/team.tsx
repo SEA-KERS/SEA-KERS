@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+/* oxlint-disable react/only-export-components */
+import { createFileRoute, useLocation } from "@tanstack/react-router";
 import TeamPage from "../../components/pages/TeamPage";
 import { SITE_CONFIG } from "../../config/site";
 
@@ -8,6 +9,7 @@ const description =
 const pageUrl = SITE_CONFIG.url ? `${SITE_CONFIG.url}/team` : null;
 
 export const Route = createFileRoute("/_layout/team")({
+  component: TeamRoute,
   head: () => ({
     meta: [
       { title },
@@ -25,5 +27,9 @@ export const Route = createFileRoute("/_layout/team")({
     ],
     links: pageUrl ? [{ rel: "canonical", href: pageUrl }] : [],
   }),
-  component: TeamPage,
 });
+
+function TeamRoute() {
+  const hash = useLocation().hash;
+  return <TeamPage activeMemberId={hash || null} />;
+}

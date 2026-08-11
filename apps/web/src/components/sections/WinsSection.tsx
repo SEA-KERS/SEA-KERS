@@ -70,6 +70,7 @@ function PodiumCard({ win, rank, isMiddle }: PodiumCardProps) {
   return (
     <Link
       to="/wins"
+      hash={win.id}
       ref={revealRef}
       aria-label={`${win.hackathon}: ${win.title}. View the full win record.`}
       className={`reveal group block border-t-2 border-(--primary) pt-6 ${

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { useReveal } from "../../hooks/useReveal";
 import { TEAM_AVATAR_IDS } from "../../data/imageRegistry";
 import { TEAM_DATA } from "../../data/team";
@@ -5,9 +6,14 @@ import ResponsiveImage from "../ui/ResponsiveImage";
 import { LinkedinIcon } from "../ui/SocialIcons";
 import type { TeamMember } from "../../types";
 
-const formatIndex = (index: number) => String(index).padStart(2, "0");
+const formatIndex = (index: number) => String(index + 1).padStart(2, "0");
 
-export default function TeamPage() {
+interface TeamPageProps {
+  /** Member id from the URL hash (#member-id) to scroll to and highlight. */
+  activeMemberId?: string | null;
+}
+
+export default function TeamPage({ activeMemberId }: TeamPageProps) {
   return (
     <div className="px-4 pb-24 pt-32 md:px-8 md:pb-32 md:pt-44">
       <div className="mx-auto max-w-7xl">
@@ -28,7 +34,12 @@ export default function TeamPage() {
 
         <div className="mt-16">
           {TEAM_DATA.map((member, index) => (
-            <MemberRow key={member.id} member={member} index={index} />
+            <MemberRow
+              key={member.id}
+              member={member}
+              index={index}
+              isActive={member.id === activeMemberId}
+            />
           ))}
         </div>
       </div>
@@ -39,18 +50,34 @@ export default function TeamPage() {
 interface MemberRowProps {
   member: TeamMember;
   index: number;
+  isActive: boolean;
 }
 
-function MemberRow({ member, index }: MemberRowProps) {
+function MemberRow({ member, index, isActive }: MemberRowProps) {
   const { ref: revealRef, isVisible } = useReveal<HTMLElement>();
+  const rowRef = useRef<HTMLElement | null>(null);
   const isEven = index % 2 === 0;
+
+  useEffect(() => {
+    if (!isActive) return;
+    rowRef.current?.scrollIntoView?.({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+      block: "center",
+    });
+  }, [isActive]);
 
   return (
     <article
-      ref={revealRef}
+      ref={(node) => {
+        revealRef.current = node;
+        rowRef.current = node;
+      }}
+      id={member.id}
       className={`reveal grid gap-8 border-t border-(--border) py-10 md:grid-cols-12 md:items-center md:gap-10 md:py-14 ${
         isVisible ? "is-visible" : ""
-      }`}
+      } ${isActive ? "bg-(--card)" : ""}`}
     >
       <div className={`relative md:col-span-4 ${isEven ? "" : "md:order-2"}`}>
         <div

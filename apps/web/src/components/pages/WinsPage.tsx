@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* oxlint-disable react/only-export-components */
 import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -18,7 +18,7 @@ import { WINS_DATA } from "../../data/wins";
 import { topByPrize } from "../../utils/prize";
 import type { WinRecord } from "../../types";
 
-const tracks = [
+export const tracks = [
   { label: "All", value: "ALL" },
   { label: "E-Cell", value: "ecell" },
   { label: "IEEE", value: "IEEE" },
@@ -27,21 +27,33 @@ const tracks = [
   { label: "HAL", value: "HAL" },
 ] as const;
 
-type TrackFilter = (typeof tracks)[number]["value"];
+export type TrackFilter = (typeof tracks)[number]["value"];
 
 const RANKED_WINS = topByPrize(WINS_DATA, WINS_DATA.length);
 
 const formatIndex = (index: number) => String(index + 1).padStart(2, "0");
 
-export default function WinsPage() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedTrack, setSelectedTrack] = useState<TrackFilter>("ALL");
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+interface WinsPageProps {
+  track: TrackFilter;
+  q: string;
+  expandedId: string | null;
+  onTrackChange: (track: TrackFilter) => void;
+  onSearchChange: (q: string) => void;
+  onToggleExpand: (id: string | null) => void;
+}
 
+export default function WinsPage({
+  track,
+  q,
+  expandedId,
+  onTrackChange,
+  onSearchChange,
+  onToggleExpand,
+}: WinsPageProps) {
   const filteredWins = RANKED_WINS.filter((win) => {
-    const query = searchQuery.toLowerCase();
+    const query = q.toLowerCase();
     return (
-      (selectedTrack === "ALL" || win.track === selectedTrack) &&
+      (track === "ALL" || win.track === track) &&
       [win.title, win.hackathon, win.description, win.location].some((value) =>
         value.toLowerCase().includes(query),
       )
@@ -74,8 +86,8 @@ export default function WinsPage() {
               <input
                 id="win-search"
                 type="search"
-                value={searchQuery}
-                onChange={(event) => setSearchQuery(event.target.value)}
+                value={q}
+                onChange={(event) => onSearchChange(event.target.value)}
                 className="input-control search-control"
                 placeholder="Project or hackathon"
               />
@@ -88,19 +100,19 @@ export default function WinsPage() {
           role="group"
           aria-label="Filter wins by track"
         >
-          {tracks.map((track) => (
+          {tracks.map((trackOption) => (
             <button
-              key={track.value}
+              key={trackOption.value}
               type="button"
-              onClick={() => setSelectedTrack(track.value)}
-              aria-pressed={selectedTrack === track.value}
+              onClick={() => onTrackChange(trackOption.value)}
+              aria-pressed={track === trackOption.value}
               className={`min-h-11 shrink-0 border-b-2 pb-3 text-[0.6875rem] font-bold uppercase tracking-[0.16em] transition-colors ${
-                selectedTrack === track.value
+                track === trackOption.value
                   ? "border-(--primary) text-(--accent-text)"
                   : "border-transparent text-(--muted-foreground) hover:text-(--foreground)"
               }`}
             >
-              {track.label}
+              {trackOption.label}
             </button>
           ))}
         </div>
@@ -117,9 +129,7 @@ export default function WinsPage() {
               index={index}
               expanded={expandedId === win.id}
               onToggle={() =>
-                setExpandedId((current) =>
-                  current === win.id ? null : win.id,
-                )
+                onToggleExpand(expandedId === win.id ? null : win.id)
               }
             />
           ))}
@@ -157,7 +167,8 @@ function WinArchiveRow({
   return (
     <article
       ref={revealRef}
-      className={`reveal border-t border-(--border) ${isVisible ? "is-visible" : ""} ${
+      id={win.id}
+      className={`reveal scroll-mt-28 border-t border-(--border) ${isVisible ? "is-visible" : ""} ${
         expanded ? "bg-(--card)" : ""
       }`}
     >
@@ -166,7 +177,7 @@ function WinArchiveRow({
         onClick={onToggle}
         aria-expanded={expanded}
         aria-controls={`win-detail-${win.id}`}
-        className="grid w-full gap-3 py-7 text-left md:grid-cols-12 md:items-center md:gap-6"
+        className="grid w-full gap-3 py-7 px-5 text-left md:grid-cols-12 md:items-center md:gap-6"
       >
         <p className="meta-label md:col-span-1">{formatIndex(index)}</p>
         <div className="md:col-span-4">
@@ -207,7 +218,7 @@ function WinArchiveRow({
         <div
           id={`win-detail-${win.id}`}
           aria-hidden={!enter}
-          className={`grid gap-8 overflow-hidden border-t border-(--border) pb-10 pt-8 md:grid-cols-12 md:gap-10 ${
+          className={`grid gap-8 overflow-hidden border-t border-(--border) pb-10 pt-8 px-5 md:grid-cols-12 md:gap-10 ${
             enter ? "detail-enter" : "detail-exit"
           }`}
         >

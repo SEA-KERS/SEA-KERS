@@ -5,13 +5,15 @@ import ProjectsSection from "./ProjectsSection";
 vi.mock("@tanstack/react-router", () => ({
   Link: ({
     to,
+    hash,
     children,
     ...props
   }: {
     to: string;
+    hash?: string;
     children: React.ReactNode;
   }) => (
-    <a href={to} {...props}>
+    <a href={`${to}${hash ? `#${hash}` : ""}`} {...props}>
       {children}
     </a>
   ),
@@ -33,6 +35,19 @@ describe("ProjectsSection home preview", () => {
     ]) {
       expect(screen.getAllByRole("link", { name })).toBeTruthy();
     }
+  });
+
+  it("deep-links each featured project to its hash on the projects page", () => {
+    render(<ProjectsSection />);
+
+    const neonMesh = screen.getByRole("link", { name: /NEON_MESH PROTOCOL/ });
+    expect(neonMesh).toHaveAttribute("href", "/projects#neon-mesh");
+
+    const kodex = screen.getByRole("link", { name: /KODEX_SENTINEL/ });
+    expect(kodex).toHaveAttribute("href", "/projects#kodex-sentinel");
+
+    const zkPulse = screen.getByRole("link", { name: /ZK_PULSE SHIELD/ });
+    expect(zkPulse).toHaveAttribute("href", "/projects#zk-pulse");
   });
 
   it("links to the full project archive", () => {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* oxlint-disable react/only-export-components */
 import {
   Activity,
   ChevronDown,
@@ -11,7 +11,7 @@ import { PROJECTS_DATA } from "../../data/projects";
 import { GithubIcon } from "../ui/SocialIcons";
 import type { Project } from "../../types";
 
-const FILTER_GROUPS = [
+export const FILTER_GROUPS = [
   {
     label: "All",
     matches: () => true,
@@ -32,19 +32,31 @@ const FILTER_GROUPS = [
   },
 ] as const;
 
-type FilterGroup = (typeof FILTER_GROUPS)[number];
+export type FilterGroup = (typeof FILTER_GROUPS)[number];
 
 const formatIndex = (index: number) => String(index + 1).padStart(2, "0");
 
-export default function ProjectsPage() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeGroup, setActiveGroup] = useState<FilterGroup>(FILTER_GROUPS[0]);
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+interface ProjectsPageProps {
+  group: FilterGroup;
+  q: string;
+  expandedId: string | null;
+  onGroupChange: (group: FilterGroup) => void;
+  onSearchChange: (q: string) => void;
+  onToggleExpand: (id: string | null) => void;
+}
 
+export default function ProjectsPage({
+  group,
+  q,
+  expandedId,
+  onGroupChange,
+  onSearchChange,
+  onToggleExpand,
+}: ProjectsPageProps) {
   const filteredProjects = PROJECTS_DATA.filter((project) => {
-    const query = searchQuery.toLowerCase();
+    const query = q.toLowerCase();
     return (
-      activeGroup.matches(project) &&
+      group.matches(project) &&
       [project.title, project.tagline, project.description, ...project.techStack].some(
         (value) => value.toLowerCase().includes(query),
       )
@@ -77,8 +89,8 @@ export default function ProjectsPage() {
               <input
                 id="project-search"
                 type="search"
-                value={searchQuery}
-                onChange={(event) => setSearchQuery(event.target.value)}
+                value={q}
+                onChange={(event) => onSearchChange(event.target.value)}
                 className="input-control search-control"
                 placeholder="Project, stack, or spec"
               />
@@ -87,19 +99,19 @@ export default function ProjectsPage() {
         </header>
 
         <div className="mt-12 flex items-center gap-4 overflow-x-auto border-b border-(--border) sm:gap-7">
-          {FILTER_GROUPS.map((group) => (
+          {FILTER_GROUPS.map((groupOption) => (
             <button
-              key={group.label}
+              key={groupOption.label}
               type="button"
-              onClick={() => setActiveGroup(group)}
-              aria-pressed={activeGroup === group}
+              onClick={() => onGroupChange(groupOption)}
+              aria-pressed={group === groupOption}
               className={`min-h-11 shrink-0 border-b-2 pb-3 text-[0.6875rem] font-bold uppercase tracking-[0.16em] transition-colors ${
-                activeGroup === group
+                group === groupOption
                   ? "border-(--primary) text-(--accent-text)"
                   : "border-transparent text-(--muted-foreground) hover:text-(--foreground)"
               }`}
             >
-              {group.label}
+              {groupOption.label}
             </button>
           ))}
         </div>
@@ -127,9 +139,7 @@ export default function ProjectsPage() {
               index={index}
               expanded={expandedId === project.id}
               onToggle={() =>
-                setExpandedId((current) =>
-                  current === project.id ? null : project.id,
-                )
+                onToggleExpand(expandedId === project.id ? null : project.id)
               }
             />
           ))}
@@ -167,7 +177,8 @@ function ProjectArchiveRow({
   return (
     <article
       ref={revealRef}
-      className={`reveal border-t border-(--border) ${isVisible ? "is-visible" : ""} ${
+      id={project.id}
+      className={`reveal scroll-mt-28 border-t border-(--border) ${isVisible ? "is-visible" : ""} ${
         expanded ? "bg-(--card)" : ""
       }`}
     >
@@ -176,7 +187,7 @@ function ProjectArchiveRow({
         onClick={onToggle}
         aria-expanded={expanded}
         aria-controls={`project-detail-${project.id}`}
-        className="grid w-full gap-3 py-7 text-left md:grid-cols-12 md:items-center md:gap-6"
+        className="grid w-full gap-3 py-7 px-5 text-left md:grid-cols-12 md:items-center md:gap-6"
       >
         <p className="meta-label md:col-span-1">{formatIndex(index)}</p>
         <div className="md:col-span-4">
@@ -198,7 +209,7 @@ function ProjectArchiveRow({
             {project.stars} stars
           </p>
         </div>
-        <span className="md:col-span-1 md:justify-self-end">
+        <span className="md:col-span-2 md:justify-self-end">
           <ChevronDown
             aria-hidden="true"
             className={`h-5 w-5 text-(--muted-foreground) transition-transform duration-300 ${
@@ -212,7 +223,7 @@ function ProjectArchiveRow({
         <div
           id={`project-detail-${project.id}`}
           aria-hidden={!enter}
-          className={`grid gap-8 overflow-hidden border-t border-(--border) pb-10 pt-8 md:grid-cols-12 md:gap-10 ${
+          className={`grid gap-8 overflow-hidden border-t border-(--border) pb-10 pt-8 px-5 md:grid-cols-12 md:gap-10 ${
             enter ? "detail-enter" : "detail-exit"
           }`}
         >

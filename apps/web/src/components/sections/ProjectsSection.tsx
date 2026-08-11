@@ -72,6 +72,7 @@ function ProjectIndexRow({ project, index }: ProjectIndexRowProps) {
   return (
     <Link
       to="/projects"
+      hash={project.id}
       ref={revealRef}
       aria-label={`${project.title}: ${project.tagline}. View the specification.`}
       className={`reveal group grid gap-4 border-t border-(--border) py-9 md:grid-cols-12 md:items-center md:gap-6 ${
