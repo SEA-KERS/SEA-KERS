@@ -1,26 +1,35 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
+/** Scroll reveal via IntersectionObserver. The `is-visible` flag is React
+ *  state so it lives inside the className React renders — never added with
+ *  classList imperatively, which React would wipe on the next re-render.
+ *  Returns `{ ref, isVisible }`; attach `ref` and render the `.is-visible`
+ *  class from `isVisible`. */
 export function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      element.classList.add("is-visible");
+    if (
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      setIsVisible(true);
       return;
     }
 
     if (typeof IntersectionObserver === "undefined") {
-      element.classList.add("is-visible");
+      setIsVisible(true);
       return;
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry?.isIntersecting) {
-          element.classList.add("is-visible");
+          setIsVisible(true);
           observer.disconnect();
         }
       },
@@ -30,5 +39,5 @@ export function useReveal<T extends HTMLElement>() {
     return () => observer.disconnect();
   }, []);
 
-  return ref;
+  return { ref, isVisible };
 }

@@ -1,46 +1,21 @@
-import { useEffect, useState } from "react";
-import { Activity, ExternalLink, X } from "lucide-react";
-import { PROJECTS_DATA } from "../../data/projects";
-import { WINS_DATA } from "../../data/wins";
-import { useAccessibleDialog } from "../../hooks/useAccessibleDialog";
+import { Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { useReveal } from "../../hooks/useReveal";
-import ResponsiveImage from "../ui/ResponsiveImage";
+import { PROJECTS_DATA } from "../../data/projects";
 import type { Project } from "../../types";
 
-interface ProjectsSectionProps {
-  selectedProjectId: string | null;
-  onClose: () => void;
-}
+const FEATURED_PROJECTS = PROJECTS_DATA.filter(
+  (project) => project.featured,
+).slice(0, 3);
 
 const metricLine = (project: Project) =>
   Object.entries(project.metrics)
     .map(([key, value]) => `${value} ${key}`)
     .join("  ·  ");
 
-export default function ProjectsSection({
-  selectedProjectId,
-  onClose,
-}: ProjectsSectionProps) {
-  const [activeProject, setActiveProject] = useState<Project | null>(null);
-  const closeActiveProject = () => {
-    setActiveProject(null);
-    onClose();
-  };
-  const { dialogRef, rememberTrigger } = useAccessibleDialog(
-    activeProject !== null,
-    closeActiveProject,
-  );
+const formatIndex = (index: number) => String(index).padStart(2, "0");
 
-  useEffect(() => {
-    if (!selectedProjectId) return;
-    setActiveProject(
-      PROJECTS_DATA.find((project) => project.id === selectedProjectId) ?? null,
-    );
-  }, [selectedProjectId]);
-
-  const featured = PROJECTS_DATA.filter((project) => project.featured);
-  const indexProjects = PROJECTS_DATA.filter((project) => !project.featured);
-
+export default function ProjectsSection() {
   return (
     <section
       id="projects"
@@ -55,246 +30,86 @@ export default function ProjectsSection({
               id="projects-title"
               className="mt-4 font-headline text-4xl font-bold leading-[1.02] tracking-[-0.02em] md:text-6xl"
             >
-              Our repositories
+              What we build
             </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-(--muted-foreground)">
+              Systems engineered with intent — from edge compute to
+              zero-knowledge protocols, three flagship builds open now.
+            </p>
           </div>
-          <p className="meta-label">
-            {PROJECTS_DATA.length} project specifications
-          </p>
+          <Link
+            to="/projects"
+            className="index-link"
+            aria-label={`View all ${PROJECTS_DATA.length} project specifications`}
+          >
+            View all {PROJECTS_DATA.length} specifications
+            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+          </Link>
         </div>
 
-        <div className="mt-12 grid gap-6 bg-(--band) px-6 py-7 text-(--band-foreground) md:grid-cols-12 md:items-center md:px-8">
-          <p className="kicker text-(--band-accent) md:col-span-3">
-            Publishing soon
-          </p>
-          <p className="max-w-xl text-sm leading-6 text-(--band-muted) md:col-span-9 md:text-base">
-            Public access and source code releases are currently undergoing
-            final documentation and preparation.
-          </p>
-        </div>
-
-        <div className="mt-20 space-y-28 md:space-y-36">
-          {featured.map((project, index) => (
-            <FeaturedSpread
+        <div className="mt-14">
+          {FEATURED_PROJECTS.map((project, index) => (
+            <ProjectIndexRow
               key={project.id}
               project={project}
-              isEven={index % 2 === 0}
-              onOpen={(event) => {
-                rememberTrigger(event.currentTarget);
-                setActiveProject(project);
-              }}
+              index={index}
             />
           ))}
         </div>
-
-        <div className="mt-20">
-          <p className="kicker">Specification index</p>
-          <div className="mt-6">
-            {indexProjects.map((project, index) => (
-              <IndexRow
-                key={project.id}
-                project={project}
-                index={index}
-                onOpen={(event) => {
-                  rememberTrigger(event.currentTarget);
-                  setActiveProject(project);
-                }}
-              />
-            ))}
-          </div>
-        </div>
       </div>
-
-      {activeProject ? (
-        <div
-          className="dialog-backdrop"
-          onMouseDown={(event) =>
-            event.target === event.currentTarget && closeActiveProject()
-          }
-        >
-          <div
-            ref={dialogRef}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="project-dialog-title"
-            aria-describedby="project-dialog-description"
-            tabIndex={-1}
-            className="dialog-panel"
-          >
-            <button
-              type="button"
-              onClick={closeActiveProject}
-              aria-label="Close project specification"
-              className="icon-button absolute right-4 top-4"
-            >
-              <X aria-hidden="true" className="h-5 w-5" />
-            </button>
-            <p className="kicker pr-12">
-              <Activity aria-hidden="true" className="h-4 w-4" />
-              Technical specification / {activeProject.category}
-            </p>
-            <h2
-              id="project-dialog-title"
-              className="mt-3 pr-12 font-headline text-3xl font-bold md:text-4xl"
-            >
-              {activeProject.title}
-            </h2>
-            <p className="mt-2 font-semibold text-(--primary)">
-              {activeProject.badge}
-            </p>
-            <p
-              id="project-dialog-description"
-              className="mt-5 leading-7 text-(--muted-foreground)"
-            >
-              {activeProject.description}
-            </p>
-
-            <p className="mt-6 text-sm font-semibold text-(--muted-foreground)">
-              {metricLine(activeProject)}
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-              {activeProject.techStack.map((technology) => (
-                <span key={technology} className="tag">
-                  {technology}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-(--border) pt-6">
-              <p className="text-sm text-(--muted-foreground)">
-                {activeProject.stars} stars / {activeProject.forks} forks
-              </p>
-              {activeProject.githubUrl ? (
-                <a
-                  href={activeProject.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="button-primary"
-                >
-                  Open repository
-                  <ExternalLink aria-hidden="true" className="h-4 w-4" />
-                </a>
-              ) : (
-                <span className="meta-label">
-                  Repository link coming soon
-                </span>
-              )}
-            </div>
-          </div>
-        </div>
-      ) : null}
     </section>
   );
 }
 
-interface SpreadProps {
-  project: Project;
-  isEven: boolean;
-  onOpen: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
-
-function FeaturedSpread({ project, isEven, onOpen }: SpreadProps) {
-  const revealRef = useReveal<HTMLElement>();
-
-  return (
-    <article
-      ref={revealRef}
-      className="reveal grid gap-10 lg:grid-cols-12 lg:items-center"
-    >
-      <div className={`lg:col-span-8 ${isEven ? "" : "lg:order-2"}`}>
-        <div className="relative">
-          <div
-            aria-hidden="true"
-            className={`absolute h-20 w-20 md:h-28 md:w-28 ${
-              isEven
-                ? "-right-3 -top-3 bg-(--primary) sm:-right-4 sm:-top-4 md:-right-6 md:-top-6"
-                : "-bottom-3 -left-3 bg-(--accent) sm:-bottom-4 sm:-left-4 md:-bottom-6 md:-left-6"
-            }`}
-          />
-          <ResponsiveImage
-            src={projectBadgeImage(project)}
-            sizes="(min-width: 1024px) 60vw, 100vw"
-            width="960"
-            height="540"
-            loading="lazy"
-            decoding="async"
-            alt=""
-            className="relative aspect-[16/9] w-full object-cover"
-          />
-        </div>
-      </div>
-      <div className={`lg:col-span-4 ${isEven ? "" : "lg:order-1"}`}>
-        <p className="kicker">{project.badge}</p>
-        <h3 className="mt-3 font-headline text-3xl font-bold leading-tight md:text-4xl">
-          {project.title}
-        </h3>
-        <p className="mt-4 leading-7 text-(--muted-foreground)">
-          {project.tagline}
-        </p>
-        <p className="mt-5 text-sm font-semibold text-(--muted-foreground)">
-          {metricLine(project)}
-        </p>
-        <div className="mt-5 flex flex-wrap gap-2">
-          {project.techStack.map((technology) => (
-            <span key={technology} className="tag">
-              {technology}
-            </span>
-          ))}
-        </div>
-        <button
-          type="button"
-          onClick={onOpen}
-          className="button-secondary mt-8"
-          aria-label={`Open specification for ${project.title}`}
-        >
-          Open specification
-        </button>
-      </div>
-    </article>
-  );
-}
-
-interface IndexRowProps {
+interface ProjectIndexRowProps {
   project: Project;
   index: number;
-  onOpen: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-function IndexRow({ project, index, onOpen }: IndexRowProps) {
+function ProjectIndexRow({ project, index }: ProjectIndexRowProps) {
+  const { ref: revealRef, isVisible } = useReveal<HTMLAnchorElement>();
+
   return (
-    <article className="grid gap-4 border-t border-(--border) py-8 md:grid-cols-12 md:items-center">
-      <p className="meta-label md:col-span-1">
-        {String(index + 1).padStart(2, "0")}
+    <Link
+      to="/projects"
+      hash={project.id}
+      ref={revealRef}
+      aria-label={`${project.title}: ${project.tagline}. View the specification.`}
+      className={`reveal group grid gap-4 border-t border-(--border) py-9 md:grid-cols-12 md:items-center md:gap-6 ${
+        isVisible ? "is-visible" : ""
+      }`}
+    >
+      <p className="font-headline text-3xl font-black tracking-[-0.02em] text-(--muted-foreground) md:col-span-1">
+        {formatIndex(index + 1)}
       </p>
       <div className="md:col-span-5">
-        <h3 className="font-headline text-2xl font-bold">{project.title}</h3>
-        <p className="mt-2 text-sm leading-6 text-(--muted-foreground)">
+        <h3 className="font-headline text-3xl font-bold leading-tight md:text-4xl">
+          {project.title}
+        </h3>
+        <p className="mt-2 text-sm leading-6 text-(--muted-foreground) md:max-w-md">
           {project.tagline}
         </p>
       </div>
       <div className="flex flex-wrap gap-2 md:col-span-3">
-        {project.techStack.slice(0, 3).map((technology) => (
-          <span key={technology} className="tag">
-            {technology}
+        {project.techStack.slice(0, 3).map((tech) => (
+          <span key={tech} className="tag">
+            {tech}
           </span>
         ))}
       </div>
-      <div className="flex items-center justify-between gap-4 md:col-span-3 md:justify-end">
-        <span className="meta-label hidden md:inline">{project.badge}</span>
-        <button
-          type="button"
-          onClick={onOpen}
-          className="index-link"
-          aria-label={`Open specification for ${project.title}`}
-        >
-          Spec
-        </button>
+      <div className="md:col-span-2">
+        <span className="rounded-md bg-(--primary-soft) px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em] text-(--primary-text)">
+          {project.badge}
+        </span>
+        <p className="mt-3 text-sm font-semibold text-(--muted-foreground)">
+          {metricLine(project)}
+        </p>
       </div>
-    </article>
+      <div className="flex justify-end md:col-span-1">
+        <span className="index-link border-b-2 border-transparent transition-colors group-hover:border-(--primary) group-hover:text-(--primary)">
+          Spec
+        </span>
+      </div>
+    </Link>
   );
 }
-
-const projectBadgeImage = (project: Project) =>
-  WINS_DATA.find((win) => win.projectRef === project.id)?.images[0] ??
-  "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=960&q=80";

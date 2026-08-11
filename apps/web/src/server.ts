@@ -1,5 +1,6 @@
 import handler, { createServerEntry } from "@tanstack/react-start/server-entry";
 import { SITE_CONFIG } from "./config/site";
+import { SECURITY_TXT_BODY } from "./config/security";
 import { IMAGE_BASE_URL } from "./data/imageRegistry";
 
 const imageSources = ["'self'", "data:", "blob:", "https://images.unsplash.com"];
@@ -46,8 +47,32 @@ export default createServerEntry({
     const siteUrl = SITE_CONFIG.url ?? requestUrl.origin;
 
     if (requestUrl.pathname === "/robots.txt") {
+      const body = [
+        "User-agent: *",
+        "Allow: /",
+        "",
+        "# Team SEA-KERS crawler policy",
+        "# Allow search engines to index and follow the whole site.",
+        "# AI crawlers are allowed: they may cite and link public records.",
+        "User-agent: GPTBot",
+        "Allow: /",
+        "User-agent: OAI-SearchBot",
+        "Allow: /",
+        "User-agent: ChatGPT-User",
+        "Allow: /",
+        "User-agent: PerplexityBot",
+        "Allow: /",
+        "User-agent: Google-Extended",
+        "Allow: /",
+        "User-agent: ClaudeBot",
+        "Allow: /",
+        "User-agent: Claude-Web",
+        "Allow: /",
+        "",
+        `Sitemap: ${siteUrl}/sitemap.xml`,
+      ].join("\n");
       return withSecurityHeaders(
-        new Response(`User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`, {
+        new Response(body, {
           headers: { "Content-Type": "text/plain; charset=utf-8" },
         }),
         requestUrl.protocol === "https:",
@@ -55,13 +80,34 @@ export default createServerEntry({
     }
 
     if (requestUrl.pathname === "/sitemap.xml") {
-      const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>${siteUrl}/</loc></url></urlset>`;
+      const pages = [
+        { path: "/", priority: "1.0", changefreq: "weekly" },
+        { path: "/wins", priority: "0.9", changefreq: "monthly" },
+        { path: "/projects", priority: "0.8", changefreq: "monthly" },
+        { path: "/team", priority: "0.7", changefreq: "monthly" },
+      ];
+      const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages
+        .map(
+          (page) =>
+            `<url><loc>${siteUrl}${page.path}</loc><changefreq>${page.changefreq}</changefreq><priority>${page.priority}</priority></url>`,
+        )
+        .join("")}</urlset>`;
       return withSecurityHeaders(
         new Response(body, {
           headers: {
             "Cache-Control": "public, max-age=3600",
             "Content-Type": "application/xml; charset=utf-8",
           },
+        }),
+        requestUrl.protocol === "https:",
+      );
+    }
+
+    if (requestUrl.pathname === "/.well-known/security.txt" ||
+        requestUrl.pathname === "/security.txt") {
+      return withSecurityHeaders(
+        new Response(SECURITY_TXT_BODY, {
+          headers: { "Content-Type": "text/plain; charset=utf-8" },
         }),
         requestUrl.protocol === "https:",
       );

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import HomePage from "../components/pages/HomePage";
-import { SITE_CONFIG } from "../config/site";
+import HomePage from "../../components/pages/HomePage";
+import { SITE_CONFIG } from "../../config/site";
 
 const title = "Team SEA-KERS | Engineering Collective in India";
 const description =
@@ -10,7 +10,7 @@ const socialPreviewUrl = SITE_CONFIG.url
   ? new URL("/social-preview.jpg", SITE_CONFIG.url).href
   : null;
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/_layout/")({
   head: () => ({
     meta: [
       { title },

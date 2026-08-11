@@ -41,11 +41,12 @@
 - Run `pnpm cms:scan` to index sources, `pnpm cms:upload` to encode + upload
   variants, `pnpm cms:generate` to regenerate the registry from the manifest
   (JSON at `tools/cms/data/manifest.json`). The TUI is `pnpm cms`.
-- Source images are NOT committed. Drop new images into `apps/web/public/images`
-  (gitignored) and run `pnpm cms:scan`, or re-upload existing ones from
-  `tools/cms/data/originals` (gitignored). Published images are served from R2
+- Source images are NOT committed. Drop new images into
+  `tools/cms/data/originals` (gitignored) and run `pnpm cms:scan`, or re-upload
+  existing ones from the same folder. Published images are served from R2
   via `IMAGE_BASE_URL` (`https://img.team-seakers.com`); credentials live in
-  `tools/cms/.env` (gitignored).
+  `tools/cms/.env` (gitignored). There is no local `apps/web/public/images`
+  folder — the app fetches every image from R2 through `ResponsiveImage`.
 - `ResponsiveImage` uses `IMAGE_REGISTRY` when a record is uploaded; otherwise it
   falls back to the legacy `<img>` + srcset path via `src/utils/images.ts`.
 

@@ -1,7 +1,7 @@
 {
   "projectPath": "../../../apps/web",
   "registryOut": "src/data/imageRegistry.ts",
-  "sourceRoot": "public/images",
+  "sourceRoot": "../../tools/cms/data/originals",
   "sizes": [
     { "name": "mobile", "width": 480, "device": "Phones (max-width: 640px)" },
     { "name": "tablet", "width": 960, "device": "Tablets (641px-1024px)" },

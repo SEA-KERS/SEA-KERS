@@ -1,32 +1,34 @@
+import { Link } from "@tanstack/react-router";
 import brandIcon from "../../assets/brand/sea-kers-icon-color.svg";
-import type { SectionId } from "../../types";
 
-interface FooterProps {
-  setActiveTab: (sectionId: SectionId) => void;
+interface FooterLink {
+  label: string;
+  to: string;
+  hash?: string;
 }
 
-const footerLinks = [
-  ["Mission", "about"],
-  ["Wins", "wins"],
-  ["Team", "team"],
-] as const;
+const footerLinks: readonly FooterLink[] = [
+  { label: "Mission", to: "/", hash: "about" },
+  { label: "Wins", to: "/wins" },
+  { label: "Projects", to: "/projects" },
+  { label: "Team", to: "/team" },
+];
 
-export default function Footer({ setActiveTab }: FooterProps) {
+export default function Footer() {
   return (
     <footer className="bg-(--band) px-4 pb-12 pt-2 text-(--band-foreground) md:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 border-t border-(--band-border) pt-14 md:grid-cols-12">
           <div className="md:col-span-6">
-            <a
-              href="#home"
-              onClick={() => setActiveTab("all")}
+            <Link
+              to="/"
               className="inline-flex min-h-11 items-center gap-2.5 rounded-lg font-headline text-xl font-bold"
             >
               <span className="brand-logo-tile h-10 w-10">
                 <img src={brandIcon} width="32" height="32" alt="" />
               </span>
               SEA-KERS
-            </a>
+            </Link>
             <p className="mt-5 max-w-sm text-sm leading-6 text-(--band-muted)">
               An engineering collective pursuing open technology across AI,
               computer vision, and robotics.
@@ -38,15 +40,15 @@ export default function Footer({ setActiveTab }: FooterProps) {
               Explore
             </h2>
             <ul className="mt-4 space-y-1 text-sm">
-              {footerLinks.map(([label, id]) => (
-                <li key={id}>
-                  <a
-                    href={`#${id}`}
-                    onClick={() => setActiveTab(id)}
+              {footerLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.to}
+                    hash={link.hash}
                     className="inline-flex min-h-11 items-center text-(--band-muted) transition-colors hover:text-(--band-foreground)"
                   >
-                    {label}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>

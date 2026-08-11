@@ -1,81 +1,74 @@
-import { render, screen, within } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import WinsSection from "./WinsSection";
 
-describe("WinsSection win dialog", () => {
-  it("opens from a win image with a labelled modal and restores focus on Escape", async () => {
-    const onSelectProject = vi.fn();
-    const user = userEvent.setup();
-    render(<WinsSection onSelectProject={onSelectProject} />);
+vi.mock("@tanstack/react-router", () => ({
+  Link: ({
+    to,
+    hash,
+    children,
+    ...props
+  }: {
+    to: string;
+    hash?: string;
+    children: React.ReactNode;
+  }) => (
+    <a href={`${to}${hash ? `#${hash}` : ""}`} {...props}>
+      {children}
+    </a>
+  ),
+}));
 
-    const imageTriggers = screen.getAllByRole("button", {
-      name: /View images of/i,
-    });
-    const firstImageTrigger = imageTriggers[0];
-    await user.click(firstImageTrigger);
+describe("WinsSection home preview", () => {
+  it("showcases the three highest-value wins and links to the archive", () => {
+    render(<WinsSection />);
 
-    const dialog = await screen.findByRole("dialog", { name: /Code Red 2.0/ });
-    expect(dialog).toHaveAttribute("aria-modal", "true");
     expect(
-      within(dialog).getByRole("region", { name: /images/i }),
+      screen.getByRole("heading", { name: "The strongest wins" }),
     ).toBeInTheDocument();
 
-    await user.keyboard("{Escape}");
-    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
-    expect(firstImageTrigger).toHaveFocus();
+    const viewAll = screen.getByRole("link", {
+      name: /View all 20 win records/i,
+    });
+    expect(viewAll).toHaveAttribute("href", "/wins");
+
+    for (const name of [
+      /MSME 5\.0 Hackathon/,
+      /HAL Aerothon 2025/,
+      /Hackverse Mumbai/,
+    ]) {
+      expect(screen.getAllByRole("link", { name })).toBeTruthy();
+    }
   });
 
-  it("opens from the view-details link and navigates to the matching project", async () => {
-    const onSelectProject = vi.fn();
-    const user = userEvent.setup();
-    render(<WinsSection onSelectProject={onSelectProject} />);
+  it("renders the podium links in topByPrize order", () => {
+    render(<WinsSection />);
 
-    await user.click(
-      screen.getAllByRole("button", { name: /View details for/i })[0],
-    );
+    const podiumLinks = screen
+      .getAllByRole("link")
+      .filter((link) => link.getAttribute("aria-label")?.includes("View the full win record"));
 
-    const dialog = await screen.findByRole("dialog", { name: /Code Red 2.0/ });
-    await user.click(
-      within(dialog).getByRole("button", { name: "View matching project" }),
-    );
-
-    expect(onSelectProject).toHaveBeenCalledWith("moondream-voice");
-    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(podiumLinks.map((link) => link.getAttribute("aria-label"))).toEqual([
+      expect.stringMatching(/MSME 5\.0 Hackathon/),
+      expect.stringMatching(/HAL Aerothon 2025/),
+      expect.stringMatching(/Hackverse Mumbai/),
+    ]);
   });
 
-  it("resets text view state when opening a new win after toggling view mode", async () => {
-    const onSelectProject = vi.fn();
-    const user = userEvent.setup();
-    render(<WinsSection onSelectProject={onSelectProject} />);
+  it("deep-links each podium win to its record hash on the wins page", () => {
+    render(<WinsSection />);
 
-    const firstTrigger = screen.getAllByRole("button", {
-      name: /View details for/i,
-    })[0];
-    await user.click(firstTrigger);
-
-    const firstDialog = await screen.findByRole("dialog");
-    const viewToggle = within(firstDialog).getByRole("button", {
-      name: /Switch to text view/i,
-    });
-    await user.click(viewToggle);
-    expect(viewToggle).toHaveAccessibleName(/Switch to image view/i);
-
-    const closeButton = within(firstDialog).getByRole("button", {
-      name: "Close win details",
-    });
-    await user.click(closeButton);
-    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
-
-    const secondTrigger = screen.getAllByRole("button", {
-      name: /View details for/i,
-    })[1];
-    await user.click(secondTrigger);
-
-    const secondDialog = await screen.findByRole("dialog");
-    const secondViewToggle = within(secondDialog).getByRole("button", {
-      name: /Switch to text view/i,
-    });
-    expect(secondViewToggle).toHaveAccessibleName(/Switch to text view/i);
+    expect(screen.getByRole("link", { name: /MSME 5\.0 Hackathon/ })).toHaveAttribute(
+      "href",
+      "/wins#win-15",
+    );
+    expect(screen.getByRole("link", { name: /HAL Aerothon 2025/ })).toHaveAttribute(
+      "href",
+      "/wins#win-08",
+    );
+    expect(screen.getByRole("link", { name: /Hackverse Mumbai/ })).toHaveAttribute(
+      "href",
+      "/wins#win-05",
+    );
   });
 });

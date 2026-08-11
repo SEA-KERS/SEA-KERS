@@ -1,32 +1,48 @@
 import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "@tanstack/react-router";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import brandIcon from "../../assets/brand/sea-kers-icon-color.svg";
-import type { SectionId, Theme } from "../../types";
+import type { Theme } from "../../types";
 
 interface NavbarProps {
-  activeTab: SectionId;
-  setActiveTab: (sectionId: SectionId) => void;
   theme: Theme;
   toggleTheme: () => void;
 }
 
-const navItems = [
-  { id: "wins", label: "Wins" },
-  { id: "projects", label: "Projects" },
-  { id: "team", label: "Team" },
-  { id: "about", label: "About" },
-] as const;
+const navItems: readonly {
+  id: string;
+  label: string;
+  to: string;
+  hash?: string;
+}[] = [
+  { id: "wins", label: "Wins", to: "/wins" },
+  { id: "projects", label: "Projects", to: "/projects" },
+  { id: "team", label: "Team", to: "/team" },
+  { id: "about", label: "About", to: "/", hash: "about" },
+];
 
-export default function Navbar({
-  activeTab,
-  setActiveTab,
-  theme,
-  toggleTheme,
-}: NavbarProps) {
+type NavItem = (typeof navItems)[number];
+
+const isActiveItem = (
+  item: NavItem,
+  pathname: string,
+  hash: string,
+): boolean => {
+  if (item.hash) {
+    return (
+      pathname === item.to &&
+      (hash === item.hash || hash === `#${item.hash}`)
+    );
+  }
+  return pathname === item.to;
+};
+
+export default function Navbar({ theme, toggleTheme }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -53,8 +69,7 @@ export default function Navbar({
     };
   }, [menuOpen]);
 
-  const navigate = (sectionId: SectionId) => {
-    setActiveTab(sectionId);
+  const navigate = () => {
     setMenuOpen(false);
   };
 
@@ -64,9 +79,9 @@ export default function Navbar({
       className="fixed inset-x-0 top-0 z-50 border-b border-(--border) bg-(--background)"
     >
       <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3 md:px-8">
-        <a
-          href="#home"
-          onClick={() => navigate("all")}
+        <Link
+          to="/"
+          onClick={navigate}
           className="flex min-h-11 items-center gap-2.5 rounded-lg pr-2 font-headline font-bold tracking-tight"
           aria-label="Team SEA-KERS home"
         >
@@ -74,19 +89,20 @@ export default function Navbar({
             <img src={brandIcon} width="28" height="28" alt="" />
           </span>
           <span className="hidden sm:inline">SEA-KERS</span>
-        </a>
+        </Link>
 
         <nav
           aria-label="Primary navigation"
           className="ml-auto hidden items-center gap-1 sm:flex"
         >
           {navItems.map((item) => {
-            const isActive = activeTab === item.id;
+            const isActive = isActiveItem(item, pathname, hash);
             return (
-              <a
+              <Link
                 key={item.id}
-                href={`#${item.id}`}
-                onClick={() => navigate(item.id)}
+                to={item.to}
+                hash={item.hash}
+                onClick={navigate}
                 aria-current={isActive ? "location" : undefined}
                 className={`flex min-h-11 shrink-0 items-center border-b-2 px-3 text-[0.6875rem] font-bold uppercase tracking-[0.16em] transition-colors ${
                   isActive
@@ -95,7 +111,7 @@ export default function Navbar({
                 }`}
               >
                 {item.label}
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -139,13 +155,14 @@ export default function Navbar({
         >
           <nav aria-label="Mobile navigation" className="flex flex-col">
             {navItems.map((item, index) => {
-              const isActive = activeTab === item.id;
+              const isActive = isActiveItem(item, pathname, hash);
               return (
-                <a
+                <Link
                   key={item.id}
                   ref={index === 0 ? firstLinkRef : undefined}
-                  href={`#${item.id}`}
-                  onClick={() => navigate(item.id)}
+                  to={item.to}
+                  hash={item.hash}
+                  onClick={navigate}
                   aria-current={isActive ? "location" : undefined}
                   className={`flex min-h-11 items-center gap-3 border-b border-(--border) py-3 text-sm font-bold uppercase tracking-[0.16em] transition-colors ${
                     isActive
@@ -157,7 +174,7 @@ export default function Navbar({
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   {item.label}
-                </a>
+                </Link>
               );
             })}
           </nav>

@@ -23,94 +23,17 @@
  * FINISH: unreviewed and undocumented is unfinished; this build ends with
  *   the finish review, the verdict, and DESIGN.md.
  */
-import { lazy, Suspense, useEffect, useState } from "react";
-import Footer from "../layout/Footer";
+import { lazy, Suspense } from "react";
 import Hero from "../hero/Hero";
-import Navbar from "../layout/Navbar";
 import StatsBand from "../sections/StatsBand";
-import type { SectionId, Theme } from "../../types";
 
 const WinsSection = lazy(() => import("../sections/WinsSection"));
 const ProjectsSection = lazy(() => import("../sections/ProjectsSection"));
 const TeamSection = lazy(() => import("../sections/TeamSection"));
 const MissionSection = lazy(() => import("../sections/MissionSection"));
 
-const getSectionIdFromHash = (hash: string): SectionId => {
-  switch (hash) {
-    case "#wins":
-      return "wins";
-    case "#projects":
-      return "projects";
-    case "#team":
-      return "team";
-    case "#about":
-      return "about";
-    default:
-      return "all";
-  }
-};
-
 export default function HomePage() {
-  const [theme, setTheme] = useState<Theme>("light");
-  const [activeTab, setActiveTab] = useState<SectionId>("all");
-  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
-
-  useEffect(() => {
-    const syncActiveTabWithHash = () => {
-      setActiveTab(getSectionIdFromHash(window.location.hash));
-    };
-
-    syncActiveTabWithHash();
-    window.addEventListener("hashchange", syncActiveTabWithHash);
-    return () => window.removeEventListener("hashchange", syncActiveTabWithHash);
-  }, []);
-
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const storedTheme = window.localStorage.getItem("sea-kers-theme");
-    setTheme(
-      storedTheme === "dark" || storedTheme === "light"
-        ? storedTheme
-        : media.matches
-          ? "dark"
-          : "light",
-    );
-
-    const syncSystemTheme = (event: MediaQueryListEvent) => {
-      if (!window.localStorage.getItem("sea-kers-theme")) {
-        setTheme(event.matches ? "dark" : "light");
-      }
-    };
-
-    media.addEventListener("change", syncSystemTheme);
-    return () => media.removeEventListener("change", syncSystemTheme);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    document.documentElement.classList.toggle("light", theme === "light");
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((currentTheme) => {
-      const nextTheme = currentTheme === "light" ? "dark" : "light";
-      window.localStorage.setItem("sea-kers-theme", nextTheme);
-      return nextTheme;
-    });
-  };
-
-  const handleSelectProject = (projectId: string) => {
-    setSelectedProjectId(projectId);
-    setActiveTab("projects");
-    document.getElementById("projects")?.scrollIntoView({
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        ? "auto"
-        : "smooth",
-    });
-  };
-
   const handleOpenRecord = () => {
-    setActiveTab("wins");
     document.getElementById("wins")?.scrollIntoView({
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ? "auto"
@@ -119,33 +42,21 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-(--background) text-(--foreground)">
-      <Navbar
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        theme={theme}
-        toggleTheme={toggleTheme}
-      />
-      <main id="main-content" tabIndex={-1}>
-        <Hero theme={theme} onOpenRecord={handleOpenRecord} />
-        <StatsBand />
-        <Suspense fallback={<div id="wins" className="min-h-16" aria-hidden="true" />}>
-          <WinsSection onSelectProject={handleSelectProject} />
-        </Suspense>
-        <Suspense fallback={<div id="projects" className="min-h-16" aria-hidden="true" />}>
-          <ProjectsSection
-            selectedProjectId={selectedProjectId}
-            onClose={() => setSelectedProjectId(null)}
-          />
-        </Suspense>
-        <Suspense fallback={<div id="team" className="min-h-16" aria-hidden="true" />}>
-          <TeamSection />
-        </Suspense>
-        <Suspense fallback={<div id="about" className="min-h-16" aria-hidden="true" />}>
-          <MissionSection />
-        </Suspense>
-      </main>
-      <Footer setActiveTab={setActiveTab} />
-    </div>
+    <>
+      <Hero onOpenRecord={handleOpenRecord} />
+      <StatsBand />
+      <Suspense fallback={<div id="wins" className="min-h-16" aria-hidden="true" />}>
+        <WinsSection />
+      </Suspense>
+      <Suspense fallback={<div id="projects" className="min-h-16" aria-hidden="true" />}>
+        <ProjectsSection />
+      </Suspense>
+      <Suspense fallback={<div id="team" className="min-h-16" aria-hidden="true" />}>
+        <TeamSection />
+      </Suspense>
+      <Suspense fallback={<div id="about" className="min-h-16" aria-hidden="true" />}>
+        <MissionSection />
+      </Suspense>
+    </>
   );
 }
