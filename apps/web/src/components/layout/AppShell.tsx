@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { useTheme } from "../../hooks/useTheme";
+import { ThemeContext, useTheme } from "../../hooks/useTheme";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
@@ -14,12 +14,14 @@ export default function AppShell({ children }: AppShellProps) {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="min-h-screen bg-(--background) text-(--foreground)">
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <main id="main-content" tabIndex={-1}>
-        {children}
-      </main>
-      <Footer />
-    </div>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="min-h-screen bg-(--background) text-(--foreground)">
+        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <main id="main-content" tabIndex={-1}>
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </ThemeContext.Provider>
   );
 }

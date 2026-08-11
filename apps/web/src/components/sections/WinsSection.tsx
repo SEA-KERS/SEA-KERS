@@ -94,10 +94,8 @@ function PodiumCard({ win, rank, isMiddle }: PodiumCardProps) {
       <div className="relative mt-6">
         <div
           aria-hidden="true"
-          className={`absolute h-16 w-16 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1 ${
-            rank % 2 === 0
-              ? "-right-2 -top-2 bg-(--accent)"
-              : "-right-2 -top-2 bg-(--primary)"
+          className={`absolute -right-2 -top-2 h-16 w-16 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1 ${
+            rank % 2 === 0 ? "bg-(--accent)" : "bg-(--primary)"
           }`}
         />
         {win.images.length > 0 ? (

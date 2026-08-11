@@ -1,5 +1,6 @@
 import handler, { createServerEntry } from "@tanstack/react-start/server-entry";
 import { SITE_CONFIG } from "./config/site";
+import { SECURITY_TXT_BODY } from "./config/security";
 import { IMAGE_BASE_URL } from "./data/imageRegistry";
 
 const imageSources = ["'self'", "data:", "blob:", "https://images.unsplash.com"];
@@ -85,11 +86,10 @@ export default createServerEntry({
         { path: "/projects", priority: "0.8", changefreq: "monthly" },
         { path: "/team", priority: "0.7", changefreq: "monthly" },
       ];
-      const lastmod = new Date().toISOString().slice(0, 10);
       const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages
         .map(
           (page) =>
-            `<url><loc>${siteUrl}${page.path}</loc><lastmod>${lastmod}</lastmod><changefreq>${page.changefreq}</changefreq><priority>${page.priority}</priority></url>`,
+            `<url><loc>${siteUrl}${page.path}</loc><changefreq>${page.changefreq}</changefreq><priority>${page.priority}</priority></url>`,
         )
         .join("")}</urlset>`;
       return withSecurityHeaders(
@@ -105,16 +105,8 @@ export default createServerEntry({
 
     if (requestUrl.pathname === "/.well-known/security.txt" ||
         requestUrl.pathname === "/security.txt") {
-      const body = [
-        "Contact: https://github.com/SEA-KERS/SEA-KERS/issues",
-        "Expires: 2027-01-01T00:00:00.000Z",
-        "Preferred-Languages: en",
-        "",
-        "# Team SEA-KERS security contact",
-        "# Please report vulnerabilities privately via a GitHub issue.",
-      ].join("\n");
       return withSecurityHeaders(
-        new Response(body, {
+        new Response(SECURITY_TXT_BODY, {
           headers: { "Content-Type": "text/plain; charset=utf-8" },
         }),
         requestUrl.protocol === "https:",

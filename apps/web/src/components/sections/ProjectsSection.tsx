@@ -4,7 +4,9 @@ import { useReveal } from "../../hooks/useReveal";
 import { PROJECTS_DATA } from "../../data/projects";
 import type { Project } from "../../types";
 
-const FEATURED_PROJECTS = PROJECTS_DATA.filter((project) => project.featured);
+const FEATURED_PROJECTS = PROJECTS_DATA.filter(
+  (project) => project.featured,
+).slice(0, 3);
 
 const metricLine = (project: Project) =>
   Object.entries(project.metrics)

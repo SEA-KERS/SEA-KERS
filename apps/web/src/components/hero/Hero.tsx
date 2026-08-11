@@ -1,13 +1,13 @@
 import { ArrowDown } from "lucide-react";
 import CyberDotMatrix from "./CyberDotMatrix";
-import { useTheme } from "../../hooks/useTheme";
+import { useThemeContext } from "../../hooks/useTheme";
 
 interface HeroProps {
   onOpenRecord: () => void;
 }
 
 export default function Hero({ onOpenRecord }: HeroProps) {
-  const { theme } = useTheme();
+  const { theme } = useThemeContext();
   return (
     <section
       id="home"
