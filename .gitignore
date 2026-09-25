@@ -33,7 +33,9 @@ tools/cms/.env
 tools/cms/data/originals
 
 # Images are served from R2 via the CMS registry, not committed
-apps/web/public/images
+apps/web/public/images/*
+!apps/web/public/images/untitled-design.png
+!apps/web/public/images/spoorthi-r.jpeg
 
 # Turbo cache (tools/turbo-cache)
 tools/turbo-cache/.env

@@ -6511,7 +6511,7 @@ export const TEAM_AVATAR_IDS: Record<string, string> = {
   "pramoda-s-r": "team/pramoda-s-r",
   "priya": "team/priya",
   "reddy": "team/reddy",
-  "spoorthi-r": "team/spoorthi-r",
+  "spoorthi-r": undefined as unknown as string,
   "sujan": "team/sujan",
   "swathi": "team/swathi"
 };

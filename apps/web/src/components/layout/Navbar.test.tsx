@@ -34,13 +34,13 @@ describe("Navbar", () => {
 
     const winsLink = within(nav).getByRole("link", { name: "Wins" });
     const projectsLink = within(nav).getByRole("link", { name: "Projects" });
-    const teamLink = within(nav).getByRole("link", { name: "Team" });
-    const aboutLink = within(nav).getByRole("link", { name: "About" });
+    const teamLink = within(nav).getByRole("link", { name: "About Us" });
+    const contactLink = within(nav).getByRole("link", { name: "Contact Us" });
 
     expect(winsLink).toHaveAttribute("href", "/wins");
     expect(projectsLink).toHaveAttribute("href", "/projects");
     expect(teamLink).toHaveAttribute("href", "/team");
-    expect(aboutLink).toHaveAttribute("href", "/#about");
+    expect(contactLink).toHaveAttribute("href", "/#contact");
   });
 
   it("opens and closes the mobile menu from the toggle", async () => {
@@ -54,7 +54,7 @@ describe("Navbar", () => {
     const mobileNav = screen.getByRole("navigation", {
       name: "Mobile navigation",
     });
-    for (const label of ["Wins", "Projects", "Team", "About"]) {
+    for (const label of ["Wins", "Projects", "About Us", "Contact Us"]) {
       expect(
         within(mobileNav).getByRole("link", { name: new RegExp(label) }),
       ).toBeInTheDocument();
