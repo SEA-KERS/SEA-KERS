@@ -34,27 +34,24 @@ export default function TeamSection() {
         ref={ref}
         id="team"
         aria-labelledby="team-title"
-        className={`relative flex flex-col w-full items-center justify-center bg-white text-neutral-900 px-4 py-20 md:px-8 md:py-32 border-t border-neutral-200 snap-section reveal ${
+        className={`relative flex flex-col w-full items-center justify-center bg-white text-neutral-900 dark:bg-[#06080e] dark:text-white px-4 py-20 md:px-8 md:py-32 border-t border-neutral-200 dark:border-neutral-800/80 snap-section reveal ${
           isVisible ? "is-visible" : ""
         }`}
       >
         <div className="mx-auto max-w-6xl w-full">
           {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
-            <div className="max-w-2xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12 sm:mb-16">
+            <div>
               <h2
                 id="team-title"
-                className="font-headline text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl leading-[1.08] text-neutral-900"
+                className="font-headline text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl leading-[1.08] text-neutral-900 dark:text-white"
               >
-                The <span className="text-[#da261c]">Masterminds</span>
+                The <span className="text-[#da261c]">Innovators</span>
               </h2>
-              <p className="mt-4 text-base sm:text-lg leading-relaxed text-neutral-600 max-w-xl">
-                What you seek is seeking you. We choose harder problems and build the systems we want to see in the world.
-              </p>
             </div>
             <Link
               to="/team"
-              className="button-primary cursor-pointer !text-white hover:!text-white shadow-md shadow-[#da261c]/25 shrink-0 group font-mono text-xs sm:text-sm uppercase tracking-wider"
+              className="button-primary cursor-pointer !text-white hover:!text-white shadow-md shadow-[#da261c]/25 shrink-0 group font-mono text-xs sm:text-sm uppercase tracking-wider self-start sm:self-auto"
               aria-label="Meet our team"
             >
               <span className="text-white">Meet Our Team</span>

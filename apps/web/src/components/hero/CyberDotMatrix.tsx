@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import brandIcon from "../../assets/brand/sea-kers-icon-color.svg";
+import brandIconWhite from "../../assets/brand/sea-kers-icon-color.svg";
 import type { Theme } from "../../types";
 import {
   mapParticleSampleToCanvas,
@@ -8,7 +8,7 @@ import {
 } from "../../utils/particleSampling";
 
 interface CyberDotMatrixProps {
-  theme: Theme;
+  theme?: Theme;
 }
 
 interface NetworkInformationLike extends EventTarget {
@@ -29,9 +29,6 @@ interface Particle extends ParticleSample {
   phase: number;
 }
 
-const clamp = (value: number, minimum: number, maximum: number) =>
-  Math.min(maximum, Math.max(minimum, value));
-
 const getParticleBudget = () => {
   const capabilities = navigator as NavigatorWithCapabilities;
   const connection = capabilities.connection;
@@ -43,32 +40,20 @@ const getParticleBudget = () => {
     connection?.effectiveType === "slow-2g" ||
     connection?.effectiveType === "2g"
   ) {
-    return 400;
+    return 800;
   }
 
-  let budget = 550;
-  if (connection?.effectiveType === "3g") budget += 150;
-  if (connection?.effectiveType === "4g") budget += 300;
-  if ((connection?.downlink ?? 0) >= 3) budget += 80;
-  if ((connection?.downlink ?? 0) >= 10) budget += 90;
+  // Generous particle budget for high dot density ("more dots, not thicker dots")
+  let budget = 1400;
+  if (cores >= 4 && memory >= 4) budget = 1600;
+  if (cores >= 8 && memory >= 8) budget = 1800;
 
-  budget += clamp((cores - 2) * 60, 0, 420);
-  budget += memory >= 8 ? 260 : memory >= 4 ? 120 : 0;
-
-  if (cores <= 2 || memory <= 2) budget = Math.min(budget, 550);
-  if (cores <= 4 || memory <= 4) budget = Math.min(budget, 1050);
-
-  return clamp(Math.round(budget / 50) * 50, 400, 1500);
+  return budget;
 };
 
-export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
+export default function CyberDotMatrix({ theme: _theme }: CyberDotMatrixProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isAnimated, setIsAnimated] = useState(false);
-  const themeRef = useRef(theme);
-
-  useEffect(() => {
-    themeRef.current = theme;
-  }, [theme]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -81,7 +66,7 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
     if (reducedMotion) return;
 
     const canvasSize = 512;
-    const frameInterval = 1000 / 24;
+    const frameInterval = 1000 / 30;
     canvas.width = canvasSize;
     canvas.height = canvasSize;
 
@@ -112,13 +97,14 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
       context.clearRect(0, 0, canvasSize, canvasSize);
 
       const caretColor = "#ffffff";
+      const arcColor = "#1e40af";
 
       for (const particle of particles) {
         const isArc = particle.kind === "arc";
         const horizontalMotion =
-          Math.sin(elapsed * 1.7 + particle.phase) * 6;
+          Math.sin(elapsed * 1.6 + particle.phase) * 4.5;
         const verticalMotion =
-          Math.cos(elapsed * 1.35 + particle.phase) * 4;
+          Math.cos(elapsed * 1.3 + particle.phase) * 3.5;
         let targetX = particle.baseX + horizontalMotion;
         let targetY = particle.baseY + verticalMotion;
 
@@ -126,17 +112,17 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
           const dx = particle.x - pointer.x;
           const dy = particle.y - pointer.y;
           const distance = Math.hypot(dx, dy);
-          if (distance > 0 && distance < 82) {
-            const force = (82 - distance) / 82;
-            targetX += (dx / distance) * force * 18;
-            targetY += (dy / distance) * force * 18;
+          if (distance > 0 && distance < 80) {
+            const force = (80 - distance) / 80;
+            targetX += (dx / distance) * force * 16;
+            targetY += (dy / distance) * force * 16;
           }
         }
 
         particle.x += (targetX - particle.x) * 0.12;
         particle.y += (targetY - particle.y) * 0.12;
-        context.fillStyle = isArc ? "#0c1e8b" : caretColor;
-        context.globalAlpha = isArc ? 0.95 : 0.86;
+        context.fillStyle = isArc ? arcColor : caretColor;
+        context.globalAlpha = isArc ? 0.95 : 0.92;
         context.fillRect(
           particle.x,
           particle.y,
@@ -150,11 +136,11 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
     const startParticleUpgrade = () => {
       if (disposed) return;
       const image = new Image();
-      image.src = brandIcon;
+      image.src = brandIconWhite;
       image.onload = () => {
         if (disposed) return;
 
-        const sampleSize = 192;
+        const sampleSize = 224;
         const offscreen = document.createElement("canvas");
         const offscreenContext = offscreen.getContext("2d", {
           willReadFrequently: true,
@@ -179,7 +165,7 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
             const green = pixels[index + 1];
             const blue = pixels[index + 2];
             const alpha = pixels[index + 3];
-            if (alpha < 72) continue;
+            if (alpha < 50) continue;
 
             sampled.push({
               x,
@@ -209,7 +195,8 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
             baseX,
             baseY,
             kind: point.kind,
-            size: Math.max(3.6, mappedPoint.scale * 1.2),
+            // Fine, crisp star-dots ("more dots, not thicker dots")
+            size: Math.max(2.8, mappedPoint.scale * 1.1),
             phase: (index * 0.618) % (Math.PI * 2),
           };
         });
@@ -219,25 +206,36 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
       };
     };
 
-    if ("requestIdleCallback" in window) {
-      idleCallbackId = window.requestIdleCallback(startParticleUpgrade, {
-        timeout: 4000,
-      });
-    } else {
-      timeoutId = globalThis.setTimeout(startParticleUpgrade, 4000);
-    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isIntersecting = entries[0]?.isIntersecting ?? true;
+        if (!isIntersecting) return;
+        if (particles.length > 0) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      isIntersecting = entry?.isIntersecting ?? true;
-    });
+        const schedule =
+          "requestIdleCallback" in window
+            ? window.requestIdleCallback
+            : null;
+
+        if (schedule) {
+          idleCallbackId = schedule(startParticleUpgrade, { timeout: 1200 });
+        } else {
+          timeoutId = setTimeout(startParticleUpgrade, 150);
+        }
+      },
+      { threshold: 0.1 },
+    );
+
     observer.observe(canvas);
 
     const handlePointerMove = (event: PointerEvent) => {
-      const bounds = canvas.getBoundingClientRect();
-      pointer.x = ((event.clientX - bounds.left) / bounds.width) * canvasSize;
-      pointer.y = ((event.clientY - bounds.top) / bounds.height) * canvasSize;
+      const rect = canvas.getBoundingClientRect();
+      const scale = canvasSize / rect.width;
+      pointer.x = (event.clientX - rect.left) * scale;
+      pointer.y = (event.clientY - rect.top) * scale;
       pointer.active = true;
     };
+
     const handlePointerLeave = () => {
       pointer.active = false;
     };
@@ -253,25 +251,27 @@ export default function CyberDotMatrix({ theme }: CyberDotMatrixProps) {
       if (animationFrameId !== null) {
         window.cancelAnimationFrame(animationFrameId);
       }
-      if (idleCallbackId !== null) {
+      if (idleCallbackId !== null && "cancelIdleCallback" in window) {
         window.cancelIdleCallback(idleCallbackId);
       }
-      if (timeoutId !== null) globalThis.clearTimeout(timeoutId);
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      }
       canvas.removeEventListener("pointermove", handlePointerMove);
       canvas.removeEventListener("pointerleave", handlePointerLeave);
     };
   }, []);
 
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[12rem] overflow-hidden rounded-2xl bg-[#030624] p-4 transition-colors duration-200 md:max-w-[25rem]">
+    <div className="relative aspect-square w-[340px] h-[340px] sm:w-[380px] sm:h-[380px] md:w-[410px] md:h-[410px] lg:w-[452px] lg:h-[452px] shrink-0 overflow-hidden rounded-2xl md:rounded-3xl bg-[#030624] p-5 shadow-2xl flex items-center justify-center ml-auto">
       <img
-        src={brandIcon}
+        src={brandIconWhite}
         width="512"
         height="512"
         fetchPriority="high"
         alt="Team SEA-KERS caret above a single ocean arc"
         aria-hidden={isAnimated || undefined}
-        className={`absolute inset-4 h-[calc(100%-2rem)] w-[calc(100%-2rem)] transition-opacity duration-200 ${isAnimated ? "opacity-0" : "opacity-100"}`}
+        className={`absolute inset-5 h-[calc(100%-2.5rem)] w-[calc(100%-2.5rem)] object-contain transition-opacity duration-200 ${isAnimated ? "opacity-0" : "opacity-100"}`}
       />
       <canvas
         ref={canvasRef}
