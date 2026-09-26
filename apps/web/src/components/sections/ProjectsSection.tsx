@@ -22,7 +22,7 @@ export default function ProjectsSection() {
       aria-labelledby="projects-title"
       className="border-t border-(--border) px-4 py-24 md:px-8 md:py-32"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl w-full">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="kicker">Code artifacts</p>

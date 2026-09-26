@@ -5,7 +5,7 @@ import TeamPage from "./TeamPage";
 describe("TeamPage roster", () => {
   it("lists every member in a descriptive vertical index", () => {
     render(<TeamPage />);
-    expect(screen.getByRole("heading", { name: /Our TEAM/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Core Team/i })).toBeInTheDocument();
 
     for (const name of ["Kashvi V", "Pramoda S R", "Sharan Reddy", "Sujan P"]) {
       expect(screen.getByRole("heading", { name })).toBeInTheDocument();

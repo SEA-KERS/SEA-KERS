@@ -61,8 +61,8 @@ export default function WinsPage({
   });
 
   return (
-    <div className="px-4 pb-24 pt-32 md:px-8 md:pb-32 md:pt-44">
-      <div className="mx-auto max-w-7xl">
+    <div className="px-4 pb-24 pt-28 md:px-8 md:pb-32 md:pt-36">
+      <div className="mx-auto max-w-6xl w-full">
         <header className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-8">
             <p className="kicker">Track record</p>

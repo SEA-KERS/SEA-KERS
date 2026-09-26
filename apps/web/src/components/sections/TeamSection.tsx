@@ -46,7 +46,7 @@ export default function TeamSection() {
                 id="team-title"
                 className="font-headline text-3xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl leading-[1.08] text-neutral-900 dark:text-white"
               >
-                The <span className="text-[#da261c]">Innovators</span>
+                The <span className="text-[#da261c]">Architects</span>
               </h2>
             </div>
             <Link

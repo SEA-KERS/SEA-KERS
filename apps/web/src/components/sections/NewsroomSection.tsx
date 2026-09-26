@@ -13,63 +13,68 @@ interface NewsArticle {
   summary: string;
   fullContent: string;
   gridClass: string;
+  link?: string;
 }
 
 const ARTICLES: NewsArticle[] = [
   {
-    id: "bmsit-code-red",
-    number: "01",
-    badge: "FEATURED",
-    badgeColor: "bg-[#da261c] text-white",
-    source: "BMSIT CODE RED",
-    date: "Jul 8, 2026",
-    title: "Team SEA-KERS Takes 1st Place for Moondream Vision & Voice LLM",
-    summary:
-      "Engineered an ultra low-latency on-device multimodal assistant combining Moondream LLM, Whisper Turbo STT, and Kokoro TTS with 0 cloud dependency.",
-    fullContent:
-      "At BMSIT Code Red 2025, Team SEA-KERS secured 1st place in the AI track by developing an entirely offline, on-device spatial multimodal assistant. The team compressed Moondream Vision LLM alongside Whisper Turbo STT and Kokoro TTS into an integrated inference pipeline running with sub-100ms response times on embedded hardware without sending any data to external cloud servers.",
-    gridClass: "lg:col-span-7",
-  },
-  {
-    id: "economic-times",
-    badge: "PRESS",
-    badgeColor: "bg-neutral-800 text-neutral-200 border border-neutral-700",
-    source: "ECONOMIC TIMES",
-    date: "Feb 17, 2026",
-    title: "Recognising Team SEA-KERS as India's Emerging Collegiate AI Collective",
-    summary:
-      "National coverage highlighting student engineering collectives building production-ready on-device spatial intelligence.",
-    fullContent:
-      "The Economic Times featured Team SEA-KERS in their spotlight on next-generation deep tech talent emerging from Indian universities. The collective was lauded for moving past theoretical academic research directly into battle-tested hackathon builds, production-grade robotics firmware, and high-throughput zero-knowledge architecture.",
-    gridClass: "lg:col-span-5",
-  },
-  {
     id: "msme-grant",
-    number: "02",
+    number: "01",
     badge: "GRANT",
-    badgeColor: "bg-neutral-800 text-neutral-200 border border-neutral-700",
+    badgeColor: "bg-[#da261c] text-white",
     source: "MINISTRY OF MSME",
     date: "Jul 13, 2026",
-    title: "Awarded ₹15 Lakh Grant by Govt. of India for Edge AI Hardware",
+    title: "Awarded ₹15 Lakh Grant by Ministry of MSME for Edge AI Hardware Development",
     summary:
-      "Selected under the MSME Innovative Scheme to design high-efficiency micro-agent compute firmware for localized embedded edge hardware.",
+      "The funding is accelerating the development of stealth, surveillance and cyber defence technology.",
     fullContent:
-      "The Ministry of Micro, Small and Medium Enterprises (MSME), Government of India, officially sanctioned a ₹15 Lakh prototyping grant to Team SEA-KERS. The funding accelerates research into decentralized micro-agent coordination and spatial intelligence firmware optimized for low-power edge compute microprocessors.",
+      "The Ministry of Micro, Small and Medium Enterprises (MSME), Government of India, officially sanctioned a ₹15 Lakh prototyping grant to Team SEA-KERS. The funding is accelerating the development of stealth, surveillance and cyber defence technology.",
+    gridClass: "lg:col-span-7",
+    link: "https://www.dcmsme.gov.in/Results_Hackathon5.0.pdf",
+  },
+  {
+    id: "ust-sight",
+    badge: "PRESS",
+    badgeColor: "bg-neutral-800 text-neutral-200 border border-neutral-700",
+    source: "PASSIONATE IN MARKETING",
+    date: "2025",
+    title: "Team SEA-KERS Places 2nd Nationally at UST SIGHT 2.0 Among 1,000+ Teams",
+    summary:
+      "Competing against over 1,000 teams from professional colleges across India, Team SEA-KERS secured 2nd place at UST SIGHT 2.0.",
+    fullContent:
+      "Team SEA-KERS from Dr. Ambedkar Institute of Technology, Bengaluru secured 2nd prize at UST SIGHT 2.0, competing against over 1,000 teams from professional colleges across India. The competition, organized by UST, challenged student teams to build innovative technology solutions for real-world problems.",
     gridClass: "lg:col-span-5",
+    link: "https://www.passionateinmarketing.com/1000-teams-from-professional-colleges-across-india-vie-for-top-honours-at-ust-sight-2-0-competition/",
   },
   {
     id: "hal-aerothon",
-    number: "03",
+    number: "02",
     badge: "FEATURED",
-    badgeColor: "bg-[#da261c] text-white",
-    source: "HAL AEROTHON",
-    date: "Recent",
-    title: "Team SEA-KERS Wins National HAL Aerothon'25 Robotics Trophy",
+    badgeColor: "bg-neutral-800 text-neutral-200 border border-neutral-700",
+    source: "PSU KHABAR",
+    date: "Jul 19, 2025",
+    title: "Team SEA-KERS Wins National HAL Aerothon'25",
     summary:
       "Demonstrated real-time autonomous drone navigation with spatial visual obstacle avoidance in simulated GPS-denied environments.",
     fullContent:
       "Competing against top aerospace and engineering institutions across India, Team SEA-KERS took home the top robotics award at HAL Aerothon'25 organized by Hindustan Aeronautics Limited. The team built an autonomous drone perception stack utilizing real-time edge TensorRT pipelines for collision-free trajectory generation.",
+    gridClass: "lg:col-span-5",
+    link: "https://www.psukhabar.com/2025/07/19/hal-in-association-with-pes-university-has-organized-aerothon-2025-at-bangalore/",
+  },
+  {
+    id: "namma-suraksha",
+    number: "03",
+    badge: "WINNER",
+    badgeColor: "bg-[#da261c] text-white",
+    source: "KARNATAKA STATE POLICE",
+    date: "2025",
+    title: "Winner at Namma Suraksha Hackathon by Karnataka State Police",
+    summary:
+      "Secured top honors at the Namma Suraksha Hackathon organized by Karnataka State Police for innovative public safety and security technology.",
+    fullContent:
+      "Team SEA-KERS emerged as winners at the prestigious Namma Suraksha Hackathon organized by Karnataka State Police, recognized for building cutting-edge technology solutions addressing real-world public safety and surveillance challenges.",
     gridClass: "lg:col-span-7",
+    link: "https://www.linkedin.com/posts/sameerirfan_nammasuraksha-hackathon-innovation-ugcPost-7327618781126582272-spPD/",
   },
 ];
 
@@ -106,8 +111,8 @@ export default function NewsroomSection() {
           {ARTICLES.map((article) => (
             <article
               key={article.id}
-              onClick={() => setActiveArticle(article)}
-              className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl p-6 sm:p-8 shadow-xl transition-all duration-300 cursor-pointer min-h-[250px] sm:min-h-[280px] ${article.gridClass} bg-gradient-to-br from-[#18181b] via-[#111113] to-[#09090b] border border-neutral-800 text-white hover:border-[#da261c]/80 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] hover:from-[#202024] hover:to-[#0d0d0f]`}
+              onClick={() => article.link ? window.open(article.link, "_blank", "noopener noreferrer") : setActiveArticle(article)}
+              className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl p-5 sm:p-6 shadow-xl transition-all duration-300 cursor-pointer min-h-[180px] sm:min-h-[200px] ${article.gridClass} bg-gradient-to-br from-[#18181b] via-[#111113] to-[#09090b] border border-neutral-800 text-white hover:border-[#da261c]/80 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] hover:from-[#202024] hover:to-[#0d0d0f]`}
             >
               {/* Giant Watermark Number */}
               {article.number ? (
@@ -129,16 +134,12 @@ export default function NewsroomSection() {
                   
                 </div>
 
-                <h3 className="mt-4 font-headline text-xl sm:text-2xl font-bold leading-snug text-white group-hover:text-neutral-100 transition-colors">
+                <h3 className="mt-3 font-headline text-lg sm:text-xl font-bold leading-snug text-white group-hover:text-neutral-100 transition-colors">
                   {article.title}
                 </h3>
-
-                <p className="mt-3 text-xs sm:text-sm leading-relaxed text-neutral-300 max-w-xl">
-                  {article.summary}
-                </p>
               </div>
 
-              <div className="mt-6 flex items-center justify-between pt-4 border-t border-neutral-800/80">
+              <div className="mt-4 flex items-center justify-between pt-3 border-t border-neutral-800/80">
                 <span className="text-xs font-mono font-bold tracking-wider text-neutral-300 group-hover:text-[#da261c] transition-colors">
                   Read full article
                 </span>

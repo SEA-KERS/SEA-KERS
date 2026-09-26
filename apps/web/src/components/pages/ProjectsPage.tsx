@@ -38,8 +38,8 @@ export default function ProjectsPage(_props: ProjectsPageProps = {}) {
   const { ref: revealRef, isVisible } = useReveal<HTMLDivElement>();
 
   return (
-    <div className="px-4 pb-24 pt-32 md:px-8 md:pb-32 md:pt-44">
-      <div className="mx-auto max-w-7xl">
+    <div className="px-4 pb-24 pt-28 md:px-8 md:pb-32 md:pt-36">
+      <div className="mx-auto max-w-6xl w-full">
         <header className="max-w-3xl">
           <div className="flex flex-wrap items-center gap-3">
             <p className="kicker">Projects & Artifacts</p>
@@ -60,17 +60,6 @@ export default function ProjectsPage(_props: ProjectsPageProps = {}) {
             isVisible ? "is-visible" : ""
           }`}
         >
-          {/* Top-Right Accent Bracket */}
-          <div
-            aria-hidden="true"
-            className="absolute top-0 right-0 h-20 w-20 border-t-4 border-r-4 border-[#da261c] pointer-events-none"
-          />
-
-          {/* Bottom-Left Accent Bracket */}
-          <div
-            aria-hidden="true"
-            className="absolute bottom-0 left-0 h-16 w-16 border-b-4 border-l-4 border-[#2563eb] pointer-events-none"
-          />
 
           <div className="relative z-10 max-w-3xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#da261c]/40 bg-[#da261c]/10 px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#da261c]">
