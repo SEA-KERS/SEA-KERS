@@ -97,7 +97,7 @@ export default function ContactSection() {
               {/* Corner accent bracket */}
               <div
                 aria-hidden="true"
-                className="absolute top-0 right-0 h-16 w-16 border-t-2 border-r-2 border-[#da261c] pointer-events-none"
+                className="absolute top-0 right-0 h-16 w-16 rounded-tr-2xl border-t-2 border-r-2 border-[#da261c] pointer-events-none"
               />
 
               {submitted ? (
