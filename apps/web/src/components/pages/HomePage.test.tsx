@@ -5,11 +5,10 @@ import HomePage from "./HomePage";
 vi.mock("../layout/Navbar", () => ({ default: () => null }));
 vi.mock("../layout/Footer", () => ({ default: () => null }));
 vi.mock("../hero/Hero", () => ({ default: () => null }));
-vi.mock("../sections/WinsSection", () => ({ default: () => <section id="wins" /> }));
-vi.mock("../sections/ProjectsSection", () => ({ default: () => <section id="projects" /> }));
+vi.mock("../sections/NewsroomSection", () => ({ default: () => <section id="newsroom" /> }));
 vi.mock("../sections/TeamSection", () => ({ default: () => <section id="team" /> }));
-vi.mock("../sections/MissionSection", () => ({ default: () => <section id="about" /> }));
-vi.mock("../sections/StatsBand", () => ({ default: () => null }));
+vi.mock("../sections/ContactSection", () => ({ default: () => <section id="contact" /> }));
+vi.mock("../sections/StatsBand", () => ({ default: () => <section id="wins" /> }));
 
 const renderHome = async () => {
   await act(async () => {
@@ -23,13 +22,13 @@ describe("HomePage section anchors", () => {
     const winsAnchor = document.getElementById("wins");
     expect(winsAnchor).toBeInTheDocument();
 
-    const projectsAnchor = document.getElementById("projects");
-    expect(projectsAnchor).toBeInTheDocument();
+    const newsroomAnchor = document.getElementById("newsroom");
+    expect(newsroomAnchor).toBeInTheDocument();
 
     const teamAnchor = document.getElementById("team");
     expect(teamAnchor).toBeInTheDocument();
 
-    const aboutAnchor = document.getElementById("about");
-    expect(aboutAnchor).toBeInTheDocument();
+    const contactAnchor = document.getElementById("contact");
+    expect(contactAnchor).toBeInTheDocument();
   });
 });

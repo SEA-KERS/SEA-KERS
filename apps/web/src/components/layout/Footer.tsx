@@ -1,71 +1,120 @@
 import { Link } from "@tanstack/react-router";
-import brandIcon from "../../assets/brand/sea-kers-icon-color.svg";
+import { Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon, TwitterIcon } from "../ui/SocialIcons";
 
-interface FooterLink {
+interface NavLink {
   label: string;
   to: string;
   hash?: string;
 }
 
-const footerLinks: readonly FooterLink[] = [
-  { label: "Mission", to: "/", hash: "about" },
+const NAV_LINKS: readonly NavLink[] = [
+  { label: "Home", to: "/" },
   { label: "Wins", to: "/wins" },
-  { label: "Projects", to: "/projects" },
-  { label: "Team", to: "/team" },
+  { label: "Showcase", to: "/projects" },
+  { label: "About Us", to: "/team" },
+  { label: "Contact Us", to: "/", hash: "contact" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-(--band) px-4 pb-12 pt-2 text-(--band-foreground) md:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 border-t border-(--band-border) pt-14 md:grid-cols-12">
-          <div className="md:col-span-6">
-            <Link
-              to="/"
-              className="inline-flex min-h-11 items-center gap-2.5 rounded-lg font-headline text-xl font-bold"
-            >
-              <span className="brand-logo-tile h-10 w-10">
-                <img src={brandIcon} width="32" height="32" alt="" />
-              </span>
-              SEA-KERS
-            </Link>
-            <p className="mt-5 max-w-sm text-sm leading-6 text-(--band-muted)">
-              An engineering collective pursuing open technology across AI,
-              computer vision, and robotics.
+    <footer className="relative w-full overflow-hidden bg-[#0a0d17] text-neutral-400 border-t border-neutral-800/80">
+      <div className="mx-auto max-w-7xl px-6 pt-16 md:px-12 md:pt-20">
+        {/* Top Info Bar */}
+        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-10">
+          {/* Left: Copyright */}
+          <div className="shrink-0">
+            <p className="text-sm font-medium text-neutral-400">
+              © {new Date().getFullYear()} SEA-KERS Inc
             </p>
           </div>
 
-          <nav aria-label="Footer navigation" className="md:col-span-3">
-            <h2 className="text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-(--band-muted)">
-              Explore
-            </h2>
-            <ul className="mt-4 space-y-1 text-sm">
-              {footerLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    to={link.to}
-                    hash={link.hash}
-                    className="inline-flex min-h-11 items-center text-(--band-muted) transition-colors hover:text-(--band-foreground)"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
+          {/* Right Group: Navigation, Legal, Socials */}
+          <div className="flex flex-wrap items-start gap-8 sm:gap-12 lg:gap-16">
+            {/* Horizontal Nav Links */}
+            <nav aria-label="Footer Navigation" className="flex flex-wrap items-center gap-5 sm:gap-8 pt-0.5">
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  hash={link.hash}
+                  className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </Link>
               ))}
-            </ul>
-          </nav>
+            </nav>
 
-          <div className="md:col-span-3">
-            <h2 className="text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-(--band-muted)">
-              Colophon
-            </h2>
-            <p className="mt-4 text-sm leading-6 text-(--band-muted)">
-              Precision engineered in India for the world.
-            </p>
+            {/* Legal Links */}
+            <div className="flex flex-col gap-2">
+              <span className="text-sm font-bold text-white">Legal</span>
+              <div className="flex flex-col gap-1.5 text-xs sm:text-sm text-neutral-400">
+                <a
+                  href="#privacy"
+                  onClick={(e) => e.preventDefault()}
+                  className="hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </a>
+                <a
+                  href="#terms"
+                  onClick={(e) => e.preventDefault()}
+                  className="hover:text-white transition-colors"
+                >
+                  Terms of Service
+                </a>
+              </div>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-4 text-neutral-400 pt-0.5">
+              <a
+                href="https://www.linkedin.com/company/team-sea-kers/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="hover:text-white transition-colors"
+              >
+                <LinkedinIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="X / Twitter"
+                className="hover:text-white transition-colors"
+              >
+                <TwitterIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+                className="hover:text-white transition-colors"
+              >
+                <GithubIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="mailto:ogmanoja@gmail.com"
+                aria-label="Email SEA-KERS"
+                className="hover:text-white transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
-        <p className="mt-14 border-t border-(--band-border) pt-6 text-xs text-(--band-muted)">
-          © 2026 SEA-KERS Collective
-        </p>
+
+        {/* Bottom Giant Watermark: SEA-KERS in ALL CAPITAL on ONE SINGLE LINE with TOP-TO-BOTTOM FADE */}
+        <div className="mt-14 sm:mt-20 flex justify-center items-end select-none pointer-events-none overflow-hidden w-full">
+          <p
+            aria-hidden="true"
+            className="font-headline font-black tracking-tight uppercase text-center leading-[0.85] text-[13.5vw] whitespace-nowrap bg-gradient-to-b from-white/20 via-white/8 to-transparent bg-clip-text text-transparent [mask-image:linear-gradient(to_bottom,black_30%,transparent_100%)] translate-y-[6%]"
+          >
+            SEA-KERS
+          </p>
+        </div>
       </div>
     </footer>
   );

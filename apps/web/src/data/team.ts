@@ -12,7 +12,7 @@ export const CORE_TEAM_DATA: readonly TeamMember[] = [
     id: "spoorthi-r",
     name: "Spoorthi R",
     linkedin: "https://www.linkedin.com/in/spoorthi-r-c/",
-    avatar: "/images/team/spoorthi-r.jpg",
+    avatar: "/images/spoorthi-r.jpeg",
   },
   {
     id: "anusha-rao",

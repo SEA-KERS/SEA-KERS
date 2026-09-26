@@ -46,7 +46,7 @@ export default function WinsPage({
   track,
   q,
   expandedId,
-  onTrackChange,
+  onTrackChange: _onTrackChange,
   onSearchChange,
   onToggleExpand,
 }: WinsPageProps) {
@@ -61,8 +61,8 @@ export default function WinsPage({
   });
 
   return (
-    <div className="px-4 pb-24 pt-32 md:px-8 md:pb-32 md:pt-44">
-      <div className="mx-auto max-w-7xl">
+    <div className="px-4 pb-24 pt-28 md:px-8 md:pb-32 md:pt-36">
+      <div className="mx-auto max-w-6xl w-full">
         <header className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-8">
             <p className="kicker">Track record</p>
@@ -95,33 +95,22 @@ export default function WinsPage({
           </div>
         </header>
 
-        <div
-          className="mt-12 flex items-center gap-4 overflow-x-auto border-b border-(--border) sm:gap-7"
-          role="group"
-          aria-label="Filter wins by track"
-        >
-          {tracks.map((trackOption) => (
-            <button
-              key={trackOption.value}
-              type="button"
-              onClick={() => onTrackChange(trackOption.value)}
-              aria-pressed={track === trackOption.value}
-              className={`min-h-11 shrink-0 border-b-2 pb-3 text-[0.6875rem] font-bold uppercase tracking-[0.16em] transition-colors ${
-                track === trackOption.value
-                  ? "border-(--primary) text-(--accent-text)"
-                  : "border-transparent text-(--muted-foreground) hover:text-(--foreground)"
-              }`}
-            >
-              {trackOption.label}
-            </button>
-          ))}
-        </div>
+        
 
         <p className="meta-label mt-4" aria-live="polite">
           {filteredWins.length} {filteredWins.length === 1 ? "record" : "records"}
         </p>
 
-        <div className="mt-14">
+        {/* Table column headers for desktop */}
+        <div className="hidden sm:grid sm:grid-cols-12 sm:gap-6 px-4 md:px-6 pb-3 pt-12 text-[11px] font-bold uppercase tracking-[0.16em] text-(--muted-foreground) border-b border-(--border)">
+          <span className="col-span-1">#</span>
+          <span className="col-span-2">Photo</span>
+          <span className="col-span-5">Challenge / Location</span>
+          <span className="col-span-3 text-right">Award</span>
+          <span className="col-span-1 text-right"></span>
+        </div>
+
+        <div className="mt-2">
           {filteredWins.map((win, index) => (
             <WinArchiveRow
               key={win.id}
@@ -168,43 +157,70 @@ function WinArchiveRow({
     <article
       ref={revealRef}
       id={win.id}
-      className={`reveal scroll-mt-28 border-t border-(--border) ${isVisible ? "is-visible" : ""} ${
-        expanded ? "bg-(--card)" : ""
-      }`}
+      className={`reveal group scroll-mt-28 border-t border-(--border) transition-colors ${
+        isVisible ? "is-visible" : ""
+      } ${expanded ? "bg-(--card)" : "hover:bg-(--card)/40"}`}
     >
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={expanded}
         aria-controls={`win-detail-${win.id}`}
-        className="grid w-full gap-3 py-7 px-5 text-left md:grid-cols-12 md:items-center md:gap-6"
+        className="grid w-full grid-cols-12 items-center gap-3 py-5 px-4 text-left transition-colors sm:gap-6 md:px-6 cursor-pointer"
       >
-        <p className="meta-label md:col-span-1">{formatIndex(index)}</p>
-        <div className="md:col-span-4">
-          <h2 className="font-headline text-2xl font-bold leading-tight md:text-3xl">
+        {/* 1. Number Index */}
+        <span className="col-span-1 font-mono text-sm md:text-base font-bold text-(--muted-foreground)">
+          {formatIndex(index)}
+        </span>
+
+        {/* 2. Photo preview (small-sized photo) */}
+        <div className="col-span-3 sm:col-span-2 flex items-center">
+          {win.images.length > 0 ? (
+            <div className="relative aspect-[16/10] w-16 sm:w-24 md:w-28 overflow-hidden rounded-lg border border-(--border) bg-(--muted) shrink-0 shadow-xs">
+              <ResponsiveImage
+                src={win.images[0]}
+                sizes="140px"
+                width="280"
+                height="175"
+                loading="lazy"
+                decoding="async"
+                alt=""
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          ) : (
+            <div className="flex aspect-[16/10] w-16 sm:w-24 md:w-28 items-center justify-center rounded-lg border border-(--border) bg-(--muted) text-(--muted-foreground) shrink-0">
+              <Award className="h-5 w-5 opacity-60" />
+            </div>
+          )}
+        </div>
+
+        {/* 3. Name of challenge, below that location and year (no prize in title preview) */}
+        <div className="col-span-7 sm:col-span-5 pr-2">
+          <h2 className="font-headline text-base sm:text-xl md:text-2xl font-bold leading-snug text-(--foreground)">
             {win.hackathon}
           </h2>
-          <p className="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-(--accent-text)">
-            {win.title}
+          <p className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs md:text-sm text-(--muted-foreground)">
+            <span className="inline-flex items-center gap-1.5">
+              <MapPin aria-hidden="true" className="h-3.5 w-3.5 shrink-0" />
+              {win.location}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Calendar aria-hidden="true" className="h-3.5 w-3.5 shrink-0" />
+              {win.date}
+            </span>
           </p>
         </div>
-        <p className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-(--muted-foreground) md:col-span-3">
-          <span className="inline-flex items-center gap-1">
-            <MapPin aria-hidden="true" className="h-4 w-4" />
-            {win.location}
-          </span>
-          <span className="inline-flex items-center gap-1">
-            <Calendar aria-hidden="true" className="h-4 w-4" />
-            {win.date}
-          </span>
-        </p>
-        <p className="text-sm font-bold uppercase tracking-[0.14em] text-(--accent-text) md:col-span-2">
-          {win.award}
-        </p>
-        <p className="text-sm font-semibold text-(--muted-foreground) md:col-span-1 md:text-right">
-          {win.prize}
-        </p>
-        <span className="md:col-span-1 md:justify-self-end">
+
+        {/* 4. Award standing (prize revealed when clicked) */}
+        <div className="col-span-11 sm:col-span-3 sm:text-right">
+          <p className="font-headline text-xs md:text-sm font-bold uppercase tracking-[0.14em] text-(--primary)">
+            {win.award}
+          </p>
+        </div>
+
+        {/* 5. Chevron toggle */}
+        <span className="col-span-1 flex justify-end">
           <ChevronDown
             aria-hidden="true"
             className={`h-5 w-5 text-(--muted-foreground) transition-transform duration-300 ${
@@ -237,9 +253,14 @@ function WinArchiveRow({
             </p>
 
             {win.prize ? (
-              <div className="mt-5 border-t border-(--border) pt-4">
-                <p className="meta-label">Awarded</p>
-                <p className="mt-1 font-headline text-lg font-bold tracking-[-0.01em]">
+              <div className="mt-5 rounded-lg border border-(--border) bg-(--card) p-4">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-mono text-xs uppercase tracking-wider text-(--muted-foreground)">Prize &amp; Grant</span>
+                  <span className="rounded-full bg-(--primary)/10 px-2.5 py-0.5 font-mono text-[11px] font-bold uppercase tracking-wider text-(--primary)">
+                    {win.award}
+                  </span>
+                </div>
+                <p className="mt-1.5 font-headline text-xl font-bold text-(--foreground) tracking-tight">
                   {win.prize}
                 </p>
               </div>

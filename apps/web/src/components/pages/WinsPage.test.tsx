@@ -56,11 +56,8 @@ describe("WinsPage archive", () => {
     expect(screen.getByText(/20 records/i)).toBeInTheDocument();
   });
 
-  it("filters records by track", async () => {
-    const user = userEvent.setup();
-    render(<Harness />);
-
-    await user.click(screen.getByRole("button", { name: "HAL" }));
+  it("filters records by track", () => {
+    render(<Harness initialTrack="HAL" />);
 
     expect(screen.getByText(/1 record/i)).toBeInTheDocument();
     expect(
@@ -115,10 +112,6 @@ describe("WinsPage archive", () => {
   it("drives the filter controls from the track and query props", () => {
     render(<Harness initialTrack="HAL" initialQ="EO/IR" />);
 
-    expect(screen.getByRole("button", { name: "HAL" })).toHaveAttribute(
-      "aria-pressed",
-      "true",
-    );
     expect(screen.getByRole("searchbox")).toHaveValue("EO/IR");
     expect(screen.getByText(/1 record/i)).toBeInTheDocument();
   });
