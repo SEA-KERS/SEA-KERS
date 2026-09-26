@@ -46,7 +46,7 @@ export default function WinsPage({
   track,
   q,
   expandedId,
-  onTrackChange,
+  onTrackChange: _onTrackChange,
   onSearchChange,
   onToggleExpand,
 }: WinsPageProps) {
