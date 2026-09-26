@@ -74,10 +74,10 @@ export default function ContactSection() {
                 </p>
                 <div className="flex flex-wrap items-center gap-2 text-sm font-bold text-white font-mono">
                   <a
-                    href="tel:+918660814164"
+                    href="tel:+918050790795"
                     className="hover:text-[#da261c] transition-colors"
                   >
-                    +91 86608 14164
+                    +91 80507 90795
                   </a>
                   <span className="text-neutral-500 font-normal">/</span>
                   <a
