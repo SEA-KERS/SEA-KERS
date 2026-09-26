@@ -77,14 +77,14 @@ export default function ContactSection() {
                     href="tel:+918660814164"
                     className="hover:text-[#da261c] transition-colors"
                   >
-                    +91 8660814164
+                    +91 86608 14164
                   </a>
                   <span className="text-neutral-500 font-normal">/</span>
                   <a
-                    href="tel:+918050790795"
+                    href="tel:+917019884773"
                     className="hover:text-[#da261c] transition-colors"
                   >
-                    +91 8050790795
+                    +91 70198 84773
                   </a>
                 </div>
               </div>
