@@ -9,6 +9,8 @@
   "scripts": {
     "dev": "turbo run dev --filter=@sea-kers/web",
     "build": "turbo run build",
+    "prerender": "node tools/prerender.js",
+    "build:vercel": "turbo run build && node tools/prerender.js",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "test": "turbo run test",

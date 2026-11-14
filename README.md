@@ -61,6 +61,18 @@ To push a commit to `main` without deploying it, include `[skip deploy]` in the 
 git commit -m "docs: update contributor guide [skip deploy]"
 ```
 
+### Vercel mirror (static)
+
+The same site is also published as static files to the Vercel project `team-seakers`:
+
+```bash
+cd apps/web && VITE_SITE_URL=https://team-seakers.com pnpm exec vite build && cd ../..
+VITE_SITE_URL=https://team-seakers.com node tools/prerender.js
+cd apps/web/dist/client && vercel deploy --prod
+```
+
+`tools/prerender.js` renders every page plus `robots.txt`, `sitemap.xml` and `security.txt`, and writes a `vercel.json` carrying the Worker's security headers. If `vercel link` creates a `.env.local` in `dist/client`, delete it before deploying.
+
 ## Design
 
 The visual language, theme tokens, typography, accessibility constraints, and asset requirements live in [`DESIGN.md`](./DESIGN.md).
