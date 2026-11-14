@@ -5,7 +5,7 @@ const DIRECTION_CONTRACT = `SEA-KERS direction contract. THESIS: A world-stage e
 
 export function RootLayout() {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="light" suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
