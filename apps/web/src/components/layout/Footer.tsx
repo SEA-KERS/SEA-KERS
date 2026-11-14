@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "../ui/SocialIcons";
+import { GithubIcon, LinkedinIcon } from "../ui/SocialIcons";
 
 interface NavLink {
   label: string;
@@ -29,7 +29,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Right Group: Navigation, Legal, Socials */}
+          {/* Right Group: Navigation, Socials */}
           <div className="flex flex-wrap items-start gap-8 sm:gap-12 lg:gap-16">
             {/* Horizontal Nav Links */}
             <nav aria-label="Footer Navigation" className="flex flex-wrap items-center gap-5 sm:gap-8 pt-0.5">
@@ -45,52 +45,22 @@ export default function Footer() {
               ))}
             </nav>
 
-            {/* Legal Links */}
-            <div className="flex flex-col gap-2">
-              <span className="text-sm font-bold text-white">Legal</span>
-              <div className="flex flex-col gap-1.5 text-xs sm:text-sm text-neutral-400">
-                <a
-                  href="#privacy"
-                  onClick={(e) => e.preventDefault()}
-                  className="hover:text-white transition-colors"
-                >
-                  Privacy Policy
-                </a>
-                <a
-                  href="#terms"
-                  onClick={(e) => e.preventDefault()}
-                  className="hover:text-white transition-colors"
-                >
-                  Terms of Service
-                </a>
-              </div>
-            </div>
-
             {/* Social Icons */}
             <div className="flex items-center gap-4 text-neutral-400 pt-0.5">
               <a
                 href="https://www.linkedin.com/company/team-sea-kers/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 className="hover:text-white transition-colors"
               >
                 <LinkedinIcon className="h-4 w-4" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://github.com/SEA-KERS"
                 target="_blank"
-                rel="noreferrer"
-                aria-label="X / Twitter"
-                className="hover:text-white transition-colors"
-              >
-                <TwitterIcon className="h-4 w-4" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
+                rel="noopener noreferrer"
+                aria-label="SEA-KERS on GitHub"
                 className="hover:text-white transition-colors"
               >
                 <GithubIcon className="h-4 w-4" />

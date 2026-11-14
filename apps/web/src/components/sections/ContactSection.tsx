@@ -2,6 +2,8 @@ import { useState } from "react";
 import { ArrowRight, CheckCircle2, Mail, Phone } from "lucide-react";
 import { useReveal } from "../../hooks/useReveal";
 
+const CONTACT_EMAIL = "ogmanoja@gmail.com";
+
 export default function ContactSection() {
   const { ref, isVisible } = useReveal<HTMLElement>();
   const [name, setName] = useState("");
@@ -9,9 +11,16 @@ export default function ContactSection() {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  // The site is static (no mail backend), so the form hands the message to the
+  // visitor's email client instead of pretending to send it.
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !email) return;
+    if (!name.trim() || !email.trim()) return;
+    const subject = `Collaboration enquiry from ${name.trim()}`;
+    const body = `${message.trim()}
+
+— ${name.trim()} (${email.trim()})`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
   };
 
@@ -48,7 +57,7 @@ export default function ContactSection() {
           {/* Left Column: Direct Connect Channels */}
           <div className="lg:col-span-5 flex flex-col gap-4">
             <a
-              href="mailto:ogmanoja@gmail.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="group flex items-center gap-4 rounded-xl border border-neutral-800 bg-[#12141d] hover:bg-[#161924] p-5 transition-all hover:border-[#da261c]/50 hover:shadow-lg"
             >
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-neutral-900 border border-neutral-800 text-[#da261c] shadow-xs">
@@ -59,7 +68,7 @@ export default function ContactSection() {
                   Email
                 </p>
                 <p className="text-sm font-bold text-white font-mono group-hover:text-[#da261c] transition-colors">
-                  ogmanoja@gmail.com
+                  {CONTACT_EMAIL}
                 </p>
               </div>
             </a>
@@ -105,9 +114,13 @@ export default function ContactSection() {
                   <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
                     <CheckCircle2 className="h-7 w-7" />
                   </div>
-                  <h3 className="mt-4 font-headline text-2xl font-bold">Transmission Received</h3>
+                  <h3 className="mt-4 font-headline text-2xl font-bold">Almost there</h3>
                   <p className="mt-2 text-sm text-neutral-300 max-w-sm mx-auto">
-                    Thanks for reaching out, {name}. Our core team will review your message and connect within 24 hours.
+                    Thanks, {name}. Your email app should now be open with your message ready. Press send there to reach us. If nothing opened, write to{" "}
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="font-bold text-white underline">
+                      {CONTACT_EMAIL}
+                    </a>
+                    .
                   </p>
                   <button
                     type="button"

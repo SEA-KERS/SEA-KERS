@@ -371,25 +371,6 @@ export const WINS_DATA: readonly WinRecord[] = [
     "prize": "Offered Incubation"
   },
   {
-    "id": "win-15",
-    "title": "GAJA",
-    "hackathon": "MSME 5.0 Hackathon",
-    "location": "India",
-    "track": "MSME",
-    "award": "GRAND PRIZE",
-    "date": "2025",
-    "projectRef": "gaja-msme",
-    "tagline": "Autonomous aerial inspection & logistics for manufacturing units.",
-    "techStack": [
-      "Drone Tech",
-      "Edge Compute",
-      "IoT"
-    ],
-    "description": "Adapted GAJA UAV platform for MSME facility inspection and local automated payload logistics.",
-    "images": [],
-    "prize": "\u20b915 Lakh Grant to Develop Idea"
-  },
-  {
     "id": "win-16",
     "title": "Airavatha",
     "hackathon": "Ai Brewery Vibe Coding Hackathon",

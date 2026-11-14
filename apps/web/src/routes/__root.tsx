@@ -7,7 +7,7 @@ import appCss from "../index.css?url";
 const themeBootstrap = `(() => {
   try {
     const stored = localStorage.getItem("sea-kers-theme");
-    const dark = stored ? stored === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    const dark = stored === "dark";
     document.documentElement.classList.toggle("dark", dark);
     document.documentElement.classList.toggle("light", !dark);
   } catch {}

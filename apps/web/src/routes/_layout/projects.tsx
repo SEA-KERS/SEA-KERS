@@ -1,9 +1,5 @@
-/* oxlint-disable react/only-export-components */
-import { createFileRoute, useLocation } from "@tanstack/react-router";
-import ProjectsPage, {
-  FILTER_GROUPS,
-  type FilterGroup,
-} from "../../components/pages/ProjectsPage";
+import { createFileRoute } from "@tanstack/react-router";
+import ProjectsPage from "../../components/pages/ProjectsPage";
 import { SITE_CONFIG } from "../../config/site";
 
 const title = "Projects | Team SEA-KERS";
@@ -11,17 +7,8 @@ const description =
   "What Team SEA-KERS builds: edge compute, AI security, zero-knowledge identity, and robotics infrastructure documented to specification.";
 const pageUrl = SITE_CONFIG.url ? `${SITE_CONFIG.url}/projects` : null;
 
-const findGroup = (label: unknown): FilterGroup =>
-  FILTER_GROUPS.find((group) => group.label === label) ?? FILTER_GROUPS[0];
-
 export const Route = createFileRoute("/_layout/projects")({
-  validateSearch: (
-    search: Record<string, unknown>,
-  ): { group?: string; q?: string } => ({
-    group: findGroup(search.group).label,
-    q: typeof search.q === "string" ? search.q : "",
-  }),
-  component: ProjectsRoute,
+  component: ProjectsPage,
   head: () => ({
     meta: [
       { title },
@@ -40,41 +27,3 @@ export const Route = createFileRoute("/_layout/projects")({
     links: pageUrl ? [{ rel: "canonical", href: pageUrl }] : [],
   }),
 });
-
-function ProjectsRoute() {
-  const { group: groupLabel, q } = Route.useSearch();
-  const navigate = Route.useNavigate();
-  const hash = useLocation().hash;
-  const group = findGroup(groupLabel);
-
-  const searchFor = (overrides: {
-    group?: string;
-    q?: string;
-  }): { group?: string; q?: string } => {
-    const nextGroup = overrides.group ?? groupLabel ?? FILTER_GROUPS[0].label;
-    const nextQ = overrides.q ?? q ?? "";
-    return nextQ ? { group: nextGroup, q: nextQ } : { group: nextGroup };
-  };
-
-  return (
-    <ProjectsPage
-      group={group}
-      q={q ?? ""}
-      expandedId={hash || null}
-      onGroupChange={(next) =>
-        navigate({ search: searchFor({ group: next.label }), replace: true })
-      }
-      onSearchChange={(next) =>
-        navigate({ search: searchFor({ q: next }), replace: true })
-      }
-      onToggleExpand={(id) =>
-        navigate({
-          search: searchFor({}),
-          hash: id ?? "",
-          replace: true,
-          resetScroll: false,
-        })
-      }
-    />
-  );
-}

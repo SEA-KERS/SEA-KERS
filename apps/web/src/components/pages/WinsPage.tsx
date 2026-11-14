@@ -1,7 +1,5 @@
 /* oxlint-disable react/only-export-components */
-import { Link } from "@tanstack/react-router";
 import {
-  ArrowRight,
   Award,
   Calendar,
   ChevronDown,
@@ -23,7 +21,6 @@ export const tracks = [
   { label: "E-Cell", value: "ecell" },
   { label: "IEEE", value: "IEEE" },
   { label: "IISc", value: "IISc" },
-  { label: "MSME", value: "MSME" },
   { label: "HAL", value: "HAL" },
 ] as const;
 
@@ -277,17 +274,6 @@ function WinArchiveRow({
                 </span>
               ))}
             </div>
-
-            <Link
-              to="/projects"
-              className="group mt-6 inline-flex items-center gap-2 border-b-2 border-(--primary) pb-1 font-headline text-sm font-bold uppercase tracking-[0.16em] text-(--primary) transition-colors hover:text-(--primary-hover)"
-            >
-              View matching project
-              <ArrowRight
-                aria-hidden="true"
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
-              />
-            </Link>
           </div>
         </div>
       ) : null}

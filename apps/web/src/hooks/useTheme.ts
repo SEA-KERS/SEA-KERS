@@ -28,24 +28,8 @@ export function useTheme(): { theme: Theme; toggleTheme: () => void } {
   const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
-    const media = window.matchMedia("(prefers-color-scheme: dark)");
     const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
-    setTheme(
-      storedTheme === "dark" || storedTheme === "light"
-        ? storedTheme
-        : media.matches
-          ? "dark"
-          : "light",
-    );
-
-    const syncSystemTheme = (event: MediaQueryListEvent) => {
-      if (!window.localStorage.getItem(THEME_STORAGE_KEY)) {
-        setTheme(event.matches ? "dark" : "light");
-      }
-    };
-
-    media.addEventListener("change", syncSystemTheme);
-    return () => media.removeEventListener("change", syncSystemTheme);
+    setTheme(storedTheme === "dark" ? "dark" : "light");
   }, []);
 
   useEffect(() => {

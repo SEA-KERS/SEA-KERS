@@ -1,14 +1,21 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Award, Trophy } from "lucide-react";
 import { useReveal } from "../../hooks/useReveal";
+import { WINS_DATA } from "../../data/wins";
+import { parsePrizeValue } from "../../utils/prize";
+
+const TOTAL_WINS = WINS_DATA.length;
+/** Sum of every cash prize on record, rounded to the nearest lakh. */
+const TOTAL_PRIZE_LAKHS = Math.round(
+  WINS_DATA.reduce((sum, win) => sum + parsePrizeValue(win.prize), 0) / 100000,
+);
 
 const PARTNER_LOGOS = [
-  { name: "UST", src: "/logos/1.png" },
-  { name: "MSME, Government of India", src: "/logos/2.png" },
-  { name: "Hindustan Aeronautics Limited (HAL)", src: "/logos/3.png" },
-  { name: "E-Cell IIT Bombay", src: "/logos/4.png" },
-  { name: "IEEE", src: "/logos/5.png" },
-  { name: "RV College of Engineering", src: "/logos/6.png" },
+  { name: "Hindustan Aeronautics Limited (HAL)", src: "/logos/2.png" },
+  { name: "E-Cell IIT Bombay", src: "/logos/3.png" },
+  { name: "IEEE", src: "/logos/4.png" },
+  { name: "RV College of Engineering", src: "/logos/5.png" },
+  { name: "UST", src: "/logos/6.png" },
 ];
 
 export default function StatsBand() {
@@ -73,7 +80,7 @@ export default function StatsBand() {
 
                 <div className="mt-3 sm:mt-4 flex items-baseline justify-center gap-1">
                   <p className="font-mono text-5xl sm:text-6xl font-black tracking-tight text-[#da261c] leading-none">
-                    20+
+                    {TOTAL_WINS}
                   </p>
                 </div>
 
@@ -98,7 +105,7 @@ export default function StatsBand() {
 
                 <div className="mt-3 sm:mt-4 flex items-baseline justify-center gap-2">
                   <p className="font-mono text-5xl sm:text-6xl font-black tracking-tight text-[#da261c] leading-none">
-                    20+
+                    {TOTAL_PRIZE_LAKHS}+
                   </p>
                   <span className="font-mono text-2xl sm:text-3xl font-bold lowercase text-[#da261c]">
                     lakhs
@@ -132,7 +139,7 @@ export default function StatsBand() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-4 flex-1 max-w-4xl lg:ml-auto">
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-4 flex-1 max-w-4xl lg:ml-auto">
               {PARTNER_LOGOS.map((logo) => (
                 <div
                   key={logo.name}

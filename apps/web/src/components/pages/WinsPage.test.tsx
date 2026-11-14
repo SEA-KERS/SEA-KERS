@@ -53,7 +53,7 @@ describe("WinsPage archive", () => {
     expect(
       screen.getByRole("heading", { name: "Challenges conquered" }),
     ).toBeInTheDocument();
-    expect(screen.getByText(/20 records/i)).toBeInTheDocument();
+    expect(screen.getByText(/19 records/i)).toBeInTheDocument();
   });
 
   it("filters records by track", () => {
