@@ -1,40 +1,6 @@
-/* oxlint-disable react/only-export-components */
 import { useReveal } from "../../hooks/useReveal";
-import type { Project } from "../../types";
 
-export const FILTER_GROUPS = [
-  {
-    label: "All",
-    matches: () => true,
-  },
-  {
-    label: "Infrastructure",
-    matches: (project: Project) =>
-      project.category === "DePIN Infrastructure" ||
-      project.category === "Cross-Chain" ||
-      project.category === "FinTech & Systems",
-  },
-  {
-    label: "AI & Robotics",
-    matches: (project: Project) =>
-      project.category === "AI & Security" ||
-      project.category === "ZK & Privacy" ||
-      project.category === "Robotics & Edge AI",
-  },
-] as const;
-
-export type FilterGroup = (typeof FILTER_GROUPS)[number];
-
-interface ProjectsPageProps {
-  group?: FilterGroup;
-  q?: string;
-  expandedId?: string | null;
-  onGroupChange?: (group: FilterGroup) => void;
-  onSearchChange?: (q: string) => void;
-  onToggleExpand?: (id: string | null) => void;
-}
-
-export default function ProjectsPage(_props: ProjectsPageProps = {}) {
+export default function ProjectsPage() {
   const { ref: revealRef, isVisible } = useReveal<HTMLDivElement>();
 
   return (
