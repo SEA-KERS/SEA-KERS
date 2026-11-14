@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import HomePage from "../../components/pages/HomePage";
 import { SITE_CONFIG } from "../../config/site";
+import { WINS_DATA } from "../../data/wins";
 
 const title = "Team SEA-KERS | Engineering Collective in India";
 const description =
-  "Meet Team SEA-KERS, a collegiate engineering collective with 20+ hackathon wins building open technology across AI, computer vision, and robotics.";
+  `Meet Team SEA-KERS, a collegiate engineering collective with ${WINS_DATA.length} hackathon wins building open technology across AI, computer vision, and robotics.`;
 const pageUrl = SITE_CONFIG.url ? `${SITE_CONFIG.url}/` : null;
 const socialPreviewUrl = SITE_CONFIG.url
   ? new URL("/social-preview.jpg", SITE_CONFIG.url).href

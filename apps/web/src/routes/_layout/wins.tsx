@@ -5,7 +5,7 @@ import { SITE_CONFIG } from "../../config/site";
 
 const title = "Wins | Team SEA-KERS";
 const description =
-  "The Team SEA-KERS track record: hackathon wins, grand prizes, and grants won on the world stage across AI, computer vision, and robotics.";
+  "The Team SEA-KERS track record: hackathon wins and grand prizes won on the world stage across AI, computer vision, and robotics.";
 const pageUrl = SITE_CONFIG.url ? `${SITE_CONFIG.url}/wins` : null;
 
 const findTrack = (value: unknown): TrackFilter =>

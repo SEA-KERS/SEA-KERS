@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { formatPrizeHeadline, parsePrizeValue, topByPrize } from "./prize";
+import { parsePrizeValue, topByPrize } from "./prize";
 
 describe("parsePrizeValue", () => {
   it("parses plain cash prizes", () => {
@@ -8,7 +8,7 @@ describe("parsePrizeValue", () => {
   });
 
   it("parses lakh-scaled grants", () => {
-    expect(parsePrizeValue("₹15 Lakh Grant to Develop Idea")).toBe(1500000);
+    expect(parsePrizeValue("₹2 Lakh Grant")).toBe(200000);
   });
 
   it("ranks non-cash prizes at zero", () => {
@@ -19,25 +19,11 @@ describe("parsePrizeValue", () => {
   });
 });
 
-describe("formatPrizeHeadline", () => {
-  it("formats cash and lakh prizes compactly", () => {
-    expect(formatPrizeHeadline("₹35,000 Cash Prize")).toBe("₹35,000");
-    expect(formatPrizeHeadline("₹15 Lakh Grant to Develop Idea")).toBe(
-      "₹15 Lakh",
-    );
-  });
-
-  it("returns null for non-cash prizes", () => {
-    expect(formatPrizeHeadline("Swags & Goodies")).toBeNull();
-    expect(formatPrizeHeadline(undefined)).toBeNull();
-  });
-});
-
 describe("topByPrize", () => {
   const records = [
     { id: "a", prize: "₹2,000 Cash Prize" },
     { id: "b", prize: "₹75,000 Cash Prize" },
-    { id: "c", prize: "₹15 Lakh Grant to Develop Idea" },
+    { id: "c", prize: "₹2 Lakh Grant" },
     { id: "d", prize: "Swags & Goodies" },
   ] as const;
 
